@@ -1,0 +1,232 @@
+<script>
+$(document).ready(function () {
+    $("select").change(function () {
+        var $this = $(this);
+        var prevVal = $this.data("prev");
+        var otherSelects = $("select").not(this);
+        otherSelects.find("option[value=" + $(this).val() + "]").attr('disabled', true);
+        if (prevVal) {
+            otherSelects.find("option[value=" + prevVal + "]").attr('disabled', false);
+        }
+
+        $this.data("prev", $this.val());
+    });
+});
+
+function clearForm(form) {
+  // iterate over all of the inputs for the form
+  // element that was passed in
+  $(':input', form).each(function() {
+    var type = this.type;
+    var tag = this.tagName.toLowerCase(); // normalize case
+    // it's ok to reset the value attr of text inputs,
+    // password inputs, and textareas
+    if (type == 'text' || type == 'password' || tag == 'textarea')
+      this.value = "";
+    // checkboxes and radios need to have their checked state cleared
+    // but should *not* have their 'value' changed
+    else if (type == 'checkbox' || type == 'radio')
+      this.checked = false;
+    // select elements need to have their 'selectedIndex' property set to -1
+    // (this works for both single and multiple select elements)
+    else if (tag == 'select')
+      this.selectedIndex = -1;
+  });
+};
+</script>
+
+<div id="formhermes">
+  <div id="formContainer">
+    <form class="autoform" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/31" method="post" id="autoform" accept-charset="UTF-8">
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[first_name]">First Name </label>
+          <input type="text" id="submitted[first_name]" name="submitted[first_name]" size="60" maxlength="128" class="name" tabindex=1/>
+          <span class="first_name-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[last_name]">Last Name </label>
+          <input type="text" id="submitted[last_name]" name="submitted[last_name]" size="60" maxlength="128" class="name" tabindex=2/>
+          <span class="last_name-msgContainer"></span></div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[netid]">Net ID (for example, abc123)</label>
+          <input type="text" id="submitted[netid]" name="submitted[netid]" size="60" maxlength="128" class="netid" tabindex=3/>
+          <span class="netid-msgContainer"></span></div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[uid]">University ID </label>
+          <input type="text" id="submitted[uid]" name="submitted[uid]" size="60" maxlength="128" value="N" tabindex=4/>
+          <span class="uid-msgContainer"></span></div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[fac_adviser]">Faculty Adviser</label>
+          <select name="submitted[fac_adviser]" id="submitted[fac_adviser]"  class="requiredselect">
+            <option value="">Select One</option>
+            <option value="m.cruz@nyu.edu">Marie Cruz Soto</option>
+            <option value="kad9@nyu.edu">Kim DaCosta</option>
+            <option value="gjd210@nyu.edu">Gail Drakes</option>
+            <option value="stephen.duncombe@nyu.edu">Steve Duncombe</option>
+            <option value="gte1@nyu.edu">Greg Erickson</option>
+            <option value="rcf2@nyu.edu">Rosalind Fredericks</option>
+            <option value="lise.friedman@nyu.edu">Lise Friedman</option>
+            <option value="mag19@nyu.edu">Matt Gregory</option>
+            <option value="hrg2@nyu.edu">Hannah Gurman</option>
+            <option value="rh388@nyu.edu">Rahul Hamid</option>
+            <option value="harkness@nyu.edu">Ethan Harkness</option>
+            <option value="abh5@nyu.edu">A.B. Huber</option>
+            <option value="lok200@nyu.edu">Lauren Kaminsky</option>
+            <option value="patrick.mccreery@nyu.edu">Patrick McCreery</option>
+            <option value="km96@nyu.edu">Keith Miller</option>
+            <option value="sem2@nyu.edu">Sara Murphy</option>
+            <option value="vn10@nyu.edu">Vasuki Nesiah</option>
+            <option value="kpf2@nyu.edu">Kim Phillips-Fein</option>
+            <option value="millery.polyne@nyu.edu">Millery Polyné</option>
+            <option value="mtp5@nyu.edu">Myisha Priest</option>
+            <option value="ls33@nyu.edu">Leslie Satin</option>
+            <option value="amy.spellacy@nyu.edu">Amy Spellacy</option>
+            <option value="mlt8@nyu.edu">Meredith Theeman</option>
+            <option value="jeanette.tran@nyu.edu">Jeanette Tran</option>
+            <option value="av48@nyu.edu">Alejandro Velasco</option>
+          </select>
+          <span class="fac_adviser-msgContainer"></span> </div>
+      </div>
+      <h2>Course Selections</h2>
+      <p>Please select your top five choices for each of the
+        First-Year Interdisciplinary Seminar and the First-Year Writing Seminar in
+        order of preference.  Your first choice should be in box number 1, your
+        second choice should be in box number 2, etc. Please see the <a href="/content/gallatin/en/academics/courses.html?year=2013&term=FA&type=First-year+Program" target="_blank">course descriptions</a> before making your selections.</p>
+      <table class="standard">
+        <THEAD>
+          <TR>
+            <TH style="width: 60px;">Preference</TH>
+            <TH>First-Year Interdisciplinary Seminar</TH>
+          </TR>
+        </THEAD>
+        <TR>
+          <TD><label for="fyis_1">1</label></TD>
+          <TD><select name="submitted[fyis_1]" id="fyis_1" tabindex=5 class="requiredselect">
+              <option value="">Choose One</option>
+              <option>FYIS: Migration and American Culture (FIRST-UG 24)</option>
+              <option>FYIS: The Social Construction of Reality (FIRST-UG 32)</option>
+              <option>FYIS: Family (FIRST-UG 35)</option>
+              <option>FYIS: Capitalism and Democracy (FIRST-UG 42)</option>
+              <option>FYIS: The Self and the Call of the Other (FIRST-UG 49)</option>
+              <option>FYIS: Incivility in the Age of Civil Society (FIRST-UG 57)</option>
+              <option>FYIS: The Scientific Revolution (FIRST-UG 63)</option>
+              <option>FYIS: Boundaries and Transgressions (FIRST-UG 69)</option>
+              <option>FYIS: Play and Games in Early China (FIRST-UG 77)</option>
+              <option>FYIS: Main Street U.S.A. (FIRST-UG 82)</option>
+              <option>FYIS: Human Rights, Human Wrongs (FIRST-UG 83)</option>
+              <option>FYIS: Picture Theories (FIRST-UG 84)</option>
+              <option>FYIS: Science and Literature (FIRST-UG 85)</option>
+              <option>FYIS: Place and Behavior (FIRST-UG 86)</option>
+              <option>FYIS: The Politics, Ethics and Aesthetics of Photography (FIRST-UG 87)</option>
+            </select>
+            <span class="fyis_1-msgContainer"></span></TD>
+        </TR>
+        <TR class='stripe'>
+          <TD><label for="fyis_2">2</label></TD>
+          <TD><select name="submitted[fyis_2]" id="fyis_2" tabindex=6   class="requiredselect">
+              <option value="">Choose One</option>
+              <option>FYIS: Migration and American Culture (FIRST-UG 24)</option>
+              <option>FYIS: The Social Construction of Reality (FIRST-UG 32)</option>
+              <option>FYIS: Family (FIRST-UG 35)</option>
+              <option>FYIS: Capitalism and Democracy (FIRST-UG 42)</option>
+              <option>FYIS: The Self and the Call of the Other (FIRST-UG 49)</option>
+              <option>FYIS: Incivility in the Age of Civil Society (FIRST-UG 57)</option>
+              <option>FYIS: The Scientific Revolution (FIRST-UG 63)</option>
+              <option>FYIS: Boundaries and Transgressions (FIRST-UG 69)</option>
+              <option>FYIS: Play and Games in Early China (FIRST-UG 77)</option>
+              <option>FYIS: Main Street U.S.A. (FIRST-UG 82)</option>
+              <option>FYIS: Human Rights, Human Wrongs (FIRST-UG 83)</option>
+              <option>FYIS: Picture Theories (FIRST-UG 84)</option>
+              <option>FYIS: Science and Literature (FIRST-UG 85)</option>
+              <option>FYIS: Place and Behavior (FIRST-UG 86)</option>
+              <option>FYIS: The Politics, Ethics and Aesthetics of Photography (FIRST-UG 87)</option>
+            </select>
+            <span class="fyis_2-msgContainer"></span></TD>
+        </TR>
+        <TR>
+          <TD><label for="fyis_3">3</label></TD>
+          <TD><select name="submitted[fyis_3]" id="fyis_3"  class="requiredselect" tabindex="7">
+              <option value="">Choose One</option>
+              <option>FYIS: Migration and American Culture (FIRST-UG 24)</option>
+              <option>FYIS: The Social Construction of Reality (FIRST-UG 32)</option>
+              <option>FYIS: Family (FIRST-UG 35)</option>
+              <option>FYIS: Capitalism and Democracy (FIRST-UG 42)</option>
+              <option>FYIS: The Self and the Call of the Other (FIRST-UG 49)</option>
+              <option>FYIS: Incivility in the Age of Civil Society (FIRST-UG 57)</option>
+              <option>FYIS: The Scientific Revolution (FIRST-UG 63)</option>
+              <option>FYIS: Boundaries and Transgressions (FIRST-UG 69)</option>
+              <option>FYIS: Play and Games in Early China (FIRST-UG 77)</option>
+              <option>FYIS: Main Street U.S.A. (FIRST-UG 82)</option>
+              <option>FYIS: Human Rights, Human Wrongs (FIRST-UG 83)</option>
+              <option>FYIS: Picture Theories (FIRST-UG 84)</option>
+              <option>FYIS: Science and Literature (FIRST-UG 85)</option>
+              <option>FYIS: Place and Behavior (FIRST-UG 86)</option>
+              <option>FYIS: The Politics, Ethics and Aesthetics of Photography (FIRST-UG 87)</option>
+            </select>
+            <span class="fyis_3-msgContainer"></span></TD>
+        </TR>
+        <TR  class='stripe'>
+          <TD><label for="fyis_4">4</label></TD>
+          <TD><select name="submitted[fyis_4]" id="fyis_4" class="requiredselect" tabindex="8">
+              <option value="">Choose One</option>
+              <option>FYIS: Migration and American Culture (FIRST-UG 24)</option>
+              <option>FYIS: The Social Construction of Reality (FIRST-UG 32)</option>
+              <option>FYIS: Family (FIRST-UG 35)</option>
+              <option>FYIS: Capitalism and Democracy (FIRST-UG 42)</option>
+              <option>FYIS: The Self and the Call of the Other (FIRST-UG 49)</option>
+              <option>FYIS: Incivility in the Age of Civil Society (FIRST-UG 57)</option>
+              <option>FYIS: The Scientific Revolution (FIRST-UG 63)</option>
+              <option>FYIS: Boundaries and Transgressions (FIRST-UG 69)</option>
+              <option>FYIS: Play and Games in Early China (FIRST-UG 77)</option>
+              <option>FYIS: Main Street U.S.A. (FIRST-UG 82)</option>
+              <option>FYIS: Human Rights, Human Wrongs (FIRST-UG 83)</option>
+              <option>FYIS: Picture Theories (FIRST-UG 84)</option>
+              <option>FYIS: Science and Literature (FIRST-UG 85)</option>
+              <option>FYIS: Place and Behavior (FIRST-UG 86)</option>
+              <option>FYIS: The Politics, Ethics and Aesthetics of Photography (FIRST-UG 87)</option>
+            </select>
+            <span class="fyis_4-msgContainer"></span></TD>
+        </TR>
+        <TR>
+          <TD><label for="fyis_5">5</label></TD>
+          <TD><select name="submitted[fyis_5]" id="fyis_5" class="requiredselect" tabindex="9">
+              <option value="">Choose One</option>
+              <option>FYIS: Migration and American Culture (FIRST-UG 24)</option>
+              <option>FYIS: The Social Construction of Reality (FIRST-UG 32)</option>
+              <option>FYIS: Family (FIRST-UG 35)</option>
+              <option>FYIS: Capitalism and Democracy (FIRST-UG 42)</option>
+              <option>FYIS: The Self and the Call of the Other (FIRST-UG 49)</option>
+              <option>FYIS: Incivility in the Age of Civil Society (FIRST-UG 57)</option>
+              <option>FYIS: The Scientific Revolution (FIRST-UG 63)</option>
+              <option>FYIS: Boundaries and Transgressions (FIRST-UG 69)</option>
+              <option>FYIS: Play and Games in Early China (FIRST-UG 77)</option>
+              <option>FYIS: Main Street U.S.A. (FIRST-UG 82)</option>
+              <option>FYIS: Human Rights, Human Wrongs (FIRST-UG 83)</option>
+              <option>FYIS: Picture Theories (FIRST-UG 84)</option>
+              <option>FYIS: Science and Literature (FIRST-UG 85)</option>
+              <option>FYIS: Place and Behavior (FIRST-UG 86)</option>
+              <option>FYIS: The Politics, Ethics and Aesthetics of Photography (FIRST-UG 87)</option>
+            </select>
+            <span class="fyis_5-msgContainer"></span></TD>
+        </TR>
+      </table>
+      <div class="section end">
+        <div class="fullSize">
+          <button type="submit"
+		id="submit"
+		name="op"
+		value="Submit">Submit </button>
+        </div>
+      </div>
+      <input type="hidden" name="form_id" value="webform_client_form_31" />
+    </form>
+  </div>
+</div>

@@ -1,0 +1,88 @@
+﻿<div id="formhermes">
+  <div id="formContainer">
+    <form class="autoform" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/181" method="post" id="autoform" accept-charset="UTF-8">
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[first_name]">Student First Name </label>
+          <input type"text" id="submitted[first_name]" name="submitted[first_name]" value="" size="60" maxlength="128" class="name"/>
+          <span class="first_name-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[last_name]">Student Last Name </label>
+          <input type"text" id="submitted[last_name]" name="submitted[last_name]" value="" size="60" maxlength="128" class="name"/>
+          <span class="last_name-msgContainer"></span> </div>
+      </div>
+        <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[netid]">Student NetID (Example: abc123)</label>
+          <input type="text" id="submitted[netid]" name="submitted[netid]" value="" size="60" maxlength="128" class="netid">
+          <span class="netid-msgContainer"></span></div>
+      </div>
+      <hr/>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[reviewer_first_name]">Reviewer First Name </label>
+          <input type"text" id="submitted[reviewer_first_name]" name="submitted[reviewer_first_name]" value="" size="60" maxlength="128" class="name"/>
+          <span class="reviewer_first_name-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[reviewer_last_name]">Reviewer Last Name </label>
+          <input type"text" id="submitted[reviewer_last_name]" name="submitted[reviewer_last_name]" value="" size="60" maxlength="128" class="name"/>
+          <span class="reviewer_last_name-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[reviewer_email]">Reviewer E-mail</label>
+          <input type="text" id="submitted[reviewer_email]" name="submitted[reviewer_email]" value="" size="60" maxlength="128" class="rev_email" />
+          <span class="reviewer_email-msgContainer"></span></div>
+      </div>
+      <hr/>
+          <div class="section radio">
+      <div class="halfSize">
+        <label for="submitted[reviewer_status]"> Are you the Adviser or the Gallatin Reviewer? </label>
+        <select name="submitted[reviewer_status]">
+        <option> Adviser </option>
+        <option> Gallatin Reviewer</option>
+        </select>
+       <span class="reviewer_status-msgContainer"></span> 
+       </div>
+    </div>    
+    <div class="section radio">
+      <div class="fullSize">
+        <label for="submitted[status]"> Approved? </label>
+        <span class="options"> <span>
+        <input name="submitted[status]" type="radio" id="submitted[status]" value="approved" class="radio"/>
+        <label for="submitted[status]"> Yes </label>
+        </span> <span>
+        <input name="submitted[status]" type="radio" id="submitted[status]" value="minor" class="radio"/>
+        <label for="submitted[status]"> Needs Minor Revisions</label>
+        </span><span>
+        <input name="submitted[status]" type="radio" id="submitted[status]" value="major" class="radio"/>
+        <label for="submitted[status]"> Needs Major Revisions </label>
+        </span><span class="status-msgContainer"></span> </span> </div>
+    </div>
+           <hr/> 
+          <div class="section text">
+        <div class="fullSize">
+          <label for="submitted[comments]">Comments (optional)</label>
+          <textarea id="submitted[comments]" name="submitted[comments]" cols="60" rows="5"></textarea>
+          <span class="comments-msgContainer"></span> </div>
+      </div>
+      <input type="hidden" name="form_id" value="webform_client_form_181" />
+      <div class="section end">
+        <div class="fullSize">
+          <button type="submit"
+		id="submit"
+		name="op"
+		value="Submit">Submit </button>
+          <button type="reset"
+		id="reset"
+		name="reset"
+		value="Reset">Reset </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

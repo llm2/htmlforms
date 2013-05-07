@@ -1,0 +1,55 @@
+<div id="formContainer">
+  <form class="webform-client-form" enctype="multipart/form-data" action="http://gabe.es.its.nyu.edu/hermes/?q=node/1" method="post"  id="autoform" accept-charset="UTF-8">
+    <input type="hidden" name="form_id" value="webform_client_form_1" />
+    <input type="hidden" name="submitted[type]" value="MA"/>
+    <h3>Your Information</h3>
+    <div class="section text">
+      <div class="halfSize">
+        <label for="submitted[first_name]">First Name</label>
+        <input type="text" name="submitted[first_name]" size="30"  maxlength="128" class="name"/>
+      </div>
+    </div>
+    <div class="section text">
+      <div class="halfSize">
+        <label for="submitted[last_name]">Last Name</label>
+        <input type="text" name="submitted[last_name]" size="30"  maxlength="128" class="name"/>
+      </div>
+    </div>
+    <div class="section text">
+      <div class="halfSize">
+        <label for="submitted[email]">Email</label>
+        <input type="text" name="submitted[email]"  maxlength="128" size="30" />
+      </div>
+    </div>
+    <div class="section text">
+      <div class="halfSize">
+        <label for="submitted[telephone]">Telephone</label>
+        <input type="text" name="submitted[telephone]"  maxlength="128" size="30" />
+      </div>
+    </div>
+    <div class="section text">
+    <div class="halfSize">
+    <label for="submitted[session_date]">
+    Session Date</font>
+    <select name="submitted[session_date]" id="submitted[session_date]">
+      <option>February 3</option >
+      <option>February 15</option >
+      <option>February 29</option >
+      <option>March 13</option >
+    </select>
+    </div>
+    </div>
+    <div class="section end">
+      <div class="fullSize">
+        <button type="submit"
+				id="submit"
+				name="op"
+				value="Submit" onclick="convert();"> Submit </button>
+        <button type="reset"
+				id="reset"
+				name="reset"
+				value="reset"> reset </button>
+      </div>
+    </div>
+  </form>
+</div>

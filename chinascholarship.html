@@ -1,0 +1,87 @@
+
+<div id="formContainer">
+  <form class="autoform" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/210" method="post" id="autoform" accept-charset="UTF-8">
+    <div class="section text">
+      <div class="halfSize">
+        <label for="submitted[first_name]">First Name </label>
+        <input type="text" id="submitted[first_name]" name="submitted[first_name]" value="" size="60" maxlength="128" class="name" />
+        <span class="first_name-msgContainer"></span> </div>
+    </div>
+    <div class="section text">
+      <div class="halfSize">
+        <label for="submitted[last_name]">Last Name </label>
+        <input type="text" id="submitted[last_name]" name="submitted[last_name]" value="" size="60" maxlength="128" class="name" />
+        <span class="last_name-msgContainer"></span></div>
+    </div>
+    <div class="section text">
+      <div class="halfSize">
+        <label for="submitted[netid]">NetID (Example: abc123)</label>
+        <input type="text" id="submitted[netid]" name="submitted[netid]" value="" size="60" maxlength="128" class="netid"/>
+      <span class="netid-msgContainer"></span></div>
+    </div>
+    <div class="section text">
+      <div class="halfSize">
+        <label for="uid">University ID</label>
+        <input name="submitted[uid]" type="text" id="uid" value="N" size="60" maxlength="128" class="uid"/>
+        <span class="uid-msgContainer"></span> </div>
+    </div>
+    <div class="section text">
+      <div class="halfSize">
+        <label for="submitted[phone]">Telephone </label>
+        <input type="text" id="submitted[phone]" name="submitted[phone]" value="" size="60" maxlength="128"/>
+      </div>
+    </div>
+    <div class="section text">
+      <div class="halfSize">
+        <label for="submitted[credits]">Units Earned to Date</label>
+        <input type="text" id="submitted[credits]" name="submitted[credits]" value="" size="60" maxlength="128"/>
+      </div>
+    </div>
+    <hr />
+    <div class="section text">
+      <div class="fullSize">
+        <label for="submitted[concentration]">Academic Concentration </label>
+        <input name="submitted[concentration]" id="submitted[concentration]" type="text" size="60" maxlength="128" />
+      </div>
+    </div>
+    <div class="section radio">
+      <div class="fullSize">
+        <label for="submitted[fafsa]">Have you filed a 2013-2014 FAFSA?</label>
+        <br />
+        <span class="options">
+        <input name="submitted[fafsa]" id="submitted[fafsa]" value="Yes" type="radio" checked="checked"/>
+        <label for="submitted[fafsa]">Yes</label>
+        </span><span>
+        <input name="submitted[fafsa]" value="No" class="required" type="radio"/>
+        <label for="submitted[fafsa]">No</label>
+        </span><span class="fafsa-msgContainer"></span></div>
+    </div>
+    <h2>Personal Statement</h2>
+    <div class="section text">
+      <div class="fullSize">
+        <label for="files[submitted_file1]">Please attach a 1- to 2-page Personal Statement (.doc, .docx, and .pdf formats accepted; maximum size 2MB)</label>
+        <input type="file" id="files[submitted_file1]" name="files[submitted_file1]" class="required" />
+      </div>
+    </div>
+    <h2>Resumes</h2>
+    <div class="section text">
+      <div class="fullSize">
+        <label for="files[submitted_file]">Current Resume (.doc, .docx, and .pdf formats accepted; maximum size 2MB)</label>
+        <input type="file" id="files[submitted_file]" name="files[submitted_file]" class="required" />
+      </div>
+    </div>
+    <input type="hidden" name="form_id" value="webform_client_form_210" />
+    <div class="section end">
+      <div class="fullSize">
+        <button type="submit"
+		id="submit"
+		name="op"
+		value="Submit">Submit </button>
+        <button type="reset"
+		id="reset"
+		name="reset"
+		value="Reset">Reset </button>
+      </div>
+    </div>
+  </form>
+</div>

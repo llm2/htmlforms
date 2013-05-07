@@ -1,0 +1,575 @@
+<div id="formhermes">
+  <div id="formContainer">
+    <form class="autoform" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/34" method="post" id="autoform" accept-charset="UTF-8">
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[first_name]">First Name</label>
+          <input type="text" id="submitted[first_name]" name="submitted[first_name]" value="" size="60" maxlength="128" class="name">
+          <span class="first_name-msgContainer"></span></div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[last_name]">Last Name</label>
+          <input type="text" id="submitted[last_name]" name="submitted[last_name]" value="" size="60" maxlength="128" class="name">
+          <span class="last_name-msgContainer"></span></div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[netid]">NetID (Example: abc123)</label>
+          <input type="text" id="submitted[netid]" name="submitted[netid]" value="" size="60" maxlength="128" class="netid">
+          <span class="netid-msgContainer"></span></div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[uid]">University ID</label>
+          <input type="text" id="submitted[uid]" name="submitted[uid]" value="N" size="60" maxlength="128" class="uid">
+          <span class="uid-msgContainer"></span></div>
+      </div>
+      <div class="section checkbox">
+        <div class="halfSize">
+          <label for="submitted[grad_month]">Expected Graduation Month</label>
+          <select name="submitted[grad_month]" id="submitted[grad_month]">
+            <option>January</option>
+            <option>May</option>
+            <option>September</option>
+          </select>
+          <span class="grad_month-msgContainer"></span> </div>
+      </div>
+      <div class="section checkbox">
+        <div class="halfSize">
+          <label for="submitted[grad_year]">Expected Graduation Year</label>
+          <select name="submitted[grad_year]" id="submitted[grad_year]" class="requiredselect" >
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+          </select>
+          <span class="grad_year-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="fullSize">
+          <label for="submitted[cumulative_earned_credits]">Cumulative Earned Credits</label>
+          <input type="text" id="submitted[cumulative_earned_credits]" name="submitted[cumulative_earned_credits]" value="" size="60" maxlength="128" class="required">
+          <span class="cumulative_earned_credits-msgContainer"></span></div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[first_name_adviser]">Adviser First Name</label>
+          <input type="text" id="submitted[first_name_adviser]" name="submitted[first_name_adviser]" value="" size="60" maxlength="128" class="name"/>
+          <span class="first_name_adviser-msgContainer"></span></div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[last_name_adviser]">Adviser Last Name</label>
+          <input type="text" id="submitted[last_name_adviser]" name="submitted[last_name_adviser]" value="" size="60" maxlength="128" class="name"/>
+          <span class="last_name_adviser-msgContainer"></span></div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[adviser_email]">Adviser E-mail</label>
+          <input type="text" id="submitted[adviser_email]" name="submitted[adviser_email]" value="" size="60" maxlength="128" class="email"/>
+          <span class="adviser_email-msgContainer"></span></div>
+      </div>
+      <div class="section radio">
+        <div class="fullsize">
+          <label for="submitted[funding]">Are you receiving financial aid (scholarships, grants, loans, etc.)?</label>
+          
+          <span class="options">
+          <input name="submitted[funding]" id="submitted[funding]" value="Yes" type="radio" checked="checked"/>
+          <label for="funding">Yes</label>
+          
+          <input name="submitted[funding]" value="No" class="required" type="radio"/>
+          <label for="funding">No</label>
+          </span> <span class="funding-msgContainer"></span> </div>
+      </div>
+      <div class="section radio">
+        <div class="fullSize">
+          <label for="submitted[iapc]">Have you completed the IAPC?</label>
+          <br />
+          <span class="options">
+          <input name="submitted[iapc]" id="submitted[iapc]" value="Yes" type="radio" checked="checked"/>
+          <label for="submitted[iapc]">Yes</label>
+          </span><span>
+          <input name="submitted[iapc]" value="No" class="required" type="radio"/>
+          <label for="submitted[iapc]">No</label>
+          </span><span class="iapc-msgContainer"></span></div>
+      </div>
+      <div class="section radio">
+        <div class="fullsize">
+          <label for="submitted[rationale]">Have you submitted the rationale?</label>
+          <br />
+          <span class="options">
+          <input name="submitted[rationale]" id="submitted[rationale]" value="Yes" type="radio" checked="checked"/>
+          <label for="submitted[rationale]">Yes</label>
+          </span><span>
+          <input name="submitted[rationale]" value="No" class="required" type="radio"/>
+          <label for="submitted[rationale]">No</label>
+          </span><span class="rationale-msgContainer"></span></span> </div>
+      </div>
+      <div class="section radio">
+        <div class="fullSize">
+          <label for="submitted[colloquium]">Have you registered for the colloquium?</label>
+          <br />
+          <span class="options">
+          <input name="submitted[colloquium]" id="submitted[colloquium]" value="Yes" type="radio" checked="checked"/>
+          <label for="submitted[colloquium]">Yes</label>
+          </span><span>
+          <input name="submitted[colloquium]" value="No" class="required" type="radio"/>
+          <label for="submitted[colloquium]">No</label>
+          </span><span class="colloquium-msgContainer"></span></div>
+      </div>
+      <hr>
+      <h3>AP Credit Request</h3>
+      <p><i>AP credits will not satisfy any Gallatin liberal arts requirement</i></p>
+      <table border="0" width="100%">
+      <tr><td width="50%">&nbsp;&nbsp;AP Examination</td><td  width="25%">Score</td><td>Credits</td></tr>
+      </table>
+      <div class="section checkbox">
+        <div class="halfsize">
+          <select id="submitted[examination]" name="submitted[examination]">
+            <option value="">Choose one</option>
+            <option>Art History</option>
+            <option>Biology</option>
+            <option>Calculus AB</option>
+            <option>Calculus BC</option>
+            <option>Chemistry</option>
+            <option>Chinese Language and Culture</option>
+            <option>Computer Science A</option>
+            <option>Computer Science AB</option>
+            <option>English Literature</option>
+            <option>Environmental Science</option>
+            <option>European History</option>
+            <option>French Language</option>
+            <option>French Literature</option>
+            <option>German Language</option>
+            <option>Italian Language and Culture</option>
+            <option>Japanese Language and Culture</option>
+            <option>Latin Literature</option>
+            <option>Latin: Vergil</option>
+            <option>Macroeconomics</option>
+            <option>Microeconomics</option>
+            <option>Physics B</option>
+            <option>Physics C—Mech</option>
+            <option>Physics C—E&amp;M</option>
+            <option>Politics (U.S. Government and Politics)</option>
+            <option>Politics (Comp. Government and Politics)</option>
+            <option>Psychology</option>
+            <option>Spanish Language</option>
+            <option>Spanish Literature</option>
+            <option>Statistics</option>
+            <option>U.S. History</option>
+            <option>World History</option>
+          </select>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="quartersize">
+          <input type="text"id="submitted[score]" name="submitted[score]">
+          <span class="score-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="quartersize">
+          <input type="text"id="submitted[credits]" name="submitted[credits]">
+          <span class="credits-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfsize">
+          <select id="submitted[examination1]" name="submitted[examination1]">
+            <option value="">Choose one</option>
+            <option>Art History</option>
+            <option>Biology</option>
+            <option>Calculus AB</option>
+            <option>Calculus BC</option>
+            <option>Chemistry</option>
+            <option>Chinese Language and Culture</option>
+            <option>Computer Science A</option>
+            <option>Computer Science AB</option>
+            <option>English Literature</option>
+            <option>Environmental Science</option>
+            <option>European History</option>
+            <option>French Language</option>
+            <option>French Literature</option>
+            <option>German Language</option>
+            <option>Italian Language and Culture</option>
+            <option>Japanese Language and Culture</option>
+            <option>Latin Literature</option>
+            <option>Latin: Vergil</option>
+            <option>Macroeconomics</option>
+            <option>Microeconomics</option>
+            <option>Physics B</option>
+            <option>Physics C—Mech</option>
+            <option>Physics C—E&amp;M</option>
+            <option>Politics (U.S. Government and Politics)</option>
+            <option>Politics (Comp. Government and Politics)</option>
+            <option>Psychology</option>
+            <option>Spanish Language</option>
+            <option>Spanish Literature</option>
+            <option>Statistics</option>
+            <option>U.S. History</option>
+            <option>World History</option>
+          </select>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="quartersize">
+          <input type="text"id="submitted[score1]" name="submitted[score1]">
+          <span class="score1-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="quartersize">
+          <input type="text"id="submitted[credits1]" name="submitted[credits1]">
+          <span class="credits1-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfsize">
+          <select id="submitted[examination2]" name="submitted[examination2]">
+            <option value="">Choose one</option>
+            <option>Art History</option>
+            <option>Biology</option>
+            <option>Calculus AB</option>
+            <option>Calculus BC</option>
+            <option>Chemistry</option>
+            <option>Chinese Language and Culture</option>
+            <option>Computer Science A</option>
+            <option>Computer Science AB</option>
+            <option>English Literature</option>
+            <option>Environmental Science</option>
+            <option>European History</option>
+            <option>French Language</option>
+            <option>French Literature</option>
+            <option>German Language</option>
+            <option>Italian Language and Culture</option>
+            <option>Japanese Language and Culture</option>
+            <option>Latin Literature</option>
+            <option>Latin: Vergil</option>
+            <option>Macroeconomics</option>
+            <option>Microeconomics</option>
+            <option>Physics B</option>
+            <option>Physics C—Mech</option>
+            <option>Physics C—E&amp;M</option>
+            <option>Politics (U.S. Government and Politics)</option>
+            <option>Politics (Comp. Government and Politics)</option>
+            <option>Psychology</option>
+            <option>Spanish Language</option>
+            <option>Spanish Literature</option>
+            <option>Statistics</option>
+            <option>U.S. History</option>
+            <option>World History</option>
+          </select>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="quartersize">
+          <input type="text"id="submitted[score2]" name="submitted[score2]">
+          <span class="score2-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="quartersize">
+          <input type="text"id="submitted[credits2]" name="submitted[credits2]">
+          <span class="credits2-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfsize">
+          <select id="submitted[examination3]" name="submitted[examination3]">
+            <option value="">Choose one</option>
+            <option>Art History</option>
+            <option>Biology</option>
+            <option>Calculus AB</option>
+            <option>Calculus BC</option>
+            <option>Chemistry</option>
+            <option>Chinese Language and Culture</option>
+            <option>Computer Science A</option>
+            <option>Computer Science AB</option>
+            <option>English Literature</option>
+            <option>Environmental Science</option>
+            <option>European History</option>
+            <option>French Language</option>
+            <option>French Literature</option>
+            <option>German Language</option>
+            <option>Italian Language and Culture</option>
+            <option>Japanese Language and Culture</option>
+            <option>Latin Literature</option>
+            <option>Latin: Vergil</option>
+            <option>Macroeconomics</option>
+            <option>Microeconomics</option>
+            <option>Physics B</option>
+            <option>Physics C—Mech</option>
+            <option>Physics C—E&amp;M</option>
+            <option>Politics (U.S. Government and Politics)</option>
+            <option>Politics (Comp. Government and Politics)</option>
+            <option>Psychology</option>
+            <option>Spanish Language</option>
+            <option>Spanish Literature</option>
+            <option>Statistics</option>
+            <option>U.S. History</option>
+            <option>World History</option>
+          </select>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="quartersize">
+          <input type="text"id="submitted[score3]" name="submitted[score3]">
+          <span class="score3-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="quartersize">
+          <input type="text"id="submitted[credits3]" name="submitted[credits3]">
+          <span class="credits3-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfsize">
+          <select id="submitted[examination4]" name="submitted[examination4]">
+            <option value="">Choose one</option>
+            <option>Art History</option>
+            <option>Biology</option>
+            <option>Calculus AB</option>
+            <option>Calculus BC</option>
+            <option>Chemistry</option>
+            <option>Chinese Language and Culture</option>
+            <option>Computer Science A</option>
+            <option>Computer Science AB</option>
+            <option>English Literature</option>
+            <option>Environmental Science</option>
+            <option>European History</option>
+            <option>French Language</option>
+            <option>French Literature</option>
+            <option>German Language</option>
+            <option>Italian Language and Culture</option>
+            <option>Japanese Language and Culture</option>
+            <option>Latin Literature</option>
+            <option>Latin: Vergil</option>
+            <option>Macroeconomics</option>
+            <option>Microeconomics</option>
+            <option>Physics B</option>
+            <option>Physics C—Mech</option>
+            <option>Physics C—E&amp;M</option>
+            <option>Politics (U.S. Government and Politics)</option>
+            <option>Politics (Comp. Government and Politics)</option>
+            <option>Psychology</option>
+            <option>Spanish Language</option>
+            <option>Spanish Literature</option>
+            <option>Statistics</option>
+            <option>U.S. History</option>
+            <option>World History</option>
+          </select>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="quartersize">
+          <input type="text"id="submitted[score4]" name="submitted[score4]">
+          <span class="score4-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="quartersize">
+          <input type="text"id="submitted[credits4]" name="submitted[credits4]">
+          <span class="credits4-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfsize">
+          <select id="submitted[examination5]" name="submitted[examination5]">
+            <option value="">Choose one</option>
+            <option>Art History</option>
+            <option>Biology</option>
+            <option>Calculus AB</option>
+            <option>Calculus BC</option>
+            <option>Chemistry</option>
+            <option>Chinese Language and Culture</option>
+            <option>Computer Science A</option>
+            <option>Computer Science AB</option>
+            <option>English Literature</option>
+            <option>Environmental Science</option>
+            <option>European History</option>
+            <option>French Language</option>
+            <option>French Literature</option>
+            <option>German Language</option>
+            <option>Italian Language and Culture</option>
+            <option>Japanese Language and Culture</option>
+            <option>Latin Literature</option>
+            <option>Latin: Vergil</option>
+            <option>Macroeconomics</option>
+            <option>Microeconomics</option>
+            <option>Physics B</option>
+            <option>Physics C—Mech</option>
+            <option>Physics C—E&amp;M</option>
+            <option>Politics (U.S. Government and Politics)</option>
+            <option>Politics (Comp. Government and Politics)</option>
+            <option>Psychology</option>
+            <option>Spanish Language</option>
+            <option>Spanish Literature</option>
+            <option>Statistics</option>
+            <option>U.S. History</option>
+            <option>World History</option>
+          </select>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="quartersize">
+          <input type="text"id="submitted[score5]" name="submitted[score5]">
+          <span class="score5-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="quartersize">
+          <input type="text"id="submitted[credits5]" name="submitted[credits5]">
+          <span class="credits5-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfsize">
+          <select id="submitted[examination6]" name="submitted[examination6]">
+            <option value="">Choose one</option>
+            <option>Art History</option>
+            <option>Biology</option>
+            <option>Calculus AB</option>
+            <option>Calculus BC</option>
+            <option>Chemistry</option>
+            <option>Chinese Language and Culture</option>
+            <option>Computer Science A</option>
+            <option>Computer Science AB</option>
+            <option>English Literature</option>
+            <option>Environmental Science</option>
+            <option>European History</option>
+            <option>French Language</option>
+            <option>French Literature</option>
+            <option>German Language</option>
+            <option>Italian Language and Culture</option>
+            <option>Japanese Language and Culture</option>
+            <option>Latin Literature</option>
+            <option>Latin: Vergil</option>
+            <option>Macroeconomics</option>
+            <option>Microeconomics</option>
+            <option>Physics B</option>
+            <option>Physics C—Mech</option>
+            <option>Physics C—E&amp;M</option>
+            <option>Politics (U.S. Government and Politics)</option>
+            <option>Politics (Comp. Government and Politics)</option>
+            <option>Psychology</option>
+            <option>Spanish Language</option>
+            <option>Spanish Literature</option>
+            <option>Statistics</option>
+            <option>U.S. History</option>
+            <option>World History</option>
+          </select>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="quartersize">
+          <input type="text"id="submitted[score6]" name="submitted[score6]">
+          <span class="score6-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="quartersize">
+          <input type="text"id="submitted[credits6]" name="submitted[credits6]">
+          <span class="credits6-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfsize">
+          <select id="submitted[examination7]" name="submitted[examination7]">
+            <option value="">Choose one</option>
+            <option>Art History</option>
+            <option>Biology</option>
+            <option>Calculus AB</option>
+            <option>Calculus BC</option>
+            <option>Chemistry</option>
+            <option>Chinese Language and Culture</option>
+            <option>Computer Science A</option>
+            <option>Computer Science AB</option>
+            <option>English Literature</option>
+            <option>Environmental Science</option>
+            <option>European History</option>
+            <option>French Language</option>
+            <option>French Literature</option>
+            <option>German Language</option>
+            <option>Italian Language and Culture</option>
+            <option>Japanese Language and Culture</option>
+            <option>Latin Literature</option>
+            <option>Latin: Vergil</option>
+            <option>Macroeconomics</option>
+            <option>Microeconomics</option>
+            <option>Physics B</option>
+            <option>Physics C—Mech</option>
+            <option>Physics C—E&amp;M</option>
+            <option>Politics (U.S. Government and Politics)</option>
+            <option>Politics (Comp. Government and Politics)</option>
+            <option>Psychology</option>
+            <option>Spanish Language</option>
+            <option>Spanish Literature</option>
+            <option>Statistics</option>
+            <option>U.S. History</option>
+            <option>World History</option>
+          </select>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="quartersize">
+          <input type="text"id="submitted[score7]" name="submitted[score7]">
+          <span class="score7-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="quartersize">
+          <input type="text"id="submitted[credits7]" name="submitted[credits7]">
+          <span class="credits7-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfsize">
+          <select id="submitted[examination8]" name="submitted[examination8]">
+            <option value="">Choose one</option>
+            <option>Art History</option>
+            <option>Biology</option>
+            <option>Calculus AB</option>
+            <option>Calculus BC</option>
+            <option>Chemistry</option>
+            <option>Chinese Language and Culture</option>
+            <option>Computer Science A</option>
+            <option>Computer Science AB</option>
+            <option>English Literature</option>
+            <option>Environmental Science</option>
+            <option>European History</option>
+            <option>French Language</option>
+            <option>French Literature</option>
+            <option>German Language</option>
+            <option>Italian Language and Culture</option>
+            <option>Japanese Language and Culture</option>
+            <option>Latin Literature</option>
+            <option>Latin: Vergil</option>
+            <option>Macroeconomics</option>
+            <option>Microeconomics</option>
+            <option>Physics B</option>
+            <option>Physics C—Mech</option>
+            <option>Physics C—E&amp;M</option>
+            <option>Politics (U.S. Government and Politics)</option>
+            <option>Politics (Comp. Government and Politics)</option>
+            <option>Psychology</option>
+            <option>Spanish Language</option>
+            <option>Spanish Literature</option>
+            <option>Statistics</option>
+            <option>U.S. History</option>
+            <option>World History</option>
+          </select>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="quartersize">
+          <input type="text"id="submitted[score8]" name="submitted[score8]">
+          <span class="score8-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="quartersize">
+          <input type="text"id="submitted[credits8]" name="submitted[credits8]">
+          <span class="credits8-msgContainer"></span> </div>
+      </div>
+      <input type="hidden" name="form_id" value="webform_client_form_34" />
+      <div class="section end">
+        <div class="fullSize">
+          <button type="submit"
+		id="submit"
+		name="op"
+		value="Submit">Submit </button>
+          <button type="reset"
+		id="reset"
+		name="reset"
+		value="Reset">Reset</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

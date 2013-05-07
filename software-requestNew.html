@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Untitled 1</title>
+   <!-- delete this -->
+    <link rel="stylesheet" href="gallatin.css" />
+	<link rel="stylesheet" href="gallatin.ie6.css" />
+	<link rel="stylesheet" href="gallatin.ie7.css" />
+	<link rel="stylesheet" href="gallatin.ie8.css" />
+	<link rel="stylesheet" href="base.css" />
+	<link rel="stylesheet" href="forms.css" />
+    <!-- end delete this-->
+</head>
+<body class="gal-form">
+
+<!-- extra divs -->
+
+<div id="contentWrapper">		
+
+			<div id="leftCol" class="singleBox">				
+				<div class="parsys singleBox01"></div>
+
+			</div><!-- END leftCol singleBox -->
+			
+			<div id="centerCol" class="tripleBox">
+<!-- extra divs end -->
+
+
+<div class="parsys tripleBox"><div class="nyuOpenCode section"><!-- Timer (start) -->
+
+	<div id="formContainer">
+<!-- KJ cut and paste begin -->
+<form action="https://www.nyu.edu/cgi-bin/cgiwrap/llm2/yform19.cgi" method="post"  class="autoform" id="autoform">
+<input type="hidden" name="required" value="name,netid,email,software,daterequired" />
+<input type="hidden" name="print_blank_fields" value="value" />
+<!-- The next fields are for the email to you -->
+<input type="hidden" name="mail_recipient" value="npl2@nyu.edu" />
+<input type="hidden" name="mail_subject" value="Academic Software Request" />
+<input type="hidden" name="mail_top" value="Academic Software Request" />
+<input type="hidden" name="mail_listfields" value="value" />
+<input type="hidden" name="mail_bottom" value="email gallatin.webmaster@nyu.edu if you think there may be a problem with this form" />
+<!-- The next fields are for the courtesy reply -->
+<input type="hidden" name="cour_send" value="yes" />
+<input type="hidden" name="cour_top" value="thank you for submitting your Academic Software Request" />
+<input type="hidden" name="cour_listfields" value="no" />
+<input type="hidden" name="cour_close" value="Sincerely,">
+<input type="hidden" name="cour_myname" value="Gallatin" />
+<input type="hidden" name="cour_mywebsite" value="http://gallatin.nyu.edu/" />
+<!-- The next fields are for the HTML response page -->
+<input type="hidden" name="html_title" value="Thank You" />
+<input type="hidden" name="html_top" value="You have submitted a Gallatin Academic Software Request" />
+<input type="hidden" name="html_listfields" value="value" />
+<input type="hidden" name="html_return_link_title" value="Click here to return to the Gallatin home page" />
+<input type="hidden" name="html_return_link_url" value="http://gallatin.nyu.edu/" />
+<!-- The next fields are for the database -->
+<input type=hidden name ="data_filename" value="/www/sites/nyu.edu/htdocs/pages/gallatin/facultystaff/data/software.txt" />
+<input type=hidden name ="data_fields_to_log" value="name,netid,email,software,daterequired,hardware,os,budget,individual,title,students,frequency" />
+<input type=hidden name ="data_delimiter" value="^" />
+<input type=hidden name ="data_listvertical" value="" />
+
+           <div class="section text"><div class="halfSize">
+              <label for="name">Instructor Name</label>
+             <input name="name" type="text" id="last" class="name"/><span class="name-msgContainer"></span>
+          </div></div>
+          
+           <div class="section text"><div class="halfSize">
+            <label for="netid">Instructor NetID</label>
+            <input name="netid" type="text" id="netid" class="netid"/> <span class="netid-msgContainer"></span>
+		  </div></div>
+		   
+          <div class="section text"><div class="halfSize">
+              <label for="email">Instructor Email</label>
+              <input name="email" type="text" id="email" class="email"/> <span class="email-msgContainer"></span>
+		  </div></div> 
+          
+          <div class="section text"><div class="halfSize">
+            <label for="software">Software title and version</label>
+            <input name="software" type="text" id="software" class="required"/> <span class="software-msgContainer"></span>
+		  </div></div>
+		   
+	      <div class="section text"><div class="halfSize">
+            <label for="daterequired">Date required </label>
+            <input name="daterequired" type="text" id="daterequired" class="required"/> <span class="software-msgContainer"></span>
+		  </div></div>
+		  
+          <div class="section text"><div class="fullSize">
+            <label for="hardware">Are there any special hardware, disk space or network requirements needed to support the software that you are aware of?</label>            
+            <input name="hardware" type="text" disable="false" id="hardware"/> <span class="hardware-msgContainer"></span>
+		  </div></div>
+		  
+          <div class="section text"><div class="halfSize">
+            <label for="os">Do you have an operating system preference? Windows, Mac, Unix, etc.?</label>
+            <input name="os" type="text" disable="false" id="os"/> <span class="os-msgContainer"></span>
+		  </div></div>
+ 
+         <div class="section text"><div class="halfSize">    
+            <span><label for="budget">Budget line from which to fund software? (if known)</label>            
+            <input name="budget" type="text" disable="false" id="budget"/></span> <span class="budget-msgContainer"></span>
+		  </div></div>
+
+		<div class="section checkbox"><div class="fullSize">            
+            <input name="individual" type="checkbox" id="individual" onClick="toggleFields();" />
+            <label for="individual">This software is for individual faculty use, and not required for students.</label> <span class="individual-msgContainer"></span>
+		  </div></div>
+		  
+        <div class="section text"><div class="halfSize">
+            <label for="title">Course Title</label>
+            <input name="title" type="text" disable="false" id="title"/> <span class="software-msgContainer"></span>
+		  </div></div>
+		  
+          <div class="section text"><div class="fullSize">
+             <label for="students">Approximate number of students using the software, including your class and any other classes who would potentially access it.</label>
+             <input name="students" type="text" disable="false" id="students"/> <span class="students-msgContainer"></span>
+		  </div></div>
+          
+          <div class="section text"><div class="fullSize">
+             <label for="frequency">Does each student need to work at a computer in each class session? If not, how often will the software be used? (e.g., once a week for 20 person class for two semesters, all freshmen once a week)</label></div><div>
+            <input name="frequency" type="text" disable="false" id="frequency"/> <span class="frequency-msgContainer"></span>
+		  </div></div>
+	
+	         
+          <input name="date" type="hidden" id="date" />
+          <script type="text/javascript">
+        	var datetoday = new Date();
+			datetoday = datetoday.toUTCString();
+			document.getElementById("date").value = datetoday;
+          </script>
+   
+<div class="section end">
+<div class="fullSize">
+
+	<button type="submit"
+		id="submit"
+		name="submit"
+		value="Submit">Submit
+	</button>
+	<button type="reset"
+		id="reset"
+		name="reset"
+		value="Reset">Reset
+	</button>
+
+</div></div>
+
+
+          
+    </form>
+
+
+
+
+
+
+
+<!-- KJ cut and paste end -->
+
+	</div>
+
+</div></div>
+
+
+</div></div>
+
+<!--
+		<div class="section radio">
+		<div class="fullSize">
+		<p>I hereby</p>
+		<fieldset
+		<span><input name="r_action" type="radio" id="r_action" value="file" /><label for="r_action">file a pass/fail grade option for</label></span>
+		<span><input name="r_action" type="radio" id="r_action" value="revoke" /><label for="r_action">revoke a pass/fail grade option for</label></span>
+		</fieldset></div></div>
+		-->		
+			
+			
+	       <!--		
+			<div class="section checkbox"> 
+           <div class="halfSize"><label for=""></label> 
+           <select name="">
+            <option value="fall">Fall</option>
+            <option value="spring">Spring</option>
+            <option value="summer">Summer</option>
+            </select>
+            </div></div>
+            -->
+
+ 		<!--
+ 
+ 		<div class="section text"><div class="halfSize">
+		<label for="Country">Country (If Non U.S.)</label>
+		<input type="text" name="Country" size="40" />
+		</div></div>
+
+ 		-->
+ 
+<!--
+
+
+-->
+
+</body>
+
+</html>

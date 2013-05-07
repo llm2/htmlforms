@@ -1,0 +1,243 @@
+﻿<div id="formContainer">
+  <form name="newemployee" method="post" action="https://www.nyu.edu/cgi-bin/cgiwrap/llm2/formprocessorpro2.cgi" enctype="multipart/form-data" id="autoform">
+    <input type="hidden" name="base_path" value="/www/sites/nyu.edu/htdocs/pages/gallatin/intra/new-employee/">
+    <h2>Supervisor Information</h2>
+    <div class="section text">
+      <div class="halfSize">
+        <label for="r_firstname">Supervisor First Name</label>
+        <input name="r_firstname" type="text" id="r_firstname" class="name"/>
+        <span class="r_firstname-msgContainer"></span> </div>
+    </div>
+    <div class="section text">
+      <div class="halfSize">
+        <label for="r_lastname">Supervisor Last Name</label>
+        <input name="r_lastname" type="text" id="r_lastname" class="name"/>
+        <span class="r_lastname-msgContainer"></span> </div>
+    </div>
+    <div class="section email">
+      <div class="halfSize">
+        <label for="re_eMail">Supervisor Email</label>
+        <input name="re_eMail" type="text" id="re_eMail" class="email"/>
+        <span class="re_eMail-msgContainer"></span> </div>
+    </div>
+    <h2>Employee Information</h2>
+    <div class="section text">
+      <div class="halfSize">
+        <label for="r_emp-firstname">Employee First Name</label>
+        <input name="r_emp-firstname" type="text" id="r_emp-firstname" class="name"/>
+        <span class="r_emp-firstname-msgContainer"></span> </div>
+    </div>
+    <div class="section text">
+      <div class="halfSize">
+        <label for="r_emp-lastname">Employee Last Name</label>
+        <input name="r_emp-lastname" type="text" id="r_emp-lastname" />
+        <span class="r_emp-lastname-msgContainer"></span> </div>
+    </div>
+    <div class="section text">
+      <div class="halfSize">
+        <label for="r_nnumber">Employee N Number</label>
+        <input name="r_nnumber" type="text" id="r_nnumber" value="N" class="uid"/>
+        <span class="r_nnumber-msgContainer"></span> </div>
+    </div>
+    <div class="section text">
+      <div class="halfSize">
+        <label for="emp-netid">Employee NetID</label>
+        <input name="emp-netid" type="text" id="emp-netid" />
+      </div>
+    </div>
+    <div class="section text">
+      <div class="halfSize">
+        <label for="e_emp-email">Employee Email</label>
+        <input name="e_emp-email" type="text" id="e_emp-email" />
+      </div>
+    </div>
+    <div class="section text">
+      <div class="halfSize">
+        <label for="phone">Employee Extension: (if known)</label>
+        <input name="phone" type="text" id="r_phone" />
+      </div>
+    </div>
+    <div class="section text">
+      <div class="fullSize">
+        <label for="r_area">Functional Area <span style="font-style: italic">(e.g., Faculty, Student Services)</span></label>
+        <input name="r_area" type="text" id="r_area" />
+      </div>
+    </div>
+    <div class="section text">
+      <div class="halfSize">
+        <label for="r_start">Employee Start Date</label>
+        <input name="r_start" type="text" id="r_start" size="10" />
+      </div>
+    </div>
+    <input name="date" type="hidden" id="date" />
+    <script type="text/javascript">
+        	var datetoday = new Date();
+			datetoday = datetoday.toUTCString();
+			document.getElementById("date").value = datetoday;
+          </script>
+    <div class="section text">
+      <div class="halfSize">
+        <label for="r_business-cards">Business Cards</label>
+        <label>
+          <select name="r_business-cards" id="r_business-cards">
+            <option value="Order Now">Order Now</option>
+            <option value="Wait to Order">Wait to Order</option>
+          </select>
+        </label>
+      </div>
+    </div>
+    <div class="section checkbox">
+      <div class="halfSize">
+        <label for="keys"><strong>Keys</strong></label>
+        <span class="options"> <span>
+        <input name="Master" type="checkbox" id="Master" value="Master"/>
+        <label for="Master">Master (all doors) </label>
+        </span> <span>
+        <input name="Semi-Master" type="checkbox" id="Semi-Master" value="Semi-Master"/>
+        <label for="Semi-Master">Semi-master (floor entrances)</label>
+        </span> <span>
+        <input  name="Specific" type="checkbox" id="Specific" value="Specific"/>
+        <label for="Specific">Specific room keys (please specify rooms) </label>
+        <input name="specific-rooms" type="text" id="specific-rooms" size="20" />
+        </span> </span> </div>
+    </div>
+    <div class="section checkbox">
+      <div class="halfSize">
+        <label for="access"><strong>Building Access</strong></label>
+        <span class="options"> <span>
+        <input name="access-weekdays" type="checkbox" value="access-weekdays"/>
+        <label for="access-weekdays">Weekdays 8:00 a.m. to 9:00 p.m.</label>
+        </span> <span>
+        <input name="access-file-room" type="checkbox" value="access-file-room"/>
+        <label for="access-file-room">8th Floor File Room</label>
+        </span> <span>
+        <input name="access-after-hours" type="checkbox" value="access-after-hours"/>
+        <label for="access-after-hours">Weekends, After Hours, &amp; Holidays (please specify reason)</label>
+        <input name="specific-building-access" type="text"/>
+        </span> </span> </div>
+    </div>
+    <hr />
+    <div class="section checkbox">
+      <div class="fullSize">
+        <label for="long-distance"><strong>Long Distance Code</strong></label>
+        <span class="options"> <span>
+        <input name="aut-local" type="checkbox" value="aut-local"/>
+        <label for="aut-loca/">North Jersey, Connecticut, Long Island, and Westchester, 24 hours, 7 days per week</label>
+        </span> <span>
+        <input name="aut-region-m-f" type="checkbox" value="aut-region-m-f"/>
+        <label for="aut-region-m-f">US, Canada, Caribbean, M-F, 8 a.m. - 8 p.m.</label>
+        </span> <span>
+        <input name="aut-region-247"  type="checkbox" value="aut-region-247"/>
+        <label for="aut-region-247">US, Canada, Caribbean, 7 days per week</label>
+        </span> <span>
+        <input name="aut-international-m-f"  type="checkbox" value="aut-international-m-f"/>
+        <label for="aut-international-m-f">US &amp; International,  M-F 8 a.m. - 8 p.m.</label>
+        </span> <span>
+        <input name="aut-international-247" type="checkbox" value="aut-international-247"/>
+        <label for="aut-international-247">US &amp; International, 7 days 24 hours </label>
+        </span> </span> </div>
+    </div>
+    <hr />
+    <div class="section checkbox">
+      <div class="halfSize">
+        <label for="extension"><strong>Telephone Extension</strong></label>
+        <span class="options"> <span>
+        <input name="extension" type="radio" value="new"/>
+        <label for="extension">New extension needed</label>
+        </span> <span>
+        <input name="extension" type="radio" value="current"/>
+        <label for="extension">Employee should use current extension</label>
+        <input name="current-extension" type="text" id="current-extension"/>
+        </span> </span> </div>
+    </div>
+    <div class="section text">
+      <div class="halfSize">
+        <label for="appearance0">Please place appearances of the following extensions on phone</label>
+        <input name="appearance0" type="text" id="appearance0" size="6" maxlength="6" />
+        <input name="appearance1" type="text" id="appearance1" size="6" maxlength="6" />
+        <input name="appearance2" type="text" id="appearance2" size="6" maxlength="6" />
+        <input name="appearance3" type="text" id="appearance3" size="6" maxlength="6" />
+        <input name="appearance4" type="text" id="appearance4" size="6" maxlength="6" />
+        <input name="appearance5" type="text" id="appearance5" size="6" maxlength="6" />
+        <input name="appearance6" type="text" id="appearance6" size="6" maxlength="6" />
+        <input name="appearance7" type="text" id="appearance7" size="6" maxlength="6" />
+      </div>
+    </div>
+    <hr />
+    <div class="section checkbox">
+      <div class="halfSize">
+        <label for="activate-network-account">Create Gallatin Network Computer Account</label>
+        <input name="activate-network-account" type="checkbox" id="activate-network-account" value="checked" />
+      </div>
+    </div>
+    <div class="section checkbox">
+      <div class="halfSize">
+        <label for="CMS">CMS Access</label>
+        <input name="CMS" type="checkbox" id="CMS" value="checked" />
+      </div>
+    </div>
+    <hr />
+    <div class="section checkbox">
+      <div class="halfSize">
+        <label for="SIS">SIS/Albert</label>
+        <input name="SIS" type="checkbox" id="SIS" value="checked" />
+      </div>
+    </div>
+    <div class="section checkbox">
+      <div class="halfSize">
+        <label for="">Registrar Electronic Memo</label>
+        <input name="Albert" type="checkbox" id="Albert" value="checked" />
+      </div>
+    </div>
+    <hr />
+    <div class="section checkbox">
+      <div class="halfSize">
+        <label for="Brio">Student Records Reporting Dashboard</label>
+        <input name="Brio" type="checkbox" id="Brio" value="checked" />
+      </div>
+    </div>
+
+    <div class="section checkbox">
+      <div class="halfSize">
+        <label for="Email-Direct">Requires email direct submit/approve access</label>
+        <input name="Email-Direct" type="checkbox" id="Email-Direct" value="checked" />
+      </div>
+    </div>
+        <hr />
+    <div class="section checkbox">
+      <div class="halfSize">
+        <label for="access-archived-student-files">Requires access to archived student files</label>
+        <input name="access-archived-student-files" type="checkbox" id="Archived Student Files" value="checked" />
+      </div>
+    </div>
+
+    <div class="section checkbox">
+      <div class="halfSize">
+        <label for="gallatin-drive">Shared Drive Access, G: Gallatin</label>
+        <input name="gallatin-drive" type="checkbox" id="gallatin-drive" value="checked" />
+      </div>
+    </div>
+        <hr />
+    <div class="section checkbox">
+      <div class="halfSize">
+        <label for="other-drives">Shared Drive Access, Other</label>
+        <input type="checkbox" value="checked" />
+      </div>
+    </div>
+    <div class="section checkbox">
+      <input name="other-drives" type="text" id="other-drives"/>
+    </div>
+    <div class="section end">
+      <div class="fullSize">
+        <button type="submit"
+		id="submit"
+		name="submit"
+		value="Submit">Submit </button>
+        <button type="reset"
+		id="reset"
+		name="reset"
+		value="Reset">Reset </button>
+      </div>
+    </div>
+  </form>
+</div>

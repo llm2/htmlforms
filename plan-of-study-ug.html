@@ -1,0 +1,1682 @@
+
+<!--  JAVASCRIPT FOR INSTRUCTOR SEARCH -->
+<script src="/etc/designs/gallatin/scripts/glow/1.7.3/core/core.js" type="text/javascript"></script>
+<script src="/etc/designs/gallatin/scripts/glow/1.7.3/widgets/widgets.js" type="text/javascript"></script>
+<link href="/etc/designs/gallatin/scripts/glow/1.7.3/widgets/widgets.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+glow.ready(function() {
+myOpts = {
+    isMatch: function(indexedWord, inputWord) {
+	var myarray = indexedWord.split(" ");		    
+        return (
+            // match if first or last names (third name if available) begin with inputWord
+			myarray[0].indexOf(inputWord) == 0 || myarray[1].indexOf(inputWord) == 0 ||
+			(myarray[2] != null && myarray[2].indexOf(inputWord) == 0)
+        );
+    },
+    formatItem: function(item) { // underline the matched bit
+        var pat = new RegExp(glow.lang.trim(this.getValue()), 'i');
+        return item.name.replace(pat, "<u>$&<"+"/u>");
+    },
+	    onItemSelect: function(e) {
+        this.val(e.selectedItem.name); // Updates the binded HTML input element with the selected value
+		//set val for netid from myData
+		document.forms["autoform"].fac_adviser.value = e.selectedItem.email;
+    }
+
+}
+mydata = [
+	{
+		"name": "Gay Abel-Bey",
+		"email": "ga5@nyu.edu"
+	},
+	{
+		"name": "Maria-Luisa Achino-Loeb",
+		"email": "MLuisa164@aol.com"
+	},
+	{
+		"name": "Ikuko Acosta",
+		"email": "ia4@nyu.edu"
+	},
+	{
+		"name": "Cynthia Allen",
+		"email": "ca5@nyu.edu"
+	},
+	{
+		"name": "Mark Alter",
+		"email": "mma2@nyu.edu"
+	},
+	{
+		"name": "Awam Amkpa",
+		"email": "aa67@nyu.edu"
+	},
+	{
+		"name": "Vincent Anania",
+		"email": "ja43@nyu.edu"
+	},
+	{
+		"name": "Peder Anker",
+		"email": "pja7@nyu.edu"
+	},
+	{
+		"name": "Lori Antonacci",
+		"email": "la13@nyu.edu"
+	},
+	{
+		"name": "Sinan Antoon",
+		"email": "sa234@nyu.edu"
+	},
+	{
+		"name": "Daniel Banks",
+		"email": "db140@nyu.edu"
+	},
+	{
+		"name": "Cristen Beam",
+		"email": "cab18@nyu.edu"
+	},
+	{
+		"name": "Abby Bender",
+		"email": "ab177@nyu.edu"
+	},
+	{
+		"name": "Amy Bentley",
+		"email": "amy.bentley@nyu.edu"
+	},
+	{
+		"name": "Marygrace Berberian",
+		"email": "arttherapist@gmail.com"
+	},
+	{
+		"name": "Jennifer Berg",
+		"email": "jb52@nyu.edu"
+	},
+	{
+		"name": "Thomas Beyer",
+		"email": "tb69@nyu.edu"
+	},
+	{
+		"name": "Mary Bitel",
+		"email": "mcb12@nyu.edu"
+	},
+	{
+		"name": "Victoria Blythe",
+		"email": "vab3@nyu.edu"
+	},
+	{
+		"name": "Martha Bowers",
+		"email": "mb155@nyu.edu"
+	},
+	{
+		"name": "Christopher Bram",
+		"email": "cb145@nyu.edu"
+	},
+	{
+		"name": "Mosette Broderick",
+		"email": "mb15@nyu.edu"
+	},
+	{
+		"name": "Kathe Burkhart",
+		"email": "kb32@nyu.edu"
+	},
+	{
+		"name": "Christopher Cartmill",
+		"email": "cjc10@nyu.edu"
+	},
+	{
+		"name": "William Caspary",
+		"email": "wc24@nyu.edu"
+	},
+	{
+		"name": "John Castellano",
+		"email": "jc46@nyu.edu"
+	},
+	{
+		"name": "Ann Chwatsky",
+		"email": "ac31@nyu.edu"
+	},
+	{
+		"name": "Laura Ciolkowski",
+		"email": "lec5@nyu.edu"
+	},
+	{
+		"name": "Eugene Cittadino",
+		"email": "ec15@nyu.edu"
+	},
+	{
+		"name": "Nicole Cohen",
+		"email": "nlc203@nyu.edu"
+	},
+	{
+		"name": "Patricia Cohen",
+		"email": "pc76@nyu.edu"
+	},
+	{
+		"name": "Nina Cornyetz",
+		"email": "nc25@nyu.edu"
+	},
+	{
+		"name": "Marie Cruz Soto",
+		"email": "mcs11@nyu.edu"
+	},
+	{
+		"name": "Terence Culver",
+		"email": "tjc202@nyu.edu"
+	},
+	{
+		"name": "Kimberly DaCosta",
+		"email": "kad9@nyu.edu"
+	},
+	{
+		"name": "Maria Damon",
+		"email": "md1858@nyu.edu"
+	},
+	{
+		"name": "David Darts",
+		"email": "dgd2@nyu.edu"
+	},
+	{
+		"name": "Lauren Davis",
+		"email": "ld41@nyu.edu"
+	},
+	{
+		"name": "Charles Dawson",
+		"email": "cdd1@nyu.edu"
+	},
+	{
+		"name": "Jennifer Debernardis",
+		"email": "jd1159@nyu.edu"
+	},
+	{
+		"name": "Dipti Desai",
+		"email": "dd25@nyu.edu"
+	},
+	{
+		"name": "Naomi Diamant",
+		"email": "naomi.diamant@nyu.edu"
+	},
+	{
+		"name": "Martha Diaz",
+		"email": "martha.diaz@nyu.edu"
+	},
+	{
+		"name": "Hasia Diner",
+		"email": "hrd1@nyu.edu"
+	},
+	{
+		"name": "Chinnie Ding",
+
+		"email": "cd53@nyu.edu"
+	},
+	{
+		"name": "Michael Dinwiddie",
+		"email": "mdd3@nyu.edu"
+	},
+	{
+		"name": "John Donnellan",
+		"email": "john.donnellan@nyu.edu"
+	},
+	{
+		"name": "Gail Drakes",
+		"email": "gjd210@nyu.edu"
+	},
+	{
+		"name": "Stephen Duncombe",
+		"email": "sd47@nyu.edu"
+	},
+	{
+		"name": "Dana Edell",
+		"email": "de487@nyu.edu"
+	},
+	{
+		"name": "David Engel",
+		"email": "de2@nyu.edu"
+	},
+	{
+		"name": "Kathy Engel",
+		"email": "ke12@nyu.edu"
+	},
+	{
+		"name": "Gregory Erickson",
+		"email": "gte1@nyu.edu"
+	},
+	{
+		"name": "Paul Eustis",
+		"email": "pje2@nyu.edu"
+	},
+	{
+		"name": "Salvatore Fallica",
+		"email": "sjf1@nyu.edu"
+	},
+	{
+		"name": "Morwaread Farbood",
+		"email": "mmf9@nyu.edu"
+	},
+	{
+		"name": "Joellen Fisherkeller",
+		"email": "jf4@nyu.edu"
+	},
+	{
+		"name": "Sean Flahaven",
+		"email": "sf2375@nyu.edu"
+	},
+	{
+		"name": "Katherine Fleming",
+		"email": "kef1@nyu.edu"
+	},
+	{
+		"name": "June Foley",
+		"email": "jaf3@nyu.edu"
+	},
+	{
+		"name": "Valerie Forman",
+		"email": "vf20@nyu.edu"
+	},
+	{
+		"name": "Paul Fotsch",
+		"email": "pmf5@nyu.edu"
+	},
+	{
+		"name": "Hallie Franks",
+		"email": "hmf2@nyu.edu"
+	},
+	{
+		"name": "Rosalind C Fredericks",
+		"email": "rcf2@nyu.edu"
+	},
+	{
+		"name": "Lise Friedman",
+		"email": "lef3@nyu.edu"
+	},
+	{
+		"name": "Sharon Friedman",
+		"email": "sf2@nyu.edu"
+	},
+	{
+		"name": "Josephine Gear",
+		"email": "jg34@nyu.edu"
+	},
+	{
+		"name": "Paul Geluso",
+		"email": "pg17@nyu.edu"
+	},
+	{
+		"name": "Laurel George",
+		"email": "lbg2@nyu.edu"
+	},
+	{
+		"name": "Carol Gilligan",
+		"email": "carol.gilligan@nyu.edu"
+	},
+	{
+		"name": "Lisa Goldfarb",
+		"email": "lg3@nyu.edu"
+	},
+	{
+		"name": "Andrew Goldman",
+		"email": "amg210@nyu.edu"
+	},
+	{
+		"name": "Ricki Goldman",
+		"email": "rg107@nyu.edu"
+	},
+	{
+		"name": "Donna Goodman",
+		"email": "djg3@nyu.edu"
+	},
+	{
+		"name": "Margaret Gormley",
+		"email": "mg184@nyu.edu"
+	},
+	{
+		"name": "Jeffrey Green",
+		"email": "jdg240@nyu.edu"
+	},
+	{
+		"name": "Judith Greenberg",
+		"email": "jag17@nyu.edu"
+	},
+	{
+		"name": "Hannah Gurman",
+		"email": "hrg2@nyu.edu"
+	},
+	{
+		"name": "Sally Guttmacher",
+		"email": "sg2@nyu.edu"
+	},
+	{
+		"name": "Cathy Hajo",
+		"email": "cm18@nyu.edu"
+	},
+	{
+		"name": "Rahul Hamid",
+		"email": "rh388@nyu.edu"
+	},
+	{
+		"name": "Ethan Harkness",
+		"email": "eh82@nyu.edu"
+	},
+	{
+		"name": "Louise Harpman",
+		"email": "ljh250@nyu.edu"
+	},
+	{
+		"name": "Lanny Harrison",
+		"email": "lannyh@earthlink.net"
+	},
+	{
+		"name": "Radha Hegde",
+		"email": "rsh4@nyu.edu"
+	},
+	{
+		"name": "Richard Hendler",
+		"email": "rmh1@nyu.edu"
+	},
+	{
+		"name": "Scott Hightower",
+		"email": "sh25@nyu.edu"
+	},
+	{
+		"name": "Thomas Hill",
+		"email": "th334@nyu.edu"
+	},
+	{
+		"name": "Christopher Hoadley",
+		"email": "ch97@nyu.edu"
+	},
+	{
+		"name": "Elizabeth Hoffman",
+		"email": "eh37@nyu.edu"
+	},
+	{
+		"name": "Kristin Holcomb",
+		"email": "kh17@nyu.edu"
+	},
+	{
+		"name": "Justin Holt",
+		"email": "jh129@nyu.edu"
+	},
+	{
+		"name": "Karen Hornick",
+		"email": "kah3@nyu.edu"
+	},
+	{
+		"name": "Kristin Horton",
+		"email": "kdh4@nyu.edu"
+	},
+	{
+		"name": "Amy Huber",
+		"email": "abh5@nyu.edu"
+	},
+	{
+		"name": "Robert Huddleston",
+		"email": "rh99@nyu.edu"
+	},
+	{
+		"name": "Steven Hutkins",
+		"email": "ssh1@nyu.edu"
+	},
+	{
+		"name": "Thomas Igoe",
+		"email": "ti8@nyu.edu"
+	},
+	{
+		"name": "Myles Jackson",
+		"email": "mwj214@nyu.edu"
+	},
+	{
+		"name": "Colin Jerolmack",
+		"email": "jerolmack@nyu.edu"
+	},
+	{
+		"name": "Mitchell W Joachim",
+		"email": "mwj3@nyu.edu"
+	},
+	{
+		"name": "Zoran Josipovic",
+		"email": "zoran@nyu.edu"
+	},
+	{
+		"name": "Lauren Kaminsky",
+		"email": "lok200@nyu.edu"
+	},
+	{
+		"name": "Nina Katchadourian",
+		"email": "nk50@nyu.edu"
+	},
+	{
+		"name": "Bertram Katz",
+		"email": "bsk1@nyu.edu"
+	},
+	{
+		"name": "Jill Kickul",
+		"email": "jk126@nyu.edu"
+	},
+	{
+		"name": "David King",
+		"email": "dmk6@nyu.edu"
+	},
+	{
+		"name": "David Kirkland",
+		"email": "dk64@nyu.edu"
+	},
+	{
+		"name": "Perri Klass",
+		"email": "pek1@nyu.edu"
+	},
+	{
+		"name": "Scott Korb",
+		"email": "smk21@nyu.edu"
+	},
+	{
+		"name": "Susan Landgraf",
+		"email": "scl1@nyu.edu"
+	},
+	{
+		"name": "Sandra Lang",
+		"email": "sl65@nyu.edu"
+	},
+	{
+		"name": "Frank Lantz",
+		"email": "frank.lantz@nyu.edu"
+	},
+	{
+		"name": "Antonio Lauria-Perricelli",
+		"email": "al71@nyu.edu"
+	},
+	{
+		"name": "Patricia Lennox",
+		"email": "pl35@nyu.edu"
+	},
+	{
+		"name": "Bradley Lewis",
+		"email": "bl466@nyu.edu"
+	},
+	{
+		"name": "Andrew Libby",
+		"email": "al260@nyu.edu"
+	},
+	{
+		"name": "Alvin Lieberman",
+		"email": "al26@nyu.edu"
+	},
+	{
+		"name": "Peter Lucas",
+		"email": "pl29@nyu.edu"
+	},
+	{
+		"name": "Moya Luckett",
+		"email": "ml122@nyu.edu"
+	},
+	{
+		"name": "Ritty Lukose",
+		"email": "ral13@nyu.edu"
+	},
+	{
+		"name": "Julie Malnig",
+		"email": "jmm2@nyu.edu"
+	},
+	{
+		"name": "Patrick McCreery",
+		"email": "pgm3@nyu.edu"
+
+	},
+	{
+		"name": "Evelyn Mcveigh",
+		"email": "em1@nyu.edu"
+	},
+	{
+		"name": "Haley Mellin",
+		"email": "haley.mellin.nyu@gmail.com"
+	},
+	{
+		"name": "Edward Melnick",
+		"email": "elm1@nyu.edu"
+	},
+	{
+		"name": "Eve Meltzer",
+		"email": "em113@nyu.edu"
+	},
+	{
+		"name": "Keith Miller",
+		"email": "km96@nyu.edu"
+	},
+	{
+		"name": "Bella Mirabella",
+		"email": "mm11@nyu.edu"
+	},
+	{
+		"name": "Ali Mirsepassi",
+		"email": "am128@nyu.edu"
+	},
+	{
+		"name": "Meleko Mokgosi",
+		"email": "meleko.mokgosi@gmail.com"
+	},
+	{
+		"name": "David Montgomery",
+		"email": "dm635@nyu.edu"
+	},
+	{
+		"name": "David Moore",
+		"email": "dm2@nyu.edu"
+	},
+	{
+		"name": "Ann Morning",
+		"email": "ann.morning@nyu.edu"
+	},
+	{
+		"name": "Sara Murphy",
+		"email": "sem2@nyu.edu"
+	},
+	{
+		"name": "Meera Nair",
+		"email": "meeran77@hotmail.com"
+	},
+	{
+		"name": "Meera Nair",
+		"email": "mn379@nyu.edu"
+	},
+	{
+		"name": "Sunder Narayanan",
+		"email": "sn15@nyu.edu"
+	},
+	{
+		"name": "Chitra Neogy",
+		"email": "cn23@nyu.edu"
+	},
+	{
+		"name": "Vasuki Nesiah",
+		"email": "vn10@nyu.edu"
+	},
+	{
+		"name": "Donna Nevel",
+		"email": "dn35@nyu.edu"
+	},
+	{
+		"name": "Pedro Noguera",
+		"email": "pan6@nyu.edu"
+	},
+	{
+		"name": "Bridget O'Connor",
+		"email": "bno1@nyu.edu"
+	},
+	{
+		"name": "Lissette Olivares",
+		"email": "lto208@nyu.edu"
+	},
+	{
+		"name": "Michael Oppenheimer",
+		"email": "mo41@nyu.edu"
+	},
+	{
+		"name": "Despina Papadopoulos",
+		"email": "dp9@nyu.edu"
+	},
+	{
+		"name": "Shireen Patell",
+		"email": "shireen.patell@nyu.edu"
+	},
+	{
+		"name": "Jessica Pearson",
+		"email": "pearsj02@nyu.edu"
+	},
+	{
+		"name": "Jose Perillan",
+		"email": "jgp10@nyu.edu"
+	},
+	{
+		"name": "Marianne Petit",
+		"email": "mp51@nyu.edu"
+	},
+	{
+		"name": "Amanda Petrusich",
+		"email": "akp220@nyu.edu"
+	},
+	{
+		"name": "Kimberly Phillips-Fein",
+		"email": "kpf2@nyu.edu"
+	},
+	{
+		"name": "Stacy Pies",
+		"email": "sep1@nyu.edu"
+	},
+	{
+		"name": "Domingo Pinero",
+		"email": "dp67@nyu.edu"
+	},
+	{
+		"name": "Rene Poitevin",
+		"email": "rfp2@nyu.edu"
+	},
+	{
+		"name": "Millery Polyne",
+		"email": "mp993@nyu.edu"
+	},
+	{
+		"name": "Kathryn Posin",
+		"email": "kop2001@nyu.edu"
+	},
+	{
+		"name": "J Powell",
+		"email": "jrp6@nyu.edu"
+	},
+	{
+		"name": "Myisha Priest",
+		"email": "mtp5@nyu.edu"
+	},
+	{
+		"name": "David Purcell",
+		"email": "dp55@nyu.edu"
+	},
+	{
+		"name": "Laurin Raiken",
+		"email": "lr2@nyu.edu"
+	},
+	{
+		"name": "Peter Rajsingh",
+		"email": "pr9@nyu.edu"
+	},
+	{
+		"name": "William Rayner",
+		"email": "wsr1@nyu.edu"
+	},
+	{
+		"name": "Mark Read",
+		"email": "mr105@nyu.edu"
+	},
+	{
+		"name": "Patrick Reed",
+		"email": "pr13@nyu.edu"
+	},
+	{
+		"name": "Jo Rees",
+		"email": "jorees@mac.com"
+	},
+	{
+		"name": "Mario Rizzo",
+		"email": "mario.rizzo@nyu.edu"
+	},
+	{
+		"name": "Lee Robbins",
+		"email": "lr33@nyu.edu"
+	},
+	{
+		"name": "Erica Robles",
+		"email": "ear8@nyu.edu"
+	},
+	{
+		"name": "Victor Rodwin",
+		"email": "vr2@nyu.edu"
+	},
+	{
+		"name": "Andrew J Romig",
+		"email": "ajr6@nyu.edu"
+	},
+	{
+		"name": "Barnaby Ruhe",
+		"email": "br18@nyu.edu"
+	},
+	{
+		"name": "Marcella Runell",
+		"email": "mer215@nyu.edu"
+	},
+	{
+		"name": "Antonio Rutigliano",
+		"email": "ar31@nyu.edu"
+	},
+	{
+		"name": "Joseph Salvatore",
+		"email": "js1655@nyu.edu"
+	},
+	{
+		"name": "Phil Sanders",
+		"email": "ps@thing.net"
+	},
+	{
+		"name": "Laszlo Santha",
+		"email": "ls71@nyu.edu"
+	},
+	{
+		"name": "Leslie Satin",
+		"email": "ls33@nyu.edu"
+	},
+	{
+		"name": "Eugene Secunda",
+		"email": "es38@nyu.edu"
+	},
+	{
+		"name": "Dennis Shasha",
+		"email": "des1@nyu.edu"
+	},
+	{
+		"name": "Lytle Shaw",
+		"email": "lds2@nyu.edu"
+	},
+	{
+		"name": "George Shulman",
+		"email": "gms1@nyu.edu"
+	},
+	{
+		"name": "Laura Slatkin",
+		"email": "ls104@nyu.edu"
+	},
+	{
+		"name": "Aviva Slesin",
+		"email": "as3683@nyu.edu"
+	},
+	{
+		"name": "Judith Sloan",
+		"email": "jls9@nyu.edu"
+	},
+	{
+		"name": "Paul Smoke",
+		"email": "ps42@nyu.edu"
+	},
+	{
+		"name": "Anthony Spanakos",
+		"email": "aps233@nyu.edu"
+	},
+	{
+		"name": "Matthew Stanley",
+		"email": "ms5100@nyu.edu"
+	},
+	{
+		"name": "Tim Starnes",
+		"email": "tjs236@nyu.edu"
+	},
+	{
+		"name": "Benjamin Steinfeld",
+		"email": "bs97@nyu.edu"
+	},
+	{
+		"name": "Kristi Steinmetz",
+		"email": "kms5@nyu.edu"
+	},
+	{
+		"name": "Diana Taylor",
+		"email": "dt7@nyu.edu"
+	},
+	{
+		"name": "John (Jack) Tchen",
+		"email": "jkt1@nyu.edu"
+	},
+	{
+		"name": "Paul Thaler",
+		"email": "pet1@nyu.edu"
+	},
+	{
+		"name": "Meredith Leigh Theeman",
+		"email": "mlt8@nyu.edu"
+	},
+	{
+		"name": "Joseph Thometz",
+		"email": "jthometz@nyu.edu"
+	},
+	{
+		"name": "Paul Thompson",
+		"email": "pt9@nyu.edu"
+	},
+	{
+		"name": "Selma Thompson",
+		"email": "st35@nyu.edu"
+	},
+	{
+		"name": "Jeanette Nguyen Tran",
+		"email": "jnt3@nyu.edu"
+	},
+	{
+		"name": "Yevgeniya Traps",
+		"email": "yt21@nyu.edu"
+	},
+	{
+		"name": "Christopher Trogan",
+		"email": "ct36@nyu.edu"
+	},
+	{
+		"name": "Diana Turk",
+		"email": "dt23@nyu.edu"
+	},
+	{
+		"name": "Tom Tyler",
+		"email": "trt1@nyu.edu"
+	},
+	{
+		"name": "Jane Tylus",
+		"email": "jt76@nyu.edu"
+	},
+	{
+		"name": "Vasu Varadhan",
+		"email": "vv2@nyu.edu"
+	},
+	{
+		"name": "Alejandro Velasco",
+		"email": "av48@nyu.edu"
+	},
+	{
+		"name": "Eugene Vydrin",
+		"email": "ev247@nyu.edu"
+	},
+	{
+		"name": "E White",
+		"email": "efw2@nyu.edu"
+	},
+	{
+		"name": "Deborah Willis",
+		"email": "dw37@nyu.edu"
+	},
+	{
+		"name": "Susanne Wofford",
+		"email": "slw13@nyu.edu"
+	},
+	{
+		"name": "Laurie A Woodard",
+		"email": "law12@nyu.edu"
+	},
+	{
+		"name": "Marilyn Young",
+		"email": "my1@nyu.edu"
+	}
+];
+
+/*var suggest = new glow.widgets.AutoSuggest(
+    "#adviser2",  // HTML input element to bind the AutoSuggest to
+	//'http://gallatin.nyu.edu/content/gallatin/en/utilities/profilejsonlist.json',
+    mydata,         // refers to a Data Source or URL that returns JSON array
+	myOpts			// optional functions
+).loadData();
+*/
+
+var suggest = new glow.widgets.AutoSuggest(
+    "#adviser",  // HTML input element to bind the AutoSuggest to
+	mydata,
+    //"http://gallatin.nyu.edu/content/gallatin/en/utilities/profilelistjsonpage.html?type=faculty&instructor=true",         // refers to a Data Source or URL that returns JSON array
+	myOpts			// optional functions
+).loadData();
+
+
+});
+</script>
+<!-- END JS FOR INSTRUCTOR SEARCH -->
+
+<div id="formhermes">
+  <div id="formContainer">
+    <form class="autoform" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/43" method="post" id="autoform" accept-charset="UTF-8">
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[first_name]">First Name </label>
+          <input type="text" id="submitted[first_name]" name="submitted[first_name]" size="60" maxlength="128" class="name" />
+          <span class="first_name-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[last_name]">Last Name </label>
+          <input type="text" id="submitted[last_name]" name="submitted[last_name]" size="60" maxlength="128" class="name" />
+          <span class="last_name-msgContainer"></span></div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[netid]">Net ID </label>
+          <input type="text" id="submitted[netid]" name="submitted[netid]" size="60" maxlength="128" class="netid" />
+          <span class="netid-msgContainer"></span></div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[uid]">University ID </label>
+          <input type="text" id="submitted[uid]" name="submitted[uid]" size="60" maxlength="128" class="uid" value="N"/>
+          <span class="uid-msgContainer"></span></div>
+      </div>
+      
+<!--      <div class="section text">
+        <div class="fullSize">
+          <label for="submitted[street_address]">Street Address </label>
+          <input type="text" id="submitted[street_address]" name="submitted[street_address]" size="60" maxlength="128"/>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[city]">City </label>
+          <input type="text" id="submitted[city]" name="submitted[city]" size="60" maxlength="128"/>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="quarterSize">
+          <label for="submitted[state]">State </label>
+          <select name="submitted[state]" id="submitted[state]">
+            <option value="">Select One</option>
+            <optgroup label="Canadian Provinces">
+            <option value="AB">Alberta</option>
+            <option value="BC">British Columbia</option>
+            <option value="MB">Manitoba</option>
+            <option value="NB">New Brunswick</option>
+            <option value="NF">Newfoundland</option>
+            <option value="NT">Northwest Territories</option>
+            <option value="NS">Nova Scotia</option>
+            <option value="NU">Nunavut</option>
+            <option value="ON">Ontario</option>
+            <option value="PE">Prince Edward Island</option>
+            <option value="QC">Quebec</option>
+            <option value="SK">Saskatchewan</option>
+            <option value="YT">Yukon Territory</option>
+            </optgroup>
+            <optgroup label="U.S. States">
+            <option value="AK">Alaska</option>
+            <option value="AL">Alabama</option>
+            <option value="AR">Arkansas</option>
+            <option value="AZ">Arizona</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DC">District of Columbia</option>
+            <option value="DE">Delaware</option>
+            <option value="FL">Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="IA">Iowa</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MD">Maryland</option>
+            <option value="ME">Maine</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MO">Missouri</option>
+            <option value="MS">Mississippi</option>
+            <option value="MT">Montana</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="NE">Nebraska</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="NV">Nevada</option>
+            <option value="NY">New York</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="PR">Puerto Rico</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tennessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VA">Virginia</option>
+            <option value="VT">Vermont</option>
+            <option value="WA">Washington</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WV">West Virginia</option>
+            <option value="WY">Wyoming</option>
+            </optgroup>
+          </select>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="quarterSize">
+          <label for="submitted[zip]">Zip/Postal Code </label>
+          <input type="text" id="submitted[zip]" name="submitted[zip]" size="60" maxlength="128"/>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[country]">Country </label>
+          <select name="submitted[country]">
+            <option value="">Select One</option>
+            <option value="AF">Afghanistan</option>
+            <option value="AL">Albania</option>
+            <option value="DZ">Algeria</option>
+            <option value="AS">American Samoa</option>
+            <option value="AD">Andorra</option>
+            <option value="AO">Angola</option>
+            <option value="AI">Anguilla</option>
+            <option value="AQ">Antarctica</option>
+            <option value="AG">Antigua And Barbuda</option>
+            <option value="AR">Argentina</option>
+            <option value="AM">Armenia</option>
+            <option value="AW">Aruba</option>
+            <option value="AU">Australia</option>
+            <option value="AT">Austria</option>
+            <option value="AZ">Azerbaijan</option>
+            <option value="BS">Bahamas</option>
+            <option value="BH">Bahrain</option>
+            <option value="BD">Bangladesh</option>
+            <option value="BB">Barbados</option>
+            <option value="BY">Belarus</option>
+            <option value="BE">Belgium</option>
+            <option value="BZ">Belize</option>
+            <option value="BJ">Benin</option>
+            <option value="BM">Bermuda</option>
+            <option value="BT">Bhutan</option>
+            <option value="BO">Bolivia</option>
+            <option value="BA">Bosnia And Herzegowina</option>
+            <option value="BW">Botswana</option>
+            <option value="BV">Bouvet Island</option>
+            <option value="BR">Brazil</option>
+            <option value="IO">British Indian Ocean Territory</option>
+            <option value="BN">Brunei Darussalam</option>
+            <option value="BG">Bulgaria</option>
+            <option value="BF">Burkina Faso</option>
+            <option value="BI">Burundi</option>
+            <option value="KH">Cambodia</option>
+            <option value="CM">Cameroon</option>
+            <option value="CA">Canada</option>
+            <option value="CV">Cape Verde</option>
+            <option value="KY">Cayman Islands</option>
+            <option value="CF">Central African Republic</option>
+            <option value="TD">Chad</option>
+            <option value="CL">Chile</option>
+            <option value="CN">China</option>
+            <option value="CX">Christmas Island</option>
+            <option value="CC">Cocos (Keeling) Islands</option>
+            <option value="CO">Colombia</option>
+            <option value="KM">Comoros</option>
+            <option value="CG">Congo</option>
+            <option value="CK">Cook Islands</option>
+            <option value="CR">Costa Rica</option>
+            <option value="CI">Cote D'Ivoire</option>
+            <option value="HR">Croatia (Local Name: Hrvatska)</option>
+            <option value="CU">Cuba</option>
+            <option value="CY">Cyprus</option>
+            <option value="CZ">Czech Republic</option>
+            <option value="DK">Denmark</option>
+            <option value="DJ">Djibouti</option>
+            <option value="DM">Dominica</option>
+            <option value="DO">Dominican Republic</option>
+            <option value="TP">East Timor</option>
+            <option value="EC">Ecuador</option>
+            <option value="EG">Egypt</option>
+            <option value="SV">El Salvador</option>
+            <option value="GQ">Equatorial Guinea</option>
+            <option value="ER">Eritrea</option>
+            <option value="EE">Estonia</option>
+            <option value="ET">Ethiopia</option>
+            <option value="FK">Falkland Islands (Malvinas)</option>
+            <option value="FO">Faroe Islands</option>
+            <option value="FJ">Fiji</option>
+            <option value="FI">Finland</option>
+            <option value="FR">France</option>
+            <option value="GF">French Guiana</option>
+            <option value="PF">French Polynesia</option>
+            <option value="TF">French Southern Territories</option>
+            <option value="GA">Gabon</option>
+            <option value="GM">Gambia</option>
+            <option value="GE">Georgia</option>
+            <option value="DE">Germany</option>
+            <option value="GH">Ghana</option>
+            <option value="GI">Gibraltar</option>
+            <option value="GR">Greece</option>
+            <option value="GL">Greenland</option>
+            <option value="GD">Grenada</option>
+            <option value="GP">Guadeloupe</option>
+            <option value="GU">Guam</option>
+            <option value="GT">Guatemala</option>
+            <option value="GN">Guinea</option>
+            <option value="GW">Guinea-Bissau</option>
+            <option value="GY">Guyana</option>
+            <option value="HT">Haiti</option>
+            <option value="HM">Heard And Mc Donald Islands</option>
+            <option value="VA">Holy See (Vatican City State)</option>
+            <option value="HN">Honduras</option>
+            <option value="HK">Hong Kong</option>
+            <option value="HU">Hungary</option>
+            <option value="IS">Icel And</option>
+            <option value="IN">India</option>
+            <option value="ID">Indonesia</option>
+            <option value="IR">Iran (Islamic Republic Of)</option>
+            <option value="IQ">Iraq</option>
+            <option value="IE">Ireland</option>
+            <option value="IL">Israel</option>
+            <option value="IT">Italy</option>
+            <option value="JM">Jamaica</option>
+            <option value="JP">Japan</option>
+            <option value="JO">Jordan</option>
+            <option value="KZ">Kazakhstan</option>
+            <option value="KE">Kenya</option>
+            <option value="KI">Kiribati</option>
+            <option value="KP">Korea, Dem People'S Republic</option>
+            <option value="KR">Korea, Republic Of</option>
+            <option value="KW">Kuwait</option>
+            <option value="KG">Kyrgyzstan</option>
+            <option value="LA">Lao People'S Dem Republic</option>
+            <option value="LV">Latvia</option>
+            <option value="LB">Lebanon</option>
+            <option value="LS">Lesotho</option>
+            <option value="LR">Liberia</option>
+            <option value="LY">Libyan Arab Jamahiriya</option>
+            <option value="LI">Liechtenstein</option>
+            <option value="LT">Lithuania</option>
+            <option value="LU">Luxembourg</option>
+            <option value="MO">Macau</option>
+            <option value="MK">Macedonia</option>
+            <option value="MG">Madagascar</option>
+            <option value="MW">Malawi</option>
+            <option value="MY">Malaysia</option>
+            <option value="MV">Maldives</option>
+            <option value="ML">Mali</option>
+            <option value="MT">Malta</option>
+            <option value="MH">Marshall Islands</option>
+            <option value="MQ">Martinique</option>
+            <option value="MR">Mauritania</option>
+            <option value="MU">Mauritius</option>
+            <option value="YT">Mayotte</option>
+            <option value="MX">Mexico</option>
+            <option value="FM">Micronesia, Federated States</option>
+            <option value="MD">Moldova, Republic Of</option>
+            <option value="MC">Monaco</option>
+            <option value="MN">Mongolia</option>
+            <option value="MS">Montserrat</option>
+            <option value="MA">Morocco</option>
+            <option value="MZ">Mozambique</option>
+            <option value="MM">Myanmar</option>
+            <option value="NA">Namibia</option>
+            <option value="NR">Nauru</option>
+            <option value="NP">Nepal</option>
+            <option value="NL">Netherlands</option>
+            <option value="AN">Netherlands Ant Illes</option>
+            <option value="NC">New Caledonia</option>
+            <option value="NZ">New Zealand</option>
+            <option value="NI">Nicaragua</option>
+            <option value="NE">Niger</option>
+            <option value="NG">Nigeria</option>
+            <option value="NU">Niue</option>
+            <option value="NF">Norfolk Island</option>
+            <option value="MP">Northern Mariana Islands</option>
+            <option value="NO">Norway</option>
+            <option value="OM">Oman</option>
+            <option value="PK">Pakistan</option>
+            <option value="PW">Palau</option>
+            <option value="PA">Panama</option>
+            <option value="PG">Papua New Guinea</option>
+            <option value="PY">Paraguay</option>
+            <option value="PE">Peru</option>
+            <option value="PH">Philippines</option>
+            <option value="PN">Pitcairn</option>
+            <option value="PL">Poland</option>
+            <option value="PT">Portugal</option>
+            <option value="PR">Puerto Rico</option>
+            <option value="QA">Qatar</option>
+            <option value="RE">Reunion</option>
+            <option value="RO">Romania</option>
+            <option value="RU">Russian Federation</option>
+            <option value="RW">Rwanda</option>
+            <option value="KN">Saint K Itts And Nevis</option>
+            <option value="LC">Saint Lucia</option>
+            <option value="VC">Saint Vincent, The Grenadines</option>
+            <option value="WS">Samoa</option>
+            <option value="SM">San Marino</option>
+            <option value="ST">Sao Tome And Principe</option>
+            <option value="SA">Saudi Arabia</option>
+            <option value="SN">Senegal</option>
+            <option value="SC">Seychelles</option>
+            <option value="SL">Sierra Leone</option>
+            <option value="SG">Singapore</option>
+            <option value="SK">Slovakia (Slovak Republic)</option>
+            <option value="SI">Slovenia</option>
+            <option value="SB">Solomon Islands</option>
+            <option value="SO">Somalia</option>
+            <option value="ZA">South Africa</option>
+            <option value="GS">South Georgia , S Sandwich Is.</option>
+            <option value="ES">Spain</option>
+            <option value="LK">Sri Lanka</option>
+            <option value="SH">St. Helena</option>
+            <option value="PM">St. Pierre And Miquelon</option>
+            <option value="SD">Sudan</option>
+            <option value="SR">Suriname</option>
+            <option value="SJ">Svalbard, Jan Mayen Islands</option>
+            <option value="SZ">Swaziland</option>
+            <option value="SE">Sweden</option>
+            <option value="CH">Switzerland</option>
+            <option value="SY">Syrian Arab Republic</option>
+            <option value="TW">Taiwan</option>
+            <option value="TJ">Tajikistan</option>
+            <option value="TZ">Tanzania, United Republic Of</option>
+            <option value="TH">Thailand</option>
+            <option value="TG">Togo</option>
+            <option value="TK">Tokelau</option>
+            <option value="TO">Tonga</option>
+            <option value="TT">Trinidad And Tobago</option>
+            <option value="TN">Tunisia</option>
+            <option value="TR">Turkey</option>
+            <option value="TM">Turkmenistan</option>
+            <option value="TC">Turks And Caicos Islands</option>
+            <option value="TV">Tuvalu</option>
+            <option value="UG">Uganda</option>
+            <option value="UA">Ukraine</option>
+            <option value="AE">United Arab Emirates</option>
+            <option value="GB">United Kingdom</option>
+            <option value="US" selected="selected">United States</option>
+            <option value="UM">United States Minor Is.</option>
+            <option value="UY">Uruguay</option>
+            <option value="UZ">Uzbekistan</option>
+            <option value="VU">Vanuatu</option>
+            <option value="VE">Venezuela</option>
+            <option value="VN">Viet Nam</option>
+            <option value="VG">Virgin Islands (British)</option>
+            <option value="VI">Virgin Islands (U.S.)</option>
+            <option value="WF">Wallis And Futuna Islands</option>
+            <option value="EH">Western Sahara</option>
+            <option value="YE">Yemen</option>
+            <option value="YU">Yugoslavia</option>
+            <option value="ZR">Zaire</option>
+            <option value="ZM">Zambia</option>
+            <option value="ZW">Zimbabwe</option>
+          </select>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[phone]">Phone </label>
+          <input type="text" id="submitted[phone]" name="submitted[phone]" size="60" maxlength="128" />
+        </div>
+      </div>
+      -->
+            <div class="section checkbox">
+        <div class="halfSize">
+          <label for="submitted[semester]">Semester of Registration </label>
+          <select id="submitted[semester]" name="submitted[semester]" class="requiredselect">
+            <option>Fall</option>
+            <option>Spring</option>
+            <option>Winter/January</option>
+            <option>Summer</option>
+          </select>
+          <span class="semester-msgContainer"></span> </div>
+      </div>
+      <div class="section checkbox">
+        <div class="halfSize">
+          <label for="submitted[year]">Year of Registration </label>
+          <select id="submitted[year]" name="submitted[year]" class="requiredselect">
+            <option>2013</option>
+            <option>2014</option>
+            <option>2015</option>
+            <option>2016</option>
+            <option>2017</option>
+            <option>2018</option>
+            <option>2019</option>
+            <option>2020</option>
+          </select>
+          <span class="year-msgContainer"></span></div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[expected_graduation_month]">Expected Graduation Month </label>
+          <select id="submitted[expected_graduation_month]" name="submitted[expected_graduation_month]" class="requiredselect">
+            <option>January</option>
+            <option selected="selected">May</option>
+            <option>September</option>
+          </select>
+          <span class="expected_graduation_month-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[expected_graduation_year]">Expected Graduation Year </label>
+          <select id="submitted[expected_graduation_year]" name="submitted[expected_graduation_year]" class="requiredselect">
+            <option>2013</option>
+            <option>2014</option>
+            <option>2015</option>
+            <option>2016</option>
+            <option>2017</option>
+            <option>2018</option>
+            <option>2019</option>
+            <option>2020</option>
+          </select>
+          <span class="expected_graduation_year-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="fullSize">
+          <label for="submitted[goals]">Goals </label><p>What are your academic goals for this semester?  What do you hope to accomplish before you graduate?</p>
+          <textarea id="submitted[goals]" name="submitted[goals]" cols="60" rows="5" class="required"></textarea>
+          <span class="goals-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="fullSize">
+          <label for="submitted[interests]">Interests and Concentration </label><p>What is your area of concentration?  Have you written your IAPC?  Have you declared a minor if you intend to do so?</p>
+          <textarea id="submitted[interests]" name="submitted[interests]" cols="60" rows="5" class="required"></textarea>
+          <span class="interests-msgContainer"></span> </div>
+      </div>
+            <div class="section text">
+        <div class="fullSize">
+          <label for="submitted[progress_and_change]">Progress and Change </label><p>What have you done over the past semester to help realize the goals described above? In what ways have your interests, goals, and plans changed since you wrote the plan of study last semester?</p>
+          <textarea id="submitted[progress_and_change]" name="submitted[progress_and_change]" cols="60" rows="5" class="required"></textarea>
+          <span class="progress_and_change-msgContainer"></span> </div>
+      </div>
+      
+            <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[unitsprogress]">Units in Progress </label>
+          <input type="text" id="submitted[unitsprogress]" name="submitted[unitsprogress]" size="60" maxlength="128"/>
+        </div>
+      </div>
+      
+            <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[unitsearned]">Total Earned Units </label>
+          <input type="text" id="submitted[unitsearned]" name="submitted[unitsearned]" size="60" maxlength="128"/>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="adviser">Adviser Name </label>
+          <input type="text" name="submitted[adviser]" id="adviser"  class="name"/><p>(Start typing the name, then choose from the list.)</p>
+          <span class="adviser-msgContainer"></span> </div>
+      </div>   
+	<div class="section text">
+        <div class="halfSize">
+          <label for="fac_adviser">Adviser E-mail</label>
+          <input type="text" name="submitted[fac_adviser]" id="fac_adviser"  class="email"/>
+          <span class="fac_adviser-msgContainer"></span> </div>
+      </div>      
+            <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[class_adviser]">Class Adviser</label>
+          <select name="submitted[class_adviser]" id="submitted[class_adviser]"  class="requiredselect">
+            <option value="">Select One</option>
+            <option value="rahul.hamid@nyu.edu">Rahul Hamid (First-Year)</option>
+            <option value="gail.drakes@nyu.edu">Gail Drakes (Sophomore)</option>
+            <option value="mag19@nyu.edu">Matthew Gregory (Junior)</option>
+            <option value="meredith.theeman@nyu.edu">Meredith Theeman (Senior)</option>
+            <option value="jeanette.tran@nyu.edu">Jeanette Tran (Transfer)</option>
+          </select>
+          <span class="class_adviser-msgContainer"></span> </div>
+      </div>
+      
+      <hr />
+      <div class="text"><h2>Registration restrictions<br>
+</h2>
+
+<h3>School of Continuing and Professional Studies Restriction (SCPS)<br>
+</h3>
+<p>Gallatin students are not permitted to receive degree credit for certain courses in SCPS. The course code for these courses contains “- UC”.  Please review<a href="/content/gallatin/en/academics/undergraduate/universitycourses/academic-departments.html#tripleBox_nyurichtext_6">list of the SCPS courses</a> that Gallatin students can take for credit. Students will not be given credit for any SCPS online courses.
+</p>
+<h3>The Liberal Studies Program (LSP)</h3>
+<p>After matriculation at Gallatin students are not permitted to receive degree credit for LSP courses. The course code for these courses contains “- UF” (formerly prefixed with “T”).</p>
+<h3>Business courses</h3>
+<p>No more than 31 credits in business courses can count towards the Gallatin degree. This includes courses in the Stern School, the McGhee Division in the School of Continuing and Professional Studies, and those transferred from other colleges and universities. <br>
+</p>
+<h3>Maintaining Matriculation</h3>
+<p>Students may maintain matriculation by fee for a maximum of 4 semesters during<br>
+their academic career, but for no more than two consecutive semesters.<br>
+</p>
+</div>
+      
+      <h2>Course Selections</h2>
+
+      <p><strong>Example</strong> (permission numbers are not required for all courses)</p>
+      <div class="section text">
+        <div class="quarterSize">
+          <label for="course_ex">Course/Section No.</label>
+          <input type="text" id="course_ex" name="course_ex" size="30" maxlength="128" value="IDSEM-UG 1250" disabled="disabled"/>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <label for="class_ex">Class No. </label>
+          <input type="text" id="class_ex" name="class_ex" size="60" maxlength="128"  value="1234" disabled="disabled"/>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <label for="permission_ex">Permission</label>
+          <input type="text" id="permission_ex" name="permission_ex" size="60" maxlength="128"  disabled="disabled"/>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="quarterSize">
+          <label for="course_titleex">Course Title </label>
+          <input type="text" id="course_titleex" name="course_titleex" size="60" maxlength="128" value="Mysticism" disabled="disabled"/>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <label for="units_ex">Units </label>
+          <input type="text" id="units_ex" name="units_ex" size="60" maxlength="128"  value="4" disabled="disabled"/>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <label for="days_ex">Days </label>
+          <input type="text" id="days_ex" name="days_ex" size="60" maxlength="128"  value="W" disabled="disabled"/>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="quarterSize">
+          <label for="submitted[course_no1]">Course/Section No.</label>
+          <input type="text" id="submitted[course_no1]" name="submitted[course_no1]" size="30" maxlength="128" class="required"/>
+          <span class="course_no1-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <label for="submitted[class_no1]">Class No. </label>
+          <input type="text" id="submitted[class_no1]" name="submitted[class_no1]" size="60" maxlength="128"  class="required"/>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <label for="submitted[permission1]">Permission</label>
+          <input type="text" id="submitted[permission1]" name="submitted[permission1]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="quarterSize">
+          <label for="submitted[course_title1]">Course Title </label>
+          <input type="text" id="submitted[course_title1]" name="submitted[course_title1]" size="60" maxlength="128"  class="required"/>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <label for="submitted[units1]">Units </label>
+          <input type="text" id="submitted[units1]" name="submitted[units1]" size="60" maxlength="128"  class="required"/>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <label for="submitted[days1]">Days </label>
+          <input type="text" id="submitted[days1]" name="submitted[days1]" size="60" maxlength="128"  class="required"/>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="quarterSize">
+          <input type="text" id="submitted[course_no2]" name="submitted[course_no2]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <input type="text" id="submitted[class_no2]" name="submitted[class_no2]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <input type="text" id="submitted[permission2]" name="submitted[permission2]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="quarterSize">
+          <input type="text" id="submitted[course_title2]" name="submitted[course_title2]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <input type="text" id="submitted[units2]" name="submitted[units2]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <input type="text" id="submitted[days2]" name="submitted[days2]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="quarterSize">
+          <input type="text" id="submitted[course_no3]" name="submitted[course_no3]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <input type="text" id="submitted[class_no3]" name="submitted[class_no3]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <input type="text" id="submitted[permission3]" name="submitted[permission3]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="quarterSize">
+          <input type="text" id="submitted[course_title3]" name="submitted[course_title3]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <input type="text" id="submitted[units3]" name="submitted[units3]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <input type="text" id="submitted[days3]" name="submitted[days3]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="quarterSize">
+          <input type="text" id="submitted[course_no4]" name="submitted[course_no4]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <input type="text" id="submitted[class_no4]" name="submitted[class_no4]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <input type="text" id="submitted[permission4]" name="submitted[permission4]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="quarterSize">
+          <input type="text" id="submitted[course_title4]" name="submitted[course_title4]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <input type="text" id="submitted[units4]" name="submitted[units4]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <input type="text" id="submitted[days4]" name="submitted[days4]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="quarterSize">
+          <input type="text" id="submitted[course_no5]" name="submitted[course_no5]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <input type="text" id="submitted[class_no5]" name="submitted[class_no5]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <input type="text" id="submitted[permission5]" name="submitted[permission5]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="quarterSize">
+          <input type="text" id="submitted[course_title5]" name="submitted[course_title5]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <input type="text" id="submitted[units5]" name="submitted[units5]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <input type="text" id="submitted[days5]" name="submitted[days5]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="quarterSize">
+          <input type="text" id="submitted[course_no6]" name="submitted[course_no6]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <input type="text" id="submitted[class_no6]" name="submitted[class_no6]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <input type="text" id="submitted[permission6]" name="submitted[permission6]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="quarterSize">
+          <input type="text" id="submitted[course_title6]" name="submitted[course_title6]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <input type="text" id="submitted[units6]" name="submitted[units6]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <input type="text" id="submitted[days6]" name="submitted[days6]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="quarterSize">
+          <input type="text" id="submitted[course_no7]" name="submitted[course_no7]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <input type="text" id="submitted[class_no7]" name="submitted[class_no7]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <input type="text" id="submitted[permission7]" name="submitted[permission7]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="quarterSize">
+          <input type="text" id="submitted[course_title7]" name="submitted[course_title7]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <input type="text" id="submitted[units7]" name="submitted[units7]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="eighthSize">
+          <input type="text" id="submitted[days7]" name="submitted[days7]" size="60" maxlength="128" />
+        </div>
+      </div>
+      <hr/>
+       <div class="section checkbox">
+        <div class="fullSize">
+          <span><input type="checkbox" id="submitted[understand]" name="submitted[understand]" value="Yes" class="required"/><label for="submitted[understand]">I acknowledge that I understand the above registration restrictions and I have met with my primary adviser to discuss my course selections.</label>
+          <span class="understand-msgContainer"></span></span>
+        </div>
+      </div>
+      <div class="section end">
+        <div class="fullSize">
+          <button type="submit"
+		id="submit"
+		name="op"
+		value="Submit">Submit </button>
+          <button type="reset"
+		id="reset"
+		name="reset"
+		value="Reset">Reset </button>
+        </div>
+      </div>
+      <input type="hidden" name="form_id" value="webform_client_form_43" />
+    </form>
+  </div>
+</div>

@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Untitled 1</title>
+   <!-- delete this -->
+    <link rel="stylesheet" href="gallatin.css" />
+	<link rel="stylesheet" href="gallatin.ie6.css" />
+	<link rel="stylesheet" href="gallatin.ie7.css" />
+	<link rel="stylesheet" href="gallatin.ie8.css" />
+	<link rel="stylesheet" href="base.css" />
+	<link rel="stylesheet" href="forms.css" />
+    <!-- end delete this-->
+</head>
+<body class="gal-form">
+
+<!-- extra divs -->
+
+<div id="contentWrapper">		
+
+			<div id="leftCol" class="singleBox">				
+				<div class="parsys singleBox01"></div>
+
+			</div><!-- END leftCol singleBox -->
+			
+			<div id="centerCol" class="tripleBox">
+<!-- extra divs end -->
+
+
+<div class="parsys tripleBox"><div class="nyuOpenCode section"><!-- Timer (start) -->
+
+	<div id="formContainer">
+<!-- KJ cut and paste begin -->
+
+<form action="https://www.nyu.edu/cgi-bin/cgiwrap/llm2/yform19.cgi" method="post" class="autoform" id="autoform">
+
+	<input type="hidden" name="required" value="FirstName,name,email,dob,Phone,Street,City,State,Zip,GradMonth,GradYear,AreaInterest,CourseInterests,NonClassroomStudy,StudyAbroad,AdviserExpertise" />          
+	<input type="hidden" name="print_blank_fields" value="value" />
+	<!-- The next fields are for the email to you -->
+	<input type="hidden" name="mail_recipient" value="jp141@nyu.edu" />
+	<input type="hidden" name="mail_subject" value="Transfer Student Questionnaire" />
+	<input type="hidden" name="mail_top" value="The following is a Transfer Student Questionnaire sumbitted on the Gallatin website" />
+	<input type="hidden" name="mail_listfields" value="yes" />
+	<input type="hidden" name="mail_bottom" value="email gallatin.webmaster@nyu.edu if you think there may be a problem with this form" />
+	<!-- The next fields are for the courtesy reply -->
+	<input type="hidden" name="cour_send" value="yes" />
+	<input type="hidden" name="cour_top" value="Thank you for submitting your Transfer Student Questionnaire. If you have any questions, please contact us at (212) 998-7380.  Thank you!" />
+	<input type="hidden" name="cour_listfields" value="" />
+	<input type="hidden" name="cour_close" value="Sincerely," />
+	<input type="hidden" name="cour_myname" value="Gallatin Student Services" />
+	<input type="hidden" name="cour_mywebsite" value="http://gallatin.nyu.edu/" />
+	<!-- The next fields are for the HTML response page -->
+	<input NAME="html_redirect" TYPE="hidden" value="" />
+	<input type="hidden" name="html_title" value="Thank You" />
+	<input type="hidden" name="html_top" value="Thank you for submitting your Transfer Student Questionnaire" />
+	<input type="hidden" name="html_listfields" value="" />
+	<!-- The next fields are for the database -->
+	<input type="hidden" name ="data_filename" value="/www/sites/nyu.edu/htdocs/pages/gallatin/incoming/ba/transfer/data/transfer-questions-2010.txt" />
+	<input type="hidden" name ="data_fields_to_log" value="FirstName,name,email,UID,dob,Phone,PreviousSchool,Street,City,State,Zip,GradMonth,GradYear,AreaInterest,CourseInterests,NonClassroomStudy,StudyAbroad,AdviserExpertise" />
+	<input type="hidden" name ="data_delimiter" value="^" />
+	<input type="hidden" name ="data_listvertical" value="" />
+
+
+	<h2>Student Information</h2>
+
+		<div class="section text"><div class="halfSize">
+		<label for="FirstName">First Name</label>
+		<input type="text" name="FirstName"  class="name"/><span class="FirstName-msgContainer"/>
+		</div></div>
+		
+		<div class="section text"><div class="halfSize">
+			<label for="name">Last Name</label><input name="name" type="text" id="name" class="name"/><span class="name-msgContainer"/>
+		</div></div>
+		
+		<div class="section text"><div class="halfSize">
+		<label for="email">Email</label><input name="email" type="text" id="email"  class="email"/><span class="email-msgContainer"/>
+		</div></div>
+		
+		<div class="section text"><div class="halfSize">
+			<label for="dob">Date of Birth</label><input name="dob" type="text" id="dob"  class="genericrequiredtext" /><span class="dob-msgContainer"/>
+		</div></div>
+		
+		<div class="section text"><div class="halfSize">
+			<label for="UID">UID (University ID) </label><input name="UID" type="text" id="UID" class="genericrequiredtext" /><span class="UID-msgContainer"/>
+		</div></div>
+		
+		<div class="section text"><div class="halfSize">
+			<label for="Phone">Phone</label><input name="Phone" type="text" id="Phone"  class="phone"/><span class="Phone-msgContainer"/>
+		</div></div>
+		
+		 <div class="section text"><div class="halfSize">
+			<label for="PreviousSchool">Previous School Attended</label>
+	        <input name="PreviousSchool" type="text" id="PreviousSchool" size="50" class="genericrequiredtext"/><span class="PreviousSchool-msgContainer"/>
+	        </div></div>
+
+		<!--strong>Address</strong--> <!-- KJ  Removed -->
+		
+		<div class="section text"><div class="halfSize">
+			<label for="Street">Street</label><input name="Street" type="text" id="Street" value="" class="genericrequiredtext" /><span class="Street-msgContainer"/>
+		</div></div>
+		
+		<div class="section text"><div class="halfSize">
+			<label for="City">City</label><input name="City" type="text" id="City" class="genericrequiredtext" /><span class="City-msgContainer"/>
+		</div></div>
+		
+				<div class="section state">
+<div class="quarterSize"><label for="State">State</label>
+		<select name="State" id="state">
+<option value="">Select One</option>
+<optgroup label="Canadian Provinces">
+<option value="AB">Alberta</option>
+<option value="BC">British Columbia</option>
+<option value="MB">Manitoba</option>
+<option value="NB">New Brunswick</option>
+
+<option value="NF">Newfoundland</option>
+<option value="NT">Northwest Territories</option>
+<option value="NS">Nova Scotia</option>
+<option value="NU">Nunavut</option>
+<option value="ON">Ontario</option>
+<option value="PE">Prince Edward Island</option>
+<option value="QC">Quebec</option>
+<option value="SK">Saskatchewan</option>
+<option value="YT">Yukon Territory</option>
+
+</optgroup>
+			
+<optgroup label="U.S. States">
+<option value="AK">Alaska</option>
+<option value="AL">Alabama</option>
+<option value="AR">Arkansas</option>
+<option value="AZ">Arizona</option>
+<option value="CA">California</option>
+<option value="CO">Colorado</option>
+<option value="CT">Connecticut</option>
+
+<option value="DC">District of Columbia</option>
+<option value="DE">Delaware</option>
+<option value="FL">Florida</option>
+<option value="GA">Georgia</option>
+<option value="HI">Hawaii</option>
+<option value="IA">Iowa</option>
+<option value="ID">Idaho</option>
+<option value="IL">Illinois</option>
+<option value="IN">Indiana</option>
+
+<option value="KS">Kansas</option>
+<option value="KY">Kentucky</option>
+<option value="LA">Louisiana</option>
+<option value="MA">Massachusetts</option>
+<option value="MD">Maryland</option>
+<option value="ME">Maine</option>
+<option value="MI">Michigan</option>
+<option value="MN">Minnesota</option>
+<option value="MO">Missouri</option>
+
+<option value="MS">Mississippi</option>
+<option value="MT">Montana</option>
+<option value="NC">North Carolina</option>
+<option value="ND">North Dakota</option>
+<option value="NE">Nebraska</option>
+<option value="NH">New Hampshire</option>
+<option value="NJ">New Jersey</option>
+<option value="NM">New Mexico</option>
+<option value="NV">Nevada</option>
+
+<option value="NY">New York</option>
+<option value="OH">Ohio</option>
+<option value="OK">Oklahoma</option>
+<option value="OR">Oregon</option>
+<option value="PA">Pennsylvania</option>
+<option value="PR">Puerto Rico</option>
+<option value="RI">Rhode Island</option>
+<option value="SC">South Carolina</option>
+<option value="SD">South Dakota</option>
+
+<option value="TN">Tennessee</option>
+<option value="TX">Texas</option>
+<option value="UT">Utah</option>
+<option value="VA">Virginia</option>
+<option value="VT">Vermont</option>
+<option value="WA">Washington</option>
+<option value="WI">Wisconsin</option>
+<option value="WV">West Virginia</option>
+<option value="WY">Wyoming</option>
+
+</optgroup>
+
+        </select><span class="State-msgContainer"/></div></div>
+		
+		<div class="section text"><div class="quarterSize">
+			<label for="Zip">Zip Code</label><input name="Zip" type="text" id="Zip" /><span class="Zip-msgContainer"/>
+		</div></div>
+		
+		<hr />
+		<div class="section checkbox"><div class="fullSize">
+		 <p><strong>When do you expect to graduate? </strong></p> 
+	    </div></div>
+	          
+        <div class="section checkbox"><div class="halfSize">        	
+		  	<label for="GradMonth">Month</label>
+            <select name="GradMonth" class="required">
+            <option>January</option>
+            <option>May</option>
+            <option>September</option>
+            </select>
+			<span class="GradMonth-msgContainer"/>
+		</div></div>
+		
+         <div class="section checkbox"><div class="halfSize">
+		 <label for="GradYear">
+		  	Year</label>
+			 <select name="GradYear" class="required">
+            <option>2011</option>
+            <option>2012</option>
+            <option>2013</option>
+            <option>2014</option>
+            <option>2015</option>
+            <option>2016</option>
+            <option>2017</option>
+            </select><span class="GradYear-msgContainer"/>
+		 </div></div>
+		 
+         <div class="section text"><div class="fullSize">
+			<label for="AreaInterest"><strong>Concentration Interests</strong></label>
+			<label for="AreaInterest">Gallatin students do not declare a major. However, every Gallatin 
+		      student has a unique academic "concentration," a set of learning
+		     experiences organized around a theme, period, region, method, or other idea.
+		      A pre-med student might combine biology and chemistry courses with ones 
+			  about the process of globalization to create a concentration in Medicine 
+			  in the Developing World; a dancer might take performance classes and courses 
+			  in gender and sexuality studies to develop a concentration in Body Politics; 
+			  an activist might mix courses in the sociology and economics of social change, 
+			  internships in grass-roots organizations, and an independent study in social 
+			  movements to construct a concentration in Social Entrepreneurialism. Please 
+			  describe as best you can the focus of your intended concentration.</label>
+			<textarea name="AreaInterest" cols="70" rows="5" id="AreaInterest" class="required"></textarea><span class="AreaInterest-msgContainer"/>
+			
+			</div></div>
+         
+         <div class="section text"><div class="fullSize">	
+			<label for="CourseInterests"><strong>Course Interests</strong></label>
+			<p>What kinds of courses do you plan to take and in which NYU schools 
+		    and departments ( e.g. the Marketing Department, Stern School of 
+		    Business, Steinhardt School of Education, the Sociology Department, 
+		    etc.) are you interested?</p>
+			<textarea name="CourseInterests" cols="70" rows="5" id="CourseInterests" class="required"></textarea><span class="CourseInterests-msgContainer"/>
+		 </div></div>
+		
+         <div class="section text"><div class="fullSize">
+         <label for="NonClassroomStudy"><strong>Non-Classroom Study</strong></label>
+         <p>Non-classroom study in the form of internships, independent studies, 
+		  private lessons, and tutorials can constitute a significant part of your 
+		  concentration. Please tell us which of these non-classroom study opportunities 
+		  you plan to integrate into your program of study.</p>
+		  <textarea name="NonClassroomStudy" cols="70" rows="5" id="NonClassroomStudy" class="required"></textarea><span class="NonClassroomStudy-msgContainer"/>
+		</div></div>
+		        
+		 <div class="section text"><div class="fullSize">
+		 <label for="StudyAbroad"><strong>Study Abroad</strong></label>
+		 <p>Do you plan to study abroad? If so, which term and where? (NOTE: Transfer students are not permitted to study abroad in their first semester at Gallatin.)</p>
+		<textarea name="StudyAbroad" cols="70" rows="5" id="StudyAbroad" class="genericrequiredtext"></textarea><span class="StudyAbroad-msgContainer"/>
+		</div></div>
+		
+		 <div class="section text"><div class="fullSize">
+			<label for="AdviserExpertise"><strong>Adviser Expertise</strong></label>
+			<p>The Office of Advising offers walk-in hours for general questions regarding 
+		  Gallatin policies and procedures. As a Gallatin student, you will be assigned to 
+		  a primary faculty adviser whose academic interests match yours. Students and 
+		  advisers work together to map out the concentration and each semester's 
+		  specific plan of study. Keeping this in mind, what academic training, scholarly or 
+		  professional interests, and background do you most desire from a primary adviser?</p>
+		<textarea name="AdviserExpertise" cols="70" rows="5" id="AdviserExpertise" class="required"></textarea><span class="AdviserExpertise-msgContainer"/>
+		</div></div>
+
+
+
+</form>
+
+<!-- KJ cut and paste end -->
+
+	</div>
+
+</div></div>
+
+
+</div></div>
+
+
+</body>
+
+</html>

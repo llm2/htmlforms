@@ -1,0 +1,178 @@
+﻿<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script>
+  $(document).ready(function() {
+	$.datepicker.setDefaults($.datepicker.regional[""]);
+	$( "#date" ).datepicker();
+  });
+  
+  </script>
+<div id="formhermes">
+  <div id="formContainer">
+    <form class="autoform" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/125" method="post" id="autoform" accept-charset="UTF-8">
+      <h2>Student Information</h2>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[first_name]">First Name</label>
+          <input name="submitted[first_name]" type="text" id="submitted[first_name]" class="name"/>
+          <span class="first_name-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[last_name]">Last Name</label>
+          <input name="submitted[last_name]" type="text" id="submitted[last_name]"  size="60" maxlength="128" class="name"/>
+          <span class="last_name-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[netid]">Net ID</label>
+          <input name="submitted[netid]" type="text" id="submitted[netid]"  size="60" maxlength="128" class="netid"/>
+          <span class="netid-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="uid">University ID</label>
+          <input name="submitted[uid]" type="text" id="uid" value="N" size="60" maxlength="128" class="uid"/>
+          <span class="uid-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[phone]">Telephone</label>
+          <input name="submitted[phone]" type="text" id="phone" />
+        </div>
+      </div>
+      <div class="section text">
+        <div class="fullSize">
+          <label for="submitted[title]">Colloquium Title (optional, 90 characters max.) </label>
+          <input name="submitted[title]" id="submitted[title]" type="text" size="60" maxlength="90" />
+        </div>
+      </div>
+      <hr/>
+      <h2>Committee Information</h2>
+      <p>The colloquium committee consists of your adviser and two other faculty members. At least one member of your committee must be a full-time Gallatin faculty member. If you are having difficulty finding faculty members for you committee, please contact the senior class adviser.</p>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[first_name_adviser]">Adviser&rsquo;s First Name </label>
+          <input name="submitted[first_name_adviser]" type="text" id="submitted[first_name_adviser]" size="60" maxlength="128" class="name"/>
+          <span class="first_name_adviser-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[last_name_adviser]">Adviser&rsquo;s Last Name </label>
+          <input name="submitted[last_name_adviser]" type="text" id="submitted[last_name_adviser]" size="60" maxlength="128" class="name"/>
+          <span class="last_name_adviser-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[email_adviser]">Adviser&rsquo;s E-mail </label>
+          <input name="submitted[email_adviser]" type="text" id="submitted[email_adviser]" class="email" size="60" maxlength="128" />
+          <span class="email_adviser-msgContainer"></span> </div>
+      </div>
+      <hr/>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[first_name_faculty2]">2nd Faculty Member&rsquo;s First Name </label>
+          <input name="submitted[first_name_faculty2]" type="text" id="submitted[first_name_faculty2]" size="60" maxlength="128" class="name"/>
+          <span class="first_name_faculty2-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[last_name_faculty2]">2nd Faculty Member&rsquo;s Last Name </label>
+          <input name="submitted[last_name_faculty2]" type="text" id="submitted[last_name_faculty2]" size="60" maxlength="128" class="name"/>
+          <span class="last_name_faculty2-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[email_faculty2]">2nd Faculty Member&rsquo;s E-mail </label>
+          <input name="submitted[email_faculty2]" type="text" id="submitted[email_faculty2]" class="email" size="60" maxlength="128" />
+          <span class="email_faculty2-msgContainer"></span> </div>
+      </div>
+      <hr/>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[first_name_faculty3]">3rd Faculty Member&rsquo;s First Name </label>
+          <input name="submitted[first_name_faculty3]" type="text" id="submitted[first_name_faculty3]" size="60" maxlength="128" class="name"/>
+          <span class="first_name_faculty3-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[last_name_faculty3]">3rd Faculty Member&rsquo;s Last Name </label>
+          <input name="submitted[last_name_faculty3]" type="text" id="submitted[last_name_faculty3]" size="60" maxlength="128" class="name"/>
+          <span class="last_name_faculty3-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[email_faculty3]">3rd Faculty Member&rsquo;s E-mail </label>
+          <input name="submitted[email_faculty3]" type="text" id="submitted[email_faculty3]" class="email" size="60" maxlength="128" />
+          <span class="email_faculty3-msgContainer"></span> </div>
+      </div>
+      <hr/>
+      <h2>Date and Time of Colloquium</h2>
+      <div class="section checkbox">
+        <div class="fullSize"> <span>
+          <input type="checkbox" id="submitted[confirmed]" name="submitted[confirmed]" value="Yes" class="required"/>
+          <label for="submitted[confirmed]">I have confirmed the following date and time of my colloquium with all the committee members.</label>
+          <span class="confirmed-msgContainer"></span></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="date">Date</label>
+          <input name="submitted[date]" id="date" type="text" size="60" maxlength="128" class="required"/>
+          <span class="date-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[time]">Start Time (Colloquia run for two hours from the start time.)</label>
+          <select name="submitted[time]" id="submitted[time]">
+            <option>8:00 a.m.</option>
+            <option>8:30 a.m.</option>
+            <option>9:00 a.m.</option>
+            <option>9:30 a.m.</option>
+            <option>10:00 a.m.</option>
+            <option>10:30 a.m.</option>
+            <option>11:00 a.m.</option>
+            <option>11:30 a.m.</option>
+            <option>12:00 p.m.</option>
+            <option>12:30 p.m.</option>
+            <option>1:00 p.m.</option>
+            <option>1:30 p.m.</option>
+            <option>2:00 p.m.</option>
+            <option>2:30 p.m.</option>
+            <option>3:00 p.m.</option>
+            <option>3:30 p.m.</option>
+            <option>4:00 p.m.</option>
+            <option>4:30 p.m.</option>
+            <option>5:00 p.m.</option>
+            <option>5:30 p.m.</option>
+            <option>6:00 p.m.</option>
+            <option>6:30 p.m.</option>
+            <option>7:00 p.m.</option>
+            <option>7:30 p.m.</option>
+            <option>8:00 p.m.</option>
+          </select>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="fullsize">
+          <p>Based on space availability colloquia are generally scheduled in one of our small conference rooms, which are equipped to display media on a large wall-mounted flat-screen monitor with speakers from the internet, DVD, flash drive through a MacMini, or directly from your laptop--if you bring the cables. Alternately, colloquia are scheduled in the office of the student's adviser or the full-time Gallatin faculty member of the committee. Please note below any media/tech or communication needs you have that may need further accommodation.</p>
+          <label for="submitted[av]">Notes</label>
+          <textarea id="submitted[av]" name="submitted[av]" cols="60" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="section end">
+        <div class="fullSize">
+          <button type="submit"
+		id="submit"
+		name="op"
+		value="Submit">Submit </button>
+          <button type="reset"
+		id="reset"
+		name="reset"
+		value="Reset">Reset </button>
+        </div>
+      </div>
+      <input type="hidden" name="form_id" value="webform_client_form_125" />
+    </form>
+  </div>
+</div>
