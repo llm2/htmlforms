@@ -94,6 +94,18 @@
           <input type="text" id="submitted[uid]" name="submitted[uid]" size="60" maxlength="128" value="N" class="uid" />
           <span class="uid-msgContainer"></span></div>
       </div>
+      <div class="section radio">
+        <div class="fullSize">
+          <label for="submitted[student_status]">Student Status</label>
+          <br />
+          <span class="options">
+          <input name="submitted[student_status]" id="submitted[fafsa]" value="first-year" type="radio" checked="checked"/>
+          <label for="submitted[student_status]">Incoming First-Year Student</label>
+          </span><span>
+          <input name="submitted[student_status]" value="transfer" class="required" type="radio"/>
+          <label for="submitted[student_status]">Transfer Student</label>
+          </span><span class="student_status-msgContainer"></span></div>
+      </div>
       <div class="section text">
         <div class="fullSize">
           <label for="submitted[street_address]">Street Address </label>
