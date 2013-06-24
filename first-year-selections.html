@@ -1,12 +1,18 @@
 <script>
 $(document).ready(function () {
-    $("select").change(function () {
+		
+	$("select").change(function () {
         var $this = $(this);
         var prevVal = $this.data("prev");
         var otherSelects = $("select").not(this);
-        otherSelects.find("option[value=" + $(this).val() + "]").attr('disabled', true);
+		var thisVal = $(this).val();	
+		
+		//otherSelects.find("option[value=" + thisVal + "]").attr('disabled', true);
+		otherSelects.find("option:contains(" + thisVal + ")").attr('disabled', true);
+		
         if (prevVal) {
-            otherSelects.find("option[value=" + prevVal + "]").attr('disabled', false);
+            //otherSelects.find("option[value=" + prevVal + "]").attr('disabled', false);
+            otherSelects.find("option:contains(" + prevVal + ")").attr('disabled', false);
         }
 
         $this.data("prev", $this.val());
@@ -34,7 +40,6 @@ function clearForm(form) {
   });
 };
 </script>
-
 <div id="formhermes">
   <div id="formContainer">
     <form class="autoform" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/31" method="post" id="autoform" accept-charset="UTF-8">
