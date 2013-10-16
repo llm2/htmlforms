@@ -16,7 +16,7 @@
       </div>
       <div class="section text">
         <div class="halfSize">
-          <label for="submitted[netid]">Net ID </label>
+          <label for="submitted[netid]">NetID </label>
           <input type="text" id="submitted[netid]" name="submitted[netid]" value="" size="60" maxlength="128" class="netid"/>
           <span class="netid-msgContainer"></span></div>
       </div>
@@ -249,16 +249,17 @@
       <h2>Gallatin/NYU Information</h2>
       <div class="section text">
         <div class="halfSize">
-          <label for="submitted[gpa]">Current GPA</label>
+          <label for="submitted[gpa]">Current GPA (first-year students may leave this field blank)</label>
           <input name="submitted[gpa]" type="text" id="submitted[gpa]"  size="60" maxlength="128" />
           <span class="gpa-msgContainer"></span> </div>
       </div>
       <div class="section checkbox">
         <div class="halfSize">
           <label for="submitted[student_status]">Class</label>
-          <select name="submitted[student_status]" id="submitted[student_status]">
+          <select name="submitted[student_status]" id="submitted[student_status]" class="required">
+             <option value="">Select one</option>
             <option value="Freshman">First-year</option>
-            <option value="Sophmore">Sophomore</option>
+            <option value="Sophomore">Sophomore</option>
             <option value="Junior">Junior</option>
             <option value="Senior">Senior</option>
           </select>

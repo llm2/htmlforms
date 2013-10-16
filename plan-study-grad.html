@@ -387,7 +387,6 @@
         <div class="halfSize">
           <label for="submitted[year]">Year of Registration </label>
           <select id="submitted[year]" name="submitted[year]" class="requiredselect">
-            <option>2012</option>
             <option>2013</option>
             <option>2014</option>
             <option>2015</option>
@@ -413,7 +412,6 @@
         <div class="halfSize">
           <label for="submitted[expected_graduation_year]">Expected Graduation Year </label>
           <select id="submitted[expected_graduation_year]" name="submitted[expected_graduation_year]" class="requiredselect">
-            <option>2012</option>
             <option>2013</option>
             <option>2014</option>
             <option>2015</option>
@@ -482,7 +480,7 @@
       </div>
       <div class="section text">
         <div class="fullSize">
-          <label for="submitted[gpa]">Cumulative G.P.A </label>
+          <label for="submitted[gpa]">Cumulative G.P.A. </label>
           <p>(You must maintain a minimum grade point average of 3.00 to remain in good academic standing; a final minimum cumulative grade point average of 3.00 is required for graduation.)</p>
           <input type="text" id="submitted[gpa]" name="submitted[gpa]" size="60" maxlength="128" class="required"/>
           <span class="gpa-msgContainer"></span> </div>
@@ -497,7 +495,8 @@
       <div class="section radio">
         <div class="fullSize">
           <p><strong>Graduate Core</strong><br/>
-            You are required to take the following Gallatin courses, totaling 14 units. Check box if fulfilled.</p>
+            You are required to take the following Gallatin courses, totaling 14 units. Please see the appropriate requirements, which depend on the semester you began the program. Check box if fulfilled.</p>
+            <p><strong>Students who began prior to Summer 2013*</strong></p>
           <span class="options"> <span>
           <input name="submitted[proseminar]" id="submitted[proseminar]" value="completed" type="checkbox" />
           <label for="submitted[proseminar]">Proseminar (4 units) </label>
@@ -510,7 +509,30 @@
           </span> <span>
           <input name="submitted[thesisanddefense]" id="submitted[thesisanddefense]" value="completed" type="checkbox" />
           <label for="submitted[thesisanddefense]">Thesis and Defense (3 units)</label>
-          </span> </span> </div>
+          </span> </span> 
+          
+          <p><em>*Students who began prior to Summer 2013 might also combine old and new Core requirements. For more information, refer to the <a href="http://gallatin.nyu.edu/academics/graduate/requirements/requirementsold.html">Gallatin M.A. Degree Requirements</a>.</em></p>
+          
+                      <p><strong>Students who began in Summer 2013 or later</strong> </p>
+          <span class="options"> <span>
+          <input name="submitted[proseminar]" id="submitted[proseminar]" value="completed" type="checkbox" />
+          <label for="submitted[proseminar]">Proseminar (4 units) </label>
+          </span> <span>
+          <input name="submitted[additional]" id="submitted[additional]" value="completed" type="checkbox" />
+          <label for="submitted[additional]">Additional Gallatin Graduate Course (4 units)  </label>
+          </span> <span>
+          <input name="submitted[proposal]" id="submitted[proposal]" value="completed" type="checkbox" />
+          <label for="submitted[proposal]">Thesis Proposal Seminar (2 units)  </label>
+          </span> <span>
+          <input name="submitted[thesis1]" id="submitted[thesis1]" value="completed" type="checkbox" />
+          <label for="submitted[thesis1]">Master’s Thesis I (2 units) </label>
+          </span> <span>
+          <input name="submitted[thesis2]" id="submitted[thesis2]" value="completed" type="checkbox" />
+          <label for="submitted[thesis2]">Master’s Thesis II (2 units) </label>
+          </span></span>
+          
+          
+          </div>
       </div>
       <hr />
       <h2>Course Selections</h2>

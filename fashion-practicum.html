@@ -1,0 +1,101 @@
+<div id="formhermes">
+  <div id="formContainer">
+    <form class="autoform" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/294" method="post" id="autoform" accept-charset="UTF-8">
+      <h2>Student Information</h2>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[first_name]">First Name </label>
+          <input type"text" id="submitted[first_name]" name="submitted[first_name]" value="" size="60" maxlength="128" class="name"/>
+          <span class="first_name-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[last_name]">Last Name </label>
+          <input type="text" id="submitted[last_name]" name="submitted[last_name]" value="" size="60" maxlength="128" class="name"/>
+          <span class="last_name-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[netid]">NetID (Example: abc123)</label>
+          <input type="text" id="submitted[netid]" name="submitted[netid]" value="" size="60" maxlength="128" class="netid" />
+          <span class="netid-msgContainer"></span></div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[uid]">University ID </label>
+          <input type="text" id="submitted[uid]" name="submitted[uid]" value="N" size="60" maxlength="128" class="uid"/>
+          <span class="uid-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[phone]">Phone</label>
+          <input type="text" id="submitted[phone]" name="submitted[phone]" size="60" maxlength="128"/>
+          <span class="phone-msgContainer"></span> </div>
+      </div>
+
+      <div class="section checkbox">
+        <div class="halfSize">
+          <label for="submitted[class]">Class Standing as of Spring 2013</label>
+          <select name="submitted[class]" id="submitted[class]" class="requiredselect" >
+            <option>First-year</option>
+            <option>Sophomore</option>
+            <option>Junior</option>
+            <option>Senior</option>
+          </select>
+          <span class="class-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="fullSize">
+          <label for="submitted[school]">College or School in Which You Are Matriculated</label>
+          <input type="text" name="submitted[school]" id="submitted[school]" class="required"/>
+          <span class="school-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="fullSize">
+          <label for="submitted[concentration]">Area of Concentration</label>
+          <input type="text" id="submitted[concentration]" name="submitted[concentration]" value="" class="required" size="60" maxlength="128">
+          <span class="concentration-msgContainer"></span></div>
+      </div>
+      <hr/>
+      <h2>Essay</h2>
+      <p>Please respond to the following question in 600 words or less: Describe your experience in the fashion field and how this course connects with your concentration (or major).
+</p>
+      <div class="section text">
+        <div class="fullSize">
+          <label for="files[submitted_file]">Essay file (.doc, .docx, and .pdf formats accepted)</label>
+          <input type="file" id="files[submitted_file]" name="files[submitted_file]" class="required" />
+        </div>
+      </div>
+      <hr/>
+      <h2>Resume</h2>
+      <div class="section text">
+        <div class="fullSize">
+          <p>Please submit a current resume.</p>
+          <label for="files[submitted_file1]">Resume file (.doc, .docx, and .pdf formats accepted)</label>
+          <input type="file" id="files[submitted_file1]" name="files[submitted_file1]" class="required" />
+        </div>
+      </div>
+      <h2>Transcript</h2>
+      <div class="section text">
+        <div class="fullSize">
+          <p>The transcript may be downloaded directly from Albert.</p>
+          <label for="files[submitted_file2]">Transcript file (.doc, .docx, and .pdf formats accepted)</label>
+          <input type="file" id="files[submitted_file2]" name="files[submitted_file2]" />
+        </div>
+      </div>
+      <input type="hidden" name="form_id" value="webform_client_form_294" />
+      <div class="section end">
+        <div class="fullSize">
+          <button type="submit"
+		id="submit"
+		name="op"
+		value="Submit">Submit </button>
+          <button type="reset"
+		id="reset"
+		name="reset"
+		value="Reset">Reset </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
