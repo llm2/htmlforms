@@ -26,7 +26,7 @@
       </div>
       <div class="section text">
         <div class="halfSize">
-          <label for="submitted[netid]">Net ID</label>
+          <label for="submitted[netid]">NetID</label>
           <input name="submitted[netid]" type="text" id="submitted[netid]"  size="60" maxlength="128" class="netid"/>
           <span class="netid-msgContainer"></span> </div>
       </div>
@@ -44,7 +44,7 @@
       </div>
       <hr/>
       <h2>The Defense Committee</h2>
-      <p>Each thesis committee includes three panelists who will read the thesis and participate in the thesis defense. Of the three panelists, one must be the student's primary academic adviser, and at least one must be a full-time Gallatin faculty member. If the academic adviser is a full-time Gallatin faculty member, the student may opt to ask two other non-Gallatin faculty members to serve on the committee.  It is your responsibility to coordinate the date and time of your defense with committee members before you submit this form.</p>
+      <p>Each thesis committee includes three panelists who will read the thesis and participate in the thesis defense. Of the three panelists, one must be the student's primary academic adviser, and at least one must be a full-time Gallatin faculty member. If the academic adviser is a full-time Gallatin faculty member, the student may opt to ask two other non-Gallatin faculty members to serve on the committee. </p><p>It is the student's responsibility to coordinate the date and time of the defense with the committee members before submitting this form.</p>
       <div class="section text">
         <div class="halfSize">
           <label for="submitted[first_name_adviser]">Adviser&rsquo;s First Name </label>
@@ -102,7 +102,13 @@
           <span class="email_faculty3-msgContainer"></span> </div>
       </div>
       <hr/>
-      <h2>Date and Time of Colloquium</h2>
+      <h2>Date and Time of Defense</h2>
+            <div class="section checkbox">
+        <div class="fullSize"> <span>
+          <input type="checkbox" id="submitted[confirmed_thesis]" name="submitted[confirmed_thesis]" value="Yes" class="required"/>
+          <label for="submitted[confirmed_thesis]">I have submitted my thesis.</label>
+          <span class="confirmed_thesis-msgContainer"></span></span> </div>
+      </div>
       <div class="section checkbox">
         <div class="fullSize"> <span>
           <input type="checkbox" id="submitted[confirmed]" name="submitted[confirmed]" value="Yes" class="required"/>
@@ -147,9 +153,21 @@
           </select>
         </div>
       </div>
+           <div class="section radio">
+        <div class="fullSize">
+          <label for="submitted[room]">Please indicate below if you require a meeting room with media presentation equipment* or if a faculty office is preferred.</label>
+          <span class="options">
+          <input name="submitted[room]" value="facultyOffice" type="radio" />
+          <label for="submitted[room]">Faculty office preferred</label>
+          <input name="submitted[room]" value="meetingRoom" type="radio" />
+          <label for="submitted[room]">Meeting room with media presentation equipment required</label>
+          </span></div>
+          <p>Gallatin's small meeting rooms are equipped to display media (on a large wall-mounted flat-screen monitor with built-in speakers or projection to a screen with audio hook-up) from the internet, DVD or CD, flash drive through a MacMini, or directly from the student's computer with NYU login and student-provided cables. The equipment is not Bluetooth enabled.</p>
+      </div>
+      
       <div class="section text">
         <div class="fullsize">
-          <label for="submitted[av]"> Audio/Visual Needs Specify TV/VCR, TV/DVD, CD, VGA/DVI Projector, Slide Projector</label>
+          <label for="submitted[av]">If you have questions or concerns about scheduling your defense, or room specifications, please indicate them below for further assistance.</label>
           <textarea id="submitted[av]" name="submitted[av]" cols="60" rows="3"></textarea>
         </div>
       </div>
