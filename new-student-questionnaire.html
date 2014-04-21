@@ -227,13 +227,14 @@
         <div class="halfSize">
           <label for="submitted[expected_graduation_year]">Expected Graduation Year </label>
           <select id="submitted[expected_graduation_year]" name="submitted[expected_graduation_year]">
-            <option>2013</option>
             <option>2014</option>
             <option>2015</option>
-            <option selected="selected">2016</option>
+            <option>2016</option>
             <option>2017</option>
             <option>2018</option>
-          </select>
+            <option>2019</option>
+            <option>2020</option>          
+            </select>
           <span class="expected_graduation_year-msgContainer"></span> </div>
       </div>
       <div class="section text">
@@ -705,10 +706,15 @@
           </select>
         </div>
       </div>
-      <div class="section text">
+      <div class="section radio">
         <div class="fullSize">
           <label for="submitted[share_adviser]">Which academic interests do you hope to share with your adviser? </label>
-          <input type="text" id="submitted[share_adviser]" name="submitted[share_adviser]" value="" size="60" maxlength="128" class="required" />
+          <select id="submitted[share_adviser]" name="submitted[share_adviser]" class="required">
+           <option value="">Select One</option>
+          <option value="humanities"/>Humanities (e.g. Literature, History, Art)</option>
+          <option value="social science"/>Social Science (e.g. Sociology, Psychology, Economics)</option>
+          <option value="science"/>Science (e.g. Biology, History of Science, Environmental Science)</option></select>
+
           <span class="share_adviser-msgContainer"></span> </div>
       </div>
       <div class="section text">

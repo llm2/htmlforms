@@ -15,7 +15,7 @@
       </div>
       <div class="section text">
         <div class="halfSize">
-          <label for="submitted[netid]">Net ID </label>
+          <label for="submitted[netid]">NetID </label>
           <input type="text" id="submitted[netid]" name="submitted[netid]" size="60" maxlength="128" class="netid" />
           <span class="netid-msgContainer"></span></div>
       </div>
@@ -85,46 +85,57 @@
           <span class="email_adviser-msgContainer"></span> </div>
       </div>
       <hr/>
-      <h2>Required Courses</h2>
-      <p>Have you completed or are you currently enrolled in any of these courses?</p>
-      <div class="section radio">
+
+            <div class="section radio">
         <div class="fullSize">
-          <label for="submitted[proseminar]">Proseminar</label>
+          <p><strong>Graduate Core</strong><br/>
+            You are required to take the following Gallatin courses, totaling 14 units. Please see the appropriate requirements, which depend on the semester you began the program. Check box if fulfilled.</p>
+            <p><strong>Students who began prior to Summer 2013*</strong></p>
           <span class="options"> <span>
-          <input type="radio" name="submitted[proseminar]" value="completed" />
-          <label for="submitted[proseminar]">completed</label>
+          <input name="submitted[proseminar]" id="submitted[proseminar]" value="completed" type="checkbox" />
+          <label for="submitted[proseminar]">Proseminar (4 units) </label>
           </span> <span>
-          <input type="radio" name="submitted[proseminar]" value="enrolled" />
-          <label for="submitted[proseminar]">enrolled</label>
-          </span> </span> </div>
-      </div>
-      <div class="section radio">
-        <div class="fullSize">
-          <label for="submitted[thesisseminar]">Master&#39;s Thesis Seminar</label>
+          <input name="submitted[review]" id="submitted[review]" value="completed" type="checkbox" />
+          <label for="submitted[review]">Review of the Literature (3 units) </label>
+          </span> <span>
+          <input name="submitted[thesisseminar]" id="submitted[thesisseminar]" value="completed" type="checkbox" />
+          <label for="submitted[thesisseminar]">Master's Thesis Seminar (4 units) </label>
+          </span> <span>
+          <input name="submitted[thesisanddefense]" id="submitted[thesisanddefense]" value="completed" type="checkbox" />
+          <label for="submitted[thesisanddefense]">Thesis and Defense (3 units)</label>
+          </span> </span> 
+          
+          <p><em>*Students who began prior to Summer 2013 might also combine old and new Core requirements. For more information, refer to the <a href="http://gallatin.nyu.edu/academics/graduate/requirements/requirementsold.html">Gallatin M.A. Degree Requirements</a>.</em></p>
+          
+                      <p><strong>Students who began in Summer 2013 or later</strong> </p>
           <span class="options"> <span>
-          <input type="radio" name="submitted[thesisseminar]" value="completed" />
-          <label for="submitted[thesisseminar]">completed</label>
+          <input name="submitted[proseminar]" id="submitted[proseminar]" value="completed" type="checkbox" />
+          <label for="submitted[proseminar]">Proseminar (4 units) </label>
           </span> <span>
-          <input type="radio" name="submitted[thesisseminar]" value="enrolled" />
-          <label for="submitted[thesisseminar]">enrolled</label>
-          </span> </span> </div>
-      </div>
-      <div class="section radio">
-        <div class="fullSize">
-          <label for="submitted[review]">Review of the Literature</label>
-          <span class="options"> <span>
-          <input type="radio" name="submitted[review]" value="completed" />
-          <label for="submitted[review]">completed</label>
+          <input name="submitted[additional]" id="submitted[additional]" value="completed" type="checkbox" />
+          <label for="submitted[additional]">Additional Gallatin Graduate Course (4 units)  </label>
           </span> <span>
-          <input type="radio" name="submitted[review]" value="enrolled" />
-          <label for="submitted[review]">enrolled</label>
-          </span> </span> </div>
+          <input name="submitted[proposal]" id="submitted[proposal]" value="completed" type="checkbox" />
+          <label for="submitted[proposal]">Thesis Proposal Seminar (2 units)  </label>
+          </span> <span>
+          <input name="submitted[thesis1]" id="submitted[thesis1]" value="completed" type="checkbox" />
+          <label for="submitted[thesis1]">Master’s Thesis I (2 units) </label>
+          </span> <span>
+          <input name="submitted[thesis2]" id="submitted[thesis2]" value="completed" type="checkbox" />
+          <label for="submitted[thesis2]">Master’s Thesis II (2 units) </label>
+          </span></span>
+          
+          
+          </div>
       </div>
+      
+      
+      
       <hr />
-      <h2>Earned credits</h2>
+      <h2>Earned Units</h2>
       <div class="section text">
         <div class="fullSize">
-          <label for="submitted[unitsearned]">How many credits have you earned toward your degree, as of the last complete semester?</label>
+          <label for="submitted[unitsearned]">How many units have you earned toward your degree, as of the last complete semester?</label>
           <p>(including transfer units and course equivalency) </p>
           <input type="text" id="submitted[unitsearned]" name="submitted[unitsearned]" size="60" maxlength="128" class="required"/>
           <span class="unitsearned-msgContainer"></span> </div>

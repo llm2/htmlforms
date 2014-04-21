@@ -42,34 +42,31 @@ myInfoPanel.show();
           <input type="text" id="submitted[uid]" name="submitted[uid]" size="60" maxlength="128" class="uid" value="N"/>
           <span class="uid-msgContainer"></span></div>
       </div>
-      <div class="section text">
-        <div class="halfSize">
-          <label for="submitted[telephone]">Telephone</label>
-          <input type="text" id="submitted[phone]" name="submitted[phone]" size="60" maxlength="128" value=""/>
-        </div>
-      </div>
+
       <div class="section text">
         <div class="halfSize">
           <label for="submitted[num_credits]">Total Units (including units in progress)</label>
           <input type="text" id="submitted[num_credits]" name="submitted[num_credits]" size="60" maxlength="128"  class="required"/>
           <span class="num_credits-msgContainer"></span></div>
       </div>
-      <div class="section checkbox">
+            <div class="section checkbox">
         <div class="halfSize">
-          <label for="submitted[semester]">Semester of Registration </label>
-          <select id="submitted[semester]" name="submitted[semester]" class="requiredselect">
-            <option>Fall</option>
-            <option>Spring</option>
-            <option>Winter/January</option>
-            <option>Summer</option>
+          <label for="submitted[rationale]">Rationale Status</label>
+          <select id="submitted[rationale]" name="submitted[rationale]" class="requiredselect">
+            <option>Not Submitted</option>
+            <option>Submitted</option>
+            <option>Approved</option>
+            <option>Rejected and In Revision</option>
           </select>
-          <span class="semester-msgContainer"></span> </div>
+          <span class="rationale-msgContainer"></span> </div>
       </div>
+      
+      <hr/>
       <div class="section checkbox">
         <div class="halfSize">
           <label for="submitted[year]">Year of Registration </label>
           <select id="submitted[year]" name="submitted[year]" class="requiredselect">
-            <option>2013</option>
+            <option value="">Choose one</option>
             <option>2014</option>
             <option>2015</option>
             <option>2016</option>
@@ -82,23 +79,23 @@ myInfoPanel.show();
       </div>
       <div class="section text">
         <div class="halfSize">
-          <label for="submitted[grad_month]">Expected Graduation Month </label>
-          <select id="submitted[grad_month]" name="submitted[grad_month]" class="requiredselect">
-            <option>January</option>
-            <option selected="selected">May</option>
-            <option>September</option>
+          <label for="submitted[semester]">Semester of Registration </label>
+          <select type="select" id="submitted[semester]" name="submitted[semester]" class="requiredselect">
+            <option value="">Choose one</option>
+            <option value="fall">Fall</option>
+            <option value="spring">Spring</option>
+            <!--<option value="summer">Summer</option>-->
           </select>
-          <span class="grad_month-msgContainer"></span> </div>
+          <span class="semester-msgContainer"></span> </div>
       </div>
       <div class="section text">
         <div class="halfSize">
           <label for="submitted[grad_year]">Expected Graduation Year </label>
           <select id="submitted[grad_year]" name="submitted[grad_year]" class="requiredselect">
-            <option>2012</option>
-            <option>2013</option>
+            <option value="">Choose one</option>
             <option>2014</option>
             <option>2015</option>
-            <option selected="selected">2016</option>
+            <option>2016</option>
             <option>2017</option>
             <option>2018</option>
             <option>2019</option>
@@ -106,6 +103,18 @@ myInfoPanel.show();
           </select>
           <span class="grad_year-msgContainer"></span> </div>
       </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[grad_month]">Expected Graduation Month </label>
+          <select id="submitted[grad_month]" name="submitted[grad_month]" class="requiredselect">
+            <option value="">Choose one</option>
+            <option>January</option>
+            <option>May</option>
+            <option>September</option>
+          </select>
+          <span class="grad_month-msgContainer"></span> </div>
+      </div>
+            <hr/>
       <div class="section text">
         <div class="halfSize">
           <label for="submitted[adviser_first_name]">Adviser First Name</label>
@@ -127,27 +136,27 @@ myInfoPanel.show();
       <hr />
       <div class="section text">
         <div class="halfSize">
-          <label for="submitted[mentor_first_name]">Mentor First Name</label>
-          <input type="text" name="submitted[mentor_first_name]" id="submitted[mentor_first_name]" size="60" maxlength="128"  class="name"/>
+          <label for="submitted[mentor_first_name]">Mentor First Name (If not Adviser)</label>
+          <input type="text" name="submitted[mentor_first_name]" id="submitted[mentor_first_name]" size="60" maxlength="128"/>
           <span class="mentor_first_name-msgContainer"></span> </div>
       </div>
       <div class="section text">
         <div class="halfSize">
           <label for="submitted[mentor_last_name]">Mentor Last Name</label>
-          <input type="text" name="submitted[mentor_last_name]" id="submitted[mentor_last_name]" size="60" maxlength="128"  class="name"/>
+          <input type="text" name="submitted[mentor_last_name]" id="submitted[mentor_last_name]" size="60" maxlength="128"/>
           <span class="mentor_last_name-msgContainer"></span> </div>
       </div>
       <div class="section text">
         <div class="halfSize">
           <label for="submitted[mentor_email]">Mentor E-mail</label>
-          <input type="text" name="submitted[mentor_email]" id="submitted[mentor_email]"  size="60" maxlength="128" class="email"/>
+          <input type="text" name="submitted[mentor_email]" id="submitted[mentor_email]"  size="60" maxlength="128"/>
           <span class="mentor_email-msgContainer"></span> </div>
       </div>
       <hr/>
       <h2>Questions</h2>
       <div id="simpleInfoPanel">
   <h2 class="hd">Questions</h2>
-  <p>According to policy, answers to these questions should be NO. If you answer YES to any of these questions, please submit a supplemental written explanation for special consideration.</p>
+  <p>If you answer YES to any of these questions, please submit a supplemental written explanation for special consideration.</p>
 </div>
       <div class="section radio">
         <div class="fullSize">
