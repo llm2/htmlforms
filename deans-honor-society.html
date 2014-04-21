@@ -1,6 +1,18 @@
 <div id="formhermes">
   <div id="formContainer">
     <form class="autoform" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/110" method="post" id="autoform" accept-charset="UTF-8">
+
+      <div class="section checkbox">
+        <div class="halfSize">
+          <label for="submitted[group]">I would like to be considered for:</label>
+          <select name="submitted[group]" id="submitted[group]" class="requiredselect" >
+            <option value="">Please select</option>
+            <option value="AS">The Americas Scholars</option>
+            <option value="DHS">The Deans Honor Society</option>
+            <option value="Either">Either the Deans Honor Society or the Americas Scholars</option>                    
+          </select>
+          <span class="group-msgContainer"></span> </div>
+      </div>
       <h2>Student Information</h2>
       <div class="section text">
         <div class="halfSize">
@@ -40,11 +52,13 @@
         <div class="halfSize">
           <label for="submitted[grad_year]">Expected Graduation Year</label>
           <select name="submitted[grad_year]" id="submitted[grad_year]" class="requiredselect" >
-            <option value="2013">2013</option>
             <option value="2014">2014</option>
             <option value="2015">2015</option>
             <option value="2016">2016</option>
             <option value="2017">2017</option>
+            <option value="2017">2018</option>
+            <option value="2017">2019</option>
+            <option value="2017">2020</option>                          
           </select>
           <span class="grad_year-msgContainer"></span> </div>
       </div>
@@ -165,12 +179,6 @@
           <input type="text" id="submitted[units]" name="submitted[units]" value="" class="required" size="60" maxlength="128">
           <span class="units-msgContainer"></span></div>
       </div>
-      <div class="section checkbox">
-        <div class="fullSize"> <span>
-          <input type="checkbox" id="submitted[as]" name="submitted[as]" value="Yes"/>
-          <label for="submitted[dhs]">I have also applied to the Americas Scholars</label>
-          </span> </div>
-      </div>
       <hr/>
       <h2>Letter of Recommendation</h2>
       <div class="section text">
@@ -182,7 +190,7 @@
       <hr/>
       <h2>Essay</h2>
       <p>Please respond to the following statement in no more than two double-spaced pages:</p>
-      <p>DHS fosters leadership in its many forms, including academic achievement and civic engagement. Write a brief essay in which you introduce yourself and identify some of your central intellectual interests and/or social concerns. Explain how participation in DHS will help you further develop those interests, and what you would contribute to the group. </p>
+      <p>Both the Deans Honor Society and Americas Scholars are Honors Groups that foster leadership in its many forms, including academic achievement and civic engagement. Write a brief essay in which you introduce yourself and identify some of your central intellectual interests and/or social concerns. Explain how participation in an Honors Group will help you further develop those interests, and what you would contribute to the group.  If you are applying to the Americas Scholars, please identify how your academic and extra-curricular endeavors demonstrate your interest in matters of relevance to the Americas, i.e., the U.S., other parts of North America, Central America, South America and the Caribbean.</p>
       <div class="section text">
         <div class="fullSize">
           <label for="files[submitted_file]">Essay file (.doc, .docx, and .pdf formats accepted)</label>
