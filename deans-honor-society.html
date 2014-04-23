@@ -3,15 +3,17 @@
     <form class="autoform" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/110" method="post" id="autoform" accept-charset="UTF-8">
 
       <div class="section checkbox">
-        <div class="halfSize">
+        <div class="fullSize">
           <label for="submitted[group]">I would like to be considered for:</label>
           <select name="submitted[group]" id="submitted[group]" class="requiredselect" >
             <option value="">Please select</option>
-            <option value="AS">The Americas Scholars</option>
-            <option value="DHS">The Deans Honor Society</option>
-            <option value="Either">Either the Deans Honor Society or the Americas Scholars</option>                    
+            <option>Dean's Honor Society</option>
+            <option>Americas Scholars</option>
+            <option value="AS or DHS">Either the Americas Scholars or the Dean's Honor Society </option>                    
           </select>
-          <span class="group-msgContainer"></span> </div>
+          <span class="group-msgContainer"></span>
+          </div>
+ 
       </div>
       <h2>Student Information</h2>
       <div class="section text">
@@ -40,7 +42,7 @@
       </div>
       <div class="section checkbox">
         <div class="halfSize">
-          <label for="submitted[grad_month]">Expected Graduation Semester</label>
+          <label for="submitted[grad_month]">Expected Graduation Month</label>
           <select name="submitted[grad_month]" id="submitted[grad_month]" class="requiredselect">
             <option>January</option>
             <option>May</option>
@@ -169,7 +171,7 @@
       </div>
       <div class="section text">
         <div class="fullSize">
-          <label for="submitted[concentration]">Area of Concentration</label>
+          <label for="submitted[concentration]">Concentration</label>
           <input type="text" id="submitted[concentration]" name="submitted[concentration]" value="" class="required" size="60" maxlength="128">
           <span class="concentration-msgContainer"></span></div>
       </div>
@@ -180,17 +182,18 @@
           <span class="units-msgContainer"></span></div>
       </div>
       <hr/>
-      <h2>Letter of Recommendation</h2>
+      <h2>Letter of Recommendation – Due Monday, May 19, 2014</h2>
       <div class="section text">
         <div class="fullSize">
-          <p>Please submit a letter of recommendation from someone with whom you have worked closely who can attest to your scholarly achievements and capacity for leadership. This person could be your adviser, professor, or the supervisor of your community service or other activity. Included in this letter should be information on the nature of the organization or activity and a contact phone number.</p>
-          <p>Have your recommender send the letter to Gallatin Global Programs by email at <a href="mailto:gallatin.global@nyu.edu">gallatin.global@nyu.edu</a> or hand-deliver it to the Gallatin Global Office located at 411 Lafayette St., 3rd Floor, New York, NY 10003.</p>
+          <p>Please submit a letter of recommendation from someone with whom you have worked closely who can attest to your scholarly achievements and capacity for leadership. This person could be your adviser, professor, or the supervisor of a civic engagement project or other activity. Please ask your recommender to include information on the nature of the organization or activity and a contact phone number.</p>
+          <p>Have your recommender send the letter to Gallatin Global Programs as a .pdf attachment to <a href="mailto:gallatin.global@nyu.edu">gallatin.global@nyu.edu</a>  or mail or hand-deliver it to the Gallatin Global Office located at 411 Lafayette St., 3rd Floor, New York, NY 10003.
+          </p>
         </div>
       </div>
       <hr/>
       <h2>Essay</h2>
       <p>Please respond to the following statement in no more than two double-spaced pages:</p>
-      <p>Both the Deans Honor Society and Americas Scholars are Honors Groups that foster leadership in its many forms, including academic achievement and civic engagement. Write a brief essay in which you introduce yourself and identify some of your central intellectual interests and/or social concerns. Explain how participation in an Honors Group will help you further develop those interests, and what you would contribute to the group.  If you are applying to the Americas Scholars, please identify how your academic and extra-curricular endeavors demonstrate your interest in matters of relevance to the Americas, i.e., the U.S., other parts of North America, Central America, South America and the Caribbean.</p>
+      <p>Both the Dean's Honor Society and Americas Scholars are honors organizations that foster leadership in its many forms, including academic achievement and civic engagement. Write a brief essay in which you introduce yourself and identify some of your central intellectual interests and/or social concerns. Explain how participation in an honors organization will help you further develop those interests, and what you would contribute to the group. If you are applying to the Americas Scholars, please identify how your academic and extra-curricular endeavors demonstrate your interest in matters of relevance to the Americas, i.e., the U.S., other parts of North America, Central America, South America and the Caribbean.</p>
       <div class="section text">
         <div class="fullSize">
           <label for="files[submitted_file]">Essay file (.doc, .docx, and .pdf formats accepted)</label>
@@ -204,14 +207,6 @@
           <p>Please submit a current resume.</p>
           <label for="files[submitted_file1]">Resume file (.doc, .docx, and .pdf formats accepted)</label>
           <input type="file" id="files[submitted_file1]" name="files[submitted_file1]" class="required" />
-        </div>
-      </div>
-      <h2>Transcript</h2>
-      <div class="section text">
-        <div class="fullSize">
-          <p>The transcript may be downloaded directly from Albert.</p>
-          <label for="files[submitted_file2]">Transcript file (.doc, .docx, and .pdf formats accepted)</label>
-          <input type="file" id="files[submitted_file2]" name="files[submitted_file2]" />
         </div>
       </div>
       <input type="hidden" name="form_id" value="webform_client_form_110" />
