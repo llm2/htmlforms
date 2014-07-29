@@ -14,9 +14,15 @@
           <input type="text" id="submitted[last_name]" name="submitted[last_name]" value="" size="60" maxlength="128" class="name" />
           <span class="last_name-msgContainer"></span></div>
       </div>
+            <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[grad_name]">Name at graduation (if different)</label>
+          <input type="text" id="submitted[grad_name]" name="submitted[grad_name]" value="" size="60" maxlength="128"/>
+          </div>
+      </div>
       <div class="section text">
         <div class="halfSize">
-          <label for="submitted[email]">E-mail</label>
+          <label for="submitted[email]">Email</label>
           <input type="text" id="submitted[email]" name="submitted[email]" value="" size="60" maxlength="128" class="email"/>
           <span class="email-msgContainer"></span></div>
       </div>
@@ -30,14 +36,69 @@
         </div>
       </div>
       <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[year]">Year</label>
+          <select id="submitted[year]" name="submitted[year]" class="requiredselect">
+            <option>1972</option>            
+            <option>1973</option>
+            <option>1974</option>
+            <option>1975</option>
+            <option>1976</option>
+            <option>1977</option>
+            <option>1978</option>
+            <option>1979</option>
+            <option>1980</option>
+            <option>1981</option>
+            <option>1982</option>
+            <option>1983</option>
+            <option>1984</option>
+            <option>1985</option>
+            <option>1986</option>
+            <option>1987</option>
+            <option>1988</option>
+            <option>1989</option>
+            <option>1990</option>
+            <option>1991</option>
+            <option>1992</option>            
+            <option>1993</option>
+            <option>1994</option>
+            <option>1995</option>
+            <option>1996</option>
+            <option>1997</option>
+            <option>1998</option>
+            <option>1999</option>
+            <option>2000</option>
+            <option>2001</option>
+            <option>2002</option>
+            <option>2003</option>
+            <option>2004</option>
+            <option>2005</option>
+            <option>2006</option>
+            <option>2007</option>
+            <option>2008</option>
+            <option>2009</option>
+            <option>2010</option>
+            <option>2011</option>
+            <option>2012</option>            
+            <option>2014</option>
+            <option>2015</option>
+            <option>2016</option>
+            <option>2017</option>
+            <option>2018</option>
+            <option>2019</option>
+            <option>2020</option>
+          </select>
+          <span class="expected_graduation_year-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
         <div class="fullSize">
-          <label for="submitted[academic_interest]">My Concentration/Area of Academic Interest at Gallatin was</label>
+          <label for="submitted[academic_interest]">Concentration/Area of Academic Interest </label>
           <input name="submitted[academic_interest]" type="text" id="submitted[academic_interest]" size="50" />
         </div>
       </div>
       <div class="section text">
         <div class="fullSize">
-          <label for="submitted[Adviser_Mentor]">My Gallatin Adviser/Gallatin Faculty Mentor(s) were</label>
+          <label for="submitted[Adviser_Mentor]">Gallatin Adviser/Gallatin Faculty Mentor(s)</label>
           <input name="submitted[Adviser_Mentor]" type="text" id="submitted[Adviser_Mentor]" size="50" />
         </div>
       </div>
@@ -56,7 +117,7 @@
       <div class="section text">
         <div class="quarterSize">
           <label for="submitted[state]">State </label>
-          <select name="submitted[state]" id="submitted[state]" class="required">
+          <select name="submitted[state]" id="submitted[state]">
             <option value="">Select One</option>
             <optgroup label="Canadian Provinces">
             <option value="AB">Alberta</option>
@@ -197,9 +258,59 @@
       <div class="section text">
         <div class="halfSize">
           <label for="submitted[GradDegreeYear]">Year of Degree</label>
-          <input name="submitted[GradDegreeYear]" type="text" id="submitted[GradDegreeYear]" />
-        </div>
+          <select id="submitted[GradDegreeYear]" name="submitted[GradDegreeYear]">
+            <option>1973</option>
+            <option>1974</option>
+            <option>1975</option>
+            <option>1976</option>
+            <option>1977</option>
+            <option>1978</option>
+            <option>1979</option>
+            <option>1980</option>
+            <option>1981</option>
+            <option>1982</option>
+            <option>1983</option>
+            <option>1984</option>
+            <option>1985</option>
+            <option>1986</option>
+            <option>1987</option>
+            <option>1988</option>
+            <option>1989</option>
+            <option>1990</option>
+            <option>1991</option>
+            <option>1992</option>            
+            <option>1993</option>
+            <option>1994</option>
+            <option>1995</option>
+            <option>1996</option>
+            <option>1997</option>
+            <option>1998</option>
+            <option>1999</option>
+            <option>2000</option>
+            <option>2001</option>
+            <option>2002</option>
+            <option>2003</option>
+            <option>2004</option>
+            <option>2005</option>
+            <option>2006</option>
+            <option>2007</option>
+            <option>2008</option>
+            <option>2009</option>
+            <option>2010</option>
+            <option>2011</option>
+            <option>2012</option>            
+            <option>2014</option>
+            <option>2015</option>
+            <option>2016</option>
+            <option>2017</option>
+            <option>2018</option>
+            <option>2019</option>
+            <option>2020</option>
+          </select>
+          </div>
       </div>
+
+
       <hr />
       <h2>Employment Information</h2>
       <div class="section text">
@@ -318,14 +429,20 @@
       <div class="section text">
         <div class="halfSize">
           <label for="submitted[business_phone]">Business Telephone</label>
-          <input type="text" id="submitted[business_phone]" name="submitted[business_phone]" value="" size="60" maxlength="128" class="business_phone"/>
-          <span class="business_phone-msgContainer"></span></div>
+          <input type="text" id="submitted[business_phone]" name="submitted[business_phone]" value="" size="60" maxlength="128"/>
+          </div>
       </div>
       <div class="section text">
         <div class="halfSize">
           <label for="submitted[business_email]">Business E-mail</label>
-          <input type="text" id="submitted[business_email]" name="submitted[business_email]" value="" size="60" maxlength="128" class="business_phone"/>
-          <span class="business_email-msgContainer"></span></div>
+          <input type="text" id="submitted[business_email]" name="submitted[business_email]" value="" size="60" maxlength="128"/>
+          </div>
+      </div>
+       <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[linkedin]">LinkedIn Profile</label>
+          <input type="text" id="submitted[linkedin]" name="submitted[linkedin]" value="" size="60" maxlength="128"/>
+          </div>
       </div>
       <hr />
       <h2>Submit a Class Note</h2>

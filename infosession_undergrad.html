@@ -1,18 +1,20 @@
 <div id="formContainer">
-  <form class="webform-client-form" enctype="multipart/form-data" action="http://gabe.es.its.nyu.edu/hermes/?q=node/1" method="post"  id="autoform" accept-charset="UTF-8">
+  <form class="webform-client-form" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/1" method="post"  id="autoform" accept-charset="UTF-8">
     <input type="hidden" name="form_id" value="webform_client_form_1" />
     <input type="hidden" name="submitted[type]" value="BA"/>
     <h3>Your Information</h3>
     <div class="section text">
       <div class="halfSize">
         <label for="submitted[first_name]">First Name</label>
-        <input type="text" name="submitted[first_name]" size="30"  maxlength="128" class="name"/>
+        <input type="text" id="submitted[first_name]" name="submitted[first_name]" value="" size="60" maxlength="128" class="name"/>
+        <span class="first_name-msgContainer"></span> 
       </div>
     </div>
     <div class="section text">
       <div class="halfSize">
         <label for="submitted[last_name]">Last Name</label>
-        <input type="text" name="submitted[last_name]" size="30"  maxlength="128" class="name"/>
+        <input type="text" id="submitted[last_name]" name="submitted[last_name]" value="" size="60" maxlength="128" class="name" />
+        <span class="last_name-msgContainer"></span>
       </div>
     </div>
     <div class="section text">
@@ -29,16 +31,38 @@
     </div>
     <div class="section text">
     <div class="halfSize">
-    <label for="submitted[session_date]">
-    Session Date</font>
+    <label for="submitted[session_date]">Session Date</label>
     <select name="submitted[session_date]" id="submitted[session_date]">
-      <option>January 25</option>
-      <option>February 15</option>
-      <option>February 24</option>
-      <option>March 2</option>
-      <option>March 29</option>
+<option value="6/25/2014"> June 25</option>
+<option value="7/18/2014">July 18</option>
+<option value="7/30/2014"> July 30</option>
+<option value="8/22/2014"> August 22</option>
     </select>
     </div>
+    </div>
+        <div class="section select">
+      <div class="fullSize">
+        <label for="submitted[how]">How did you find out about NYU Gallatin?</label>
+        <select name="submitted[how]" id="submitted[how]" class="requiredselect">
+          <option value="">Choose one</option>
+          <option>NYU main website</option>
+          <option>I am a current / former NYU student</option>
+          <option>Search</option>
+          <option>Facebook</option>
+          <option>Twitter</option>
+          <option>NYU Campus Tour</option>
+          <option>College Counselor</option>
+          <option>Friend</option>
+          <option>Other (Please specify)</option>     
+        </select>
+        <span class="how-msgContainer"></span> 
+      </div>
+    </div>
+    <div class="section text">
+      <div class="halfSize">
+        <label for="submitted[other]">Other</label>
+        <input name="submitted[other]" type="text" id="submitted[other]" maxlength="128" size="30" />
+      </div>
     </div>
     <div class="section end">
       <div class="fullSize">
