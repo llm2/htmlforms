@@ -1,3 +1,4 @@
+<script src="/content/dam/gallatin/js/country.js" type="text/javascript"></script>
 <div id="formhermes">
   <div id="formContainer">
     <form class="autoform" action="https://gabe.es.its.nyu.edu/hermes/?q=node/2" enctype="multipart/form-data" method="POST" id="autoform" accept-charset="UTF-8">
@@ -39,7 +40,8 @@
         <div class="halfSize">
           <label for="submitted[year]">Year</label>
           <select id="submitted[year]" name="submitted[year]" class="requiredselect">
-            <option>1972</option>            
+            <option value="">Select One</option>
+             <option>1972</option>            
             <option>1973</option>
             <option>1974</option>
             <option>1975</option>
@@ -200,7 +202,7 @@
       <div class="section text">
         <div class="halfSize">
           <label for="submitted[country]">Country </label>
-          <input type="text" name="submitted[country]" id="submitted[country]" size="60" maxlength="128" />
+          <input type="text" name="submitted[country]" id="submitted[country]" size="60" maxlength="128" class="country"/>
         </div>
       </div>
       <div class="section text">
@@ -259,6 +261,7 @@
         <div class="halfSize">
           <label for="submitted[GradDegreeYear]">Year of Degree</label>
           <select id="submitted[GradDegreeYear]" name="submitted[GradDegreeYear]">
+            <option value="">Select One</option>
             <option>1973</option>
             <option>1974</option>
             <option>1975</option>
@@ -423,7 +426,7 @@
       <div class="section text">
         <div class="halfSize">
           <label for="submitted[business_country]">Business Country </label>
-          <input type="text" name="submitted[business_country]" id="submitted[business_country]" size="60" maxlength="128" />
+          <input type="text" name="submitted[business_country]" id="submitted[business_country]" size="60" maxlength="128" class="country"/>
         </div>
       </div>
       <div class="section text">
