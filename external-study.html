@@ -61,56 +61,52 @@ $(document).ready(function() {
   <div id="formContainer">
     <form class="webform-client-form" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/7" method="post" id="autoform" accept-charset="UTF-8">
      <div class="section checkbox">
-        <div class="fullSize">
-          <label for="submitted[policies]">
+      <div class="fullSize">
+        <label for="submitted[policies]">
           <strong>I have read and understood Gallatin’s External Study policies.</strong>
-          </label>
-          <input type="checkbox" id="submitted[policies]" name="submitted[policies]" value="yes" size="60" maxlength="128" class="required" />
-        </div>
+        </label>
+        <input type="checkbox" id="submitted[policies]" name="submitted[policies]" value="yes" size="60" maxlength="128" class="required" />
       </div>
-<div class="section radio">
-    <div class="fullSize">
-      <label for="submitted[32units]"><strong>I intend to pursue this external study during the period in which I will complete my final 32 units.</strong> If yes, an explanation is required (see personal statement instructions below).</label>
-      <span class="options"> 
-        <span>
-          <input name="submitted[32units]" value="FR" type="radio" class="required" />
-          <label for="submitted[32units]">Yes</label>
-      </span> 
-      <span>
-          <input name="submitted[32units]" value="SO" type="radio" checked="checked"/>
-          <label for="submitted[32units]">No</label>
-      </span>
-      <span class="32units-msgContainer"></span>
-  </span> 
-</div>
-</div>
+    </div>
+    <div class="section radio">
+      <div class="fullSize">
+        <label for="32units"><strong>I intend to pursue this external study during the period in which I will complete my final 32 units.</strong> If yes, an explanation is required (see personal statement instructions below).</label>
+
+        <select name="submitted[32units]" id="32units" class="required">
+         <option value="">Select one</option>
+         <option>Yes</option>
+         <option>No</option>
+       </select>
+       <span class="32units-msgContainer"></span>
+     </div>
+   </div>
 
 
-<hr/>
-      <div class="section text">
-        <div class="halfSize">
-          <label for="submitted[first_name]">First Name </label>
-          <input type="text" id="submitted[first_name]" name="submitted[first_name]" value="" size="60" maxlength="128" class="name"/>
-      </div>
+   <hr/>
+   <div class="section text">
+    <div class="halfSize">
+      <label for="submitted[first_name]">First Name </label>
+      <input type="text" id="submitted[first_name]" name="submitted[first_name]" value="" size="60" maxlength="128" class="name"/>
+    </div>
   </div>
   <div class="section text">
     <div class="halfSize">
       <label for="submitted[last_name]">Last Name </label>
       <input type="text" id="submitted[last_name]" name="submitted[last_name]" value="" size="60" maxlength="128"  class="name"/>
+    </div>
   </div>
-</div>
-<div class="section text">
+  <div class="section text">
     <div class="halfSize">
       <label for="submitted[netid]">NetID </label>
       <input type="text" id="submitted[netid]" name="submitted[netid]" value="" size="60" maxlength="128" class="netid"/>
+    </div>
   </div>
-</div>
-<div class="section text">
+  <div class="section text">
     <div class="halfSize">
       <label for="submitted[uid]">University ID </label>
       <input type="text" id="submitted[uid]" name="submitted[uid]" value="N" size="60" maxlength="9" />
+    </div>
   </div>
-</div>
 <!--<hr/>
 <h2>Permanent Home Address</h2>
 <div class="section text">
@@ -361,99 +357,100 @@ $(document).ready(function() {
 </div>
 </div>-->
 <div class="section text">
-    <div class="halfSize">
-      <label for="submitted[semester]">Expected Graduation Month</label>
-      <select type="select" id="submitted[semester]" name="submitted[semester]">
-        <option>January</option>
-        <option selected="selected">May</option>
-        <option>September</option>
+  <div class="halfSize">
+    <label for="semester">Expected Graduation Month</label>
+    <select type="select" id="semester" name="submitted[semester]" class="requiredselect">
+      <option value="">Select One</option>
+      <option>January</option>
+      <option>May</option>
+      <option>September</option>
     </select>
-</div>
+    <span class="semester-msgContainer"></span>
+  </div>
 </div>
 <div class="section checkbox">
-    <div class="halfSize">
-      <label for="submitted[year]">Expected Graduation Year</label>
-      <select id="submitted[year]" name="submitted[year]" class="requiredselect">
-        <option>2014</option>
-        <option>2015</option>
-        <option>2016</option>
-        <option>2017</option>
-        <option>2018</option>
-        <option>2019</option>
-        <option>2020</option>
+  <div class="halfSize">
+    <label for="submitted[year]">Expected Graduation Year</label>
+    <select id="submitted[year]" name="submitted[year]" class="requiredselect">
+      <option value="">Select One</option>
+      <option>2014</option>
+      <option>2015</option>
+      <option>2016</option>
+      <option>2017</option>
+      <option>2018</option>
+      <option>2019</option>
+      <option>2020</option>
     </select>
     <span class="year-msgContainer"></span></div>
-</div>
-<hr/>
-<h2>Adviser Information</h2>
-<p>Please select your academic adviser below. Gallatin will forward a copy of this application to your adviser in lieu of the Plan of Study for the relevant term.</p>
-<div class="section text">
-  <div class="halfSize">
-    <label for="adviser">Adviser Name </label>
-    <input type="text" name="submitted[adviser]" id="adviser"/><p>(Start typing the name, then choose from the list.)</p>
-    <span class="adviser-msgContainer"></span> 
-</div>
-</div>   
-<div class="section text">
-  <div class="halfSize">
-    <label for="fac_adviser">Adviser Email</label>
-    <input type="text" name="submitted[fac_adviser]" id="fac_adviser"/>
-    <span class="fac_adviser-msgContainer"></span> 
-</div>
-</div>  
-<hr/>
-<h2> External Program Information </h2>
-<br>
-<div class="section radio">
+  </div>
+  <hr/>
+  <h2>Adviser Information</h2>
+  <p>Please select your academic adviser below. Gallatin will forward a copy of this application to your adviser in lieu of the Plan of Study for the relevant term.</p>
+  <div class="section text">
+    <div class="halfSize">
+      <label for="adviser">Adviser Name </label>
+      <input type="text" name="submitted[adviser]" id="adviser"/><p>(Start typing the name, then choose from the list.)</p>
+      <span class="adviser-msgContainer"></span> 
+    </div>
+  </div>   
+  <div class="section text">
+    <div class="halfSize">
+      <label for="fac_adviser">Adviser Email</label>
+      <input type="text" name="submitted[fac_adviser]" id="fac_adviser"/>
+      <span class="fac_adviser-msgContainer"></span> 
+    </div>
+  </div>  
+  <hr/>
+  <h2> External Program Information </h2>
+  <br>
+  <div class="section radio">
     <div class="fullSize">
       <label for="registration">Do you plan to enroll in an NYU course or individualized project during the semester in which you will pursue your external study?</label>
-      <span class="options"> <span>
-          <input name="submitted[registration]" id="submitted[registration]" value="Yes" type="radio" />
-          <label for="registration">Yes</label>
-      </span> 
-      <span>
-      <input name="submitted[registration]"id="submitted[registration]"  value="No" class="required" type="radio" />
-      <label for="registration">No</label>
-  </span> 
-  <span class="registration-msgContainer"></span></span> 
-</div>
-</div>
-  <div class="section text">
-    <div class="fullSize">
-      <label for="external_program">Name of External Program</label>
-      <input name="submitted[external_program]" type="text" id="submitted[external_program]" />
-      <span class="external_program-msgContainer"></span> </div>
+
+      <select name="submitted[registration]" id="registration" class="required">
+       <option value="">Select one</option>
+       <option>Yes</option>
+       <option>No</option>
+     </select>
+     <span class="registration-msgContainer"></span>
+   </div>
+ </div>
+ <div class="section text">
+  <div class="fullSize">
+    <label for="external_program">Name of External Program</label>
+    <input name="submitted[external_program]" type="text" id="submitted[external_program]" />
+    <span class="external_program-msgContainer"></span> </div>
   </div>
-    <div class="section text">
+  <div class="section text">
     <div class="fullSize">
       <label for="program_website">Program Website</label>
       <input name="submitted[program_website]" type="text" id="submitted[program_website]" value="http://"/>
       <span class="program_website-msgContainer"></span> </div>
-  </div>
-<div class="section radio">
-    <div class="halfSize">
-      <label for="application">Status of application to program</label>
-      <span class="options"> <span>
-          <input name="submitted[application]" id="submitted[application]" value="accepted" type="radio" />
-          <label for="application">Accepted</label>
-      </span> <span>
-      <input name="submitted[application]" id="submitted[application]" value="pending" class="required" type="radio" />
-      <label for="application">Pending</label>
-  </span> <span class="application-msgContainer"></span></span> </div>
-</div>
-<h3>Location where you will be studying</h3>
-  <div class="section text">
+    </div>
+    <div class="section radio">
+      <div class="halfSize">
+        <label for="application">Status of application to program</label>
+        <select name="submitted[application]" id="application" class="required">
+         <option value="">Select one</option>
+         <option>Accepted</option>
+         <option>Pending</option>
+       </select>
+       <span class="32units-msgContainer"></span>
+     </div>
+   </div>
+   <h3>Location where you will be studying</h3>
+   <div class="section text">
     <div class="halfSize">
       <label for="city_state">City</label>
       <input name="submitted[city_state]" type="text" id="submitted[city_state]" />
       <span class="city_state-msgContainer"></span> </div>
-  </div>
-  <div class="section text">
-    <div class="quarterSize">
-      <label for="submitted[program_state]">State / Province </label>
-      <select name="submitted[program_state]" id="submitted[program_state]">
-        <option value="">Select One</option>
-        <optgroup label="Canadian Provinces">
+    </div>
+    <div class="section text">
+      <div class="quarterSize">
+        <label for="submitted[program_state]">State / Province </label>
+        <select name="submitted[program_state]" id="submitted[program_state]">
+          <option value="">Select One</option>
+          <optgroup label="Canadian Provinces">
             <option value="AB">Alberta</option>
             <option value="BC">British Columbia</option>
             <option value="MB">Manitoba</option>
@@ -467,8 +464,8 @@ $(document).ready(function() {
             <option value="QC">Quebec</option>
             <option value="SK">Saskatchewan</option>
             <option value="YT">Yukon Territory</option>
-        </optgroup>
-        <optgroup label="U.S. States">
+          </optgroup>
+          <optgroup label="U.S. States">
             <option value="AK">Alaska</option>
             <option value="AL">Alabama</option>
             <option value="AR">Arkansas</option>
@@ -521,67 +518,94 @@ $(document).ready(function() {
             <option value="WI">Wisconsin</option>
             <option value="WV">West Virginia</option>
             <option value="WY">Wyoming</option>
-        </optgroup>
-    </select>
-</div>
-</div>
+          </optgroup>
+        </select>
+      </div>
+    </div>
 
-<div class="section text">
-  <div class="halfSize">
-    <label for="submitted[program_country]">Country </label>
-    <input type="text" name="submitted[program_country]" id="submitted[program_country]" class="country"/>
-</div>
-</div>
-<div class="section text">
-    <div class="halfSize">
-      <label for="submitted[start_program]">Program Start Date </label>
-      <input type="text" id="start_program" name="submitted[start_program]" size="60" maxlength="128" class="required" />
-      <span class="start_program-msgContainer"></span> </div>
-  </div>
-  <div class="section text">
-    <div class="halfSize">
-      <label for="submitted[end_program]">Program End Date</label>
-      <input type="text" id="end_program" name="submitted[end_program]" size="60" maxlength="128" class="required" />
-      <span class="end_program-msgContainer"></span> </div>
-  </div>
+    <div class="section text">
+      <div class="halfSize">
+        <label for="submitted[program_country]">Country </label>
+        <input type="text" name="submitted[program_country]" id="submitted[program_country]" class="country"/>
+      </div>
+    </div>
+  <h3>Period you are requesting for study</h3>
+    <div class="section checkbox">
+        <div class="halfSize">
+          <label for="submitted[term]">Term</label>
+          <select id="submitted[term]" name="submitted[term]" class="requiredselect">
+            <option>Fall</option>
+            <option>Spring</option>
+            <option>Winter/January</option>
+            <option>Summer</option>
+          </select>
+          <span class="term-msgContainer"></span> 
+        </div>
+      </div>
+      <div class="section checkbox">
+        <div class="halfSize">
+          <label for="submitted[regyear]">Year</label>
+          <select id="submitted[regyear]" name="submitted[regyear]" class="requiredselect">
+            <option>2014</option>
+            <option>2015</option>
+            <option>2016</option>
+            <option>2017</option>
+            <option>2018</option>
+            <option>2019</option>
+            <option>2020</option>
+          </select>
+          <span class="regyear-msgContainer"></span></div>
+      </div>
+    <div class="section text">
+      <div class="halfSize">
+        <label for="start_program">Program Start Date </label>
+        <input type="text" id="start_program" name="submitted[start_program]" size="60" maxlength="128" class="required" />
+        <span class="start_program-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="end_program">Program End Date</label>
+          <input type="text" id="end_program" name="submitted[end_program]" size="60" maxlength="128" class="required" />
+          <span class="end_program-msgContainer"></span> </div>
+        </div>
 
-  <div class="section text">
-    <div class="fullSize">
-      <label for="college">College or University that will generate a transcript of the external coursework</label>
-      <input name="submitted[college]" type="text" id="submitted[college]" />
-      <span class="college-msgContainer"></span> </div>
-  </div>
-<div class="section text">
-    <div class="fullSize">
-      <label for="submitted[other_countries]">Is this a multi-country program? List countries  </label>
-      <input type="text" id="submitted[other_countries]" name="submitted[other_countries]" size="60" maxlength="128"/>
-  </div>
-</div>
-  <h3>Program Administrator Contact Information</h3>
-  <div class="section text">
-    <div class="halfSize">
-      <label for="first_name1">First Name</label>
-      <input type="text" size="15" maxlength="50" input name="submitted[first_name1]" id="submitted[first_name1]" class="name"/>
-      <span class="first_name1-msgContainer"></span> </div>
-  </div>
-  <div class="section text">
-    <div class="halfSize">
-      <label for="last_name1">Last Name</label>
-      <input type="text" size="15" maxlength="50" input name="submitted[last_name1]" id="submitted[last_name1]"  class="name"/>
-      <span class="last_name1-msgContainer"></span> </div>
-  </div>
-  <div class="section text">
-    <div class="halfSize">
-      <label for="email1">Email address</label>
-      <input type="text" size="15" name="submitted[email1]" id="submitted[email1]" />
-      <span class="email1-msgContainer"></span> </div>
-  </div>
-  <div class="section text">
-    <div class="halfSize">
-      <label for="submitted[phone1]">Telephone </label>
-      <input type="text" id="submitted[phone1]" name="submitted[phone1]" value="" size="60" maxlength="128" />
-  </div>
-</div>
+        <div class="section text">
+          <div class="fullSize">
+            <label for="college">College or University that will generate a transcript of the external coursework</label>
+            <input name="submitted[college]" type="text" id="submitted[college]" />
+            <span class="college-msgContainer"></span> </div>
+          </div>
+          <div class="section text">
+            <div class="fullSize">
+              <label for="submitted[other_countries]">Is this a multi-country program? List countries  </label>
+              <input type="text" id="submitted[other_countries]" name="submitted[other_countries]" size="60" maxlength="128"/>
+            </div>
+          </div>
+          <h3>Program Administrator Contact Information</h3>
+          <div class="section text">
+            <div class="halfSize">
+              <label for="first_name1">First Name</label>
+              <input type="text" size="15" maxlength="50" input name="submitted[first_name1]" id="first_name1" class="name"/>
+              <span class="first_name1-msgContainer"></span> </div>
+            </div>
+            <div class="section text">
+              <div class="halfSize">
+                <label for="last_name1">Last Name</label>
+                <input type="text" size="15" maxlength="50" input name="submitted[last_name1]" id="last_name1"  class="name"/>
+                <span class="last_name1-msgContainer"></span> </div>
+              </div>
+              <div class="section text">
+                <div class="halfSize">
+                  <label for="email1">Email address</label>
+                  <input type="text" size="15" name="submitted[email1]" id="submitted[email1]" />
+                  <span class="email1-msgContainer"></span> </div>
+                </div>
+                <div class="section text">
+                  <div class="halfSize">
+                    <label for="submitted[phone1]">Telephone </label>
+                    <input type="text" id="submitted[phone1]" name="submitted[phone1]" value="" size="60" maxlength="128" />
+                  </div>
+                </div>
  <!-- <div class="section text">
     <div class="fullSize">
       <label for="submitted[address1]">Street Address </label>
@@ -686,135 +710,135 @@ $(document).ready(function() {
 </div>
 -->
 <hr/>
-<h4>Planned Course Selections</h4>
+<h4>Planned Course Selections. Include course details below, if available.</h4>
 <div class="section text">
-    <div class="quarterSize">
-      <label for="course_no1">Course Number</label>
-      <input name="submitted[course_no1]" type="text" id="submitted[course_no1]" class="text" size="30" />
+  <div class="quarterSize">
+    <label for="course_no1">Course Number</label>
+    <input name="submitted[course_no1]" type="text" id="submitted[course_no1]" class="text" size="30" />
   </div>
 </div>
 <div class="section text">
-    <div class="halfSize">
-      <label for="course_title1">Course Title</label>
-      <input name="submitted[course_title1]" type="text" id="submitted[course_title1]" class="text" size="30" />
+  <div class="halfSize">
+    <label for="course_title1">Course Title</label>
+    <input name="submitted[course_title1]" type="text" id="submitted[course_title1]" class="text" size="30" />
   </div>
 </div>
 <div class="section text">
-    <div class="eighthSize">
-      <label for="Credits1">Units</label>
-      <input name="submitted[credits1]" type="text" id="submitted[credits1]" class="text" size="30" />
+  <div class="eighthSize">
+    <label for="Credits1">Units</label>
+    <input name="submitted[credits1]" type="text" id="submitted[credits1]" class="text" size="30" />
   </div>
 </div>
 <div class="section text">
-    <div class="quarterSize">
-      <input type="text" id="submitted[course_no2]" name="submitted[course_no2]" size="60" maxlength="128" />
+  <div class="quarterSize">
+    <input type="text" id="submitted[course_no2]" name="submitted[course_no2]" size="60" maxlength="128" />
   </div>
 </div>
 <div class="section text">
-    <div class="halfSize">
-      <input type="text" id="submitted[course_title2]" name="submitted[course_title2]" size="60" maxlength="128" />
+  <div class="halfSize">
+    <input type="text" id="submitted[course_title2]" name="submitted[course_title2]" size="60" maxlength="128" />
   </div>
 </div>
 <div class="section text">
-    <div class="eighthSize">
-      <input type="text" id="submitted[credits2]" name="submitted[credits2]" size="60" maxlength="128" />
+  <div class="eighthSize">
+    <input type="text" id="submitted[credits2]" name="submitted[credits2]" size="60" maxlength="128" />
   </div>
 </div>
 <div class="section text">
-    <div class="quarterSize">
-      <input type="text" id="submitted[course_no3]" name="submitted[course_no3]" size="60" maxlength="128" />
+  <div class="quarterSize">
+    <input type="text" id="submitted[course_no3]" name="submitted[course_no3]" size="60" maxlength="128" />
   </div>
 </div>
 <div class="section text">
-    <div class="halfSize">
-      <input type="text" id="submitted[course_title3]" name="submitted[course_title3]" size="60" maxlength="128" />
+  <div class="halfSize">
+    <input type="text" id="submitted[course_title3]" name="submitted[course_title3]" size="60" maxlength="128" />
   </div>
 </div>
 <div class="section text">
-    <div class="eighthSize">
-      <input type="text" id="submitted[credits3]" name="submitted[credits3]" size="60" maxlength="128" />
+  <div class="eighthSize">
+    <input type="text" id="submitted[credits3]" name="submitted[credits3]" size="60" maxlength="128" />
   </div>
 </div>
 <div class="section text">
-    <div class="quarterSize">
-      <input type="text" id="submitted[course_no4]" name="submitted[course_no4]" size="60" maxlength="128" />
+  <div class="quarterSize">
+    <input type="text" id="submitted[course_no4]" name="submitted[course_no4]" size="60" maxlength="128" />
   </div>
 </div>
 <div class="section text">
-    <div class="halfSize">
-      <input type="text" id="submitted[course_title4]" name="submitted[course_title4]" size="60" maxlength="128" />
+  <div class="halfSize">
+    <input type="text" id="submitted[course_title4]" name="submitted[course_title4]" size="60" maxlength="128" />
   </div>
 </div>
 <div class="section text">
-    <div class="eighthSize">
-      <input type="text" id="submitted[credits4]" name="submitted[credits4]" size="60" maxlength="128" />
-  </div>
-</div>
-
-<div class="section text">
-    <div class="quarterSize">
-      <input type="text" id="submitted[course_no5]" name="submitted[course_no5]" size="60" maxlength="128" />
-  </div>
-</div>
-<div class="section text">
-    <div class="halfSize">
-      <input type="text" id="submitted[course_title5]" name="submitted[course_title5]" size="60" maxlength="128" />
-  </div>
-</div>
-<div class="section text">
-    <div class="eighthSize">
-      <input type="text" id="submitted[credits5]" name="submitted[credits5]" size="60" maxlength="128" />
+  <div class="eighthSize">
+    <input type="text" id="submitted[credits4]" name="submitted[credits4]" size="60" maxlength="128" />
   </div>
 </div>
 
 <div class="section text">
-    <div class="quarterSize">
-      <input type="text" id="submitted[course_no6]" name="submitted[course_no6]" size="60" maxlength="128" />
+  <div class="quarterSize">
+    <input type="text" id="submitted[course_no5]" name="submitted[course_no5]" size="60" maxlength="128" />
   </div>
 </div>
 <div class="section text">
-    <div class="halfSize">
-      <input type="text" id="submitted[course_title6]" name="submitted[course_title6]" size="60" maxlength="128" />
+  <div class="halfSize">
+    <input type="text" id="submitted[course_title5]" name="submitted[course_title5]" size="60" maxlength="128" />
   </div>
 </div>
 <div class="section text">
-    <div class="eighthSize">
-      <input type="text" id="submitted[credits6]" name="submitted[credits6]" size="60" maxlength="128" />
+  <div class="eighthSize">
+    <input type="text" id="submitted[credits5]" name="submitted[credits5]" size="60" maxlength="128" />
+  </div>
+</div>
+
+<div class="section text">
+  <div class="quarterSize">
+    <input type="text" id="submitted[course_no6]" name="submitted[course_no6]" size="60" maxlength="128" />
+  </div>
+</div>
+<div class="section text">
+  <div class="halfSize">
+    <input type="text" id="submitted[course_title6]" name="submitted[course_title6]" size="60" maxlength="128" />
+  </div>
+</div>
+<div class="section text">
+  <div class="eighthSize">
+    <input type="text" id="submitted[credits6]" name="submitted[credits6]" size="60" maxlength="128" />
   </div>
 </div>
 
 <div class="section text">
-    <div class="quarterSize">
-      <input type="text" id="submitted[course_no7]" name="submitted[course_no7]" size="60" maxlength="128" />
+  <div class="quarterSize">
+    <input type="text" id="submitted[course_no7]" name="submitted[course_no7]" size="60" maxlength="128" />
   </div>
 </div>
 <div class="section text">
-    <div class="halfSize">
-      <input type="text" id="submitted[course_title7]" name="submitted[course_title7]" size="60" maxlength="128" />
+  <div class="halfSize">
+    <input type="text" id="submitted[course_title7]" name="submitted[course_title7]" size="60" maxlength="128" />
   </div>
 </div>
 <div class="section text">
-    <div class="eighthSize">
-      <input type="text" id="submitted[credits7]" name="submitted[credits7]" size="60" maxlength="128" />
+  <div class="eighthSize">
+    <input type="text" id="submitted[credits7]" name="submitted[credits7]" size="60" maxlength="128" />
   </div>
 </div>
 
 
 <div class="section text">
-    <div class="halfSize">
-      <label for="submitted[num_credits]">Total Number of Units</label>
-      <input type="text" id="submitted[num_credits]" name="submitted[num_credits]" value="" size="60" maxlength="128" />
-      <span class="num_credits-msgContainer"></span> </div>
+  <div class="halfSize">
+    <label for="submitted[num_credits]">Total Number of Units</label>
+    <input type="text" id="submitted[num_credits]" name="submitted[num_credits]" value="" size="60" maxlength="128" />
+    <span class="num_credits-msgContainer"></span> </div>
   </div>
   <hr />
-    <h2>Personal Statement</h2>
-    <div class="section text">
-      <div class="fullSize">
-        <label for="submitted[personal_statement]">Please attach a 250-500-word personal statement explaining how this particular program enhances your education. Please note that Gallatin’s residency requirement stipulates that undergraduates must complete their final 32 credits in residence at NYU. If you intend to complete your external study during this period, your statement should also address why you are petitioning to violate the residency requirement.</label>
-        <textarea name="submitted[personal_statement]" cols="90" rows="8" id="submitted[personal_statement]"  maxlength="5000" class="required"></textarea>
-        <span class="personal_statement-msgContainer"></span> 
-      </div>
+  <h2>Personal Statement</h2>
+  <div class="section text">
+    <div class="fullSize">
+      <label for="submitted[personal_statement]">Please submit a 250-500-word personal statement explaining how this particular program enhances your education. As a reminder, Gallatin’s residency requirement stipulates that undergraduates must complete their final 32 credits in residence at NYU. If you intend to complete your external study during this period, your statement should also address why you are petitioning to be waived from the residency requirement.</label>
+      <textarea name="submitted[personal_statement]" cols="90" rows="8" id="submitted[personal_statement]"  maxlength="5000" class="required"></textarea>
+      <span class="personal_statement-msgContainer"></span> 
     </div>
+  </div>
   <!--  <hr/>
     <h2>Official Program and Course Description</h2>
     <p></p>
@@ -826,20 +850,20 @@ $(document).ready(function() {
     </div>-->
 
 
-<hr />
-<input type="hidden" name="form_id" value="webform_client_form_7" />
-<div class="section end">
-    <div class="fullSize">
-      <button type="submit"
-      id="submit"
-      name="op"
-      value="Submit">Submit </button>
-      <button type="reset"
-      id="reset"
-      name="reset"
-      value="Reset">Reset </button>
-  </div>
-</div>
-</form>
+    <hr />
+    <input type="hidden" name="form_id" value="webform_client_form_7" />
+    <div class="section end">
+      <div class="fullSize">
+        <button type="submit"
+        id="submit"
+        name="op"
+        value="Submit">Submit </button>
+        <button type="reset"
+        id="reset"
+        name="reset"
+        value="Reset">Reset </button>
+      </div>
+    </div>
+  </form>
 </div>
 </div>

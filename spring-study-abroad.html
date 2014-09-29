@@ -1,52 +1,4 @@
 <script src="/content/dam/gallatin/js/country.js" type="text/javascript"></script>
-<!--  JAVASCRIPT FOR INSTRUCTOR SEARCH -->
-<script src="/etc/designs/gallatin/scripts/glow/1.7.3/core/core.js" type="text/javascript"></script>
-<script src="/etc/designs/gallatin/scripts/glow/1.7.3/widgets/widgets.js" type="text/javascript"></script>
-<link href="/etc/designs/gallatin/scripts/glow/1.7.3/widgets/widgets.css" type="text/css" rel="stylesheet" />
-<script type="text/javascript">
-glow.ready(function() {
-  myOpts = {
-    isMatch: function(indexedWord, inputWord) {
-      var myarray = indexedWord.split(" ");       
-      return (
-            // match if first or last names (third name if available) begin with inputWord
-            myarray[0].indexOf(inputWord) == 0 || myarray[1].indexOf(inputWord) == 0 ||
-            (myarray[2] != null && myarray[2].indexOf(inputWord) == 0)
-            );
-    },
-    formatItem: function(item) { // underline the matched bit
-      var pat = new RegExp(glow.lang.trim(this.getValue()), 'i');
-      return item.name.replace(pat, "<u>$&<"+"/u>");
-    },
-    onItemSelect: function(e) {
-        this.val(e.selectedItem.name); // Updates the binded HTML input element with the selected value
-    //set val for netid from myData
-    document.forms["autoform"].fac_adviser.value = e.selectedItem.email;
-  }
-
-}
-var suggest = new glow.widgets.AutoSuggest(
-    "#adviser",  // HTML input element to bind the AutoSuggest to
-    "/content/dam/gallatin/documents/json/advisers.js",
-  myOpts      // optional functions
-  ).loadData();
-
-});//end glow ready
-
-//hide gallatin-only fields from non-gallatin students
-$(document).ready(function() {
-
-  $("input[name$='submitted[matriculation]']").click(function() {
-    var studentStatus = $(this).val();
-
-    if(studentStatus=="gallatin"){
-      $(".gallonly").show();
-    }else{
-      $(".gallonly").hide();
-    }
-  });
-});
-</script>
 
 <div id="formhermes">
   <div id="formContainer">
@@ -355,7 +307,9 @@ $(document).ready(function() {
         <span class="concentration-msgContainer"></span> 
       </div>
     </div>
-    <hr/>
+
+   <hr/>
+      <!-- 
     <div class="gallonly">
     <h2>Gallatin Adviser Information</h2>
     <p>Gallatin students only: please select your academic adviser below. Gallatin will forward a copy of this application to your adviser in lieu of the Plan of Study for the summer term.</p>
@@ -372,9 +326,11 @@ $(document).ready(function() {
         <input type="text" name="submitted[fac_adviser]" id="fac_adviser"/>
         <span class="fac_adviser-msgContainer"></span> 
       </div>
-    </div>      
+    </div>   
+ 
     <hr/>
     </div>
+      -->  
     <h2>Personal Statement</h2>
     <div class="section text">
       <div class="fullSize">
