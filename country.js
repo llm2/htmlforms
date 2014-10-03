@@ -51,9 +51,7 @@ glow.ready(function() {
 										countryAR[i] = results[i].countryName;
 									}
 								//alphabetize
-								countryAR.sort(function(a, b) {
-									return a > b;
-								});
+								countryAR.sort();
 								//create option elements for each country
 								for(var j=0; j<countryAR.length; j++) {
 									var option = document.createElement('option');
