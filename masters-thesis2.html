@@ -1,0 +1,148 @@
+<div id="formhermes">
+  <div id="formContainer">
+    <form class="autoform" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/477" method="post" id="autoform" accept-charset="UTF-8">
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[first_name]">First Name </label>
+          <input type="text" id="submitted[first_name]" name="submitted[first_name]" size="60" maxlength="128" class="name" />
+          <span class="first_name-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[last_name]">Last Name </label>
+          <input type="text" id="submitted[last_name]" name="submitted[last_name]" size="60" maxlength="128" class="name" />
+          <span class="last_name-msgContainer"></span></div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[netid]">NetID </label>
+          <input type="text" id="submitted[netid]" name="submitted[netid]" size="60" maxlength="128" class="netid" />
+          <span class="netid-msgContainer"></span></div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[universityid]">University ID </label>
+          <input type="text" id="submitted[universityid]" name="submitted[universityid]" size="60" maxlength="128" class="uid" value="N"/>
+          <span class="universityid-msgContainer"></span></div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[type]">Type of Thesis</label>
+          <select id="submitted[type]" name="submitted[type]"  class="requiredselect" >
+            <option value="research">Research</option>
+            <option value="artistic">Artistic</option>
+            <option value="project">Project</option>
+          </select>
+          <span class="type-msgContainer"></span></div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[title]">Thesis Title</label>
+          <input type="text" id="submitted[title]" name="submitted[title]" size="60" maxlength="128" />
+          <span class="title-msgContainer"></span></div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[expected_graduation_month]">Expected Graduation Month </label>
+          <select id="submitted[expected_graduation_month]" name="submitted[expected_graduation_month]" class="requiredselect">
+            <option>January</option>
+            <option selected="selected">May</option>
+            <option>September</option>
+          </select>
+          <span class="expected_graduation_month-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[expected_graduation_year]">Expected Graduation Year </label>
+          <select id="submitted[expected_graduation_year]" name="submitted[expected_graduation_year]" class="requiredselect">
+            <option>2014</option>
+            <option>2015</option>
+            <option selected="selected">2016</option>
+            <option>2017</option>
+            <option>2018</option>
+            <option>2019</option>
+            <option>2020</option>
+          </select>
+          <span class="expected_graduation_year-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[first_name_adviser]">Adviser First Name</label>
+          <input type="text" name="submitted[first_name_adviser]" id="submitted[first_name_adviser]"  class="name"/>
+          <span class="first_name_adviser-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[last_name_adviser]">Adviser Last Name</label>
+          <input type="text" name="submitted[last_name_adviser]" id="submitted[last_name_adviser]"  class="name"/>
+          <span class="last_name_adviser-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[email_adviser]">Adviser E-mail</label>
+          <input type="text" name="submitted[email_adviser]" id="submitted[email_adviser]"  class="email"/>
+          <span class="email_adviser-msgContainer"></span> </div>
+      </div>
+      <hr/>
+      <div class="section radio">
+        <div class="fullSize">
+          <h2>Required Courses</h2>
+          <p>Have you completed or are you currently enrolled in any of these courses?</p>
+          <h3>Proseminar (4 units)</h3>
+          <span>
+          <input name="submitted[proseminar]" type="radio" id="proseminar" value="completed"/>
+          <label for="submitted[proseminar]">completed</label>
+          </span> <span>
+          <input name="submitted[proseminar]" type="radio" id="submitted[proseminar]" value="enrolled"/>
+          <label for="submitted[proseminar]">enrolled</label>
+          </span> <span>
+         <h3>Additional Gallatin Graduate Course (4 units)</h3>
+          <span>
+          <input name="submitted[additional]" type="radio" id="additional" value="completed"/>
+          <label for="submitted[additional]">completed</label>
+          </span> <span>
+          <input name="submitted[additional]" type="radio" id="submitted[additional]" value="enrolled" />
+          <label for="submitted[additional]">enrolled</label>
+          </span> <span>
+          <h3>Thesis Proposal Seminar (2 units)</h3>
+          <span>
+          <input name="submitted[proposal]" type="radio" id="proposal" value="completed"/>
+          <label for="submitted[proposal]">completed</label>
+          </span> <span>
+          <input name="submitted[proposal]" type="radio" id="submitted[proposal]" value="enrolled"/>
+          <label for="submitted[proposal]">enrolled</label>
+          </span>
+            <h3>Master's Thesis I (2 units)</h3>
+          <span>
+          <input name="submitted[thesis1]" type="radio" id="thesis1" value="completed"/>
+          <label for="submitted[thesis1]">completed</label>
+          </span> <span>
+          <input name="submitted[thesis1]" type="radio" id="submitted[thesis1]" value="enrolled"/>
+          <label for="submitted[thesis1]">enrolled</label>
+          </span>  
+        </div>
+      </div>
+      <hr />
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[unitsearned]">Earned Units </label>
+          <p>How many units have you earned toward your degree, as of the last complete semester? (including transfer units and course equivalency) </p>
+          <input type="text" id="submitted[unitsearned]" name="submitted[unitsearned]" size="60" maxlength="128" class="required"/>
+          <span class="unitsearned-msgContainer"></span> </div>
+      </div>
+      <div class="section end">
+        <div class="fullSize">
+          <button type="submit"
+		id="submit"
+		name="op"
+		value="Submit">Submit </button>
+          <button type="reset"
+		id="reset"
+		name="reset"
+		value="Reset">Reset </button>
+        </div>
+      </div>
+      <input type="hidden" name="form_id" value="webform_client_form_477" />
+    </form>
+  </div>
+</div>
