@@ -4,638 +4,635 @@
 <script src="/etc/designs/gallatin/scripts/glow/1.7.3/widgets/widgets.js" type="text/javascript"></script>
 <link href="/etc/designs/gallatin/scripts/glow/1.7.3/widgets/widgets.css" type="text/css" rel="stylesheet" />
 <script type="text/javascript">
-glow.ready(function() {
-  myOpts = {
-    isMatch: function(indexedWord, inputWord) {
-      var myarray = indexedWord.split(" ");       
-      return (
-            // match if first or last names (third name if available) begin with inputWord
-            myarray[0].indexOf(inputWord) == 0 || myarray[1].indexOf(inputWord) == 0 ||
-            (myarray[2] != null && myarray[2].indexOf(inputWord) == 0)
-            );
-    },
-    formatItem: function(item) { // underline the matched bit
-      var pat = new RegExp(glow.lang.trim(this.getValue()), 'i');
-      return item.name.replace(pat, "<u>$&<"+"/u>");
-    },
-    onItemSelect: function(e) {
-        this.val(e.selectedItem.name); // Updates the binded HTML input element with the selected value
-    //set val for netid from myData
-    document.forms["autoform"].fac_adviser.value = e.selectedItem.email;
-  }
-
-}
-var suggest = new glow.widgets.AutoSuggest(
-    "#adviser",  // HTML input element to bind the AutoSuggest to
-    "/content/dam/gallatin/documents/json/advisers.js",
-  myOpts      // optional functions
-  ).loadData();
-
-});//end glow ready
-//END JS FOR INSTRUCTOR SEARCH
-
-//hide gallatin-only fields from non-gallatin students
-$(document).ready(function() {
-
-  $("input[name$='submitted[matriculation]']").click(function() {
-    var studentStatus = $(this).val();
-
-    if(studentStatus=="gallatin"){
-      $(".gallonly").show();
-    }else{
-      $(".gallonly").hide();
-    }
-  });
-});
-
+   glow.ready(function() {
+     myOpts = {
+       isMatch: function(indexedWord, inputWord) {
+         var myarray = indexedWord.split(" ");       
+         return (
+               // match if first or last names (third name if available) begin with inputWord
+               myarray[0].indexOf(inputWord) == 0 || myarray[1].indexOf(inputWord) == 0 ||
+               (myarray[2] != null && myarray[2].indexOf(inputWord) == 0)
+               );
+       },
+       formatItem: function(item) { // underline the matched bit
+         var pat = new RegExp(glow.lang.trim(this.getValue()), 'i');
+         return item.name.replace(pat, "<u>$&<"+"/u>");
+       },
+       onItemSelect: function(e) {
+           this.val(e.selectedItem.name); // Updates the binded HTML input element with the selected value
+       //set val for netid from myData
+       document.forms["autoform"].fac_adviser.value = e.selectedItem.email;
+     }
+   
+   }
+   var suggest = new glow.widgets.AutoSuggest(
+       "#adviser",  // HTML input element to bind the AutoSuggest to
+       "/content/dam/gallatin/documents/json/advisers.js",
+     myOpts      // optional functions
+     ).loadData();
+   
+   });//end glow ready
+   //END JS FOR INSTRUCTOR SEARCH
+   
+   //hide gallatin-only fields from non-gallatin students
+   $(document).ready(function() {
+   
+     $("input[name$='submitted[matriculation]']").click(function() {
+       var studentStatus = $(this).val();
+   
+       if(studentStatus=="gallatin"){
+         $("#gallonly").show();
+       }else{
+         $("#gallonly").hide();
+       }
+     });
+   });
+   
 </script>
-
 <div id="formhermes">
-  <div id="formContainer">
-    <form class="webform-client-form" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/105" method="post" id="autoform" accept-charset="UTF-8">
+<div id="formContainer">
+   <form class="webform-client-form" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/105" method="post" id="autoform" accept-charset="UTF-8">
       <h2>Program Selection</h2>
       <div class="section radio">
-        <div class="fullSize"> 
-          <span class="options"> 
+         <div class="fullSize"> 
+            <span class="options"> 
             <span>
-              <input name="submitted[program]" value="Berlin" type="radio" class="required" checked="checked"/>
-              <label for="submitted[program]">Berlin, Capital of Modernity: TRAVL-UG 9500 </label>
+            <input name="submitted[program]" value="Berlin" type="radio" class="required" checked="checked"/>
+            <label for="submitted[program]">Berlin, Capital of Modernity: TRAVL-UG 9500 </label>
             </span> 
             <span>
-              <input name="submitted[program]" value="Florence" type="radio" />
-              <label for="submitted[program]">Florence: Italian Renaissance, Art and Literature:  The Culture Explosion: TRAVL-GG 2060: TRAVL-UG 9100</label>
+            <input name="submitted[program]" value="Florence" type="radio" />
+            <label for="submitted[program]">Florence: Italian Renaissance, Art and Literature:  The Culture Explosion: TRAVL-GG 2060: TRAVL-UG 9100</label>
             </span> 
             <span>
-              <input name="submitted[program]" id="submitted[program]" value="Hawaii" type="radio" />
-              <label for="program">Hawaii: Island Science: TRAVL-UG 9050</label>
+            <input name="submitted[program]" id="submitted[program]" value="Hawaii" type="radio" />
+            <label for="program">Hawaii: Island Science: TRAVL-UG 9050</label>
             </span> 
             <span>
-              <input name="submitted[program]" value="Madrid" type="radio" />
-              <label for="submitted[program]">Madrid: Faces of the Changing European City, TRAVL-UG 9350</label>
+            <input name="submitted[program]" value="Madrid" type="radio" />
+            <label for="submitted[program]">Madrid: Faces of the Changing European City, TRAVL-UG 9350</label>
             </span>
-          </span> 
-          <span class="program-msgContainer"></span>
-        </div>
+            </span> 
+            <span class="program-msgContainer"></span>
+         </div>
       </div>
       <div class="section checkbox">
-        <div class="fullSize">
-          <label for="submitted[another]">Please Mark if applicable</label>
-          <span class="options">
+         <div class="fullSize">
+            <label for="submitted[another]">Please Mark if applicable</label>
+            <span class="options">
             <input name="submitted[another]" id="submitted[another]" value="yes" type="checkbox" />
             <label for="applicable">I would like to apply to another program listed above if my selected program is not available.</label>
-          </span> 
-        </div>
+            </span> 
+         </div>
       </div>
       <div class="section text">
-        <div class="halfSize">
-          <label for="submitted[title]">Title of Program</label>
-          <input type="text" size="60" maxlength="128"  name="submitted[title]" id="submitted[title]"/>
-        </div>
+         <div class="halfSize">
+            <label for="submitted[title]">Title of Program</label>
+            <input type="text" size="60" maxlength="128"  name="submitted[title]" id="submitted[title]"/>
+         </div>
       </div>
       <hr/>
       <h2>Personal Information</h2>
       <div class="section text">
-        <div class="halfSize">
-          <label for="submitted[first_name]">First Name </label>
-          <input type="text" id="submitted[first_name]" name="submitted[first_name]" value="" size="60" maxlength="128" class="name"/>
-        </div>
+         <div class="halfSize">
+            <label for="submitted[first_name]">First Name </label>
+            <input type="text" id="submitted[first_name]" name="submitted[first_name]" value="" size="60" maxlength="128" class="name"/>
+         </div>
       </div>
       <div class="section text">
-        <div class="halfSize">
-          <label for="submitted[last_name]">Last Name </label>
-          <input type="text" id="submitted[last_name]" name="submitted[last_name]" value="" size="60" maxlength="128"  class="name"/>
-        </div>
+         <div class="halfSize">
+            <label for="submitted[last_name]">Last Name </label>
+            <input type="text" id="submitted[last_name]" name="submitted[last_name]" value="" size="60" maxlength="128"  class="name"/>
+         </div>
       </div>
       <div class="section text">
-        <div class="halfSize">
-          <label for="submitted[netid]">NetID </label>
-          <input type="text" id="submitted[netid]" name="submitted[netid]" value="" size="60" maxlength="128"/>
-        </div>
+         <div class="halfSize">
+            <label for="submitted[netid]">NetID </label>
+            <input type="text" id="submitted[netid]" name="submitted[netid]" value="" size="60" maxlength="128"/>
+         </div>
       </div>
       <div class="section text">
-        <div class="halfSize">
-          <label for="submitted[universityid]">University ID </label>
-          <input type="text" id="submitted[universityid]" name="submitted[universityid]" value="N" size="60" maxlength="9" />
-        </div>
+         <div class="halfSize">
+            <label for="submitted[universityid]">University ID </label>
+            <input type="text" id="submitted[universityid]" name="submitted[universityid]" value="N" size="60" maxlength="9" />
+         </div>
       </div>
       <hr/>
       <h2>Permanent Home Address</h2>
       <div class="section text">
-        <div class="fullSize">
-          <label for="submitted[padd]">Address</label>
-          <input type="text"  size="60" maxlength="128"  id="submitted[padd]" name="submitted[padd]" />
-          <span class="padd-msgContainer"></span> 
-        </div>
+         <div class="fullSize">
+            <label for="submitted[padd]">Address</label>
+            <input type="text"  size="60" maxlength="128"  id="submitted[padd]" name="submitted[padd]" />
+            <span class="padd-msgContainer"></span> 
+         </div>
       </div>
       <div class="section text">
-        <div class="halfSize">
-          <label for="submitted[pcity]">City</label>
-          <input type="text"  size="60" maxlength="128"  id="submitted[pcity]" name="submitted[pcity]" />
-          <span class="pcity-msgContainer"></span> 
-        </div>
+         <div class="halfSize">
+            <label for="submitted[pcity]">City</label>
+            <input type="text"  size="60" maxlength="128"  id="submitted[pcity]" name="submitted[pcity]" />
+            <span class="pcity-msgContainer"></span> 
+         </div>
       </div>
       <div class="section text">
-        <div class="quarterSize">
-          <label for="submitted[pstate]">State / Province</label>
-          <select name="submitted[pstate]" id="submitted[pstate]">
-
-            <option value="">Select One</option>
-            <optgroup label="Canadian Provinces">
-              <option value="AB">Alberta</option>
-              <option value="BC">British Columbia</option>
-              <option value="MB">Manitoba</option>
-              <option value="NB">New Brunswick</option>
-              <option value="NF">Newfoundland</option>
-              <option value="NT">Northwest Territories</option>
-              <option value="NS">Nova Scotia</option>
-              <option value="NU">Nunavut</option>
-              <option value="ON">Ontario</option>
-              <option value="PE">Prince Edward Island</option>
-              <option value="QC">Quebec</option>
-              <option value="SK">Saskatchewan</option>
-              <option value="YT">Yukon Territory</option>
-            </optgroup>
-            <optgroup label="U.S. States">
-              <option value="AK">Alaska</option>
-              <option value="AL">Alabama</option>
-              <option value="AR">Arkansas</option>
-              <option value="AZ">Arizona</option>
-              <option value="CA">California</option>
-              <option value="CO">Colorado</option>
-              <option value="CT">Connecticut</option>
-              <option value="DC">District of Columbia</option>
-              <option value="DE">Delaware</option>
-              <option value="FL">Florida</option>
-              <option value="GA">Georgia</option>
-              <option value="HI">Hawaii</option>
-              <option value="IA">Iowa</option>
-              <option value="ID">Idaho</option>
-              <option value="IL">Illinois</option>
-              <option value="IN">Indiana</option>
-              <option value="KS">Kansas</option>
-              <option value="KY">Kentucky</option>
-              <option value="LA">Louisiana</option>
-              <option value="MA">Massachusetts</option>
-              <option value="MD">Maryland</option>
-              <option value="ME">Maine</option>
-              <option value="MI">Michigan</option>
-              <option value="MN">Minnesota</option>
-              <option value="MO">Missouri</option>
-              <option value="MS">Mississippi</option>
-              <option value="MT">Montana</option>
-              <option value="NC">North Carolina</option>
-              <option value="ND">North Dakota</option>
-              <option value="NE">Nebraska</option>
-              <option value="NH">New Hampshire</option>
-              <option value="NJ">New Jersey</option>
-              <option value="NM">New Mexico</option>
-              <option value="NV">Nevada</option>
-              <option value="NY">New York</option>
-              <option value="OH">Ohio</option>
-              <option value="OK">Oklahoma</option>
-              <option value="OR">Oregon</option>
-              <option value="PA">Pennsylvania</option>
-              <option value="PR">Puerto Rico</option>
-              <option value="RI">Rhode Island</option>
-              <option value="SC">South Carolina</option>
-              <option value="SD">South Dakota</option>
-              <option value="TN">Tennessee</option>
-              <option value="TX">Texas</option>
-              <option value="UT">Utah</option>
-              <option value="VA">Virginia</option>
-              <option value="VT">Vermont</option>
-              <option value="WA">Washington</option>
-              <option value="WI">Wisconsin</option>
-              <option value="WV">West Virginia</option>
-              <option value="WY">Wyoming</option>
-            </optgroup>
-          </select>
-          <span class="pstate-msgContainer"></span> 
-        </div>
+         <div class="quarterSize">
+            <label for="submitted[pstate]">State / Province</label>
+            <select name="submitted[pstate]" id="submitted[pstate]">
+               <option value="">Select One</option>
+               <optgroup label="Canadian Provinces">
+                  <option value="AB">Alberta</option>
+                  <option value="BC">British Columbia</option>
+                  <option value="MB">Manitoba</option>
+                  <option value="NB">New Brunswick</option>
+                  <option value="NF">Newfoundland</option>
+                  <option value="NT">Northwest Territories</option>
+                  <option value="NS">Nova Scotia</option>
+                  <option value="NU">Nunavut</option>
+                  <option value="ON">Ontario</option>
+                  <option value="PE">Prince Edward Island</option>
+                  <option value="QC">Quebec</option>
+                  <option value="SK">Saskatchewan</option>
+                  <option value="YT">Yukon Territory</option>
+               </optgroup>
+               <optgroup label="U.S. States">
+                  <option value="AK">Alaska</option>
+                  <option value="AL">Alabama</option>
+                  <option value="AR">Arkansas</option>
+                  <option value="AZ">Arizona</option>
+                  <option value="CA">California</option>
+                  <option value="CO">Colorado</option>
+                  <option value="CT">Connecticut</option>
+                  <option value="DC">District of Columbia</option>
+                  <option value="DE">Delaware</option>
+                  <option value="FL">Florida</option>
+                  <option value="GA">Georgia</option>
+                  <option value="HI">Hawaii</option>
+                  <option value="IA">Iowa</option>
+                  <option value="ID">Idaho</option>
+                  <option value="IL">Illinois</option>
+                  <option value="IN">Indiana</option>
+                  <option value="KS">Kansas</option>
+                  <option value="KY">Kentucky</option>
+                  <option value="LA">Louisiana</option>
+                  <option value="MA">Massachusetts</option>
+                  <option value="MD">Maryland</option>
+                  <option value="ME">Maine</option>
+                  <option value="MI">Michigan</option>
+                  <option value="MN">Minnesota</option>
+                  <option value="MO">Missouri</option>
+                  <option value="MS">Mississippi</option>
+                  <option value="MT">Montana</option>
+                  <option value="NC">North Carolina</option>
+                  <option value="ND">North Dakota</option>
+                  <option value="NE">Nebraska</option>
+                  <option value="NH">New Hampshire</option>
+                  <option value="NJ">New Jersey</option>
+                  <option value="NM">New Mexico</option>
+                  <option value="NV">Nevada</option>
+                  <option value="NY">New York</option>
+                  <option value="OH">Ohio</option>
+                  <option value="OK">Oklahoma</option>
+                  <option value="OR">Oregon</option>
+                  <option value="PA">Pennsylvania</option>
+                  <option value="PR">Puerto Rico</option>
+                  <option value="RI">Rhode Island</option>
+                  <option value="SC">South Carolina</option>
+                  <option value="SD">South Dakota</option>
+                  <option value="TN">Tennessee</option>
+                  <option value="TX">Texas</option>
+                  <option value="UT">Utah</option>
+                  <option value="VA">Virginia</option>
+                  <option value="VT">Vermont</option>
+                  <option value="WA">Washington</option>
+                  <option value="WI">Wisconsin</option>
+                  <option value="WV">West Virginia</option>
+                  <option value="WY">Wyoming</option>
+               </optgroup>
+            </select>
+            <span class="pstate-msgContainer"></span> 
+         </div>
       </div>
       <div class="section text">
-        <div class="quarterSize">
-          <label for="submitted[pzip]">Zip / Postal Code</label>
-          <input type="text" size="10" maxlength="10" id="submitted[pzip]" name="submitted[pzip]" />
-          <span class="pzip-msgContainer"></span> 
-        </div>
+         <div class="quarterSize">
+            <label for="submitted[pzip]">Zip / Postal Code</label>
+            <input type="text" size="10" maxlength="10" id="submitted[pzip]" name="submitted[pzip]" />
+            <span class="pzip-msgContainer"></span> 
+         </div>
       </div>
       <div class="section text">
-        <div class="halfSize">
-          <label for="submitted[pcountry]">Country </label>
-          <input type="text" name="submitted[pcountry]" id="submitted[pcountry]" class="country"/>
-        </div>
+         <div class="halfSize">
+            <label for="submitted[pcountry]">Country </label>
+            <input type="text" name="submitted[pcountry]" id="submitted[pcountry]" class="country"/>
+         </div>
       </div>
       <div class="section text">
-        <div class="halfSize">
-          <label for="submitted[permphone]">Telephone</label>
-          <input name="submitted[permphone]" type="text" id="submitted[permphone]"  size="60" maxlength="128" />
-          <span class="permphone-msgContainer"></span> 
-        </div>
+         <div class="halfSize">
+            <label for="submitted[permphone]">Telephone</label>
+            <input name="submitted[permphone]" type="text" id="submitted[permphone]"  size="60" maxlength="128" />
+            <span class="permphone-msgContainer"></span> 
+         </div>
       </div>
       <hr/>
       <h2>Current Mailing Address</h2>
       <div class="section text">
-        <div class="fullSize">
-          <label for="submitted[ladd]">Address</label>
-          <input type="text" id="submitted[ladd]" name="submitted[ladd]"  size="60" maxlength="128"  />
-          <span class="ladd-msgContainer"></span> 
-        </div>
+         <div class="fullSize">
+            <label for="submitted[ladd]">Address</label>
+            <input type="text" id="submitted[ladd]" name="submitted[ladd]"  size="60" maxlength="128"  />
+            <span class="ladd-msgContainer"></span> 
+         </div>
       </div>
       <div class="section text">
-        <div class="halfSize">
-          <label for="submitted[lcity]">City</label>
-          <input type="text" id="submitted[lcity]"  size="60" maxlength="128" name="submitted[lcity]" />
-          <span class="lcity-msgContainer"></span> 
-        </div>
+         <div class="halfSize">
+            <label for="submitted[lcity]">City</label>
+            <input type="text" id="submitted[lcity]"  size="60" maxlength="128" name="submitted[lcity]" />
+            <span class="lcity-msgContainer"></span> 
+         </div>
       </div>
       <div class="section text">
-        <div class="quarterSize">
-          <label for="submitted[lstate]">State </label>
-          <select name="submitted[lstate]" id="submitted[lstate]">
-            <option value="">Select One</option>
-            <optgroup label="Canadian Provinces">
-              <option value="AB">Alberta</option>
-              <option value="BC">British Columbia</option>
-              <option value="MB">Manitoba</option>
-              <option value="NB">New Brunswick</option>
-              <option value="NF">Newfoundland</option>
-              <option value="NT">Northwest Territories</option>
-              <option value="NS">Nova Scotia</option>
-              <option value="NU">Nunavut</option>
-              <option value="ON">Ontario</option>
-              <option value="PE">Prince Edward Island</option>
-              <option value="QC">Quebec</option>
-              <option value="SK">Saskatchewan</option>
-              <option value="YT">Yukon Territory</option>
-            </optgroup>
-            <optgroup label="U.S. States">
-              <option value="AK">Alaska</option>
-              <option value="AL">Alabama</option>
-              <option value="AR">Arkansas</option>
-              <option value="AZ">Arizona</option>
-              <option value="CA">California</option>
-              <option value="CO">Colorado</option>
-              <option value="CT">Connecticut</option>
-              <option value="DC">District of Columbia</option>
-              <option value="DE">Delaware</option>
-              <option value="FL">Florida</option>
-              <option value="GA">Georgia</option>
-              <option value="HI">Hawaii</option>
-              <option value="IA">Iowa</option>
-              <option value="ID">Idaho</option>
-              <option value="IL">Illinois</option>
-              <option value="IN">Indiana</option>
-              <option value="KS">Kansas</option>
-              <option value="KY">Kentucky</option>
-              <option value="LA">Louisiana</option>
-              <option value="MA">Massachusetts</option>
-              <option value="MD">Maryland</option>
-              <option value="ME">Maine</option>
-              <option value="MI">Michigan</option>
-              <option value="MN">Minnesota</option>
-              <option value="MO">Missouri</option>
-              <option value="MS">Mississippi</option>
-              <option value="MT">Montana</option>
-              <option value="NC">North Carolina</option>
-              <option value="ND">North Dakota</option>
-              <option value="NE">Nebraska</option>
-              <option value="NH">New Hampshire</option>
-              <option value="NJ">New Jersey</option>
-              <option value="NM">New Mexico</option>
-              <option value="NV">Nevada</option>
-              <option value="NY">New York</option>
-              <option value="OH">Ohio</option>
-              <option value="OK">Oklahoma</option>
-              <option value="OR">Oregon</option>
-              <option value="PA">Pennsylvania</option>
-              <option value="PR">Puerto Rico</option>
-              <option value="RI">Rhode Island</option>
-              <option value="SC">South Carolina</option>
-              <option value="SD">South Dakota</option>
-              <option value="TN">Tennessee</option>
-              <option value="TX">Texas</option>
-              <option value="UT">Utah</option>
-              <option value="VA">Virginia</option>
-              <option value="VT">Vermont</option>
-              <option value="WA">Washington</option>
-              <option value="WI">Wisconsin</option>
-              <option value="WV">West Virginia</option>
-              <option value="WY">Wyoming</option>
-            </optgroup>
-          </select>
-        </div>
+         <div class="quarterSize">
+            <label for="submitted[lstate]">State </label>
+            <select name="submitted[lstate]" id="submitted[lstate]">
+               <option value="">Select One</option>
+               <optgroup label="Canadian Provinces">
+                  <option value="AB">Alberta</option>
+                  <option value="BC">British Columbia</option>
+                  <option value="MB">Manitoba</option>
+                  <option value="NB">New Brunswick</option>
+                  <option value="NF">Newfoundland</option>
+                  <option value="NT">Northwest Territories</option>
+                  <option value="NS">Nova Scotia</option>
+                  <option value="NU">Nunavut</option>
+                  <option value="ON">Ontario</option>
+                  <option value="PE">Prince Edward Island</option>
+                  <option value="QC">Quebec</option>
+                  <option value="SK">Saskatchewan</option>
+                  <option value="YT">Yukon Territory</option>
+               </optgroup>
+               <optgroup label="U.S. States">
+                  <option value="AK">Alaska</option>
+                  <option value="AL">Alabama</option>
+                  <option value="AR">Arkansas</option>
+                  <option value="AZ">Arizona</option>
+                  <option value="CA">California</option>
+                  <option value="CO">Colorado</option>
+                  <option value="CT">Connecticut</option>
+                  <option value="DC">District of Columbia</option>
+                  <option value="DE">Delaware</option>
+                  <option value="FL">Florida</option>
+                  <option value="GA">Georgia</option>
+                  <option value="HI">Hawaii</option>
+                  <option value="IA">Iowa</option>
+                  <option value="ID">Idaho</option>
+                  <option value="IL">Illinois</option>
+                  <option value="IN">Indiana</option>
+                  <option value="KS">Kansas</option>
+                  <option value="KY">Kentucky</option>
+                  <option value="LA">Louisiana</option>
+                  <option value="MA">Massachusetts</option>
+                  <option value="MD">Maryland</option>
+                  <option value="ME">Maine</option>
+                  <option value="MI">Michigan</option>
+                  <option value="MN">Minnesota</option>
+                  <option value="MO">Missouri</option>
+                  <option value="MS">Mississippi</option>
+                  <option value="MT">Montana</option>
+                  <option value="NC">North Carolina</option>
+                  <option value="ND">North Dakota</option>
+                  <option value="NE">Nebraska</option>
+                  <option value="NH">New Hampshire</option>
+                  <option value="NJ">New Jersey</option>
+                  <option value="NM">New Mexico</option>
+                  <option value="NV">Nevada</option>
+                  <option value="NY">New York</option>
+                  <option value="OH">Ohio</option>
+                  <option value="OK">Oklahoma</option>
+                  <option value="OR">Oregon</option>
+                  <option value="PA">Pennsylvania</option>
+                  <option value="PR">Puerto Rico</option>
+                  <option value="RI">Rhode Island</option>
+                  <option value="SC">South Carolina</option>
+                  <option value="SD">South Dakota</option>
+                  <option value="TN">Tennessee</option>
+                  <option value="TX">Texas</option>
+                  <option value="UT">Utah</option>
+                  <option value="VA">Virginia</option>
+                  <option value="VT">Vermont</option>
+                  <option value="WA">Washington</option>
+                  <option value="WI">Wisconsin</option>
+                  <option value="WV">West Virginia</option>
+                  <option value="WY">Wyoming</option>
+               </optgroup>
+            </select>
+         </div>
       </div>
       <div class="section text">
-        <div class="quarterSize">
-          <label for="submitted[lzip]">Zip / Postal Code</label>
-          <input type="text" size="10" maxlength="10" id="submitted[lzip]" name="submitted[lzip]" />
-          <span class="lzip-msgContainer"></span> 
-        </div>
+         <div class="quarterSize">
+            <label for="submitted[lzip]">Zip / Postal Code</label>
+            <input type="text" size="10" maxlength="10" id="submitted[lzip]" name="submitted[lzip]" />
+            <span class="lzip-msgContainer"></span> 
+         </div>
       </div>
       <div class="section text">
-        <div class="halfSize">
-          <label for="submitted[lcountry]">Country </label>
-          <input type="text" name="submitted[lcountry]" id="submitted[lcountry]" class="country"/>
-        </div>
+         <div class="halfSize">
+            <label for="submitted[lcountry]">Country </label>
+            <input type="text" name="submitted[lcountry]" id="submitted[lcountry]" class="country"/>
+         </div>
       </div>
       <div class="section text">
-        <div class="halfSize">
-          <label for="submitted[telephone]">Telephone</label>
-          <input type="text" id="submitted[telephone]" name="submitted[telephone]"  size="60" maxlength="128" />
-          <span class="telephone-msgContainer"></span> 
-        </div>
+         <div class="halfSize">
+            <label for="submitted[telephone]">Telephone</label>
+            <input type="text" id="submitted[telephone]" name="submitted[telephone]"  size="60" maxlength="128" />
+            <span class="telephone-msgContainer"></span> 
+         </div>
       </div>
       <hr/>
       <h2>Academic Information</h2>
       <div class="section radio">
-        <div class="halfSize">
-          <label for="submitted[student_status]">Class Standing </label>
-          <span class="options"> 
+         <div class="halfSize">
+            <label for="submitted[student_status]">Class Standing </label>
+            <span class="options"> 
             <span>
-              <input name="submitted[student_status]" value="FR" type="radio" class="required" checked="checked"/>
-              <label for="submitted[student_status]">First-year</label>
+            <input name="submitted[student_status]" value="FR" type="radio" class="required" checked="checked"/>
+            <label for="submitted[student_status]">First-year</label>
             </span> 
             <span>
-              <input name="submitted[student_status]" value="SO" type="radio" />
-              <label for="submitted[student_status]">Sophomore</label>
+            <input name="submitted[student_status]" value="SO" type="radio" />
+            <label for="submitted[student_status]">Sophomore</label>
             </span> 
             <span>
-              <input name="submitted[student_status]" value="JR" type="radio" />
-              <label for="submitted[student_status]">Junior</label>
+            <input name="submitted[student_status]" value="JR" type="radio" />
+            <label for="submitted[student_status]">Junior</label>
             </span> 
             <span>
-              <input name="submitted[student_status]" value="SR" type="radio" />
-              <label for="submitted[student_status]">Senior</label>
+            <input name="submitted[student_status]" value="SR" type="radio" />
+            <label for="submitted[student_status]">Senior</label>
             </span> 
             <span>
-              <input name="submitted[student_status]" value="GR" type="radio" />
-              <label for="submitted[student_status]">Graduate</label>
+            <input name="submitted[student_status]" value="GR" type="radio" />
+            <label for="submitted[student_status]">Graduate</label>
             </span> 
             <span class="student_status-msgContainer"></span>
-          </span> 
-        </div>
+            </span> 
+         </div>
       </div>
       <div class="section radio">
-        <div class="halfSize">
-          <label for="submitted[matriculation]">Status</label>
-          <span class="options">
+         <div class="halfSize">
+            <label for="submitted[matriculation]">Status</label>
+            <span class="options">
             <input name="submitted[matriculation]" value="gallatin" type="radio"  checked="checked"/>
             <label for="submitted[matriculation]">Gallatin Student </label>
-          </span> 
-          <span >
+            </span> 
+            <span >
             <input name="submitted[matriculation]" value="nyu" type="radio" />
             <label for="submitted[matriculation]">Other NYU Student </label>
-          </span> <span>
-          <input name="submitted[matriculation]" value="non" type="radio" />
-          <label for="submitted[matriculation]">Non-NYU Student </label>
-        </span> <span class="matriculation-msgContainer"></span> 
+            </span> <span>
+            <input name="submitted[matriculation]" value="non" type="radio" />
+            <label for="submitted[matriculation]">Non-NYU Student </label>
+            </span> <span class="matriculation-msgContainer"></span> 
+         </div>
       </div>
-    </div>
-    <div class="section text">
-      <div class="fullSize">
-        <label for="submitted[school]">NYU School / Current School </label>
-        <input type="text" id="submitted[school]" name="submitted[school]" value="" size="60" maxlength="128" class="required"/>
-        <span class="school-msgContainer"></span> 
-      </div>
-    </div>
-    <div class="section text">
-      <div class="fullSize">
-        <label for="submitted[concentration]">Major / Concentration </label>
-        <input type="text" id="submitted[concentration]" name="submitted[concentration]" value="" size="60" maxlength="128"  class="required"/>
-        <span class="concentration-msgContainer"></span> 
-      </div>
-    </div>
-    <hr/>
-    <div class="gallonly">
-      <h2>Gallatin Adviser Information</h2>
-      <p>Gallatin students only: please select your primary academic (faculty) adviser below. Gallatin will forward a copy of this application to your adviser in lieu of the Plan of Study for the summer term.</p>
       <div class="section text">
-        <div class="halfSize">
-          <label for="adviser">Adviser Name </label>
-          <input type="text" name="submitted[adviser]" id="adviser"/><p>(Start typing the name, then choose from the list.)</p>
-          <span class="adviser-msgContainer"></span> 
-        </div>
-      </div>   
+         <div class="fullSize">
+            <label for="submitted[school]">NYU School / Current School </label>
+            <input type="text" id="submitted[school]" name="submitted[school]" value="" size="60" maxlength="128" class="required"/>
+            <span class="school-msgContainer"></span> 
+         </div>
+      </div>
       <div class="section text">
-        <div class="halfSize">
-          <label for="fac_adviser">Adviser Email</label>
-          <input type="text" name="submitted[fac_adviser]" id="fac_adviser"/>
-          <span class="fac_adviser-msgContainer"></span> 
-        </div>
-      </div>      
+         <div class="fullSize">
+            <label for="submitted[concentration]">Major / Concentration </label>
+            <input type="text" id="submitted[concentration]" name="submitted[concentration]" value="" size="60" maxlength="128"  class="required"/>
+            <span class="concentration-msgContainer"></span> 
+         </div>
+      </div>
       <hr/>
-    </div>
-    <h2>Personal Statement</h2>
-    <div class="section text">
-      <div class="fullSize">
-        <label for="submitted[personal_statement]">Please submit a 250 word personal statement addressing your academic  reasons for wanting to to participate in this program as well as any experience you may have had living or traveling in another country.</label>
-        <textarea name="submitted[personal_statement]" cols="90" rows="8" id="submitted[personal_statement]"  maxlength="2000" class="required"></textarea>
-        <span class="personal_statement-msgContainer"></span> 
+      <div id="gallonly">
+         <h2>Gallatin Adviser Information</h2>
+         <p>Gallatin students only: please select your primary academic (faculty) adviser below. Gallatin will forward a copy of this application to your adviser in lieu of the Plan of Study for the summer term.</p>
+         <div class="section text">
+            <div class="halfSize">
+               <label for="adviser">Adviser Name </label>
+               <input type="text" name="submitted[adviser]" id="adviser"/>
+               <p>(Start typing the name, then choose from the list.)</p>
+               <span class="adviser-msgContainer"></span> 
+            </div>
+         </div>
+         <div class="section text">
+            <div class="halfSize">
+               <label for="fac_adviser">Adviser Email</label>
+               <input type="text" name="submitted[fac_adviser]" id="fac_adviser"/>
+               <span class="fac_adviser-msgContainer"></span> 
+            </div>
+         </div>
+         <hr/>
       </div>
-    </div>
-    <hr/>
-    <h2>Transcript</h2>
-    <div class="section text">
-      <div class="fullSize">
-        <label for="files[submitted_file2]">NYU students DO NOT have to submit a transcript; the Office of Global Programs will review them in Albert. A transcript is required for all other applicants. An unofficial transcript may be submitted. Please submit your transcript with this application (preferred) in .doc, .docx, or .pdf format. The transcript can also be mailed/delivered to the Gallatin Office of Global Programs, 411 Lafayette St., 3rd Floor, New York, NY 10003.</label>
-        <input type="file" id="files[submitted_file2]" name="files[submitted_file2]"/>
+      <h2>Personal Statement</h2>
+      <div class="section text">
+         <div class="fullSize">
+            <label for="submitted[personal_statement]">Please submit a 250 word personal statement addressing your academic  reasons for wanting to to participate in this program as well as any experience you may have had living or traveling in another country.</label>
+            <textarea name="submitted[personal_statement]" cols="90" rows="8" id="submitted[personal_statement]"  maxlength="2000" class="required"></textarea>
+            <span class="personal_statement-msgContainer"></span> 
+         </div>
       </div>
-    </div>
-    <hr/>
-    <h2>Reference</h2>
-    <p>Please provide contact information for a faculty member or a primary academic adviser who can speak to your academic standing and ability to study away in an intensive course.</p>
-    <div class="section text">
-      <div class="halfSize">
-        <label for="submitted[reference_first_name]">First Name </label>
-        <input type="text" id="submitted[reference_first_name]" name="submitted[reference_first_name]" value="" size="60" maxlength="128" class="name"/>
+      <hr/>
+      <h2>Transcript</h2>
+      <div class="section text">
+         <div class="fullSize">
+            <label for="files[submitted_file2]">NYU students DO NOT have to submit a transcript; the Office of Global Programs will review them in Albert. A transcript is required for all other applicants. An unofficial transcript may be submitted. Please submit your transcript with this application (preferred) in .doc, .docx, or .pdf format. The transcript can also be mailed/delivered to the Gallatin Office of Global Programs, 411 Lafayette St., 3rd Floor, New York, NY 10003.</label>
+            <input type="file" id="files[submitted_file2]" name="files[submitted_file2]"/>
+         </div>
       </div>
-    </div>
-    <div class="section text">
-      <div class="halfSize">
-        <label for="submitted[reference_last_name]">Last Name </label>
-        <input type="text" id="submitted[reference_last_name]" name="submitted[reference_last_name]" value="" size="60" maxlength="128"  class="name"/>
+      <hr/>
+      <h2>Reference</h2>
+      <p>Please provide contact information for a faculty member or a primary academic adviser who can speak to your academic standing and ability to study away in an intensive course.</p>
+      <div class="section text">
+         <div class="halfSize">
+            <label for="submitted[reference_first_name]">First Name </label>
+            <input type="text" id="submitted[reference_first_name]" name="submitted[reference_first_name]" value="" size="60" maxlength="128" class="name"/>
+         </div>
       </div>
-    </div>
- <!--   <div class="section text">
-      <div class="fullSize">
-        <label for="submitted[reference_address]">Address</label>
-        <input type="text" id="submitted[reference_address]" name="submitted[reference_address]"  size="60" maxlength="128"  />
-        <span class="reference_address-msgContainer"></span> 
+      <div class="section text">
+         <div class="halfSize">
+            <label for="submitted[reference_last_name]">Last Name </label>
+            <input type="text" id="submitted[reference_last_name]" name="submitted[reference_last_name]" value="" size="60" maxlength="128"  class="name"/>
+         </div>
       </div>
-    </div>
-    <div class="section text">
-      <div class="halfSize">
-        <label for="submitted[reference_city]">City</label>
-        <input type="text" id="submitted[reference_city]"  size="60" maxlength="128" name="submitted[reference_city]" />
-        <span class="reference_city-msgContainer"></span> 
+      <!--   <div class="section text">
+         <div class="fullSize">
+           <label for="submitted[reference_address]">Address</label>
+           <input type="text" id="submitted[reference_address]" name="submitted[reference_address]"  size="60" maxlength="128"  />
+           <span class="reference_address-msgContainer"></span> 
+         </div>
+         </div>
+         <div class="section text">
+         <div class="halfSize">
+           <label for="submitted[reference_city]">City</label>
+           <input type="text" id="submitted[reference_city]"  size="60" maxlength="128" name="submitted[reference_city]" />
+           <span class="reference_city-msgContainer"></span> 
+         </div>
+         </div>
+         <div class="section text">
+         <div class="quarterSize">
+           <label for="submitted[reference_state]">State </label>
+           <select name="submitted[reference_state]" id="submitted[reference_state]">
+             <option value="">Select One</option>
+             <optgroup label="Canadian Provinces">
+               <option value="AB">Alberta</option>
+               <option value="BC">British Columbia</option>
+               <option value="MB">Manitoba</option>
+               <option value="NB">New Brunswick</option>
+               <option value="NF">Newfoundland</option>
+               <option value="NT">Northwest Territories</option>
+               <option value="NS">Nova Scotia</option>
+               <option value="NU">Nunavut</option>
+               <option value="ON">Ontario</option>
+               <option value="PE">Prince Edward Island</option>
+               <option value="QC">Quebec</option>
+               <option value="SK">Saskatchewan</option>
+               <option value="YT">Yukon Territory</option>
+             </optgroup>
+             <optgroup label="U.S. States">
+               <option value="AK">Alaska</option>
+               <option value="AL">Alabama</option>
+               <option value="AR">Arkansas</option>
+               <option value="AZ">Arizona</option>
+               <option value="CA">California</option>
+               <option value="CO">Colorado</option>
+               <option value="CT">Connecticut</option>
+               <option value="DC">District of Columbia</option>
+               <option value="DE">Delaware</option>
+               <option value="FL">Florida</option>
+               <option value="GA">Georgia</option>
+               <option value="HI">Hawaii</option>
+               <option value="IA">Iowa</option>
+               <option value="ID">Idaho</option>
+               <option value="IL">Illinois</option>
+               <option value="IN">Indiana</option>
+               <option value="KS">Kansas</option>
+               <option value="KY">Kentucky</option>
+               <option value="LA">Louisiana</option>
+               <option value="MA">Massachusetts</option>
+               <option value="MD">Maryland</option>
+               <option value="ME">Maine</option>
+               <option value="MI">Michigan</option>
+               <option value="MN">Minnesota</option>
+               <option value="MO">Missouri</option>
+               <option value="MS">Mississippi</option>
+               <option value="MT">Montana</option>
+               <option value="NC">North Carolina</option>
+               <option value="ND">North Dakota</option>
+               <option value="NE">Nebraska</option>
+               <option value="NH">New Hampshire</option>
+               <option value="NJ">New Jersey</option>
+               <option value="NM">New Mexico</option>
+               <option value="NV">Nevada</option>
+               <option value="NY">New York</option>
+               <option value="OH">Ohio</option>
+               <option value="OK">Oklahoma</option>
+               <option value="OR">Oregon</option>
+               <option value="PA">Pennsylvania</option>
+               <option value="PR">Puerto Rico</option>
+               <option value="RI">Rhode Island</option>
+               <option value="SC">South Carolina</option>
+               <option value="SD">South Dakota</option>
+               <option value="TN">Tennessee</option>
+               <option value="TX">Texas</option>
+               <option value="UT">Utah</option>
+               <option value="VA">Virginia</option>
+               <option value="VT">Vermont</option>
+               <option value="WA">Washington</option>
+               <option value="WI">Wisconsin</option>
+               <option value="WV">West Virginia</option>
+               <option value="WY">Wyoming</option>
+             </optgroup>
+           </select>
+         </div>
+         </div>
+         <div class="section text">
+         <div class="quarterSize">
+           <label for="submitted[reference_zip]">Zip / Postal Code</label>
+           <input type="text" size="10" maxlength="10" id="submitted[reference_zip]" name="submitted[reference_zip]" />
+           <span class="reference_zip-msgContainer"></span> 
+         </div>
+         </div>
+         <div class="section text">
+         <div class="halfSize">
+           <label for="submitted[reference_country]">Country </label>
+           <input type="text" name="submitted[reference_country]" id="submitted[reference_country]" class="country"/>
+         </div>
+         </div>-->
+      <div class="section text">
+         <div class="halfSize">
+            <label for="submitted[reference_telephone]">Telephone</label>
+            <input type="text" id="submitted[reference_telephone]" name="submitted[reference_telephone]"  size="60" maxlength="128" />
+            <span class="reference_telephone-msgContainer"></span> 
+         </div>
       </div>
-    </div>
-    <div class="section text">
-      <div class="quarterSize">
-        <label for="submitted[reference_state]">State </label>
-        <select name="submitted[reference_state]" id="submitted[reference_state]">
-          <option value="">Select One</option>
-          <optgroup label="Canadian Provinces">
-            <option value="AB">Alberta</option>
-            <option value="BC">British Columbia</option>
-            <option value="MB">Manitoba</option>
-            <option value="NB">New Brunswick</option>
-            <option value="NF">Newfoundland</option>
-            <option value="NT">Northwest Territories</option>
-            <option value="NS">Nova Scotia</option>
-            <option value="NU">Nunavut</option>
-            <option value="ON">Ontario</option>
-            <option value="PE">Prince Edward Island</option>
-            <option value="QC">Quebec</option>
-            <option value="SK">Saskatchewan</option>
-            <option value="YT">Yukon Territory</option>
-          </optgroup>
-          <optgroup label="U.S. States">
-            <option value="AK">Alaska</option>
-            <option value="AL">Alabama</option>
-            <option value="AR">Arkansas</option>
-            <option value="AZ">Arizona</option>
-            <option value="CA">California</option>
-            <option value="CO">Colorado</option>
-            <option value="CT">Connecticut</option>
-            <option value="DC">District of Columbia</option>
-            <option value="DE">Delaware</option>
-            <option value="FL">Florida</option>
-            <option value="GA">Georgia</option>
-            <option value="HI">Hawaii</option>
-            <option value="IA">Iowa</option>
-            <option value="ID">Idaho</option>
-            <option value="IL">Illinois</option>
-            <option value="IN">Indiana</option>
-            <option value="KS">Kansas</option>
-            <option value="KY">Kentucky</option>
-            <option value="LA">Louisiana</option>
-            <option value="MA">Massachusetts</option>
-            <option value="MD">Maryland</option>
-            <option value="ME">Maine</option>
-            <option value="MI">Michigan</option>
-            <option value="MN">Minnesota</option>
-            <option value="MO">Missouri</option>
-            <option value="MS">Mississippi</option>
-            <option value="MT">Montana</option>
-            <option value="NC">North Carolina</option>
-            <option value="ND">North Dakota</option>
-            <option value="NE">Nebraska</option>
-            <option value="NH">New Hampshire</option>
-            <option value="NJ">New Jersey</option>
-            <option value="NM">New Mexico</option>
-            <option value="NV">Nevada</option>
-            <option value="NY">New York</option>
-            <option value="OH">Ohio</option>
-            <option value="OK">Oklahoma</option>
-            <option value="OR">Oregon</option>
-            <option value="PA">Pennsylvania</option>
-            <option value="PR">Puerto Rico</option>
-            <option value="RI">Rhode Island</option>
-            <option value="SC">South Carolina</option>
-            <option value="SD">South Dakota</option>
-            <option value="TN">Tennessee</option>
-            <option value="TX">Texas</option>
-            <option value="UT">Utah</option>
-            <option value="VA">Virginia</option>
-            <option value="VT">Vermont</option>
-            <option value="WA">Washington</option>
-            <option value="WI">Wisconsin</option>
-            <option value="WV">West Virginia</option>
-            <option value="WY">Wyoming</option>
-          </optgroup>
-        </select>
+      <div class="section text">
+         <div class="halfSize">
+            <label for="reference_email">Email</label>
+            <input type="text" name="submitted[reference_email]" id="reference_email"  class="email"/>
+            <span class="reference_email-msgContainer"></span> 
+         </div>
       </div>
-    </div>
-    <div class="section text">
-      <div class="quarterSize">
-        <label for="submitted[reference_zip]">Zip / Postal Code</label>
-        <input type="text" size="10" maxlength="10" id="submitted[reference_zip]" name="submitted[reference_zip]" />
-        <span class="reference_zip-msgContainer"></span> 
-      </div>
-    </div>
-    <div class="section text">
-      <div class="halfSize">
-        <label for="submitted[reference_country]">Country </label>
-        <input type="text" name="submitted[reference_country]" id="submitted[reference_country]" class="country"/>
-      </div>
-    </div>-->
-    <div class="section text">
-      <div class="halfSize">
-        <label for="submitted[reference_telephone]">Telephone</label>
-        <input type="text" id="submitted[reference_telephone]" name="submitted[reference_telephone]"  size="60" maxlength="128" />
-        <span class="reference_telephone-msgContainer"></span> 
-      </div>
-    </div>
-    <div class="section text">
-      <div class="halfSize">
-        <label for="reference_email">Email</label>
-        <input type="text" name="submitted[reference_email]" id="reference_email"  class="email"/>
-        <span class="reference_email-msgContainer"></span> 
-      </div>
-    </div>  
-    <hr/>
-    <div class="gallonly">
-      <h2>Gallatin Dean’s Scholarship for Gallatin Travel Courses</h2>
-
-      <p><strong>For students currently enrolled at Gallatin</strong>: Limited scholarship funding is available for Gallatin’s winter and summer travel courses. To be considered, you must meet the following criteria:
-
-        <ul><li>You must be enrolled at Gallatin <strong>at the time of application</strong></li>
-          <li>Good academic standing (GPA 3.0 or better; no grades of Incomplete)</li>
-          <li>Have a current FAFSA on file with the Office of Financial Aid and show unmet need</li>
-          <li>Minimum of half-time matriculation during the semester awarded (changes in the number of credits registered for during the semester may alter your award)</li>
-        </ul>
-      </p>
-      <p>
-       You will receive an email at your NYU email address indicating whether you have been awarded a Dean’s Scholarship. Final scholarship decisions will be made by <strong>November 7</strong> for winter travel courses and by <strong>March 15</strong> for summer travel courses.
-     </p>
-    <div class="section text">
-      <div class="halfSize">
-        <label for="submitted[request]">I would like to request a Dean’s Scholarship</label>
-        <select type="select" id="submitted[request]" name="submitted[request]" class="required">
-          <option value="">Select One</option>
-          <option value="Yes">Yes</option>
-          <option value="No">No</option>
-        </select>
-         <span class="request-msgContainer"></span>
-      </div>
-    </div>  
-     <div class="section text">
-      <div class="fullSize">
-        <label for="submitted[scholarship]"><strong>If you are requesting a Dean's Scholarship, you must provide a reason below</strong>. Please be specific: include any financial considerations and reasons for wanting to participate in the travel course. 250-500 words.</label>
-        <textarea name="submitted[scholarship]" cols="90" rows="8" id="submitted[scholarship]"  maxlength="4000"></textarea>
-      </div>
-    </div>
-    <div class="section text">
-      <div class="halfSize">
-        <label for="submitted[fafsa]">Have you submitted a FAFSA this year?</label>
-        <select type="select" id="submitted[fafsa]" name="submitted[fafsa]">
-          <option value="">Select One</option>
-          <option value="Yes">Yes</option>
-          <option value="No">No</option>
-        </select>
-      </div>
-    </div>  
-    <div class="section text">
-      <div class="halfSize">
-        <label for="submitted[past_scholarships]">Have you received a dean's scholarship in the past?</label>
-        <select type="select" id="submitted[past_scholarships]" name="submitted[past_scholarships]">
-          <option value="">Select One</option>
-          <option value="Yes">Yes</option>
-          <option value="No">No</option>
-        </select>
-      </div>
-    </div>  
-  
-  <input type="hidden" name="form_id" value="webform_client_form_105" />
-  <input type="hidden" name="submitted[application_type]" value="Summer" />
-  <div class="section end">
-    <div class="fullSize">
-      <button type="submit" id="submit" name="op" value="Submit">Submit</button>
-      <button type="reset" id="reset" name="reset" value="Reset">Reset</button>
-    </div>
-  </div>
-</form>
-</div>
+      <hr/>
+      <div class="gallonly">
+         <h2>Gallatin Dean’s Scholarship for Gallatin Travel Courses</h2>
+         <p><strong>For students currently enrolled at Gallatin</strong>: Limited scholarship funding is available for Gallatin’s winter and summer travel courses. To be considered, you must meet the following criteria:
+         <ul>
+            <li>You must be enrolled at Gallatin <strong>at the time of application</strong></li>
+            <li>Good academic standing (GPA 3.0 or better; no grades of Incomplete)</li>
+            <li>Have a current FAFSA on file with the Office of Financial Aid and show unmet need</li>
+            <li>Minimum of half-time matriculation during the semester awarded (changes in the number of credits registered for during the semester may alter your award)</li>
+         </ul>
+         </p>
+         <p>
+            You will receive an email at your NYU email address indicating whether you have been awarded a Dean’s Scholarship. Final scholarship decisions will be made by <strong>November 7</strong> for winter travel courses and by <strong>March 15</strong> for summer travel courses.
+         </p>
+         <div class="section text">
+            <div class="halfSize">
+               <label for="submitted[request]">I would like to request a Dean’s Scholarship</label>
+               <select type="select" id="submitted[request]" name="submitted[request]" class="required">
+                  <option value="">Select One</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+               </select>
+               <span class="request-msgContainer"></span>
+            </div>
+         </div>
+         <div class="section text">
+            <div class="fullSize">
+               <label for="submitted[scholarship]"><strong>If you are requesting a Dean's Scholarship, you must provide a reason below</strong>. Please be specific: include any financial considerations and reasons for wanting to participate in the travel course. 250-500 words.</label>
+               <textarea name="submitted[scholarship]" cols="90" rows="8" id="submitted[scholarship]"  maxlength="4000"></textarea>
+            </div>
+         </div>
+         <div class="section text">
+            <div class="halfSize">
+               <label for="submitted[fafsa]">Have you submitted a FAFSA this year?</label>
+               <select type="select" id="submitted[fafsa]" name="submitted[fafsa]">
+                  <option value="">Select One</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+               </select>
+            </div>
+         </div>
+         <div class="section text">
+            <div class="halfSize">
+               <label for="submitted[past_scholarships]">Have you received a dean's scholarship in the past?</label>
+               <select type="select" id="submitted[past_scholarships]" name="submitted[past_scholarships]">
+                  <option value="">Select One</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+               </select>
+            </div>
+         </div>
+         <input type="hidden" name="form_id" value="webform_client_form_105" />
+         <input type="hidden" name="submitted[application_type]" value="Summer" />
+         <div class="section end">
+            <div class="fullSize">
+               <button type="submit" id="submit" name="op" value="Submit">Submit</button>
+               <button type="reset" id="reset" name="reset" value="Reset">Reset</button>
+            </div>
+         </div>
+   </form>
+   </div>
 </div>

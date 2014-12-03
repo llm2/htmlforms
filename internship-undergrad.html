@@ -106,6 +106,7 @@ var suggest = new glow.widgets.AutoSuggest(
             <div class="halfSize">
               <label for="submitted[semester]">Semester of Registration </label>
               <select id="submitted[semester]" name="submitted[semester]" class="requiredselect">
+                <option value="">Select One</option>
                 <option>Fall</option>
                 <option>Spring</option>
                 <option>Summer</option>
@@ -117,6 +118,7 @@ var suggest = new glow.widgets.AutoSuggest(
             <div class="halfSize">
               <label for="submitted[year]">Year of Registration </label>
               <select id="submitted[year]" name="submitted[year]" class="requiredselect">
+                <option value="">Select One</option>
                 <option>2014</option>
                 <option>2015</option>
                 <option>2016</option>
@@ -132,13 +134,21 @@ var suggest = new glow.widgets.AutoSuggest(
             <div class="halfSize">
               <label for="submitted[units]">Number of Units</label>
                <select id="submitted[units]" name="submitted[units]" class="requiredselect">
-                <option>2</option>
+                <option value="">Select One</option>
+               <option>2</option>
                 <option>3</option>
                 <option>4</option>
               </select>
               <span class="units-msgContainer"></span>
             </div>
           </div>
+          <div class="section text">
+            <div class="halfSize">
+              <label for="submitted[industry]">Industry Field</label>
+              <input type="text" id="submitted[industry]" name="submitted[industry]" value="">
+              <span class="industry-msgContainer"></span>
+            </div>
+          </div>          
           <div class="section text">
             <div class="fullSize">
               <label for="submitted[organization]">Name of Organization</label>
