@@ -1,4 +1,29 @@
-﻿<div id="formContainer">
+﻿<script type="text/javascript">
+$(document).ready(function() {
+  checkCookie();
+});
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
+    }
+    return "";
+}
+
+function checkCookie() {
+    var user = getCookie("netid");
+    if (user != "") {
+        $("#formContainer").show();
+    } else {
+        $("#formContainer").replaceWith("<hr/><H1>You must complete the <a href=\"http://devcms4.home.nyu.edu:4503/content/gallatin/en/utilities/forms/senior_exit.html\">Exit Survey</a> before requesting graduation tickets.</H1><hr/>");
+    }
+}
+</script>
+<div id="formContainer">
   <form enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/25" method="post" id="autoform" class="autoform" accept-charset="UTF-8">
     <div class="section text">
       <div class="halfSize">

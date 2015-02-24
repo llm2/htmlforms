@@ -49,7 +49,7 @@ $(document).ready(function() {
 
 </script>
 <div id="formContainer">
-  <form class="autoform" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/210" method="post" id="autoform" accept-charset="UTF-8">
+  <form class="autoform" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/504" method="post" id="autoform" accept-charset="UTF-8">
     <div class="section text">
       <div class="halfSize">
         <label for="submitted[first_name]">First Name </label>
@@ -129,9 +129,18 @@ $(document).ready(function() {
  <h2>Personal Statement</h2>
   <div class="section text">
     <div class="fullSize">
-      <label for="submitted[personal_statement]">Provide a 250-500-word statement explaining the relevance of Chinese to your Gallatin concentration. Also indicate relevant language proficiency and completed coursework that you believe will help you succeed in your Fellowship.</label>
+      <label for="submitted[personal_statement]">Provide a 500-word statement describing your specific research project, how it fits into your academic concentration, and any relevant courses, experience, background, and language skills that prepare you for the research.</label>
       <textarea name="submitted[personal_statement]" cols="90" rows="8" id="submitted[personal_statement]"  maxlength="5000" class="required"></textarea>
       <span class="personal_statement-msgContainer"></span> 
+    </div>
+  </div>
+            <hr />
+ <h2>Concentration or Thesis Plan</h2>
+  <div class="section text">
+    <div class="fullSize">
+      <label for="submitted[plan]">Provide a brief description of your concentration or thesis plan.</label>
+      <textarea name="submitted[plan]" cols="90" rows="8" id="submitted[plan]"  maxlength="5000" class="required"></textarea>
+      <span class="plan-msgContainer"></span> 
     </div>
   </div>
       <hr />
@@ -144,7 +153,7 @@ $(document).ready(function() {
     </div>
     <hr />
      <h2>Faculty Reference</h2>
-      <p>Please provide contact information for a fulltime NYU faculty member who can speak to your academic standing and your ability to work independently.</p>
+      <p>Please request a letter of recommendation from an NYU faculty member who supports this project and is willing to work with you on it, as an informal mentor. Letters should be submitted by the application deadline as an email attachment to <a href="mailto:gallatin.global@nyu.edu">gallatin.global@nyu.edu</a> (.doc, .docx, or .pdf format) or should be mailed/delivered to the Gallatin Office of Global Programs, 411 Lafayette Street, 3rd Floor, New York, NY 10003. Please provide this faculty member’s contact information below.</p>
       <div class="section text">
         <div class="halfSize">
           <label for="submitted[reference_first_name]">First Name </label>
@@ -173,7 +182,7 @@ $(document).ready(function() {
         </div>
       </div>  
 
-    <input type="hidden" name="form_id" value="webform_client_form_210" />
+    <input type="hidden" name="form_id" value="webform_client_form_504" />
     <div class="section end">
       <div class="fullSize">
         <button type="submit"
