@@ -125,16 +125,18 @@ function checkCookie() {
         <label for="submitted[study_abroad_location]"> If yes, where?</label>
         <select name="submitted[study_abroad_location]" id="submitted[study_abroad_location]">
           <option value="">Select</option>
-          <option value="Berlin">Berlin, Germany</option>
           <option value="Accra">Accra, Ghana</option>
-          <option value="Florence">Florence, Italy</option>
+          <option value="AbuDhabi">Abu Dhabi</option>
+          <option value="Berlin">Berlin, Germany</option>
           <option value="BuenosAires">Buenos Aires, Argentina</option>
+          <option value="Florence">Florence, Italy</option>
           <option value="London">London, England</option>
           <option value="Madrid">Madrid, Spain</option>
           <option value="Paris">Paris, France</option>
           <option value="Prague">Prague, Czech Republic</option>
           <option value="Shanghai">Shanghai, China</option>
           <option value="TelAviv">Tel Aviv, Israel</option>
+          <option value="Washington">Washington, DC</option>
           <option value="Other">Other (please specify below)</option>
         </select>
         <input type="text" id="submitted[other_location]" name="submitted[other_location]" value="" size="60" maxlength="128"/>
@@ -157,6 +159,7 @@ function checkCookie() {
         <select name="submitted[kind_programs]" id="submitted[kind_programs]">
           <option value="">Select</option>
           <option value="MA">M.A., M.S.</option>
+          <option value="MFA">M.F.A.</option>
           <option value="PhD">Ph.D.</option>
           <option value="MBA">M.B.A.</option>
           <option value="Law">Law</option>
@@ -236,6 +239,13 @@ function checkCookie() {
       </div>
     </div>
     <hr />
+    
+    <div class="section text">
+      <div class="fullSize">
+        <label for="submitted[impact]">Please give the name of any adviser, faculty member, or person who had a large, positive impact on your career at Gallatin.</label>
+        <input type="text" id="submitted[impact]" name="submitted[impact]" value="" size="60" maxlength="128"/>
+      </div>
+    </div>
     <div class="section text">
       <div class="fullSize">
         <label for="submitted[memory]">What is your favorite memory of Gallatin? </label>
