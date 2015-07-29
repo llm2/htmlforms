@@ -17,7 +17,7 @@
           <div class="section text">
             <div class="halfSize">
               <label for="submitted[netid]">NetID</label>
-              <input type="text" id="submitted[netid]" name="submitted[netid]" value="" size="60" maxlength="128" />
+              <input type="text" id="submitted[netid]" name="submitted[netid]" value="" size="60" maxlength="128" class="netid"/>
               <span class="netid-msgContainer"></span></div>
             </div>
             <div class="section text">
@@ -49,13 +49,14 @@
         <div class="section checkbox">
           <div class="fullSize">
             <input name="submitted[attending]" type="checkbox" id="submitted[attending]" value="yes" />
-            <label for="submitted[attending]">Yes, I plan to attend the Welcome Week Orientation</label>
+            <label for="submitted[attending]">Yes, I plan to attend the Welcome Week Orientation, beginning the week of August 25-29, 2014 at 12:00pm.</label>
           </div>
         </div>
+        <hr/>
         <h2>Meals</h2>
         <div class="section checkbox">
           <div class="halfSize">
-            <label for="submitted[vegetarian]">I require vegetarian meals</label>
+            <label for="submitted[vegetarian]">Do you have any dietary restrictions? Vegetarian, Kosher, Halal? Please list in detail below.</label>
             <select name="submitted[vegetarian]" id="submitted[vegetarian]">
               <option value="No" selected="selected">No</option>
               <option value="Yes">Yes</option>
@@ -64,7 +65,6 @@
           </div>
           <div class="section text">
             <div class="fullSize">
-              <label for="submitted[religion]">I have a meal preference due to religion. (Please explain)</label>
               <textarea name="submitted[religion]" id="submitted[religion]"></textarea>
             </div>
           </div>
@@ -74,13 +74,18 @@
               <textarea name="submitted[allergic]" id="submitted[allergic]"></textarea>
             </div>
           </div>
+                  <hr/>
+
           <h2>Parents/Guardians</h2>
+          <p>Welcome Orientation Monday August 25, 2014 9:00am</p>
            <div class="section text">
-            <div class="fullSize">
+            <div class="halfSize">
               <label for="submitted[howmany]">If your parents/guardians plan to come to the parent orientation, how many will be attending?</label>
               <input type="text" name="submitted[howmany]" id="submitted[howmany]"/>
             </div>
           </div>
+                  <hr/>
+
           <h2>Interests</h2>
           <p>Please choose up to five areas of academic interest</p>
           <div class="section checkbox">
