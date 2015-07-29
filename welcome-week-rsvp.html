@@ -1,3 +1,45 @@
+<script>
+$(document).ready(function () {
+  
+  $("select").change(function () {
+        var $this = $(this);
+        var prevVal = $this.data("prev");
+        var otherSelects = $("select").not(this);
+    var thisVal = $(this).val();  
+    
+    //otherSelects.find("option[value=" + thisVal + "]").attr('disabled', true);
+    otherSelects.find("option:contains(" + thisVal + ")").attr('disabled', true);
+    
+        if (prevVal) {
+            //otherSelects.find("option[value=" + prevVal + "]").attr('disabled', false);
+            otherSelects.find("option:contains(" + prevVal + ")").attr('disabled', false);
+        }
+
+        $this.data("prev", $this.val());
+    });
+});
+
+function clearForm(form) {
+  // iterate over all of the inputs for the form
+  // element that was passed in
+  $(':input', form).each(function() {
+    var type = this.type;
+    var tag = this.tagName.toLowerCase(); // normalize case
+    // it's ok to reset the value attr of text inputs,
+    // password inputs, and textareas
+    if (type == 'text' || type == 'password' || tag == 'textarea')
+      this.value = "";
+    // checkboxes and radios need to have their checked state cleared
+    // but should *not* have their 'value' changed
+    else if (type == 'checkbox' || type == 'radio')
+      this.checked = false;
+    // select elements need to have their 'selectedIndex' property set to -1
+    // (this works for both single and multiple select elements)
+    else if (tag == 'select')
+      this.selectedIndex = -1;
+  });
+};
+</script>
 <div id="formhermes">
   <div id="formContainer">
     <form class="autoform" enctype="multipart/form-data" action= "https://gabe.es.its.nyu.edu/hermes/?q=node/280" method="post" id="autoform" accept-charset="UTF-8">
@@ -49,14 +91,14 @@
         <div class="section checkbox">
           <div class="fullSize">
             <input name="submitted[attending]" type="checkbox" id="submitted[attending]" value="yes" />
-            <label for="submitted[attending]">Yes, I plan to attend the Welcome Week Orientation, beginning the week of August 25-29, 2014 at 12:00pm.</label>
+            <label for="submitted[attending]">Yes, I plan to attend the Welcome Week Orientation, August 30-Sept 4, 2015 at 12:00pm.</label>
           </div>
         </div>
         <hr/>
         <h2>Meals</h2>
         <div class="section checkbox">
           <div class="halfSize">
-            <label for="submitted[vegetarian]">Do you have any dietary restrictions? Vegetarian, Kosher, Halal? Please list in detail below.</label>
+            <label for="submitted[vegetarian]">Do you have any dietary restrictions?</label>
             <select name="submitted[vegetarian]" id="submitted[vegetarian]">
               <option value="No" selected="selected">No</option>
               <option value="Yes">Yes</option>
@@ -77,7 +119,7 @@
                   <hr/>
 
           <h2>Parents/Guardians</h2>
-          <p>Welcome Orientation Monday August 25, 2014 9:00am</p>
+          <p>Welcome Orientation Sunday, August 30, 2015 9:00am</p>
            <div class="section text">
             <div class="halfSize">
               <label for="submitted[howmany]">If your parents/guardians plan to come to the parent orientation, how many will be attending?</label>
@@ -87,7 +129,97 @@
                   <hr/>
 
           <h2>Interests</h2>
-          <p>Please choose up to five areas of academic interest</p>
+
+      <p>Please select your top three interests in
+        order of preference. Your first choice should be in box number 1, your
+        second choice should be in box number 2, etc.</p>
+      <table class="standard">
+        <THEAD>
+          <TR>
+            <TH style="width: 60px;">Preference</TH>
+            <TH>Interest</TH>
+          </TR>
+        </THEAD>
+        <TR>
+          <TD><label for="interest_1">1</label></TD>
+          <TD><select name="submitted[interest_1]" id="interest_1" class="requiredselect">
+            <option value="">Choose One</option>
+            <option>Architecture/Design</option>
+            <option>Art</option>
+            <option>Business</option>
+            <option>Computer Science/Video Games</option>
+            <option>Fashion</option>
+            <option>Film/TV</option>
+            <option>Foreign Language/Global Affairs</option>
+            <option>Gender/Sexuality</option>
+            <option>Media</option>
+            <option>Music</option>
+            <option>Politics</option>
+            <option>Psychology</option>
+            <option>Science/Pre-Health</option>
+            <option>Tech</option>
+            <option>Social Issues/Social Impact</option>
+            <option>Theatre</option>
+            <option>Writing</option>
+          </select>
+          </TD>
+        </TR>
+        <TR class='stripe'>
+          <TD><label for="interest_2">2</label></TD>
+          <TD><select name="submitted[interest_2]" id="interest_2" class="requiredselect">
+            <option value="">Choose One</option>
+            <option>Architecture/Design</option>
+            <option>Art</option>
+            <option>Business</option>
+            <option>Computer Science/Video Games</option>
+            <option>Fashion</option>
+            <option>Film/TV</option>
+            <option>Foreign Language/Global Affairs</option>
+            <option>Gender/Sexuality</option>
+            <option>Media</option>
+            <option>Music</option>
+            <option>Politics</option>
+            <option>Psychology</option>
+            <option>Science/Pre-Health</option>
+            <option>Tech</option>
+            <option>Social Issues/Social Impact</option>
+            <option>Theatre</option>
+            <option>Writing</option>
+          </select>
+          </TD>
+        </TR>
+        <TR>
+          <TD><label for="interest_3">3</label></TD>
+          <TD><select name="submitted[interest_3]" id="interest_3"  class="requiredselect">
+            <option value="">Choose One</option>
+            <option>Architecture/Design</option>
+            <option>Art</option>
+            <option>Business</option>
+            <option>Computer Science/Video Games</option>
+            <option>Fashion</option>
+            <option>Film/TV</option>
+            <option>Foreign Language/Global Affairs</option>
+            <option>Gender/Sexuality</option>
+            <option>Media</option>
+            <option>Music</option>
+            <option>Politics</option>
+            <option>Psychology</option>
+            <option>Science/Pre-Health</option>
+            <option>Tech</option>
+            <option>Social Issues/Social Impact</option>
+            <option>Theatre</option>
+            <option>Writing</option>
+          </select>
+          </TD>
+        </TR>
+      </table>
+
+
+
+
+
+
+        <!--  <p>Please choose up to five areas of academic interest</p>
           <div class="section checkbox">
             <div class="fullSize">
               <ul class="checklist">
@@ -174,7 +306,7 @@
             </ul>
           </div>
         </div>
-
+-->
 
 
         <div class="section text">
