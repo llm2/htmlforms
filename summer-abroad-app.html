@@ -1,4 +1,4 @@
-<script src="/content/dam/gallatin/js/country.js" type="text/javascript"></script>
+           <script src="/content/dam/gallatin/js/country.js" type="text/javascript"></script>
 <!--  JAVASCRIPT FOR INSTRUCTOR SEARCH -->
 <script src="/etc/designs/gallatin/scripts/glow/1.7.3/core/core.js" type="text/javascript"></script>
 <script src="/etc/designs/gallatin/scripts/glow/1.7.3/widgets/widgets.js" type="text/javascript"></script>
@@ -23,23 +23,23 @@
        //set val for netid from myData
        document.forms["autoform"].fac_adviser.value = e.selectedItem.email;
      }
-   
+    
    }
    var suggest = new glow.widgets.AutoSuggest(
        "#adviser",  // HTML input element to bind the AutoSuggest to
        "/content/dam/gallatin/documents/json/advisers.js",
      myOpts      // optional functions
      ).loadData();
-   
+    
    });//end glow ready
    //END JS FOR INSTRUCTOR SEARCH
-   
+    
    //hide gallatin-only fields from non-gallatin students
    $(document).ready(function() {
-   
+    
      $("input[name$='submitted[matriculation]']").click(function() {
        var studentStatus = $(this).val();
-   
+    
        if(studentStatus=="gallatin"){
          $("#gallonly").show();
        }else{
@@ -47,7 +47,7 @@
        }
      });
    });
-   
+    
 </script>
 <div id="formhermes">
 <div id="formContainer">
@@ -57,31 +57,22 @@
          <div class="fullSize"> 
             <span class="options"> 
             <span>
-            <input name="submitted[program]" value="Berlin" type="radio" class="required" checked="checked"/>
-            <label for="submitted[program]">Berlin, Capital of Modernity: TRAVL-UG 9500 </label>
+            <input name="submitted[program]" value="Berlin" type="radio"  />
+            <label for="submitted[program]"> Berlin, Capital of Modernity (TRAVL-UG 9500)  </label>
             </span> 
             <span>
-            <input name="submitted[program]" value="Florence" type="radio" />
-            <label for="submitted[program]">Florence: Italian Renaissance, Art and Literature:  The Culture Explosion: TRAVL-GG 2060: TRAVL-UG 9100</label>
-            </span> 
-            <span>
-            <input name="submitted[program]" id="submitted[program]" value="Hawaii" type="radio" />
-            <label for="program">Hawaii: Island Science: TRAVL-UG 9050</label>
-            </span> 
-            <span>
-            <input name="submitted[program]" value="Madrid" type="radio" />
-            <label for="submitted[program]">Madrid: Faces of the Changing European City, TRAVL-UG 9350</label>
-            </span>
+            <input name="submitted[program]" value="Senegal" type="radio"  />
+            <label for="submitted[program]">Postcolonial Urbanisms: Development, Environment, & Social Movements in Senegal (TRAVL-UG 9801)</label>
             </span> 
             <span class="program-msgContainer"></span>
          </div>
       </div>
       <div class="section checkbox">
          <div class="fullSize">
-            <label for="submitted[another]">Please Mark if applicable</label>
+            <label for="submitted[another]">Please mark if applicable</label>
             <span class="options">
             <input name="submitted[another]" id="submitted[another]" value="yes" type="checkbox" />
-            <label for="applicable">I would like to apply to another program listed above if my selected program is not available.</label>
+            <label for="applicable">I would like to apply to another program listed above if my selected program is not available(you may be asked to submit a supplemental application statement at a later date). <br>Important Note: if you have equal interest in more than one program, DO NOT check this box; you should instead submit a separate application for each program.</label>
             </span> 
          </div>
       </div>
@@ -107,8 +98,14 @@
       </div>
       <div class="section text">
          <div class="halfSize">
-            <label for="submitted[netid]">NetID </label>
+            <label for="submitted[netid]">Net ID(NYU Students Only)</label>
             <input type="text" id="submitted[netid]" name="submitted[netid]" value="" size="60" maxlength="128"/>
+         </div>
+      </div>
+      <div class="section text">
+         <div class="halfSize">
+            <label for="submitted[email_address]">Email Address (Non-NYU Students)</label>
+            <input type="text" id="submitted[email_address]" name="submitted[email_address]" value="" size="60" maxlength="128"/>
          </div>
       </div>
       <div class="section text">
@@ -379,12 +376,15 @@
             <label for="submitted[matriculation]">Status</label>
             <span class="options">
             <input name="submitted[matriculation]" value="gallatin" type="radio"  checked="checked"/>
-            <label for="submitted[matriculation]">Gallatin Student </label>
+            <label for="submitted[matriculation]">Current Gallatin Student </label>
             </span> 
             <span >
             <input name="submitted[matriculation]" value="nyu" type="radio" />
-            <label for="submitted[matriculation]">Other NYU Student </label>
+            <label for="submitted[matriculation]"> Incoming Gallatin Transfer Student  </label>
             </span> <span>
+            <input name="submitted[matriculation]" value="non" type="radio" />
+            <label for="submitted[matriculation]">Other NYU Student </label>
+            </span> <span class="matriculation-msgContainer"></span>  <span>
             <input name="submitted[matriculation]" value="non" type="radio" />
             <label for="submitted[matriculation]">Non-NYU Student </label>
             </span> <span class="matriculation-msgContainer"></span> 
@@ -392,7 +392,7 @@
       </div>
       <div class="section text">
          <div class="fullSize">
-            <label for="submitted[school]">NYU School / Current School </label>
+            <label for="submitted[school]">NYU school where you are CURRENTLY matriculated  </label>
             <input type="text" id="submitted[school]" name="submitted[school]" value="" size="60" maxlength="128" class="required"/>
             <span class="school-msgContainer"></span> 
          </div>
@@ -407,7 +407,7 @@
       <hr/>
       <div id="gallonly">
          <h2>Gallatin Adviser Information</h2>
-         <p>Gallatin students only: please select your primary academic (faculty) adviser below. Gallatin will forward a copy of this application to your adviser in lieu of the Plan of Study for the summer term.</p>
+         <p>Current Gallatin students only: please select your primary academic (faculty) adviser below. Gallatin will forward a copy of this application to your adviser in lieu of the Plan of Study for the summer term.</p>
          <div class="section text">
             <div class="halfSize">
                <label for="adviser">Adviser Name </label>
@@ -424,12 +424,64 @@
             </div>
          </div>
          <hr/>
+                  <h2>Gallatin Dean’s Scholarship</h2>
+         <p><strong>For current Gallatin students and incoming Gallatin transfer students</strong>: to be considered for this scholarship (Gallatin January Term and Summer travel courses only), you must meet the following criteria: <br>
+            <ul>
+               <li>Must be enrolled at Gallatin at the time of application OR must be an incoming Gallatin transfer student whose Gallatin admission can be confirmed</li>
+               <li>Have a good academic standing (GPA 3.0 or better; no grades of Incomplete)</li>
+               <li>Have a current FAFSA on file with the Office of Financial Aid and show unmet need</li>
+               <li>Minimum of half-time matriculation during the semester awarded (changes in the number of credits registered for during the semester may alter your award)</li>
+            </ul>
+         </p>
+         <p><br>
+            <strong>Priority Deadline for Summer Travel Courses: February 1</strong><br><br>
+            The amount awarded is <strong>typically equivalent to half of the course tuition</strong>. Scholarships are awarded based on the availability of funds. Applicants may investigate additional funding options but because summer aid for study away tends to be limited, awardees should anticipate covering the remaining costs of the program without additional aid. <br><br>Final scholarship decisions will be made in February. Students who disqualify may receive earlier notification. <br><br>
+            <strong>IMPORTANT NOTE </strong>: Applicants may be admitted to the travel course before receiving scholarship notification. Such students may hold off on submitting a program confirmation until after receiving scholarship notification. Applicants who believe they can cover the full program cost by other means are encouraged to submit a program confirmation earlier in case the course fills, as only a few slots will be held in each course for Dean’s Scholarship awardees.<strong> However, if applicants confirm before scholarship notification, their scholarship application will be withdrawn.</strong>
+         </p>
+         <div class="section text">
+            <div class="fullSize">
+               <label for="submitted[request]">I would like to request a Gallatin Dean’s Scholarship</label>
+               <select type="select" id="submitted[request]" name="submitted[request]" class="required">
+                  <option value="">Select One</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+               </select>
+               <span class="request-msgContainer"></span>
+            </div>
+         </div>
+         <div class="section text">
+            <div class="fullSize">
+               <label for="submitted[fafsa]">Have you submitted a FAFSA this year?</label>
+               <select type="select" id="submitted[fafsa]" name="submitted[fafsa]">
+                  <option value="">Select One</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+               </select>
+            </div>
+         </div>
+         <div class="section text">
+            <div class="fullSize">
+               <label for="submitted[past_scholarships]">Have you received a dean's scholarship in the past?</label>
+               <select type="select" id="submitted[past_scholarships]" name="submitted[past_scholarships]">
+                  <option value="">Select One</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+               </select>
+            </div>
+         </div>
+         <div class="section text">
+            <div class="fullSize">
+               <label for="submitted[scholarship]"><strong>Gallatin Dean's Scholarship Statement. </strong>. In 250 words please describe any financial considerations that would impact your ability to participate in this course. </label>
+               <textarea name="submitted[scholarship]" cols="90" rows="8" id="submitted[scholarship]"  maxlength="4000"></textarea>
+            </div>
+         </div>
+         <hr/>
       </div>
       <h2>Personal Statement</h2>
       <div class="section text">
          <div class="fullSize">
-            <label for="submitted[personal_statement]">Please submit a 250 word personal statement addressing your academic  reasons for wanting to to participate in this program as well as any experience you may have had living or traveling in another country.</label>
-            <textarea name="submitted[personal_statement]" cols="90" rows="8" id="submitted[personal_statement]"  maxlength="2000" class="required"></textarea>
+            <label for="submitted[personal_statement]">Please submit a 250 word personal statement addressing your academic and personal reasons for wanting to participate in this program. This should include details on how this course will fit into your academic plans. It should also detail any experience that will inform your participation in the course, including relevant coursework, language training, and travel abroad. Senegal applicants: your statement should be 250-500 words; in addition to the above, your statement should address specifically any proficiency in French or Wolof and any previous travel to Africa </label>
+            <textarea name="submitted[personal_statement]" cols="90" rows="8" id="submitted[personal_statement]"  maxlength="5000" class="required"></textarea>
             <span class="personal_statement-msgContainer"></span> 
          </div>
       </div>
@@ -575,56 +627,8 @@
          </div>
       </div>
       <hr/>
-      <div class="gallonly">
-         <h2>Gallatin Dean’s Scholarship for Gallatin Travel Courses</h2>
-         <p><strong>For students currently enrolled at Gallatin</strong>: Limited scholarship funding is available for Gallatin’s winter and summer travel courses. To be considered, you must meet the following criteria:
-         <ul>
-            <li>You must be enrolled at Gallatin <strong>at the time of application</strong></li>
-            <li>Good academic standing (GPA 3.0 or better; no grades of Incomplete)</li>
-            <li>Have a current FAFSA on file with the Office of Financial Aid and show unmet need</li>
-            <li>Minimum of half-time matriculation during the semester awarded (changes in the number of credits registered for during the semester may alter your award)</li>
-         </ul>
-         </p>
-         <p>
-            You will receive an email at your NYU email address indicating whether you have been awarded a Dean’s Scholarship. Final scholarship decisions will be made by <strong>November 7</strong> for winter travel courses and by <strong>March 15</strong> for summer travel courses.
-         </p>
-         <div class="section text">
-            <div class="halfSize">
-               <label for="submitted[request]">I would like to request a Dean’s Scholarship</label>
-               <select type="select" id="submitted[request]" name="submitted[request]" class="required">
-                  <option value="">Select One</option>
-                  <option value="Yes">Yes</option>
-                  <option value="No">No</option>
-               </select>
-               <span class="request-msgContainer"></span>
-            </div>
-         </div>
-         <div class="section text">
-            <div class="fullSize">
-               <label for="submitted[scholarship]"><strong>If you are requesting a Dean's Scholarship, you must provide a reason below</strong>. Please be specific: include any financial considerations and reasons for wanting to participate in the travel course. 250-500 words.</label>
-               <textarea name="submitted[scholarship]" cols="90" rows="8" id="submitted[scholarship]"  maxlength="4000"></textarea>
-            </div>
-         </div>
-         <div class="section text">
-            <div class="halfSize">
-               <label for="submitted[fafsa]">Have you submitted a FAFSA this year?</label>
-               <select type="select" id="submitted[fafsa]" name="submitted[fafsa]">
-                  <option value="">Select One</option>
-                  <option value="Yes">Yes</option>
-                  <option value="No">No</option>
-               </select>
-            </div>
-         </div>
-         <div class="section text">
-            <div class="halfSize">
-               <label for="submitted[past_scholarships]">Have you received a dean's scholarship in the past?</label>
-               <select type="select" id="submitted[past_scholarships]" name="submitted[past_scholarships]">
-                  <option value="">Select One</option>
-                  <option value="Yes">Yes</option>
-                  <option value="No">No</option>
-               </select>
-            </div>
-         </div>
+
+
          <input type="hidden" name="form_id" value="webform_client_form_105" />
          <input type="hidden" name="submitted[application_type]" value="Summer" />
          <div class="section end">
@@ -633,6 +637,6 @@
                <button type="reset" id="reset" name="reset" value="Reset">Reset</button>
             </div>
          </div>
-   </form>
+            </form>
    </div>
 </div>
