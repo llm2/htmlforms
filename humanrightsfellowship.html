@@ -1,4 +1,4 @@
-<script src="/content/dam/gallatin/js/country.js" type="text/javascript"></script>
+                <script src="/content/dam/gallatin/js/country.js" type="text/javascript"></script>
 <!--  JAVASCRIPT FOR INSTRUCTOR SEARCH -->
 <script src="/etc/designs/gallatin/scripts/glow/1.7.3/core/core.js" type="text/javascript"></script>
 <script src="/etc/designs/gallatin/scripts/glow/1.7.3/widgets/widgets.js" type="text/javascript"></script>
@@ -23,23 +23,23 @@ glow.ready(function() {
     //set val for netid from myData
     document.forms["autoform"].fac_adviser.value = e.selectedItem.email;
   }
-
+  
 }
 var suggest = new glow.widgets.AutoSuggest(
     "#adviser",  // HTML input element to bind the AutoSuggest to
     "/content/dam/gallatin/documents/json/advisers.js",
   myOpts      // optional functions
   ).loadData();
-
+  
 });//end glow ready
 //END JS FOR INSTRUCTOR SEARCH
-
+  
 //hide gallatin-only fields from non-gallatin students
 $(document).ready(function() {
-
+  
   $("input[name$='submitted[matriculation]']").click(function() {
     var studentStatus = $(this).val();
-
+  
     if(studentStatus=="gallatin"){
       $(".gallonly").show();
     }else{
@@ -47,9 +47,9 @@ $(document).ready(function() {
     }
   });
 });
-
+  
 </script>
-
+  
 <div id="formhermes">
   <div id="formContainer">
     <form class="webform-client-form" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/468" method="post" id="autoform" accept-charset="UTF-8">
@@ -122,9 +122,30 @@ $(document).ready(function() {
       </div>
       <div class="section text">
         <div class="fullSize">
-          <label for="submitted[school]">NYU School / Current School </label>
+          <label for="submitted[school]">NYU School</label>
           <input type="text" id="submitted[school]" name="submitted[school]" value="" size="60" maxlength="128" class="required"/>
           <span class="school-msgContainer"></span> 
+        </div>
+      </div>
+       <div class="section text">
+        <div class="fullSize">
+          <label for="submitted[dept]">Department</label>
+          <input type="text" id="submitted[dept]" name="submitted[dept]" value="" size="60" maxlength="128" class="required"/>
+          <span class="dept-msgContainer"></span> 
+        </div>
+      </div>
+       <div class="section text">
+        <div class="fullSize">
+          <label for="submitted[program]">Program(if applicable)</label>
+          <input type="text" id="submitted[program]" name="submitted[program]" value="" size="60" maxlength="128" />
+          <span class="program-msgContainer"></span> 
+        </div>
+      </div>
+       <div class="section text">
+        <div class="fullSize">
+          <label for="submitted[degree]">Expected Degree (e.g., BA, BFA, MA, etc.)  </label>
+          <input type="text" id="submitted[degree]" name="submitted[degree]" value="" size="60" maxlength="128" class="required"/>
+          <span class="degree-msgContainer"></span> 
         </div>
       </div>
       <div class="section text">
@@ -141,7 +162,7 @@ $(document).ready(function() {
         </div>
       </div>
       <hr/>
-      <h2>Project Information</h2>
+      <h2>Host Organization</h2>
       <div class="section text">
         <div class="fullSize">
           <label for="submitted[host]">Name of Host Organization</label>
@@ -156,7 +177,7 @@ $(document).ready(function() {
           <span class="host_website-msgContainer"></span> 
         </div>
       </div>
-      <h3>Project Location </h3>
+      <h3>Summer Project Location </h3>
       <div class="section text">
         <div class="halfSize">
           <label for="submitted[city]">City</label>
@@ -168,7 +189,7 @@ $(document).ready(function() {
         <div class="quarterSize">
           <label for="submitted[state]">State / Province</label>
           <select name="submitted[state]" id="submitted[state]">
-
+  
             <option value="">Select One</option>
             <optgroup label="Canadian Provinces">
               <option value="AB">Alberta</option>
@@ -249,22 +270,22 @@ $(document).ready(function() {
           <input type="text" name="submitted[country]" id="submitted[country]" class="country"/>
         </div>
       </div>
-      <h3>Project Site Supervisor Contact</h3>
-
+      <h3>Host Organization Contact</h3>
+  
       <div class="section text">
         <div class="halfSize">
           <label for="edit-submitted-first-name-supervisor">First Name </label>
           <input type="text" id="edit-submitted-first-name-supervisor" name="submitted[first_name_supervisor]" value="" size="60" maxlength="128" class="name" />
         </div>
       </div>
-
+  
       <div class="section text">
         <div class="halfSize">
           <label for="edit-submitted-last-name-supervisor">Last Name </label>
           <input type="text" id="edit-submitted-last-name-supervisor" name="submitted[last_name_supervisor]" value="" size="60" maxlength="128" class="name" />
         </div>
       </div>
-
+  
       <div class="section text">
         <div class="halfSize">  
           <label for="supervisor_email">Email </label>
@@ -279,24 +300,35 @@ $(document).ready(function() {
       </div>
       <div class="section text">
         <div class="fullSize">
-          <label for="submitted[project]">Provide a brief description of your project</label>
+               <label for="submitted[confirmation]">Have you received confirmation from this organization that you may pursue your summer project with them?</label>
+               <select type="select" id="submitted[fafsa]" name="submitted[fafsa]">
+                  <option value="">Select One</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                  <option value="Pending">Pending</option>
+               </select>
+            </div>
+         </div>
+      <div class="section text">
+        <div class="fullSize">
+          <label for="submitted[project]">Provide a brief description of your project(approximately 150 words)</label>
           <textarea name="submitted[project]" id="submitted[project]"  maxlength="2000" cols="90" rows="8" class="required"></textarea>
           <span class="project-msgContainer"></span> 
         </div>
       </div>
       <hr/>
       <h2>Statement of Proposal</h2>
-
+  
 <p>Please attach a 2- to 3-page statement (.doc, .docx, and .pdf formats accepted). Your name should appear in the header of each page. The statement should contain the following:
-
+  
 <ul><li>Clear statement of the human rights dimension of the work you will undertake and the goals that will be advanced by this work, including why you think this is a critical issue for the human rights field.</li>
-<li>Name of the human rights organization you plan to work with and description of its objectives.</li>
+<li>Name of the human rights organization you plan to work with and description of its objectives. Indicate if you have worked with this organization in the past.</li>
 <li> Description of the specific duties and responsibilities you will assume with the host organization.</li>
 <li>Academic or extracurricular knowledge or expertise that will help you make a contribution to the human rights issue you will address, including any linguistic proficiency or completed course work.</li>
 <li>Relevance of your human rights project to your Gallatin concentration, NYU major, or master’s degree.</li>
 </ul>
 </p>
-
+  
       <div class="section text">
         <div class="fullSize">
           <label for="files[submitted_file1]">Statement of Proposal file</label>
@@ -305,7 +337,15 @@ $(document).ready(function() {
       </div>
       <hr/>
       <h2>Independent Study Proposal </h2>
-      <p>Please provide contact information for the faculty mentor—either your faculty adviser or another NYU faculty member—who will supervise your independent study.</p>
+      <p>The required 2-credit Spring independent study need not relate to human rights; it should focus on helping you to better contextualize your summer work (e.g., a history of the conflict, background on sociopolitical aspects of the region, etc.). It should meet at least five times and should explore a minimum of five texts. Provide a 250-500-word description of the independent study you plan to undertake and how it relates to your proposed summer work. Include at least five texts you anticipate reading and indicate why each is essential to examining the aspect of human rights you wish to pursue.</p>
+     <div class="section text">
+        <div class="fullSize">
+          <label for="edit-submitted-study">Description of the Independent Study </label>
+          <textarea id="edit-submitted-study" name="submitted[study]" cols="90" rows="8" class="required"></textarea>
+        </div>
+      </div>
+ 
+      <p>Please provide contact information for the NYU faculty mentor(full or part-time) who will supervise your independent study.</p>
       <h3>Faculty Mentor</h3>
       <div class="section text">
         <div class="halfSize">
@@ -337,18 +377,12 @@ $(document).ready(function() {
           <input class="email form-text form-email" type="email" id="edit-submitted-email-mentor" name="submitted[email_mentor]" size="60" />
         </div>
       </div>
-      <p>The required 2-credit independent study should meet at least five times during the spring semester and should explore a minimum of five texts. Provide a 250-500-word description of the independent study you plan to undertake and how it relates to your proposed summer work. Include at least five texts you anticipate reading and indicate why each is essential to examining the aspect of human rights you wish to pursue.</p>
-      <div class="section text">
-        <div class="fullSize">
-          <label for="edit-submitted-study">Description of the Independent Study </label>
-          <textarea id="edit-submitted-study" name="submitted[study]" cols="90" rows="8" class="required"></textarea>
-        </div>
-      </div>
+     
       <hr/>
       <h2>Projected Budget </h2>
       <div class="section text">
         <div class="fullSize">
-
+  
           <label for="edit-submitted-budget">Detail your anticipated expenses during your summer project (e.g., transportation and living expenses, research costs, etc.).</label>
           <textarea id="edit-submitted-budget" name="submitted[budget]"  maxlength="2000" cols="90" rows="8" class="required"></textarea>
         </div>
@@ -363,9 +397,9 @@ $(document).ready(function() {
       </div>
       <hr/>
       <h2>Faculty Recommendation Letter</h2>
-      <p>Please submit a letter of recommendation from the faculty member who will oversee your 2-credit spring independent study. The letter should confirm his/her readiness to oversee your independent study and should address your academic strengths, knowledge of human rights discourse if any, and your ability to be a self-starter.
+      <p>Please submit a letter of recommendation from the NYU faculty member(full or part-time) who will oversee your 2-credit Spring independent study. The letter should confirm his/her readiness to oversee your independent study and should address your academic strengths, knowledge of human rights discourse if any, and your ability to be a self-starter.
       </p><p>
-      Letters may be emailed as an attachment to <a href="mailto:gallatin.global@nyu.edu">mailto:gallatin.global@nyu.edu</a> (.doc, .docx, or .pdf format) or mailed/delivered to the Gallatin Office of Global Programs, 411 Lafayette Street, 3rd Floor, New York, NY 10003.</p>
+      Letters may be emailed as an attachment to <a href="mailto:gallatin.global@nyu.edu">gallatin.global@nyu.edu</a> (.doc, .docx, or .pdf format) or mailed/delivered to the Gallatin Office of Global Programs, 411 Lafayette Street, 3rd Floor, New York, NY 10003.</p>
       <hr/>
       <h2>Reference</h2>
       <p>Please provide contact information for an additional faculty member who can speak to your academic standing and your ability to work independently.</p>
@@ -381,7 +415,7 @@ $(document).ready(function() {
           <input type="text" id="submitted[reference_last_name]" name="submitted[reference_last_name]" value="" size="60" maxlength="128"  class="name"/>
         </div>
       </div>
-
+  
       <div class="section text">
         <div class="halfSize">
           <label for="submitted[reference_telephone]">Telephone</label>
@@ -396,8 +430,8 @@ $(document).ready(function() {
           <span class="reference_email-msgContainer"></span> 
         </div>
       </div>  
-
-
+  
+  
       <input type="hidden" name="form_id" value="webform_client_form_468" />
       <div class="section end">
         <div class="fullSize">
