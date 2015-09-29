@@ -96,6 +96,8 @@ formText['494'] = "Thank you for submitting your A/V Equipment Request.";
 formText['504'] = "Thank you for submitting your Gallatin/Africa House Summer Fellowship application. Your application has been forwarded to Gallatin’s Office of Global Programs for review.";
 formText['530'] = "Thank you for submitting your Alumni College RSVP.";
 formText['577'] = "Thank you for submitting your Parent's Day RSVP.";
+formText['574'] = "Thank you for submitting your Colloquium Memeber Information Form.";
+
 var GET = {};
 var query = window.location.search.substring(1).split("&");
 for (var i = 0, max = query.length; i < max; i++)
@@ -110,10 +112,10 @@ for (var i = 0, max = query.length; i < max; i++)
 glow.ready(function() {
     var p = glow.dom.get("#greeting");
     p.html(formText[GET["form"]]);
-	if(formText[GET["form"]]){
-		var p = glow.dom.get("#perl");
-    	p.html("");
-	}
+    if(formText[GET["form"]]){
+        var p = glow.dom.get("#perl");
+        p.html("");
+    }
 });
 </script>
 
