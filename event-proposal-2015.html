@@ -1,7 +1,6 @@
-<head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-</head> 
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+
 <div id="formContainer">
    <form class="autoform" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/551" method="post" id="autoform" accept-charset="UTF-8">
     <div class="section text">
@@ -39,23 +38,127 @@
     <div class="section text">
       <div class="fullSize">
         <div id="commentsdiv">
-          <label for="submitted[event_description]">Event Description (please provide a detailed description with links to bios of any guests)</label>
+          <label for="submitted[event_description]">Event Description (please provide a description of the event and include links to bios of any guests/speakers)</label>
           <textarea name="submitted[event_description]" cols="30" class="text" id="event_description" maxlength="500"></textarea>
            <span class="submitted[event_description]-msgContainer"></span> 
         </div>
       </div>
     </div> 
-
     <div class="section text">
       <div class="fullSize">
+        <label for="submitted[faculty_sponsor]">Full-time Gallatin faculty or administrator sponsor</label>
+        <input name="submitted[faculty_sponsor]" type="text" id="submitted[faculty_sponsor]" class="required" maxlength="128"/>
+        <span class="submitted[faculty_sponsor]-msgContainer"></span> 
+      </div>
+    </div>
+    <div class="section text">
+      <div class="fullSize">
+        <label for="submitted[facutly_contact]">Main contact for the event</label>
+        <input name="submitted[facutly_contact]" type="text" id="submitted[facutly_contact]" class="required" maxlength="128"/>
+        <span class="submitted[facutly_contact]-msgContainer"></span> 
+      </div>
+    </div>
+    <hr/>
+    <p> Desired Event Dates and Times </p>
+<div class="section text">
+      <div class="halfSize">
         <div id="commentsdiv">
-          <label for="submitted[date]">Desired Event Dates and Times</label>
-          <textarea name="submitted[date]" cols="30" class="text" id="date"  maxlength="500"></textarea>
-           <span class="submitted[date]-msgContainer"></span> 
+          <label for="submitted[approx]"></label>
+          <select name="submitted[approx]" id="submitted[approx]">
+             <option value="">Please Select</option>
+             <option value="The Month of">The month of</option>
+             <option value="The week of">The week of</option>
+             <option value="On">On</option>
+          </select>    
+          <span class="submitted[approx]-msgContainer"></span>     
         </div>
       </div>
     </div>
+    <div class="section text">
+      <div class="halfSize">
+        <div id="commentsdiv">
+          <label for="submitted[Month]"></label>
+          <select name="submitted[Month]" id="submitted[Month]">
+            <option value="">Month</option>
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
 
+          </select>    
+          <span class="submitted[Month]-msgContainer"></span>     
+        </div>
+      </div>
+    </div>
+    <div class="section text">
+      <div class="halfSize">
+        <div id="commentsdiv">
+          <label for="submitted[day]"></label>
+          <select name="submitted[day]" id="submitted[day]">
+              <option value ="">Day</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+              <option>13</option>
+              <option>14</option>
+              <option>15</option>
+              <option>16</option>
+              <option>17</option>
+              <option>18</option>
+              <option>19</option>
+              <option>20</option>
+              <option>21</option>
+              <option>22</option>
+              <option>23</option>
+              <option>24</option>
+              <option>25</option>
+              <option>26</option>
+              <option>27</option>
+              <option>28</option>
+              <option>29</option>
+              <option>30</option>
+              <option>31</option>
+
+            </select>    
+          <span class="submitted[day]-msgContainer"></span>     
+        </div>
+      </div>
+    </div>
+    <div class="section text">
+      <div class="halfSize">
+        <div id="commentsdiv">
+          <label for="submitted[time]"></label>
+          <select name="submitted[time]" id="submitted[time]">
+             <option value = "">Time</option>
+             <option>Morning (10AM - Noon)</option>
+             <option>Early Afternoon (Noon - 2PM)</option>
+             <option>Late Afternoon (2 - 5PM)</option>
+             <option>Early Evening (5 - 6:30PM)</option>
+             <option>Evening (6:30 - 8:30PM)</option>
+          </select>    
+          <span class="submitted[time]-msgContainer"></span>     
+        </div>
+      </div>
+    </div>
+    <hr/>
+    
     <div class="section text">
       <div class="halfSize">
         <label for="submitted[budget]">Budget unit to be charged</label>
@@ -77,39 +180,59 @@
         <div id="commentsdiv">
           <label for="submitted[event_type]">Please select the type of Event </label>
           <select name="submitted[event_type]" id="submitted[event_type]">
-             <option value="Screening">Screening</option>
-             <option value="Panel">Panel</option>
+             <option value="Concert">Concert</option>
+             <option value="Conference">Conference</option>
+             <option value="Gallery Opening">Gallery Opening</option>
              <option value="Lecture">Lecture</option>
+             <option value="Lunch or Dinner">Lunch or Dinner</option>
+             <option value="Musical Performance">Musical Performance</option>
+             <option value="Panel">Panel</option>
+             <option value="Party">Party</option>
+             <option value="Reception">Reception</option>
+             <option value="Screening">Screening</option>
              <option value="Staged Reading">Staged Reading</option>
              <option value="Table Reading">Table Reading</option>
-             <option value="Musical Performance">Musical Performance</option>
              <option value="Theatrical Performance">Theatrical Performance</option>
-             <option value="Concert">Concert</option>
-             <option value="Reception">Reception</option>
-             <option value="Party">Party</option>
-             <option value="Lunch or Dinner">Lunch or Dinner</option>
-             <option value="Gallery Opening">Gallery Opening</option>
-             <option value="Conference">Conference</option>
+             <option value="Other">Other</option>
           </select>    
           <span class="submitted[event_type]-msgContainer"></span>     
         </div>
       </div>
     </div>
 
+<div class="section text">
+      <div class="fullSize">
+        <label for="submitted[other_specify]">If Other, please describe:</label>
+        <input name="submitted[other_specify]" type="text" id="first" maxlength="128"/>
+        <span class="submitted[other_specify]-msgContainer"></span> 
+      </div>
+    </div>
+
     <div class="section text">
       <div class="fullSize">
-        <label for="submitted[target]">Target audiences (whether open to the public, Gallatin students, faculty, staff, all NYU, external groups etc.)</label>
+
+
+        <label for="submitted[target]">Target audience (i.e. open to the public, Gallatin students, faculty, staff, all NYU Alumni, external groups etc.)</label>
         <input name="submitted[target]" type="text" id="first" maxlength="128"/>
         <span class="submitted[target]-msgContainer"></span> 
       </div>
     </div>
     
-    <div class="section text">
+  <!--<div class="section text">
       <div class="fullSize">
-        <label for="submitted[location]">Event Location </label>
+        <label for="submitted[location]">Is this a request for a particular space in Gallatin, and if so, which one?</label>
         <br>
         <input name="submitted[location]" type="text" id="submitted[location]" class="name" maxlength="128"/>
         <span class="submitted[location]-msgContainer"></span> 
+      </div>
+    </div>
+-->
+    <div class="section text">
+      <div class="fullSize">
+        <label for="submitted[event_needs]">What are the needs for this event? (capacity, space set up, and A/V capabilities)</label>
+        <br>
+        <input name="submitted[event_needs]" type="text" id="submitted[event_needs]" class="name" maxlength="128"/>
+        <span class="submitted[event_needs]-msgContainer"></span> 
       </div>
     </div>
 
@@ -121,17 +244,27 @@
                     <ul class="checklist">
                      <li>
                       <label for="design">
-                        <input type="checkbox" name="submitted[support_type][design]"  value="design" />&nbsp;Digital or Print Design
+                        <input type="checkbox" name="submitted[support_type][design]"  value="Digital/Print Design" />&nbsp;Digital or Print Design
                       </label>
                     </li>
                     <li>
                       <label for="press">
-                        <input type="checkbox" name="submitted[support_type][press]" value="press" />&nbsp;External Press (information needed six weeks in advance)
+                        <input type="checkbox" name="submitted[support_type][press]" value="External Press" />&nbsp;External Press (information needed six weeks in advance)
                       </label>
                     </li>
                     <li>
                       <label for="media">
-                        <input type="checkbox" name="submitted[support_type][media]"  value="media" />&nbsp;Social Media Posts
+                        <input type="checkbox" name="submitted[support_type][media]"  value="Social Media Posts" />&nbsp;Social Media Posts
+                      </label>
+                    </li>
+                    <li>
+                      <label for="posters">
+                        <input type="checkbox" name="submitted[support_type][posters]"  value="posters/fliers" />&nbsp;Printing Posters/Fliers
+                      </label>
+                    </li>
+                    <li>
+                      <label for="cosponsor">
+                        <input type="checkbox" name="submitted[support_type][cosponsor]"  value="Co-sponsorship" />&nbsp;Co-Sponsorship
                       </label>
                     </li>
                   </ul>
@@ -143,7 +276,7 @@
 
     <div class="section radio">
       <div class="fullSize">
-        <label for="submitted[calendar]">Will you want this on the Gallatin Events calendar?</label>
+        <label for="submitted[calendar]">Will you want this on the Gallatin Online Events calendar?</label>
         <br />
         <span class = "options">
           <input name="submitted[calendar]" value="Yes" type="radio" checked="checked"/>
@@ -156,7 +289,22 @@
       <span class="submitted[calendar]-msgContainer"></span> 
       </div>
     </div>
-
+   <!-- <div class="section radio">
+      <div class="fullSize">
+        <label for="submitted[nyu_calendar]">Will you want this on the NYU Events calendar?</label>
+        <br />
+        <span class = "options">
+          <input name="submitted[nyu_calendar]" value="Yes" type="radio" checked="checked"/>
+          <label for="submitted[nyu_calendar]">Yes</label>
+          </span>
+          <span>
+          <input name="submitted[nyu_calendar]" value="No" class="required" type="radio"/>
+          <label for="submitted[nyu_calendar]">No</label>
+          </span>
+      <span class="submitted[nyu_calendar]-msgContainer"></span> 
+      </div>
+    </div>
+-->
     <div class="section radio">
       <div class="fullSize">
         <label for="submitted[rsvp]">If so, would you like an RSVP set up?</label>
@@ -204,50 +352,97 @@
           <span class="submitted[catering_options]-msgContainer"></span>  
       </div>
     </div>
-
-  <div class="section text">
+    <div class="section radio">
       <div class="fullSize">
-        <label for="submitted[space_layout]">If in the Jerry H. Labowitz Theatre for the Performing Arts, how would you like the space layout? </label>
+      <label for="submitted[alcoholic_beverages]">Will alcoholic beverages be served? (If yes, please note that IDs will need to be checked)</label>  
+      <br />
+          <span class = "options">
+          <input name="submitted[alcoholic_beverages]" value="Yes" type="radio" checked="checked"/>
+          <label for="submitted[alcoholic_beverages]">Yes</label>
+          </span>
+          <span>
+           <input name="submitted[alcoholic_beverages]" value="No" class="required" type="radio"/>
+          <label for="submitted[alcoholic_beverages]">No</label>
+          </span>
+          <span class="submitted[alcoholic_beverages]-msgContainer"></span>  
+      </div>
+    </div>
+
+    <div class="section radio">
+      <div class="fullSize">
+      <label for="submitted[space_layout]">Have you secured a space?</label>  
+      <br />
+          <span class = "options">
+          <input name="submitted[space_layout]" value="Yes" type="radio" checked="checked"/>
+          <label for="submitted[space_layout]">Yes</label>
+          </span>
+      
+          <span>
+           <input name="submitted[space_layout]" value="No" class="required" type="radio"/>
+          <label for="submitted[space_layout]">No</label>
+          
+          </span>
+          <span class="submitted[space_layout]-msgContainer"></span>         
+      </div>
+    </div>
+
+    <div class="section text">
+      <div class="fullSize">
+        <label for="submitted[other_specify]">If Yes, where? If No, please specify desired room type</label>
+        <input name="submitted[other_specify]" type="text" id="first" maxlength="128"/>
+        <span class="submitted[other_specify]-msgContainer"></span> 
+      </div>
+    </div>
+
+
+  <!--<div class="section text">
+      <div class="fullSize">
+        <label for="submitted[space_layout]">If in The Jerry H. Labowitz Theatre for the Performing Arts, how would you like the space layout? </label>
        <div class="section checkbox">
                   <div class="fullSize">
                     <ul class="checklist">
                      <li>
                       <label for="bb1">
-                        <input type="checkbox" name="submitted[space_layout][bb1]" id="submitted[space_layout][bb1]" value="bb1" />&nbsp;Black Box Theater with seating unit deployed 
+                        <input type="checkbox" name="submitted[space_layout][bb1]" id="submitted[space_layout][bb1]" value="Black Box Theater with seating unit deployed" />&nbsp;Black Box Theater with seating unit deployed 
                       </label>
                     </li>
                     <li>
                       <label for="bb2">
-                        <input type="checkbox" name="submitted[space_layout][bb2]" id="submitted[space_layout][bb2]" value="bb2" />&nbsp;Black box side of space with seating unit retracted and rented furniture 
+                        <input type="checkbox" name="submitted[space_layout][bb2]" id="submitted[space_layout][bb2]" value="Black box side of space with seating unit retracted and rented furniture" />&nbsp;Black box side of space with seating unit retracted and rented furniture 
                       </label>
                     </li>
                     <li>
                       <label for="fs1">
-                        <input type="checkbox" name="submitted[space_layout][fs1]" id="submitted[space_layout][fs1]" value="fs1" />&nbsp;Full space with cocktail tables, chairs and stage 
+                        <input type="checkbox" name="submitted[space_layout][fs1]" id="submitted[space_layout][fs1]" value="Full space with cocktail tables, chairs and stage" />&nbsp;Full space with cocktail tables, chairs and stage 
                       </label>
                     </li>
                     <li>
                       <label for="fs2">
-                        <input type="checkbox" name="submitted[space_layout][fs2]" id="submitted[space_layout][fs2]" value="fs2" />&nbsp;Full space with stage and row chairs
+                        <input type="checkbox" name="submitted[space_layout][fs2]" id="submitted[space_layout][fs2]" value="Full space with stage and row chairs" />&nbsp;Full space with stage and row chairs
                       </label>
                     </li>
+
                     <li>
                       <label for="other">
-                          <input type="checkbox" />&nbsp;Other  &emsp;
-                        <input type="text" disabled="disabled" name="submitted[space_layout][other]" maxlength="128" id="submitted[space_layout][other]" />                       
-                        <script>
-                            $(':checkbox').change(function() {
+                        <input type="checkbox" name="submitted[space_layout][other]" id="submitted[space_layout][other]" value="other" />&nbsp;Other
+                      </label>
+                    </li>                  
+      -->                        
+                       
+                    <!--    <script
+>                            $(':checkbox').change(function() {
                             $('input:text').attr('disabled',! this.checked)
                             });
-                        </script>
-                      </label>                    
+                        </script> -->
+                    
+                                          
                     </li>
                   </ul>
                 </div>
               </div>
         <span class="submitted[space_layout]-msgContainer"></span> 
-       <p>* Please note if you are requesting the full space, rental of tables, chairs, and a stage, come at an extra cost of about $2000 depending on what you are looking to do.</p>
-       <p><small>Black Box Theater with seating unit deployed Black box side of space with seating unit retracted and rented furniture Full space with cocktail tables, chairs and stage Full space with stage and row chairs</small></p>
+    <!--   <p>* Please note: the use of the entire space is not always feasible, as it is pending the availability of the gallery. If you are requesting the full space, rental of tables, chairs, and a stage, come at an extra cost of about $2,000 depending on what you are looking to do.</p> -->
+      
       </div>
     </div>
 
