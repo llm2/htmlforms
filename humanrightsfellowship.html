@@ -79,45 +79,29 @@ $(document).ready(function() {
         </div>
       </div>
       <h2>Academic Information</h2>
-      <div class="section radio">
+      <div class="section text">
         <div class="halfSize">
-          <label for="student_status">Class Standing </label>
-          <span class="options"> 
-            <span>
-              <input name="submitted[student_status]" id="student_status" value="FR" type="radio" class="required"/>
-              <label for="submitted[student_status]">First-year</label>
-            </span> 
-            <span>
-              <input name="submitted[student_status]" value="SO" type="radio" />
-              <label for="submitted[student_status]">Sophomore</label>
-            </span> 
-            <span>
-              <input name="submitted[student_status]" value="JR" type="radio" />
-              <label for="submitted[student_status]">Junior</label>
-            </span> 
-            <span>
-              <input name="submitted[student_status]" value="SR" type="radio" />
-              <label for="submitted[student_status]">Senior</label>
-            </span> 
-            <span>
-              <input name="submitted[student_status]" value="GR" type="radio" />
-              <label for="submitted[student_status]">Graduate</label>
-            </span> 
-            <span class="student_status-msgContainer"></span>
-          </span> 
+          <label for="submitted[class_standing]">Class Standing</label>
+          <select name="submitted[class_stnading]" id="submitted[class_standing]" class = "requiredselect">
+            <option value="">Select One</option> 
+            <option>First-Year</option> 
+            <option>Sophmore</option> 
+            <option>Junior</option> 
+            <option>Senior</option> 
+            <option>Graduate</option> 
+            </select>
+          <span class="state-msgContainer"></span> 
         </div>
       </div>
-      <div class="section radio">
+      <div class="section text">
         <div class="halfSize">
-          <label for="submitted[matriculation]">Status</label>
-          <span class="options">
-            <input name="submitted[matriculation]" id="ubmitted[matriculation]" value="gallatin" type="radio"  class="required"/>
-            <label for="submitted[matriculation]">Gallatin Student </label>
-          </span> 
-          <span >
-            <input name="submitted[matriculation]" value="nyu" type="radio" />
-            <label for="submitted[matriculation]">Other NYU Student </label>
-          </span> <span>
+          <label for="submitted[student_status]">Status</label>
+          <select name="submitted[student_status]" id="submitted[student_status]" class = "requiredselect">
+            <option value="">Select One</option> 
+            <option>Gallatin Student</option> 
+            <option>Other NYU Student</option> 
+            </select>
+            <span class="student_status-msgContainer"></span>
         </div>
       </div>
       <div class="section text">
@@ -261,7 +245,7 @@ $(document).ready(function() {
               <option value="WY">Wyoming</option>
             </optgroup>
           </select>
-          <span class="pstate-msgContainer"></span> 
+          <span class="state-msgContainer"></span> 
         </div>
       </div>
       <div class="section text">
