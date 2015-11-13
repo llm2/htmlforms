@@ -1,6 +1,4 @@
 
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
-
 <div id="formContainer">
    <form class="autoform" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/551" method="post" id="autoform" accept-charset="UTF-8">
     <div class="section text">
@@ -53,9 +51,9 @@
     </div>
     <div class="section text">
       <div class="fullSize">
-        <label for="submitted[facutly_contact]">Main contact for the event</label>
-        <input name="submitted[facutly_contact]" type="text" id="submitted[facutly_contact]" class="required" maxlength="128"/>
-        <span class="submitted[facutly_contact]-msgContainer"></span> 
+        <label for="submitted[faculty_contact]">Main contact for the event</label>
+        <input name="submitted[faculty_contact]" type="text" id="submitted[faculty_contact]" class="email" maxlength="128"/>
+        <span class="submitted[faculty_contact]-msgContainer"></span> 
       </div>
     </div>
     <hr/>
@@ -217,16 +215,7 @@
         <span class="submitted[target]-msgContainer"></span> 
       </div>
     </div>
-    
-  <!--<div class="section text">
-      <div class="fullSize">
-        <label for="submitted[location]">Is this a request for a particular space in Gallatin, and if so, which one?</label>
-        <br>
-        <input name="submitted[location]" type="text" id="submitted[location]" class="name" maxlength="128"/>
-        <span class="submitted[location]-msgContainer"></span> 
-      </div>
-    </div>
--->
+
     <div class="section text">
       <div class="fullSize">
         <label for="submitted[event_needs]">What are the needs for this event? (capacity, space set up, and A/V capabilities)</label>
@@ -289,22 +278,7 @@
       <span class="submitted[calendar]-msgContainer"></span> 
       </div>
     </div>
-   <!-- <div class="section radio">
-      <div class="fullSize">
-        <label for="submitted[nyu_calendar]">Will you want this on the NYU Events calendar?</label>
-        <br />
-        <span class = "options">
-          <input name="submitted[nyu_calendar]" value="Yes" type="radio" checked="checked"/>
-          <label for="submitted[nyu_calendar]">Yes</label>
-          </span>
-          <span>
-          <input name="submitted[nyu_calendar]" value="No" class="required" type="radio"/>
-          <label for="submitted[nyu_calendar]">No</label>
-          </span>
-      <span class="submitted[nyu_calendar]-msgContainer"></span> 
-      </div>
-    </div>
--->
+
     <div class="section radio">
       <div class="fullSize">
         <label for="submitted[rsvp]">If so, would you like an RSVP set up?</label>
@@ -395,71 +369,7 @@
     </div>
 
 
-  <!--<div class="section text">
-      <div class="fullSize">
-        <label for="submitted[space_layout]">If in The Jerry H. Labowitz Theatre for the Performing Arts, how would you like the space layout? </label>
-       <div class="section checkbox">
-                  <div class="fullSize">
-                    <ul class="checklist">
-                     <li>
-                      <label for="bb1">
-                        <input type="checkbox" name="submitted[space_layout][bb1]" id="submitted[space_layout][bb1]" value="Black Box Theater with seating unit deployed" />&nbsp;Black Box Theater with seating unit deployed 
-                      </label>
-                    </li>
-                    <li>
-                      <label for="bb2">
-                        <input type="checkbox" name="submitted[space_layout][bb2]" id="submitted[space_layout][bb2]" value="Black box side of space with seating unit retracted and rented furniture" />&nbsp;Black box side of space with seating unit retracted and rented furniture 
-                      </label>
-                    </li>
-                    <li>
-                      <label for="fs1">
-                        <input type="checkbox" name="submitted[space_layout][fs1]" id="submitted[space_layout][fs1]" value="Full space with cocktail tables, chairs and stage" />&nbsp;Full space with cocktail tables, chairs and stage 
-                      </label>
-                    </li>
-                    <li>
-                      <label for="fs2">
-                        <input type="checkbox" name="submitted[space_layout][fs2]" id="submitted[space_layout][fs2]" value="Full space with stage and row chairs" />&nbsp;Full space with stage and row chairs
-                      </label>
-                    </li>
 
-                    <li>
-                      <label for="other">
-                        <input type="checkbox" name="submitted[space_layout][other]" id="submitted[space_layout][other]" value="other" />&nbsp;Other
-                      </label>
-                    </li>                  
-      -->                        
-                       
-                    <!--    <script
->                            $(':checkbox').change(function() {
-                            $('input:text').attr('disabled',! this.checked)
-                            });
-                        </script> -->
-                    
-                                          
-                    </li>
-                  </ul>
-                </div>
-              </div>
-        <span class="submitted[space_layout]-msgContainer"></span> 
-    <!--   <p>* Please note: the use of the entire space is not always feasible, as it is pending the availability of the gallery. If you are requesting the full space, rental of tables, chairs, and a stage, come at an extra cost of about $2,000 depending on what you are looking to do.</p> -->
-      
-      </div>
-    </div>
-
-
-
-<!--
-      <div class="section text">
-      <div class="fullSize">
-        <div id="commentsdiv">
-          <label for="submitted[space_layout]">If in the Jerry H. Labowitz Theatre for the Performing Arts, how would you like the space layout (please note if requesting the full space rental of tables, chairs, and a stage come at an extra cost of about $2000 depending on what you are looking to do)</label>
-          <textarea name="submitted[space_layout]" cols="30" class="text" id="space_layout" class="text" maxlength="500"></textarea>
-          <span class="submitted[space_layout]-msgContainer"></span>  
-        </div>
-         <p><small>Black Box Theater with seating unit deployed Black box side of space with seating unit retracted and rented furniture Full space with cocktail tables, chairs and stage Full space with stage and row chairs</small></p>
-      </div>     
-    </div>
--->
     <div class="section end">
       <div class="fullSize">
         <button type="submit"
