@@ -1,12 +1,12 @@
 ﻿<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-<script>
+<!-- <script>
   $(document).ready(function() {
 	$.datepicker.setDefaults($.datepicker.regional[""]);
 	$( "#start_date" ).datepicker();
   });
-  </script>
+  </script> -->
 <div id="formhermes">
   <div id="formContainer">
     <form class="autoform" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/233" method="post" id="autoform" accept-charset="UTF-8">
@@ -49,7 +49,7 @@
       <div class="section text">
         <div class="halfSize">
           <label for="submitted[start_date]">Date Required </label>
-          <input type="text" id="start_date" name="submitted[start_date]" size="60" maxlength="128" class="required" />
+          <input type="text" id="start_date" name="submitted[start_date]" size="60" maxlength="128" class="datepicker required" />
           <span class="start_date-msgContainer"></span></div>
       </div>
       <div class="section text">

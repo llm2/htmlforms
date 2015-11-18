@@ -1,7 +1,7 @@
 <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-<script>
+<!-- <script>
 $(document).ready(function() {
   $.datepicker.setDefaults($.datepicker.regional[""]);
   $( "#event_date" ).datepicker();
@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 });
 
-</script>
+</script> -->
 <div id="formhermes">
   <div id="formContainer">
     <form name="autoform" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/12" method="post" class="autoform" id="autoform">
@@ -75,14 +75,14 @@ $(document).ready(function() {
       <div class="section text">
         <div class="halfSize">
           <label for="event_date">Event Date</label>
-          <input name="submitted[event_date]" type="text" id="event_date" class="required" maxlength="128"/>
+          <input name="submitted[event_date]" type="text" id="event_date" class="datepicker required" maxlength="128"/>
           <span class="event_date-msgContainer"></span> 
         </div>
       </div>
       <div class="section text">
         <div class="halfSize">
           <label for="submitted[backup]">Back-up Date</label>
-          <input name="submitted[backup]" type="text" id="backup" maxlength="128"/>
+          <input name="submitted[backup]" type="text" id="backup" maxlength="128" class="datepicker required"/>
           <span class="backup-msgContainer"></span> 
         </div>
       </div>
