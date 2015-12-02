@@ -1,10 +1,6 @@
-                        <script src="/content/dam/gallatin/js/country.js" type="text/javascript"></script>
-   
-<div id="formhermes">
+   <div id="formhermes">
   <div id="formContainer">
     <form class="webform-client-form" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/587" method="post" id="autoform" accept-charset="UTF-8">
-    
-  
      
       <h2>Personal Information</h2>
       <div class="section text">
@@ -21,39 +17,58 @@
       </div>
       <div class="section text">
         <div class="halfSize">
-          <label for="submitted[netid]">Net ID </label>
-          <input type="text" id="submitted[netid]" name="submitted[netid]" value="" size="60" maxlength="128"/>
+          <label for="submitted[netid]">NetID </label>
+          <input type="text" id="submitted[netid]" name="submitted[netid]" value="" size="60" maxlength="128" class="netid"/>
         </div>
       </div>
       <div class="section text">
         <div class="halfSize">
           <label for="submitted[universityid]">University ID </label>
-          <input type="text" id="submitted[universityid]" name="submitted[universityid]" value="N" size="60" maxlength="9" />
+          <input type="text" id="submitted[universityid]" name="submitted[universityid]" value="N" size="60" maxlength="9" class="uid"/>
         </div>
       </div>
-       <div class="section text">
-        <div class="halfSize">
-          <label for="submitted[academic_standing]">Academic Standing</label>
-          <input type="text" id="submitted[academic_standing]" name="submitted[academic_standing]" value="" size="60" maxlength="9" />
+      <div class="section radio">
+        <div class="fullSize">
+          <h3>Academic Standing</h3>
+          <span class="options"> 
+              <input name="academic_standing" id="academic_standing" value="FR" type="radio" class="radio"/>
+              <label for="submitted[academic_standing]">First year</label>
+
+              <input name="submitted[academic_standing]" value="SO" type="radio" />
+              <label for="submitted[academic_standing]">Sophomore</label>
+
+              <input name="submitted[academic_standing]" value="JR" type="radio" />
+              <label for="submitted[academic_standing]">Junior</label>
+
+              <input name="submitted[academic_standing]" value="SR" type="radio" />
+              <label for="submitted[academic_standing]">Senior</label>
+
+              <input name="submitted[academic_standing]" value="GR" type="radio" />
+              <label for="submitted[academic_standing]">Graduate</label>
+              <span class="academic_standing-msgContainer"></span>
+          </span> 
         </div>
       </div>
+
        <div class="section text">
-        <div class="halfSize">
-          <label for="submitted[concentration]">Major/Concentration</label>
-          <input type="text" id="submitted[concentration]" name="submitted[concentration]" value="" size="60" maxlength="9" />
+        <div class="fullSize">
+          <label for="submitted[concentration]">Major / Concentration</label>
+          <input type="text" id="submitted[concentration]" name="submitted[concentration]" value="" size="60" maxlength="9" class="required"/>
+          <span class="concentration-msgContainer"></span>
         </div>
       </div>
       <div class="section text">
          <div class="fullSize">
-            <label for="files[submitted_file1]"></label>
+            <label for="files[submitted_file1]">Statement</label>
             <p>In one document, please attach:
             <ul>
                         <li>
-                    A 2-3pp statement explaining why you would like to be a member of the Student Advisory Board, as well as what skills and/or perspectives you would bring to the position."</p>
+                    A 2-3 page statement explaining why you would like to be a member of the Student Advisory Board, as well as what skills and/or perspectives you would bring to the position.</p>
                 </li>
             </ul>
              
-            <input type="file" id="files[submitted_file1]" name="files[submitted_file1]"/>
+            <input type="file" id="files[submitted_file1]" name="files[submitted_file1]" class="required"/>
+            <span class="file1-msgContainer"></span>
          </div>
       </div>
        
