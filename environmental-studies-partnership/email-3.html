@@ -1,0 +1,365 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+</head>
+<body id="mimemail-body" style="">
+
+<style>
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
+
+body {
+    color: #333;
+    font-family: "Raleway", arial, sans-serif;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+}
+#logo{
+  width:50%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding-bottom: 20px;
+  margin: 0;
+  font-family: "Playfair Display", handwriting;
+}
+/*#####################################################################################
+MAIN CONTENT STYLES - STRUCTURE
+#######################################################################################*/
+
+section {
+  padding: 50px 0;
+}
+
+section.gray {
+  background-color: #f2f2f2;
+}
+
+section.blue {
+  background-color: #69d2e7;
+}
+section.red {
+  background-color: #b51111;
+}
+.main {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.main:before,
+.main:after {
+  content: " ";
+  display: table;
+}
+
+.main:after {
+  clear: both;
+}
+
+a, a:hover {
+    color: inherit;
+}
+
+#one-col{
+  position: relative;
+  top:-50; left:0;
+}
+
+/* 
+  Generic Styling, for Desktops/Laptops 
+  */
+  table.standard { 
+    width: 100%; 
+    border-collapse: collapse; 
+  }
+  /* Zebra striping */
+  table.standard tr:nth-of-type(odd) { 
+    background: #eee; 
+  }
+  table.standard tr.stripe{
+    background-color: #eee; 
+  }
+  table.standard th { 
+    background-color: #333; 
+    color: white; 
+    font-weight: bold; 
+  }
+  table.standard td, th { 
+    padding: 6px; 
+    border: 1px solid #ccc; 
+    text-align: left; 
+  }
+
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)  {
+
+    .main{
+      padding: 0;
+    }
+    #logo{
+      width: 320;
+    }
+    #header-image{
+      display: none;
+    }
+    /* Force table to not be like tables anymore */
+    table.standard, table.standard thead, table.standard tbody, table.standard th, table.standard td, table.standard tr {
+      display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    table.standard thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+      display:none;
+    }
+
+    table.standard tr { border: 1px solid #ccc; }
+
+    table.standard td {
+      /* Behave  like a "row" */
+      border: none;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      /*padding-left: 50%;*/
+    }
+
+    table.standard td:before {
+      /* Now like a table header */
+      position: absolute;
+      /* Top/left values mimic padding */
+      top: 6px;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+    }
+
+  }
+
+  /* Smartphones (portrait and landscape) ----------- */
+
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    body {
+      padding: 0;
+      margin: 0;
+      width: 320px; }
+    }
+    .main{
+      padding: 0;
+    }
+
+  }
+  /* iPads (portrait and landscape) ----------- */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    body, #logo {
+      width: 495px;
+    }
+        .main{
+      padding: 0;
+    }
+  }
+
+</style>
+
+</head>
+<body style="color: #333;
+    font-family: "Raleway", arial, sans-serif;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;">
+  <table id="standard" style="width: 100%; line-height: 16px; background-color: #69D2E7;" cellspacing="0" cellpadding="0"><tbody><tr><td style="border-collapse: collapse; text-align: left; vertical-align: top;" align="left" valign="top">
+
+<table id="header-wrap" style="width: 100%;background-color: #B51111;" cellspacing="0" cellpadding="30px"><tbody><tr><td style="border-collapse: collapse; text-align: left; vertical-align: top;" align="left" valign="top"><div class="main"><strong><img id="logo" src="http://gallatin.nyu.edu/content/dam/gallatin/photos/Logos/gallatin_long_white.png" width="50%" alt="NYU Gallatin School of Individualized Study" style="color:#fff; font-family: "Playfair Display", handwriting; font-size: 20px;"/></strong></div>
+
+<table id="header" cellspacing="0" cellpadding="0" style="color:#fff;"><tbody><tr><td style="border-collapse: collapse; text-align: center; vertical-align: top;text-color:#fff; line-height: 50px;" align="left" valign="top"></td>
+
+</tr></tbody></table></td>
+
+</tr></tbody></table><!--/header--><strong><img src="http://gallatin.nyu.edu/content/dam/gallatin/carousels/news-header-default.jpg" width="100%" alt=""/></strong>
+
+<div class="main">
+  <center>
+<table id="one-col" style="background-color:#FFF; position: relative; top: -50px;left: 0px;max-width: 95%" cellpadding="30px;"><tbody><tr><td >
+
+
+<!-- BEGIN EMAIL CONTENT -->
+<p>
+<strong>Dear Adviser,</strong>
+<p>Your advisee, %value[first_name] %value[last_name], has submitted a Plan of Study which requires your approval before we can clear the student to register for classes on Albert.  All students have been instructed to speak with their advisers about their course selections prior to submitting the Plan of Study form.  If your advisee has not discussed this Plan of Study with you, you may reject it, and request that s/he meet with you before resubmitting another Plan of Study.</p> 
+
+<p>Before approving your student’s plan, please be mindful of the following restrictions, and help your advisee find an alternative course if he or she selects a restricted course.  The student’s class adviser might also help with this.<p/>
+
+<p>
+<h2>Registration and Program Restrictions</FONT></h2>
+<ol>
+<li><strong>Internships</strong>: Undergraduate students may enroll in as many as (but no more than) 24 total internship units during their undergraduate course of study, and as many as (but no more than) four internship units per semester.</li>
+<li><strong>Business courses</strong>: Due to business school accreditation restrictions, no more than 31 credits in business courses can count towards the Gallatin degree. This includes courses in the Stern School, the McGhee Division in the School of Professional Studies, and those transferred from other colleges and universities.</li>
+<li><strong>Private Lessons</strong>: Undergraduate students may not take more than 24 credits in private lessons during their studies at the Gallatin School. Included in this total will be units earned from Gallatin Private Lessons (INDIV-UG 1701) as well as units earned from Steinhardt music courses noted as “individual instruction in the performing arts” (e.g., Participation in NYU Orchestra, Private Vocal Training, etc.).</li>
+<li><strong>Liberal Studies Program (LSP) Courses</strong>: After matriculation at Gallatin students are not permitted to receive degree credit for LSP courses. The subject area code for these courses contains “- UF” </li>
+<li><strong>School of Professional Studies Restriction (SPS)</strong>: Gallatin students are not permitted to receive degree credit for certain courses in SPS. The subject area code for these courses contains “- UC”  Please review the <a href= "http://gallatin.nyu.edu/about/bulletin/undergrad/cross-school/academic-departments.html#School of Continuing and Professional Studies">list of the SPS courses </a>that Gallatin students can take for credit.</li>
+
+</ol>
+</p>
+<p>
+<strong>To Approve the Course Selections Below:</strong><br/>
+Please reply to this email to submit your approval.  Students will be cleared according to the  following unit/credit limits:
+<ul>
+<li>Fall/Spring – 18 units/credits per semester</li>
+<li>Six-week summer session – 8 units/credits per semester</li>
+<li>January term -4 units/credits in the three-week term</li>
+</ul></p>
+
+<p>
+<strong>Approval above the unit/credit limit: </strong><br/>
+With the exception of January term, students may receive approval to register above the unit/credit limit for a particular term.  If you are approving your advisee to register above the unit/credit limit, <strong>please specify the number of units/credits </strong>and note the following: 
+ <ul>
+<li>First-year students are not permitted to register for more than 18 units/credits in their first semester of study.</li>
+<li>A petition is also required if a student (1) requests approval above 20 units/credits for fall/spring, (2) does not have a minimum GPA of 3.0 and/or (3) has outstanding incomplete grades.</li>
+</ul>
+ </p>
+<p>
+<strong>If You Cannot Approve the Course Selections Below:</strong><br/>
+Please reply to your advisee with the recommended changes and have him/her resubmit a revised Plan of Study form.</p>
+
+<p>If you have other questions or concerns, please e-mail us at <a href="mailto:studentservices.gallatin@nyu.edu">studentservices.gallatin@nyu.edu</a>.</p>
+
+<p>Best,<br />
+<p><a href="http://gallatin.nyu.edu/academics/advising">Office of Student Services and Office of Academic Advising</a>,<br/>
+<a href="http://gallatin.nyu.edu">Gallatin School of Individualized Study</a></p>
+
+
+
+<h2>Undergraduate Plan of Study</h2>
+
+  <table class="standard">
+    <tr>
+      <td> <strong>NetID</strong> %value[netid] </td>
+      <td> <strong>University ID</strong> %value[uid] </td>
+    </tr>
+    <tr>
+      <td> <strong>Semester and Year of registration</strong> %value[semester] %value[year]</td>
+      <td> <strong>Expected graduation</strong> %value[expected_graduation_month] %value[expected_graduation_year]</td>
+    </tr>
+    <tr>
+      <td> <strong>Faculty Adviser E-mail</strong> %value[fac_adviser] </td>
+        <td> <strong>Class Adviser E-mail</strong> %value[class_adviser] </td>
+  </tr>
+    <tr>
+      <td colspan="2"> <strong>Goals</strong> %value[goals] </td>
+    </tr>
+    <tr>
+      <td colspan="2"> <strong>Interests</strong> %value[interests] </td>
+    </tr>
+    <tr>
+      <td colspan="2"> <strong>Progress and Change</strong> %value[progress_and_change] </td>
+    </tr>
+   <tr>
+      <td> <strong>Units in Progress</strong> %value[unitsprogress] </td>
+      <td> <strong>Total Earned Units</strong> %value[unitsearned]</td>
+    </tr>
+  </table>
+  <p></p>
+  <table class="standard">
+      <THEAD>
+      <TR>
+        <TH>Course</TH>
+        <TH>Class Number</TH>
+        <TH>Permission</TH>
+        <TH>Course Title</TH>
+        <TH>Units</TH>
+        <TH>Days</TH>
+      </TR>
+    </THEAD>
+    <tr>
+      <td> %value[course_no1] </td>
+      <td> %value[class_no1] </td>
+      <td> %value[permission1] </td>
+      <td> %value[course_title1] </td>
+      <td> %value[units1] </td>
+      <td> %value[days1] </td>
+    </tr>
+    <tr   class='stripe'>
+      <td> %value[course_no2] </td>
+      <td> %value[class_no2] </td>
+      <td> %value[permission2] </td>
+      <td> %value[course_title2] </td>
+      <td> %value[units2] </td>
+      <td> %value[days2] </td>
+    </tr>
+    <tr>
+      <td> %value[course_no3] </td>
+      <td> %value[class_no3] </td>
+      <td> %value[permission3] </td>
+      <td> %value[course_title3] </td>
+      <td> %value[units3] </td>
+      <td> %value[days3] </td>
+    </tr>
+    <tr   class='stripe'>
+      <td> %value[course_no4] </td>
+      <td> %value[class_no4] </td>
+      <td> %value[permission4] </td>
+      <td> %value[course_title4] </td>
+      <td> %value[units4] </td>
+      <td> %value[days4] </td>
+    </tr>
+    <tr>
+      <td> %value[course_no5] </td>
+      <td> %value[class_no5] </td>
+      <td> %value[permission5] </td>
+      <td> %value[course_title5] </td>
+      <td> %value[units5] </td>
+      <td> %value[days5] </td>
+    </tr>
+    <tr   class='stripe'>
+      <td> %value[course_no6] </td>
+      <td> %value[class_no6] </td>
+      <td> %value[permission6] </td>
+      <td> %value[course_title6] </td>
+      <td> %value[units6] </td>
+      <td> %value[days6] </td>
+    </tr>
+    <tr>
+      <td> %value[course_no7] </td>
+      <td> %value[class_no7] </td>
+      <td> %value[permission7] </td>
+      <td> %value[course_title7] </td>
+      <td> %value[units7] </td>
+      <td> %value[days7] </td>
+    </tr>
+  </table>
+     <p><b>%value[understand]</b>, I acknowledge that I understand the above registration restrictions and I have met with my primary adviser to discuss my course selections.</p>
+<!-- END EMAIL CONTENT -->
+  
+</td></tr>
+
+
+
+
+</tbody></table>
+</div>
+</center>
+<!--/one-col--></td>
+
+
+
+</tr>
+<tr><td height="20px;"></td></tr>
+    <tr>
+        <td valign="top" width="100%" rowspan="1" colspan="1" align="center" style="color:#ffffff;TEXT-ALIGN: left; background-color:#000; padding: 0 30px;"><center><p style="margin-top:10px;color:#fff;font-family: "Raleway",arial,sans-serif;">NYU Gallatin School of Individualized Study | 1 Washington Place | New York | NY | 10003-6806</p></center>
+        </td>
+    </tr></tbody></table>
+
+
+
+</body>
+</html>
