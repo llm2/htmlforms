@@ -1,198 +1,93 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
 </head>
-<body id="mimemail-body" style="">
+<body id="mimemail-body" class="submission">
+<div id="center">
+<div id="main">
+<html>
+<head>
 
 <style>
-@import url(http://fonts.googleapis.com/css?family=Playfair+Display);
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
-
 body {
-    color: #333;
-    font-family: "Raleway", arial, sans-serif;
+    /*margin: 0px;
+    font-size: 11px;
+    font-family: verdana, arial, helvetica, sans-serif; */
+
+    background-color: #FFF; width: 100% !important; padding: 0; -webkit-text-size-adjust: none; margin: 0;
+}
+/* ------------------------ TABLES ----------------------- */
+
+table.standard thead,
+table.standard .mainColumn {
+    background-color: #ece7d3 !important;
+}
+table.standard .stripe {
+    background-color: #fff6d7;
+}
+table.standard tr {
+    border-bottom: 1px solid #bfbfbf;
+}
+table.standard td, th{
+        font-size: 12px;
+    line-height: 16px;
+    color: #333333;
+}
+table.standard th{
+    font-weight:bold;
     font-size: 14px;
-    padding: 0;
-    margin: 0;
 }
-#logo{
-  width:50%;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  padding-bottom: 20px;
-  margin: 0;
-  font-family: "Playfair Display", handwriting;
-}
-/*#####################################################################################
-MAIN CONTENT STYLES - STRUCTURE
-#######################################################################################*/
-
-section {
-  padding: 50px 0;
-}
-
-section.gray {
-  background-color: #f2f2f2;
-}
-
-section.blue {
-  background-color: #69d2e7;
-}
-section.red {
-  background-color: #b51111;
-}
-.main {
-  position: relative;
-  width: 100%;
-  max-width: 1000px;
-  padding: 0 20px;
-  margin: 0 auto;
-}
-
-.main:before,
-.main:after {
-  content: " ";
-  display: table;
-}
-
-.main:after {
-  clear: both;
-}
-
+/* TYPOGRAPHY & REFORMATTING
+----------------------------------------------------------------------------------- */
 a, a:hover {
-    color: inherit;
+    color: #b3151b;
 }
-/*
-#one-col{
-  position: relative;
-  top:-50; left:0;
+p {
+    font-size: 12px;
+    line-height: 16px;
+    color: #333333;
 }
-*/
-/* 
-  Generic Styling, for Desktops/Laptops 
-  */
-  table.standard { 
-    width: 100%; 
-    border-collapse: collapse; 
-  }
-  /* Zebra striping */
-  table.standard tr:nth-of-type(odd) { 
-    background: #eee; 
-  }
-  table.standard tr.stripe{
-    background-color: #eee; 
-  }
-  table.standard th { 
-    background-color: #333; 
-    color: white; 
-    font-weight: bold; 
-  }
-  table.standard td, th { 
-    padding: 6px; 
-    border: 1px solid #ccc; 
-    text-align: left; 
-  }
-
-@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)  {
-
-    .main{
-      padding: 0;
-    }
-    #logo{
-      width: 320;
-    }
-    #header-image{
-      display: none;
-    }
-    /* Force table to not be like tables anymore */
-    table.standard, table.standard thead, table.standard tbody, table.standard th, table.standard td, table.standard tr {
-      display: block;
-    }
-
-    /* Hide table headers (but not display: none;, for accessibility) */
-    table.standard thead tr {
-      position: absolute;
-      top: -9999px;
-      left: -9999px;
-      display:none;
-    }
-
-    table.standard tr { border: 1px solid #ccc; }
-
-    table.standard td {
-      /* Behave  like a "row" */
-      border: none;
-      border-bottom: 1px solid #eee;
-      position: relative;
-      /*padding-left: 50%;*/
-    }
-
-    table.standard td:before {
-      /* Now like a table header */
-      position: absolute;
-      /* Top/left values mimic padding */
-      top: 6px;
-      left: 6px;
-      width: 45%;
-      padding-right: 10px;
-      white-space: nowrap;
-    }
-
-  }
-
-  /* Smartphones (portrait and landscape) ----------- */
-
-  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    body {
-      padding: 0;
-      margin: 0;
-      width: 320px; }
-    }
-    .main{
-      padding: 0;
-    }
-
-  }
-  /* iPads (portrait and landscape) ----------- */
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    body, #logo {
-      width: 495px;
-    }
-        .main{
-      padding: 0;
-    }
-  }
-
-</style>
-
-</head>
-<body style="color: #333;
-    font-family: "Raleway", arial, sans-serif;
+h1, h2 {
+    font-family: Georgia;
+    color: #1f6a75;
+    font-size: 24px;
+}
+h2 {
+    font-size: 18px;
+    line-height: 21px;
+}
+h3, h4, h5 {
+    font-family: arial;
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+    line-height: 18px;
+}
+h4 {
     font-size: 14px;
-    padding: 0;
-    margin: 0;">
-  <table id="standard" style="width: 100%; line-height: 16px; background-color: #69D2E7;" cellspacing="0" cellpadding="0"><tbody><tr><td style="border-collapse: collapse; text-align: left; vertical-align: top;" align="left" valign="top">
+    line-height: 16px;
+}
+h5 {
+    color: #1f6a75;
+    font-size: 12px;
+    line-height: 14px;
+}
+</style>
+</head>
+<body><table id="standard" style="width: 100%; line-height: 16px; font-size: 11px; font-family: Verdana, Arial, sans-serif;background-color: #D6EDF0;" cellspacing="0" cellpadding="0"><tbody><tr><td style="border-collapse: collapse; text-align: left; vertical-align: top;" align="left" valign="top">
 
-<table id="header-wrap" style="width: 100%;background-color: #B51111;" cellspacing="0" cellpadding="30px"><tbody><tr><td style="border-collapse: collapse; text-align: left; vertical-align: top;" align="left" valign="top"><div class="main"><strong><img id="logo" src="http://gallatin.nyu.edu/content/dam/gallatin/photos/Logos/gallatin_long_white.png" width="50%" alt="NYU Gallatin School of Individualized Study" style="color:#fff; font-family: "Playfair Display", handwriting; font-size: 20px;"/></strong></div>
+<table id="header-wrap" style="width: 100%;" cellspacing="0" cellpadding="0" bgcolor="#fff"><tbody><tr><td style="border-collapse: collapse; text-align: left; vertical-align: top;" align="left" valign="top"><center>
 
-<table id="header" cellspacing="0" cellpadding="0" style="color:#fff;"><tbody><tr><td style="border-collapse: collapse; text-align: center; vertical-align: top;text-color:#fff; line-height: 50px;" align="left" valign="top"></td>
+<table id="header" cellspacing="0" cellpadding="0" style="width: 100%; color:#fff;background:url(http://gallatin.nyu.edu/etc/designs/gallatin/images/bgSkyline.gif) repeat-x #D6EDF0;"><tbody><tr><td style="border-collapse: collapse; text-align: center; vertical-align: top;text-color:#fff; line-height: 0px;" align="left" valign="top"><img id="galLogo" src="http://gallatin.nyu.edu/content/dam/gallatin/photos/Logos/email-header.png" title="NYU Gallatin" alt="NYU Gallatin School of Individualized Study" style="height: auto; outline: none; text-decoration: none; border: 0;margin-left:0px;"/></td>
 
-</tr></tbody></table></td>
+</tr></tbody></table></center></td>
 
-</tr></tbody></table><!--/header--><strong><img src="http://gallatin.nyu.edu/content/dam/gallatin/carousels/news-header-default.jpg" width="100%" alt=""/></strong>
+</tr></tbody></table><!--/header--><center>
 
-<div class="main">
-  <center>
-<table id="one-col" style="background-color:#FFF; max-width: 95%" cellpadding="30px;"><tbody><tr><td >
+<table id="one-col" style="width: 600px; background-color:#FFF; " cellspacing="0" cellpadding="0" ><tbody><tr><td style="text-align: left; font-size: 11px; vertical-align: top;" align="left" valign="top">
+<div style="margin: 10px">
 
-
-<!-- BEGIN EMAIL CONTENT -->
+  <!-- BEGIN EMAIL CONTENT -->
 <p>
 <strong>Dear Adviser,</strong>
 <p>Your advisee, %value[first_name] %value[last_name], has submitted a Plan of Study which requires your approval before we can clear the student to register for classes on Albert.  All students have been instructed to speak with their advisers about their course selections prior to submitting the Plan of Study form.  If your advisee has not discussed this Plan of Study with you, you may reject it, and request that s/he meet with you before resubmitting another Plan of Study.</p> 
@@ -338,28 +233,29 @@ Please reply to your advisee with the recommended changes and have him/her resub
     </tr>
   </table>
      <p><b>%value[understand]</b>, I acknowledge that I understand the above registration restrictions and I have met with my primary adviser to discuss my course selections.</p>
-<!-- END EMAIL CONTENT -->
+  <!-- END EMAIL CONTENT -->
   
+</div>
+<p>&nbsp;</p>
 </td></tr>
 
-
-
-
-</tbody></table>
-</div>
-</center>
-<!--/one-col--></td>
-
-
-
-</tr>
-<tr><td height="20px;"></td></tr>
     <tr>
-        <td valign="top" width="100%" rowspan="1" colspan="1" align="center" style="color:#ffffff;TEXT-ALIGN: left; background-color:#000; padding: 0 30px;"><center><p style="margin-top:10px;color:#fff;font-family: "Raleway",arial,sans-serif;">NYU Gallatin School of Individualized Study | 1 Washington Place | New York | NY | 10003-6806</p></center>
+        <td valign="top" width="100%" rowspan="1" colspan="1" align="left" style="color:#ee2869;font-family:Times New Roman,Times,serif;font-size:10pt;TEXT-ALIGN: left; background-color:#000;"><a href="http://nyu.edu"><img height="22" name="ACCOUNT.IMAGE.15" border="0" hspace="0" width="229" alt="New York University" src="http://gallatin.nyu.edu/etc/designs/gallatin/images/topBarNyuLogo.gif" /></a>
         </td>
-    </tr></tbody></table>
+    </tr>
 
 
+</tbody></table></center><!--/one-col--></td>
+
+
+<tr><td style="background-color:#FFF;text-align:center;" ><!-- footer --><p style="margin-top:10px;">NYU Gallatin School of Individualized Study | 1 Washington Place | New York | NY | 10003-6806</p></td></tr>
+
+
+</tr></tbody></table><p style="padding-left: 7px;">&#xA0;</p>
 
 </body>
+</html>      </div>
+    </div>
+  </body>
+
 </html>
