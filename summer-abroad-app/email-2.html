@@ -1,0 +1,168 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body id="mimemail-body" class="submission">
+<div id="center">
+<div id="main">
+<html>
+<head>
+
+<style>
+body {
+    /*margin: 0px;
+    font-size: 11px;
+    font-family: verdana, arial, helvetica, sans-serif; */
+
+    background-color: #FFF; width: 100% !important; padding: 0; -webkit-text-size-adjust: none; margin: 0;
+}
+/* ------------------------ TABLES ----------------------- */
+
+table.standard thead,
+table.standard .mainColumn {
+    background-color: #ece7d3 !important;
+}
+table.standard .stripe {
+    background-color: #fff6d7;
+}
+table.standard tr {
+    border-bottom: 1px solid #bfbfbf;
+}
+table.standard td, th{
+        font-size: 12px;
+    line-height: 16px;
+    color: #333333;
+}
+table.standard th{
+    font-weight:bold;
+    font-size: 14px;
+}
+/* TYPOGRAPHY & REFORMATTING
+----------------------------------------------------------------------------------- */
+a, a:hover {
+    color: #b3151b;
+}
+p {
+    font-size: 12px;
+    line-height: 16px;
+    color: #333333;
+}
+h1, h2 {
+    font-family: Georgia;
+    color: #1f6a75;
+    font-size: 24px;
+}
+h2 {
+    font-size: 18px;
+    line-height: 21px;
+}
+h3, h4, h5 {
+    font-family: arial;
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+    line-height: 18px;
+}
+h4 {
+    font-size: 14px;
+    line-height: 16px;
+}
+h5 {
+    color: #1f6a75;
+    font-size: 12px;
+    line-height: 14px;
+}
+</style>
+</head>
+<body><table id="standard" style="width: 100%; line-height: 16px; font-size: 11px; font-family: Verdana, Arial, sans-serif;background-color: #D6EDF0;" cellspacing="0" cellpadding="0"><tbody><tr><td style="border-collapse: collapse; text-align: left; vertical-align: top;" align="left" valign="top">
+
+<table id="header-wrap" style="width: 100%;" cellspacing="0" cellpadding="0" bgcolor="#fff"><tbody><tr><td style="border-collapse: collapse; text-align: left; vertical-align: top;" align="left" valign="top"><center>
+
+<table id="header" cellspacing="0" cellpadding="0" style="width: 100%; color:#fff;background:url(http://gallatin.nyu.edu/etc/designs/gallatin/images/bgSkyline.gif) repeat-x #D6EDF0;"><tbody><tr><td style="border-collapse: collapse; text-align: center; vertical-align: top;text-color:#fff; line-height: 0px;" align="left" valign="top"><img id="galLogo" src="http://gallatin.nyu.edu/content/dam/gallatin/photos/Logos/email-header.png" title="NYU Gallatin" alt="NYU Gallatin School of Individualized Study" style="height: auto; outline: none; text-decoration: none; border: 0;margin-left:0px;"/></td>
+
+</tr></tbody></table></center></td>
+
+</tr></tbody></table><!--/header--><center>
+
+<table id="one-col" style="width: 600px; background-color:#FFF; " cellspacing="0" cellpadding="0" ><tbody><tr><td style="text-align: left; font-size: 11px; vertical-align: top;" align="left" valign="top">
+<div style="margin: 10px">
+
+  <!-- BEGIN EMAIL CONTENT -->
+
+<p>
+<strong>Dear Office of Global Programs</strong>,<br/>
+
+%value[first_name] %value[last_name] has submitted a %value[application_type] Study Abroad Application.
+
+<p>The results of this submission may be viewed at:<br/>
+<a href="%submission_url">%submission_url</a>
+</p>
+   <h2>%value[application_type] Study Abroad Application</h2>
+
+ <table class="standard">
+ 	<tr><td><strong> Program
+ 	</strong> %value[program]</td><td><strong> I would like to apply to another program listed above if my selected program is not available.  (for Summer Application)
+ 	</strong> %value[another]: %value[title]</td>
+	</tr>
+ 	<tr><td><strong> Applicant </strong> %value[first_name] %value[last_name]</td>
+ 		<td><strong> Email </strong> %value[netid_email]<br>
+ 		  <strong>Non-NYU Email</strong> %value[email_address]<br></td>
+ 	</tr>
+ 	<tr><td><strong> University ID
+ 	</strong> %value[universityid]</td><td><strong> Class Standing</strong> %value[student_status]</td>
+ 	</tr>
+ 	<tr><td><strong> Local Address
+ 	</strong> %value[ladd], %value[lcity], %value[lstate], %value[lcountry], %value[lzip]</td><td><strong> Local Phone
+ 	</strong> %value[telephone]</td>
+ 	</tr>
+ 	<tr><td><strong> Permanent Address
+ 	</strong> %value[padd], %value[pcity], %value[pstate], %value[pcountry], %value[pzip]</td>
+ 	<td><strong> Permanent Phone
+ 	</strong> %value[permphone]</td>
+ 	</tr>
+ 	<tr><td><strong> Status </strong>%value[matriculation]</td><td><strong> NYU/Current School
+ 	</strong> %value[school]</td>
+ </tr>
+ 	<tr><td colspan="2"><strong> Major/Concentration
+ 	</strong> %value[concentration]</td></tr>
+ 	<tr><td  colspan="2"><strong> Personal Statement
+ 	</strong> %value[personal_statement]</td></tr>
+ 	<tr><td><strong> Adviser (for Winter/Summer Application) </strong> %value[adviser]</td><td><strong> Adviser Email (for Winter/Summer Application) </strong> %value[fac_adviser]</td>
+ 	</tr>
+ 	<tr><td><strong> Reference 
+ 	</strong> %value[reference_first_name] %value[reference_last_name]</td><td><strong>Email </strong> %value[reference_email]<br>
+ 	  <br></td></tr>
+ 	<tr><td><strong>Telephone
+ 	</strong> %value[reference_telephone]</td>
+ 	</tr>
+ 	<tr><td><strong> I would like to request a Dean's Scholarship (for Winter Application)
+ 	</strong> %value[request]</td><td><strong>  Reason for requesting a Dean's Scholarship
+ 	</strong> %value[scholarship]</td></tr>
+ 	<tr><td><strong> Have you submitted a FAFSA this year (for Winter Application)?
+ 	</strong> %value[fafsa]</td><td><strong> Have you received a dean's scholarship in the past?
+ 	</strong> %value[past_scholarships]</td></tr>
+ </table>
+
+
+  <!-- END EMAIL CONTENT -->
+  
+</div>
+<p>&nbsp;</p>
+</td></tr>
+
+    <tr>
+        <td valign="top" width="100%" rowspan="1" colspan="1" align="left" style="color:#ee2869;font-family:Times New Roman,Times,serif;font-size:10pt;TEXT-ALIGN: left; background-color:#000;"><a href="http://nyu.edu"></a>
+        </td>
+    </tr>
+
+
+</tbody></table></center><!--/one-col--></td>
+
+
+<tr><td style="background-color:#FFF;text-align:center;" ><!-- footer --><p style="margin-top:10px;">NYU Gallatin School of Individualized Study | 1 Washington Place | New York | NY | 10003-6806</p></td></tr>
+
+
+</tr></tbody></table><p style="padding-left: 7px;">&#xA0;</p>
+
+</body>
+</html>      
