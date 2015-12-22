@@ -1,0 +1,316 @@
+﻿<div id="formContainer">
+<!-- KJ cut and paste begin -->
+<form action="https://www.nyu.edu/cgi-bin/cgiwrap/llm2/formprocessorpro2.cgi" method="post" id="autoform" class="autoform">
+          <input type="hidden" name="required" value="name,email" />
+          <input type="hidden" name="print_blank_fields" value="value" />
+          <!-- The next fields are for the email to you -->
+          <input type="hidden" name="mail_recipient" value="npl2@nyu.edu,rachel.plutzer@nyu.edu,jennifer.birge@nyu.edu" />
+          <input type="hidden" name="mail_subject" value="Event Space Request" />
+          <input type="hidden" name="mail_top" value="The following is an event space request submitted on the Gallatin website" />
+          <input type="hidden" name="mail_listfields" value="value" />
+          <input type="hidden" name="mail_bottom" value="email gallatin.webmaster@nyu.edu if you think there may be a problem with this form" />
+          <!-- The next fields are for the courtesy reply -->
+          <input type="hidden" name="cour_send" value="yes" />
+          <input type="hidden" name="cour_top" value="Thank you for your Gallatin NYU Event Space Request" />
+          <input type="hidden" name="cour_listfields" value="no" />
+          <input type="hidden" name="cour_close" value="Sincerely," />
+          <input type="hidden" name="cour_myname" value="Gallatin Events" />
+          <input type="hidden" name="cour_mywebsite" value="http://www.gallatin.nyu.edu" />
+          <!-- this field is for the message to send to the event sponsor -->
+          <input type="hidden" name="sponsor_top" value="A Gallatin NYU Event Space Request has been sent in your name" />
+          <!-- The next fields are for the HTML response page -->
+          <input type="hidden" name="html_title" value="Thank You" />
+          <input type="hidden" name="html_top" value="Thank you for your Gallatin NYU Event Space Request. This form does not confirm a reservation. You will receive notification of request status within 7 to 10 business days." />
+          <input type="hidden" name="html_listfields" value="value" />
+          <input type="hidden" name="html_return_link_title" value="Click here to return to the main page." />
+          <input type="hidden" name="html_return_link_url" value="http://gallatin.nyu.edu" />
+          <!-- The next fields are for the database -->
+          <input type="hidden" name ="data_filename" value="dat/eventspace.txt" />
+          <input type="hidden" name ="data_fields_to_log" value="name,title,dept,phone,email,Persontype,EventTitle,EventDate,StartTime,EndTime,EventDescription,sponsor,sponsorEmail,EventAttendees,FacingBasic,account,fund,org,program,project,flooringYes,flooringNo,SpecialTheater,Gallery,Lobby,DVD,CD,MP3_iPod,Laptop-powerpoint,Special AV,WiredMics,WirelessMics,Furniture,Loading,Catering,Security2" />
+	      <input type="hidden" name ="data_delimiter" value="^" />
+	  
+          
+          
+            
+           	<div class="section text"><div class="halfSize">
+				<label for="name">Full Name</label>
+				<input name="name" type="text" id="name" class="name" /><span class="name-msgContainer"></span>
+			</div></div>
+		
+			<div class="section text"><div class="halfSize">
+				<label for="title">Title</label>
+				<input name="title" type="text" id="title" class="text" />
+			</div></div>
+            
+           	<div class="section text"><div class="halfSize">
+             	<div><label for="title">NYU Department</label>
+				<input name="dept" type="text" id="dept" class="text" />
+			</div></div>
+            
+            
+        <div class="section text"><div class="halfSize">
+			<label for="dept">Telephone</label>
+			<input name="telephone" type="text" id="telephone" class="phone" /><span class="telephone-msgContainer"></span>
+        </div>
+		
+		<div class="section text"><div class="halfSize">
+			<label for="fax">Fax</label>
+		    <input name="fax" type="text" id="fax" class="text" />
+		</div></div>            
+            
+            
+          <div class="section text"><div class="halfSize">
+			<label for="email">Email</label>
+		    <input type="text" name="email" class="email" /><span class="email-msgContainer"></span>
+		   </div></div>
+          
+  <script type="text/javascript">
+ function toggleFunc(divid)
+ {
+ var selObj = document.getElementById('Persontype');
+	
+	var selIndex = selObj.selectedIndex;
+	if(selObj.options[selIndex].value == "Student")
+	{
+	toggleDiv(divid);
+  }
+  else
+  {
+  toggleBack(divid);
+  }
+ } 
+  
+  function toggleDiv(divid){
+    if(document.getElementById(divid).style.display == 'none'){
+      document.getElementById(divid).style.display = 'block';
+    }
+    }
+  
+  function toggleBack(divid){
+    if(document.getElementById(divid).style.display == 'block'){
+      document.getElementById(divid).style.display = 'none';
+    }
+    } 
+  
+  
+</script>  
+
+		<div class="section checkbox"><div class="halfSize">
+		   <label for="Persontype">Are You?</label>
+			<select name="Persontype" id="Persontype" class="select" onchange="javascript:toggleFunc('mydiv')">
+			<option value="Staff" selected>Staff</option>
+			<option value="Student">Student</option>
+			<option value="Faculty">Faculty</option>
+			<option value="Other">Other</option>		
+			</select>
+            <span class="Persontype-msgContainer"></span>
+        </div></div>
+        
+        <div class="section text"><div class="halfSize">
+			<label for="EventTitle">Event Title</label>
+			<input name="EventTitle" type="text" id="EventTitle" class="required" /><span class="EventTitle-msgContainer"></span>
+		</div></div>
+        
+        <div class="section text"><div class="fullSize">
+			<label for="EventDate">Event Date(s)</label>
+			<input name="EventDate" type="text" id="EventDate" class="required" /><span class="EventDate-msgContainer"></span>
+		</div></div>
+        
+       <!--div class="section text"><div class="fullSize" -->
+			<p>Event Times</p>
+		<!--/div></div-->
+		
+        <div class="section text"><div class="halfSize">
+			<label for="StartTime">Start</label>
+		    <input name="StartTime" type="text" id="StartTime" class="required" /><span class="StartTime-msgContainer"></span>
+		</div></div>
+        
+          <div class="section text"><div class="halfSize">
+			<label for="EndTime">End</label>
+			<input name="EndTime" type="text" id="EndTime" class="required" /><span class="EndTime-msgContainer"></span>
+		  </div></div>
+            
+            <div class="section text"><div class="fullSize">
+				<label for="EventDescription">Description of Event</label>
+				<textarea name="EventDescription" cols="30" class="text" id="EventDescription"></textarea>
+			</div></div>
+            
+          <div class="section text"><div class="fullSize">
+            <label for="sponsor">Gallatin Faculty or Administrative Sponsor (required for students)</label>
+		    <input name="sponsor" type="text" id="sponsor" class="text" />
+		 </div></div>
+            
+            
+          <div class="section text"><div class="halfSize">
+			<label for="sponsorEmail">Sponsor email</label>
+		    <input type="text" name="sponsorEmail" class="email" /></div>
+		  </div></div>
+           
+          <div class="section text"><div class="halfSize">
+			<label for="EventAttendees">Event Attendees</label>
+			<select name="EventAttendees" id="EventAttendees" class="select">
+			<option value="Gallatin Students" selected>Gallatin Students</option>
+			<option value="Gallatin Faculty">Gallatin Faculty</option>
+			<option value="Gallatin Staff">Gallatin Staff</option>
+			<option value="Gallatin Community">Gallatin Community</option>
+			<option value="NYU Community">NYU Community</option>
+			<option value="Public">Public</option>		
+			</select>
+         </div></div>
+        
+        <div class="section checkbox"><div class="fullSize">
+            <span><input type="checkbox" name="submitToNyuCalendar" value="yes" id="submitToNyuCalendar" /><label for="submitToNyuCalendar">Submit this event to the NYU web calendar</label></span>
+        </div></div>
+    
+      <hr />
+		<h2>Jerry H. Labowitz Theatre for the Performing Arts Space Setup</h2> 
+			
+			<p><strong>West facing theater.</strong> Partition and seats extended, 117 theater style seats, theatrical 
+			lighting spread over  18' x 14'   flat floor stage, sprung floor.</p>
+			
+            <p><strong>North facing theater.</strong> (Two week advanced notice required) Partition and Seats retracted. 
+            275 folding chairs (must be rented). 16 x 9 raised platform (must be rented). Partial sight 
+            lines blocked by columns, basic lighting spread over platform.</p>            
+            
+            <div class="section radio"><div class="halfSize">
+            <fieldset>
+            <legend class="FacingBasic-prompt">Space Setup</legend>
+                <span><input type="radio" name="FacingBasic" value="WestFacingBasic" id="WestFacingBasic" class="radio" /><label for="FacingBasic">West facing theater</label></span>              
+                <span><input type="radio" name="FacingBasic" value="NorthFacingBasic" id="NorthFacingBasic" class="radio" /><label for="FacingBasic">North facing theater</label></span>
+                <span class="FacingBasic-msgContainer"></span>
+               </fieldset>
+            </div></div>
+            
+            <hr />
+            
+            <div class="section text"><div class="fullSize">
+           		<label> A valid NYU chartfield must be provided upon request to cover rental costs</label>                
+                <input name="account" type="text" id="account" size="5" maxlength="5" />                
+                <input name="fund" type="text" id="fund" size="2" maxlength="2" />
+                <input name="org" type="text" id="org" size="5" maxlength="5" />
+                <input name="program" type="text" id="program" size="5" maxlength="5" />
+                <input name="project" type="text" id="project" size="5" maxlength="5" />
+            </div></div>
+            
+            
+             <div class="section radio"><div class="halfSize">
+				<label for="flooring">Require dance flooring (Marley)?</label>
+				<fieldset>
+				<span class="options">				
+            	<span><input name="flooring" type="radio" id="flooringYes" value="Yes" class="radio" /><label for="flooring">Yes</label></span>                  
+                <span><input name="flooring" type="radio" id="flooringNo" value="No" class="radio" /><label for="flooring">No</label></span>
+                <span class="flooring-msgContainer"></span> 
+                </span>   
+                </fieldset>
+             </div></div>
+            
+            <div class="section text"><div class="fullSize">
+            	<label for="SpecialTheater">Special Theater configuration (Please explain)</label>
+            	<textarea name="SpecialTheater" cols="30" class="text" id="SpecialTheater"></textarea>
+            </div></div>
+            
+           <div class="section checkbox"><div class="fullSize">
+                <span><input type="checkbox" name="Gallery" value="GalleryRequested" id="Gallery"/>               
+                <label for="Gallery"><strong>Gallery.</strong> Partition Closed</label></span>
+            </div></div>
+            
+           <div class="section checkbox"><div class="fullSize">                
+                <span><input type="checkbox" name="Lobby" value="LobbyRequested" id="Lobby"/>                
+                <label for="Lobby"><b>Lobby</b></label></span>
+           </div></div>          
+             
+			<h4>A/V needs</h4> 
+            <div class="section checkbox"><div class="quarterSize">            	
+            	<span class="choice">
+                <span><input type="checkbox" name="DVD" value="Yes" id="DVD"/><label for="DVD">DVD</label> </span>         
+                <span><input type="checkbox" name="CD" value="Yes" id="CD"/><label for="CD">CD</label></span>                
+    			<span><input type="checkbox" name="MP3_iPod" value="Yes" id="MP3_iPod"/><label for="MP3_iPod">MP3/Ipod</label></span>
+                <span><input type="checkbox" name="Laptop-powerpoint" value="Yes" id="Laptop-powerpoint"/><label for="Laptop-powerpoint">Laptop/Powerpoint</label></span>
+            	</span>
+            </div></div>
+              
+           <div class="section text"><div class="fullSize">
+				<label for="Special AV">Special theatrical lighting or A/V needs? Do you have your own lighting designer, hangers, grippers? Please explain</label>
+				<textarea name="Special AV" cols="30" class="text" id="Special AV"></textarea>
+		   </div></div>
+            
+              <div class="section checkbox"><div class="halfSize">
+				    <label for="WiredMics">Number of wired microphones needed</label>
+					<select name="WiredMics" id="WiredMics" class="select">
+                    <option value="0" selected="selected">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>		
+				</select>
+        	</div></div>
+        
+        <div class="section checkbox"><div class="halfSize">
+			<label for="WirelessMics">Number of wireless microphones needed</label>
+			<select name="WirelessMics" id="WirelessMics" class="select">
+                    <option value="0" selected="selected">0</option>
+					<option value="1">1</option>
+			<option value="2">2</option>		
+			</select>
+        </div></div>
+        
+        <div class="section text"><div class="fullSize">
+			<label for="Furniture">Furniture Needs</label>
+			<textarea name="Furniture" cols="30" class="text" id="Furniture"></textarea>
+		</div></div>
+           
+        <div class="section text"><div class="fullSize">
+           <label for="Loading">Are you loading in special sets or furniture? Please explain and list the amount of 
+           time you will require for load-in</label>
+           <textarea name="Loading" cols="30" class="text" id="Loading"></textarea>
+        </div></div>                
+             
+        <div class="section text"><div class="fullSize">
+			<label for="Catering">Will you be catering the event? Please explain</label>
+			<textarea name="Catering" cols="30" class="text" id="Catering"></textarea>
+		</div></div>            
+            
+         <div class="section checkbox"><div class="fullSize">
+			<label for="Security2">Special security needs? If so please explain</label>
+			<textarea name="Security2" cols="30" class="text" id="Security2"></textarea>
+		 </div></div>
+           
+          <div class="section checkbox"><div class="fullSize">
+			<p>You will be contacted to further discuss event requirements and cost.</p></div>
+	         <input name="date" type="hidden" id="date" />
+	       </div></div>  
+	         
+          <script type="text/javascript">
+        	var datetoday = new Date();
+			datetoday = datetoday.toUTCString();
+			document.getElementById("date").value = datetoday;
+          </script> 
+       
+             <input type="hidden" name="base_path" value="/www/sites/nyu.edu/htdocs/pages/gallatin/news/event-space-form" />
+  		     <input type="hidden" name="base_url" value="http://gallatin.nyu.edu/gallatin/news/event-space-form" />
+      
+<div class="section end">
+<div class="fullSize">
+
+	<button type="submit"
+		id="submit"
+		name="submit"
+		value="Submit">Submit
+	</button>
+	<button type="reset"
+		id="reset"
+		name="reset"
+		value="Reset">Reset
+	</button>
+
+</div></div>
+ 
+       	 
+
+ </form>
+
+
+	</div>
+

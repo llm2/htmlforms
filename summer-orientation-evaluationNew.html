@@ -1,0 +1,371 @@
+﻿<style>
+.grid{
+	background-color:#FFF6D7;
+	margin-left: 10px;
+	margin-right: 10px;
+	width:auto;
+}
+.grid .item{
+	/*background-color:#FFF6D7;*/
+	display: block;
+    float: left;
+    margin: 5px 5px 5px 0;
+    padding: 5px 5px 8px 5px;
+    width: 100px;
+	min-height: 40px;
+}
+.grid .fullsize{
+	float: left;
+	background-color:#FFF6D7;
+	border-bottom:#999 thin double;
+}
+.grid .section{
+	display:block;	
+	margin: 5px;
+
+}
+.head{
+	font-weight:bold;
+}
+
+.grid .col{
+	width: 75px;
+	border-left:#999 thin double;
+	min-height: 40px;
+	float: left;
+	padding-left: 5px;
+	padding-top: 5px;
+}
+</style>
+
+<div id="formContainer">
+
+
+<form action="https://www.nyu.edu/cgi-bin/cgiwrap/llm2/yform20.cgi" method="post" class="autoform" id="autoform">	
+	<input type="hidden" name="required" value="fname,lname, email,netid,check_in_and_breakfast,Orientation_101,Deans_Welcome_Address,The_Gallatin_Experience,Campus_Tour,OL_Skit,All_About_Albert,Night_Out_Event,Registration_Workshop,Diversity_Resources_Workshop,OL_Office_Hours,Optional_Workshops,Get_Involved,Too_Much_Light,After-Party,Registration_Process,Accommodations,Meals,Overall_Orientation_Experience,bring_laptop_Orientation,OrientationLeader,CommentsOnOriLeader,CommentsOverall" />
+	<input type="hidden" name="print_blank_fields" value="no" />
+
+	<input type="hidden" name="mail_recipient" value="jp141@nyu.edu" />
+	<input type="hidden" name="mail_subject" value="Orientation Evaluation." />
+	<input type="hidden" name="mail_top" value="Orientation Evaluation submitted on the Gallatin website" />
+	<input type="hidden" name="mail_listfields" value="yes" />
+	<input type="hidden" name="mail_bottom" value="email gallatin.webmaster@nyu.edu if you think there may be a problem with this form">
+
+	<input type="hidden" name="cour_send" value="yes" />
+	<input type="hidden" name="cour_top" value="thank you for submitting your orientation evaluation." />
+	<input type="hidden" name="cour_listfields" value="no" />
+	<input type="hidden" name="cour_close" value="Sincerely," />
+	<input type="hidden" name="cour_myname" value="Gallatin Administration" />
+	<input type="hidden" name="cour_mywebsite" value="http://www.gallatin.nyu.edu" />
+
+    <input type="hidden" name="html_template" value="http://gallatin.nyu.edu/incoming/ba/firstyear/templates/thankyou.html" />
+    <input type="hidden" name="error_template" value="http://gallatin.nyu.edu/incoming/ba/firstyear/templates/error.html" />
+	<input type="hidden" name="html_title" value="Thank You" />
+	<input type="hidden" name="html_top" value="You have submitted a Gallatin Orientation Evaluation" />
+	<input type="hidden" name="html_listfields" value="no" />
+	<input type="hidden" name="html_return_link_title" value="Click here to return to the main page." />
+	<input type="hidden" name="html_return_link_url" value="http://gallatin.nyu.edu/" />
+
+	<input type="hidden" name ="data_filename" value="/www/sites/nyu.edu/htdocs/pages/gallatin/incoming/ba/firstyear/dat/OriEval11.txt" />
+	<input type="hidden" name ="data_fields_to_log" value="fname, lname,email,netid,check_in_and_breakfast,Orientation_101,Deans_Welcome_Address,The_Gallatin_Experience,Campus_Tour,OL_Skit,All_About_Albert,Night_Out_Event,Registration_Workshop,Diversity_Resources_Workshop,OL_Office_Hours,Optional_Workshops,Get_Involved,Too_Much_Light,After-Party,Registration_Process,Accommodations,Meals,Overall_Orientation_Experience,bring_laptop_Orientation,help_during_Orientation,own_a_laptop,plan_buy_one,OrientationLeader,CommentsOnOriLeader,CommentsOverall" />
+	<input type="hidden" name ="data_delimiter" value="^" />
+
+<input type="hidden" name="form_token" value="NRk0NRarPH7fMnjGHR0JFP5zMKhh3IWEhVqplCrjeIM" />
+<input type="hidden" name="form_id" value="39" />
+        <INPUT type=hidden name="html_template" value="http://www.gallatin.nyu.edu/utilities/thankyou.html" />
+        <INPUT type=hidden name="error_template" value="http://www.gallatin.nyu.edu/utilities/error.html" />
+        
+	<div class="section text"><div class="halfSize">
+		<label for="fname">First Name</label>
+		<input name="fname" type="text" id="fname" class="name" /><span class="fname-msgContainer"></span>
+	</div></div>
+	<div class="section text"><div class="halfSize">
+		<label for="lname">Last Name</label>
+		<input name="lname" type="text" id="lname" class="name" /><span class="lname-msgContainer"></span>
+	</div></div>	
+	<div class="section text"><div class="halfSize">
+		<label for="email">Email</label>
+		<input type="text" name="email" class="email" /><span class="email-msgContainer"></span>
+	</div></div>
+
+	<div class="section text"><div class="halfSize">
+		<label for="netid">NetID</label>
+		<input type="text" name="netid" class="netid" /><span class="netid-msgContainer"></span>
+	</div></div>
+	
+	<hr />
+        <div class="grid">
+        <div class="section"><div class="fullSize">	
+		 <span class="head item">Please rate the following</span>
+         <span class="col head">Excellent</span>
+         <span class="col head">Very good</span>
+         <span class="col head">Good</span>
+         <span class="col head">Fair</span>
+         <span class="col head">Poor</span>
+         </div></div>
+
+		<div class="section radio"><div class="fullSize">		 
+		  <span  class="item">Check-in &amp; Breakfast</span>
+		  <span class="options">
+		  <span class="col"><input type="radio"  name="check_in_and_breakfast" value="5" checked="yes" class="requiredselect" autocomplete="off"/></span>
+          <span class="col"><input type="radio"  name="check_in_and_breakfast" value="4" class="requiredselect" /></span>
+          <span class="col"><input type="radio"  name="check_in_and_breakfast" value="3" class="requiredselect" /></span>
+          <span class="col"><input type="radio"  name="check_in_and_breakfast" value="2" class="requiredselect" /></span>
+          <span class="col"><input type="radio"  name="check_in_and_breakfast" value="1" class="requiredselect" /></span><span class="check_in_and_breakfast-msgContainer" />
+          </span>
+        </div></div>        
+        
+		<div class="section radio"><div class="fullSize">
+			<span class="item">Orientation 101</span> 
+          <span class="options">
+          <span class="col"><input type="radio" class="requiredselect"  name="Orientation_101" value="5" checked="yes" autocomplete="off"/></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Orientation_101" value="4" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Orientation_101" value="3" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Orientation_101" value="2" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Orientation_101" value="1" /></span><span class="Orientation_101-msgContainer" />
+		  </span>		 
+        </div></div>
+        
+		<div class="section radio"><div class="fullSize">
+		  <span class="item">Dean&rsquo;s Welcome Address</span> 
+		  <span class="options">
+		  <span class="col"><input type="radio" class="requiredselect"  name="Deans_Welcome_Address" value="5" checked="yes"  autocomplete="off"/></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Deans_Welcome_Address" value="4" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Deans_Welcome_Address" value="3" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Deans_Welcome_Address" value="2" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Deans_Welcome_Address" value="1" /></span><span class="Deans_Welcome_Address-msgContainer" />
+          </span>
+        </div></div>
+        
+		<div class="section radio"><div class="fullSize">
+			<span class="item">The Gallatin Experience</span> 
+		  <span class="options">
+		  <span class="col"><input type="radio" class="requiredselect"  name="The_Gallatin_Experience" value="5" checked="yes" autocomplete="off"/></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="The_Gallatin_Experience" value="4" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="The_Gallatin_Experience" value="3" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="The_Gallatin_Experience" value="2" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="The_Gallatin_Experience" value="1" /></span><span class="The_Gallatin_Experience-msgContainer" />
+          </span>
+	    </div></div>
+
+		<div class="section radio"><div class="fullSize">
+		 <span class="item">Campus Tour</span> 
+		  <span class="options">
+		  <span class="col"><input type="radio" class="requiredselect"  name="Campus_Tour" value="5" checked="yes"  autocomplete="off"/></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Campus_Tour" value="4" /> </span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Campus_Tour" value="3" /> </span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Campus_Tour" value="2" /> </span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Campus_Tour" value="1" /> </span><span class="Campus_Tour-msgContainer" /></span>
+          </span>
+        </div></div>
+
+		<div class="section radio"><div class="fullSize">
+			<span class="item">OL Skit "A Day in the Life of an NYU Student"</span> 
+		  <span class="options">
+		 <span class="col"> <input type="radio" class="requiredselect"  name="OL_Skit" value="5" checked="yes"  autocomplete="off"/></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="OL_Skit" value="4" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="OL_Skit" value="3" /></span>
+         <span class="col"> <input type="radio" class="requiredselect"  name="OL_Skit" value="2" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="OL_Skit" value="1" /></span><span class="OL_Skit-msgContainer" />
+          </span>
+        </div></div>
+
+		  <div class="section radio"><div class="fullSize">
+		  <span class="item">All About Albert / Course Selection Review</span> 
+		  <span class="options">
+		  <span class="col"><input type="radio" class="requiredselect"  name="All_About_Albert" value="5" checked="yes"  autocomplete="off"/></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="All_About_Albert" value="4" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="All_About_Albert" value="3" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="All_About_Albert" value="2" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="All_About_Albert" value="1" /></span><span class="All_About_Albert-msgContainer" />
+          </span>
+        </div></div>
+        
+        
+		<div class="section radio"><div class="fullSize">
+		<span class="item">Night Out Event</span> 
+			<span class="options">
+		  <span class="col"><input type="radio" class="requiredselect"  name="Night_Out_Event" value="5" checked="yes"  autocomplete="off"/></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Night_Out_Event" value="4" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Night_Out_Event" value="3" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Night_Out_Event" value="2" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Night_Out_Event" value="1" /></span><span class="Night_Out_Event-msgContainer" />
+          </span>
+        </div></div>
+        
+		<div class="section radio"><div class="fullSize">
+		  <span class="item">Registration Workshop</span> 
+		  <span class="options">
+		  <span class="col"><input type="radio" class="requiredselect"  name="Registration_Workshop" value="5" checked="yes"  autocomplete="off"/></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Registration_Workshop" value="4" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Registration_Workshop" value="3" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Registration_Workshop" value="2" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Registration_Workshop" value="1" /></span><span class="Registration_Workshop-msgContainer" />
+          </span>
+        </div></div>       
+        
+        
+ 		<div class="section radio"><div class="fullSize">
+			<span class="item">Diversity Resources Workshop</span> 
+		  <span class="options">
+		  <span class="col"><input type="radio" class="requiredselect"  name="Diversity_Resources_Workshop" value="5" checked="yes"  autocomplete="off"/></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Diversity_Resources_Workshop" value="4" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Diversity_Resources_Workshop" value="3" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Diversity_Resources_Workshop" value="2" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Diversity_Resources_Workshop" value="1" /></span><span class="Diversity_Resources_Workshop-msgContainer" />
+          </span>
+        </div></div>
+        
+		<div class="section radio"><div class="fullSize">
+			<span class="item">OL Office Hours</span> 
+		  <span class="options">
+		  <span class="col"><input type="radio" class="requiredselect"  name="OL_Office_Hours" value="5" checked="yes"  autocomplete="off"/></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="OL_Office_Hours" value="4" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="OL_Office_Hours" value="3" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="OL_Office_Hours" value="2" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="OL_Office_Hours" value="1" /></span><span class="OL_Office_Hours-msgContainer" />
+          </span>
+        </div></div>
+        
+		<div class="section radio"><div class="fullSize">	
+		<span class="item">Optional Workshops in Kimmel and Silver</span> 
+		  <span class="options">
+		  <span class="col"><input type="radio" class="requiredselect"  name="Optional_Workshops" value="5" checked="yes"  autocomplete="off"/></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Optional_Workshops" value="4" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Optional_Workshops" value="3" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Optional_Workshops" value="2" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Optional_Workshops" value="1" /></span><span class="Optional_Workshops-msgContainer" />
+          </span>
+        </div></div>
+        
+		<div class="section radio"><div class="fullSize">
+		<span class="item">Get Involved! Gallatin Student Life</span> 
+		<span class="options">
+		  <span class="col"><input type="radio" class="requiredselect"  name="Get_Involved" value="5" checked="yes"  autocomplete="off"/></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Get_Involved" value="4" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Get_Involved" value="3" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Get_Involved" value="2" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Get_Involved" value="1" /></span><span class="Get_Involved-msgContainer" />
+          </span>
+        </div></div>
+        
+		<div class="section radio"><div class="fullSize">
+		<span class="item">"Too Much Light Makes the Baby Go Blind"</span> 
+		  <span class="options">
+		  <span class="col"><input type="radio" class="requiredselect"  name="Too_Much_Light" value="5" checked="yes"  autocomplete="off"/></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Too_Much_Light" value="4" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Too_Much_Light" value="3" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Too_Much_Light" value="2" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Too_Much_Light" value="1" /></span><span class="Too_Much_Light-msgContainer" />
+          </span>
+        </div></div>
+        
+		<div class="section radio"><div class="fullSize">
+			<span class="item">After-Party</span> 
+		  <span class="options">
+		  <span class="col"><input type="radio" class="requiredselect"  name="After-Party" value="5" checked="yes"  autocomplete="off"/></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="After-Party" value="4" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="After-Party" value="3" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="After-Party" value="2" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="After-Party" value="1" /></span><span class="After-Party-msgContainer" />
+          </span>
+        </div></div>
+        
+		<div class="section radio"><div class="fullSize">
+		<span class="item">Registration Process (Wednesday, June 22)</span> 
+		<span class="options">
+		  <span class="col"><input type="radio" class="requiredselect"  name="Registration_Process" value="5" checked="yes"  autocomplete="off"/></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Registration_Process" value="4" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Registration_Process" value="3" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Registration_Process" value="2" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Registration_Process" value="1" /></span><span class="Registration_Process-msgContainer" />
+          </span>
+        </div></div>
+        
+ 		<div class="section radio"><div class="fullSize">
+			<span class="item">Accommodations</span> 
+		  <span class="options">
+		  <span class="col"><input type="radio" class="requiredselect"  name="Accommodations" value="5" checked="yes"  autocomplete="off"/></span>
+		  <span class="col"><input type="radio" class="requiredselect"  name="Accommodations" value="4" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Accommodations" value="3" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Accommodations" value="2" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Accommodations" value="1" /></span><span class="Accommodations-msgContainer" />
+          </span>
+        </div></div>
+        
+ 		<div class="section radio"><div class="fullSize">
+		  <span class="item">Meals</span> 
+		  <span class="options">
+		  <span class="col"><input type="radio" class="requiredselect"  name="Meals" value="5" checked="yes"  autocomplete="off"/></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Meals" value="4" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Meals" value="3" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Meals" value="2" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Meals" value="1" /></span><span class="Meals-msgContainer" />
+          </span>
+        </div></div>
+        
+		<div class="section radio"><div class="fullSize">
+		  <span class="item">Overall Orientation Experience</span> 
+		  <span class="options">
+		  <span class="col"><input type="radio" class="requiredselect"  name="Overall_Orientation_Experience" value="5" checked="yes"  autocomplete="off"/></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Overall_Orientation_Experience" value="4" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Overall_Orientation_Experience" value="3" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Overall_Orientation_Experience" value="2" /></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="Overall_Orientation_Experience" value="1" /></span><span class="Overall_Orientation_Experience-msgContainer" />
+          </span>
+        </div></div>
+    
+    </div><!--END OF GRID-->
+        
+ 		<div class="section radio"><div class="fullSize">
+			<label for="bring_laptop_Orientation">Did you bring a laptop to Orientation?</label>
+		  <span class="options"> 
+          <span class="col"><input type="radio" class="requiredselect"  name="bring_laptop_Orientation" value="yes" /><label for="bring_laptop_Orientation">yes </label></span>
+          <span class="col"><input type="radio" class="requiredselect"  name="bring_laptop_Orientation" value="no" /><label for="bring_laptop_Orientation">no</label></span>
+          </span><span class="bring_laptop_Orientation-msgContainer" />
+		</div></div>
+		
+        <div class="section radio"><div class="fullSize">
+			<label for="help_during_Orientation">If so, did it help you to have it during Orientation?</label>
+			<span class="options"> 
+			<span class="col"><input type="radio" class="text"  name="help_during_Orientation" value="yes" /><label for="help_during_Orientation">yes</label></span>
+            <span class="col"><input type="radio" class="text"  name="help_during_Orientation" value="no" /><label for="help_during_Orientation">no</label></span>
+	        </span>
+          </div></div>          
+          
+		<div class="section text"><div class="fullSize">
+			<label for="OrientationLeader">Name of Orientation Leader</label> 
+			<input name="OrientationLeader" type="text" id="OrientationLeader" class="genericrequiredtext" /><span class="OrientationLeader-msgContainer"></span>
+		</div></div>
+
+		<div class="section text"><div class="fullSize">
+		<label for="CommentsOnOriLeader">Comments on Orientation Leader</label> 
+		<textarea name="CommentsOnOriLeader" cols="40" id="CommentsOnOriLeader"></textarea><span class="CommentsOnOriLeader-msgContainer" />
+		</div></div>
+
+		<div class="section radio"><div class="fullSize">
+			<label for="CommentsOverall">Comments on overall Orientation experience</label> 
+			<textarea name="CommentsOverall" cols="40" id="CommentsOverall"></textarea><span class="CommentsOverall-msgContainer" />
+		</div></div>
+
+<div class="section end">
+<div class="fullSize">
+
+	<button type="submit"
+		id="submit"
+		name="submit"
+		value="Submit">Submit
+	</button>
+	<button type="reset"
+		id="reset"
+		name="reset"
+		value="Reset">Reset
+	</button>
+
+</div></div>
+
+
+	</form>
+<!-- KJ cut and paste end -->
+
+	</div>
