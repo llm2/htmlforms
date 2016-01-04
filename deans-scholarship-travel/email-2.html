@@ -2,15 +2,14 @@
 <!-- BEGIN EMAIL CONTENT -->
 
 <p>
-<strong>Dear Sheila</strong>,<br/>
+<strong>Dear Gallatin Global</strong>,<br/>
 
-%value[first_name] %value[last_name] has submitted an Americas Scholars Membership Application.
+%value[first_name] %value[last_name] has submitted a %value[group] application.
 </p>
 <p>The results of this submission may be viewed at:<br/>
 <a href="%submission_url">%submission_url</a>
 </p>
-
-<h2>Application Information</h2>
+  <h2>Application Information</h2>
 
   <table class="standard">
      <tr>
@@ -30,7 +29,10 @@
      <td> <strong>Area of Concentration</strong> %value[concentration] </td>
     </tr>
     <tr>
-     <td colspan="2"><strong>I have also applied to the Dean's Honors Society</strong> %value[dhs]  </td>
+     <td colspan="2"><strong>Essay Part I</strong> %value[essay_part_1]  </td>
+    </tr>
+    <tr>
+     <td colspan="2"><strong>Essay Part 2</strong> %value[essay_part_2]  </td>
     </tr>
   </table>
   
