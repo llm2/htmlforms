@@ -2,48 +2,48 @@
 
 <!-- BEGIN EMAIL CONTENT -->
 <p>
-<strong>Dear %value[first_name_adviser]</strong>,<br/>
+<strong>Dear [submission:values:first_name_adviser]</strong>,<br/>
 
-Your advisee, %value[first_name] %value[last_name], has submitted an Internship Proposal. To approve this proposal, please reply to this e-mail. If you do not approve, please contact the student directly. Please note that by approving this internship proposal, you are the grading instructor for the internship and will submit the final internship grade for the student. If you have questions about the Internship process, please contact <a href="fs1@nyu.edu">Faith Stangler</a> in the Office of External Programs.
+Your advisee, [submission:values:first_name] [submission:values:last_name], has submitted an Internship Proposal. To approve this proposal, please reply to this e-mail. If you do not approve, please contact the student directly. Please note that by approving this internship proposal, you are the grading instructor for the internship and will submit the final internship grade for the student. If you have questions about the Internship process, please contact <a href="fs1@nyu.edu">Faith Stangler</a> in the Office of External Programs.
 </p>
 
 <p>
 <a href="http://gallatin.nyu.edu">NYU Gallatin School of Individualized Study</a></p>
 </p>
-<h2>Internship Proposal: %value[first_name] %value[last_name]</h2>
+<h2>Internship Proposal: [submission:values:first_name] [submission:values:last_name]</h2>
 
   <table class="standard">
     <tr>
-     <td> <strong>Phone</strong> %value[phone] </td>
-     <td> <strong>Student Status</strong> %value[student_status] </td>
+     <td> <strong>Phone</strong> [submission:values:phone] </td>
+     <td> <strong>Student Status</strong> [submission:values:student_status] </td>
      </tr>
      <tr>
-      <td> <strong>NetID</strong> %value[netid] </td>
-      <td> <strong>University ID</strong> %value[uid] </td>
+      <td> <strong>NetID</strong> [submission:values:netid] </td>
+      <td> <strong>University ID</strong> [submission:values:uid] </td>
     </tr>
     <tr>
-    <td> <strong>Semester and Year of registration</strong> %value[semester] %value[year]</td>
-     <td><strong>Number of Units</strong> %value[units]  </td>
+    <td> <strong>Semester and Year of registration</strong> [submission:values:semester] [submission:values:year]</td>
+     <td><strong>Number of Units</strong> [submission:values:units]  </td>
     </tr>
     <tr>
-    <td> <strong>Name of Organization</strong> %value[organization]  </td>
-     <td> <strong>Street Address</strong> %value[street_organization] </td>
-     <td> <strong>City</strong> %value[city_organization] </td>
-    <td> <strong>State/Province</strong> %value[state_organization] </td> 
-    <td> <strong>Zip/Postal</strong> %value[zip_organization] </td>
-    <td> <strong>Country</strong> %value[country_organization] </td>
- <td>  <strong>Industry Field</strong> %value[industry] </td>
+    <td> <strong>Name of Organization</strong> [submission:values:organization]  </td>
+     <td> <strong>Street Address</strong> [submission:values:street_organization] </td>
+     <td> <strong>City</strong> [submission:values:city_organization] </td>
+    <td> <strong>State/Province</strong> [submission:values:state_organization] </td> 
+    <td> <strong>Zip/Postal</strong> [submission:values:zip_organization] </td>
+    <td> <strong>Country</strong> [submission:values:country_organization] </td>
+ <td>  <strong>Industry Field</strong> [submission:values:industry] </td>
    </tr>
     <tr>
- <td><strong>Supervisor Name</strong> %value[first_name_supervisor]  %value[last_name_supervisor] </td>
-      <td> <strong>Supervisor Phone</strong> %value[sup_phone]</td>
-    <td> <strong>Supervisor's E-mail</strong> %value[email_supervisor]</td>
+ <td><strong>Supervisor Name</strong> [submission:values:first_name_supervisor]  [submission:values:last_name_supervisor] </td>
+      <td> <strong>Supervisor Phone</strong> [submission:values:sup_phone]</td>
+    <td> <strong>Supervisor's E-mail</strong> [submission:values:email_supervisor]</td>
     </tr>
     <tr>
-     <td colspan="2"> <strong>Goals</strong> %value[reason1] </td>
+     <td colspan="2"> <strong>Goals</strong> [submission:values:reason1] </td>
     </tr>
     <tr>
-      <td colspan="2"> <strong>Interests</strong> %value[reason] </td>
+      <td colspan="2"> <strong>Interests</strong> [submission:values:reason] </td>
     </tr>
   </table>
 

@@ -1,18 +1,18 @@
 
   <!-- BEGIN EMAIL CONTENT -->
 
-<p>Dear %value[first_name_adviser],</p>
+<p>Dear [submission:values:first_name_adviser],</p>
 <p>
 <strong>This is a message that requires your reply.</strong>
 </p>
 <p>
-Your advisee, %value[first_name] %value[last_name], has submitted a Colloquium Registration form. 
+Your advisee, [submission:values:first_name] [submission:values:last_name], has submitted a Colloquium Registration form. 
 </p>
 <p>
-<strong>Please reply to this email indicating your approval or disapproval of %value[first_name]'s registration information, found below.</strong>  Make sure to direct particular attention to the date and time listed.
+<strong>Please reply to this email indicating your approval or disapproval of [submission:values:first_name]'s registration information, found below.</strong>  Make sure to direct particular attention to the date and time listed.
 </p>
 <p>
-Once approved, a confirmation email will be sent to you, %value[first_name], and the Colloquium committee.  This confirmation will include with the date and time of %value[first_name]'s Colloquium, a room assignment, and a copy of %value[first_name]'s approved Rationale and Booklist.
+Once approved, a confirmation email will be sent to you, [submission:values:first_name], and the Colloquium committee.  This confirmation will include with the date and time of [submission:values:first_name]'s Colloquium, a room assignment, and a copy of [submission:values:first_name]'s approved Rationale and Booklist.
 </p><p>
  If you have other questions or concerns, please email us at <a href="mailto:colloquium.gallatin@nyu.edu">colloquium.gallatin@nyu.edu</a>
 </p><p>
@@ -23,27 +23,27 @@ NYU Gallatin School of Individualized Study
 </p>
   <table class="standard">
     <tr>
-      <td> <strong>Name</strong> %value[first_name] %value[last_name]</td>
-      <td> <strong>NetID</strong> %value[netid] <br/><strong>University ID</strong> %value[uid] </td>
+      <td> <strong>Name</strong> [submission:values:first_name] [submission:values:last_name]</td>
+      <td> <strong>NetID</strong> [submission:values:netid] <br/><strong>University ID</strong> [submission:values:uid] </td>
     </tr>
     <tr>
-      <td> <strong>Adviser</strong> %value[first_name_adviser] %value[last_name_adviser] </td>
-      <td> <strong>E-mail </strong>%value[email_adviser]</td>
+      <td> <strong>Adviser</strong> [submission:values:first_name_adviser] [submission:values:last_name_adviser] </td>
+      <td> <strong>E-mail </strong>[submission:values:email_adviser]</td>
     </tr>
     <tr>
-      <td><strong>2nd Faculty Member</strong> %value[first_name_faculty2] %value[last_name_faculty2] </td>
-      <td><strong>E-mail </strong>%value[email_faculty2]</td>
+      <td><strong>2nd Faculty Member</strong> [submission:values:first_name_faculty2] [submission:values:last_name_faculty2] </td>
+      <td><strong>E-mail </strong>[submission:values:email_faculty2]</td>
       </tr>
       <tr>
-      <td> <strong>3rd Faculty Member</strong> %value[first_name_faculty3] %value[last_name_faculty3] </td>
-      <td><strong>E-mail </strong>%value[email_faculty3]</td>
+      <td> <strong>3rd Faculty Member</strong> [submission:values:first_name_faculty3] [submission:values:last_name_faculty3] </td>
+      <td><strong>E-mail </strong>[submission:values:email_faculty3]</td>
     </tr>
     <tr>
-      <td> <strong>Colloquium Title</strong> %value[title] </td>
-      <td> <strong>Date and Time </strong><font size="4">%value[date] %value[time]</font></td>
+      <td> <strong>Colloquium Title</strong> [submission:values:title] </td>
+      <td> <strong>Date and Time </strong><font size="4">[submission:values:date] [submission:values:time]</font></td>
     </tr>
         <tr>
-      <td> <strong>Audio/Visual Needs</strong> %value[av] </td>
+      <td> <strong>Audio/Visual Needs</strong> [submission:values:av] </td>
       <td> </td>
     </tr>
 </table>

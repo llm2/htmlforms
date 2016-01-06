@@ -3,13 +3,13 @@
   <!-- BEGIN EMAIL CONTENT -->
 
 <p>
-<strong>Dear %value[first_name_2nd] %value[last_name_2nd]</strong>,
+<strong>Dear [submission:values:first_name_2nd] [submission:values:last_name_2nd]</strong>,
 </p>
 <p>
-Gallatin M.A. student <strong>%value[first_name] %value[last_name]</strong> has submitted the attached thesis.
+Gallatin M.A. student <strong>[submission:values:first_name] [submission:values:last_name]</strong> has submitted the attached thesis.
 </p>
 <p>
-Thank you for agreeing to serve as a member of this student's thesis defense committee. We are sending you the thesis to review in advance of the defense. If you determine that substantial revisions are required before the defense can take place, please use our online <a href="https://gabe.es.its.nyu.edu/hermes/?q=node/211&first_name=%value[first_name]&last_name=%value[last_name]&netid=%value[netid]&first_name_adviser=%value[first_name_adviser]&last_name_adviser=%value[last_name_adviser]&email_adviser=%value[email_adviser]&type=%value[type]&universityid=%value[universityid]&title=%value[thesis_title]">Thesis Review form</a> to provide us with this feedback. If any member of the committee expresses concerns about the thesis, the student may need to postpone the defense.
+Thank you for agreeing to serve as a member of this student's thesis defense committee. We are sending you the thesis to review in advance of the defense. If you determine that substantial revisions are required before the defense can take place, please use our online <a href="https://gabe.es.its.nyu.edu/hermes/?q=node/211&first_name=[submission:values:first_name]&last_name=[submission:values:last_name]&netid=[submission:values:netid]&first_name_adviser=[submission:values:first_name_adviser]&last_name_adviser=[submission:values:last_name_adviser]&email_adviser=[submission:values:email_adviser]&type=[submission:values:type]&universityid=[submission:values:universityid]&title=[submission:values:thesis_title]">Thesis Review form</a> to provide us with this feedback. If any member of the committee expresses concerns about the thesis, the student may need to postpone the defense.
 </p>
 <p>
 If no revisions are required prior to the defense, no further action is required from you at this time.
@@ -28,33 +28,33 @@ If you have questions, please write to  <a href="mailto:gallatin.thesis@nyu.edu"
 
   <table class="standard">
     <tr>
-      <td> <strong>Name</strong> %value[first_name] %value[last_name] </td>
+      <td> <strong>Name</strong> [submission:values:first_name] [submission:values:last_name] </td>
       <td></td>
     </tr>
     <tr>
-      <td> <strong>NetID</strong> %value[netid] </td>
-      <td> <strong>University ID</strong> %value[uid] </td>
+      <td> <strong>NetID</strong> [submission:values:netid] </td>
+      <td> <strong>University ID</strong> [submission:values:uid] </td>
     </tr>
     <tr>
-      <td> <strong>Faculty Adviser</strong> %value[first_name_adviser] %value[last_name_adviser]</td>
-      <td> <strong>Faculty Adviser E-mail</strong> %value[email_adviser] </td>
+      <td> <strong>Faculty Adviser</strong> [submission:values:first_name_adviser] [submission:values:last_name_adviser]</td>
+      <td> <strong>Faculty Adviser E-mail</strong> [submission:values:email_adviser] </td>
     </tr>
     <tr>
-      <td> <strong>Second Reader</strong> %value[first_name_2nd] %value[last_name_2nd]</td>
-      <td> <strong>Second Reader E-mail</strong> %value[email_2nd] </td>
+      <td> <strong>Second Reader</strong> [submission:values:first_name_2nd] [submission:values:last_name_2nd]</td>
+      <td> <strong>Second Reader E-mail</strong> [submission:values:email_2nd] </td>
     </tr>
         <tr>
-      <td> <strong>Third Reader</strong> %value[first_name_3rd] %value[last_name_3rd]</td>
-      <td> <strong>Third Reader E-mail</strong> %value[email_3rd] </td>
+      <td> <strong>Third Reader</strong> [submission:values:first_name_3rd] [submission:values:last_name_3rd]</td>
+      <td> <strong>Third Reader E-mail</strong> [submission:values:email_3rd] </td>
     </tr>
     <tr>
 <tr>
-    <td> <strong>Thesis Transcript</strong> %value[thesis_transcript] </td>
-    <td> <strong>Thesis Title</strong> %value[thesis_title]</td>
+    <td> <strong>Thesis Transcript</strong> [submission:values:thesis_transcript] </td>
+    <td> <strong>Thesis Title</strong> [submission:values:thesis_title]</td>
     </tr>
    <tr>
-   <td> <strong>Thesis</strong> %value[file] </td>
-    <td> <strong>Thesis Type</strong> %value[type] </td>
+   <td> <strong>Thesis</strong> [submission:values:file] </td>
+    <td> <strong>Thesis Type</strong> [submission:values:type] </td>
 </tr>
 </table>
   <!-- END EMAIL CONTENT -->

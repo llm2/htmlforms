@@ -6,39 +6,39 @@
 <strong>Dear Thesis Administrator</strong>,
 </p>
 <p>
-<strong>%value[first_name] %value[last_name]</strong> has submitted a thesis. You may view the results of this submission at: <a href="%submission_url">%submission_url</a>.
+<strong>[submission:values:first_name] [submission:values:last_name]</strong> has submitted a thesis. You may view the results of this submission at: <a href="%submission_url">%submission_url</a>.
 </p>
 
 <h2>Thesis Submission</h2>
 
   <table class="standard">
     <tr>
-      <td> <strong>Name</strong> %value[first_name] %value[last_name] </td>
+      <td> <strong>Name</strong> [submission:values:first_name] [submission:values:last_name] </td>
       <td></td>
     </tr>
     <tr>
-      <td> <strong>NetID</strong> %value[netid] </td>
-      <td> <strong>University ID</strong> %value[uid] </td>
+      <td> <strong>NetID</strong> [submission:values:netid] </td>
+      <td> <strong>University ID</strong> [submission:values:uid] </td>
     </tr>
     <tr>
-      <td> <strong>Faculty Adviser</strong> %value[first_name_adviser] %value[last_name_adviser]</td>
-      <td> <strong>Faculty Adviser E-mail</strong> %value[email_adviser] </td>
+      <td> <strong>Faculty Adviser</strong> [submission:values:first_name_adviser] [submission:values:last_name_adviser]</td>
+      <td> <strong>Faculty Adviser E-mail</strong> [submission:values:email_adviser] </td>
     </tr>
     <tr>
-      <td> <strong>Second Reader</strong> %value[first_name_2nd] %value[last_name_2nd]</td>
-      <td> <strong>Second Reader E-mail</strong> %value[email_2nd] </td>
+      <td> <strong>Second Reader</strong> [submission:values:first_name_2nd] [submission:values:last_name_2nd]</td>
+      <td> <strong>Second Reader E-mail</strong> [submission:values:email_2nd] </td>
     </tr>
         <tr>
-      <td> <strong>Third Reader</strong> %value[first_name_3rd] %value[last_name_3rd]</td>
-      <td> <strong>Third Reader E-mail</strong> %value[email_3rd] </td>
+      <td> <strong>Third Reader</strong> [submission:values:first_name_3rd] [submission:values:last_name_3rd]</td>
+      <td> <strong>Third Reader E-mail</strong> [submission:values:email_3rd] </td>
     </tr>
     <tr>
-    <td> <strong>Thesis Transcript</strong> %value[thesis_transcript] </td>
-    <td> <strong>Thesis Title</strong> %value[thesis_title]</td>
+    <td> <strong>Thesis Transcript</strong> [submission:values:thesis_transcript] </td>
+    <td> <strong>Thesis Title</strong> [submission:values:thesis_title]</td>
     </tr>
    <tr>
-  <td> <strong>Thesis</strong> %value[file] </td>
-    <td> <strong>Thesis Type</strong> %value[type] </td>
+  <td> <strong>Thesis</strong> [submission:values:file] </td>
+    <td> <strong>Thesis Type</strong> [submission:values:type] </td>
 </tr>
 <tr>
 </table>

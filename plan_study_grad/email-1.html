@@ -3,7 +3,7 @@
   <!-- BEGIN EMAIL CONTENT -->
 
 
-<p><strong>Dear %value[first_name] %value[last_name]</strong>,<br/><p>
+<p><strong>Dear [submission:values:first_name] [submission:values:last_name]</strong>,<br/><p>
 
 <p>This is to confirm that your Plan of Study form was submitted and is being forwarded to your adviser for review and approval. The review process and clearance for registration will take a minimum of one to three business days (business days are Monday-Friday, 9:00am – 5:00pm Eastern time). </p> 
 
@@ -28,47 +28,47 @@
 
   <table class="standard">
     <tr>
-      <td> <strong>NetID</strong> %value[netid] </td>
-      <td> <strong>University ID</strong> %value[uid] </td>
+      <td> <strong>NetID</strong> [submission:values:netid] </td>
+      <td> <strong>University ID</strong> [submission:values:uid] </td>
     </tr>
     <tr>
-      <td> <strong>Semester and Year of registration</strong> %value[semester] %value[year]</td>
-      <td> <strong>Faculty Adviser E-mail</strong> %value[email_adviser] </td>
+      <td> <strong>Semester and Year of registration</strong> [submission:values:semester] [submission:values:year]</td>
+      <td> <strong>Faculty Adviser E-mail</strong> [submission:values:email_adviser] </td>
     </tr>
   </tr>
     <tr>
-      <td colspan="2"> <strong>Goals</strong> %value[goals] </td>
+      <td colspan="2"> <strong>Goals</strong> [submission:values:goals] </td>
     </tr>
     <tr>
-      <td colspan="2"> <strong>Interests</strong> %value[interests] </td>
+      <td colspan="2"> <strong>Interests</strong> [submission:values:interests] </td>
     </tr>
     <tr>
-      <td colspan="2"> <strong>Progress and Change</strong> %value[progress_and_change] </td>
+      <td colspan="2"> <strong>Progress and Change</strong> [submission:values:progress_and_change] </td>
     </tr>
    <tr>
-      <td> <strong>Units in Progress</strong> %value[unitsprogress] </td>
-      <td> <strong>Total Earned Units</strong> %value[unitsearned]</td>
+      <td> <strong>Units in Progress</strong> [submission:values:unitsprogress] </td>
+      <td> <strong>Total Earned Units</strong> [submission:values:unitsearned]</td>
     </tr>
 
 <tr>
       <td> <strong>Graduate Core</strong><br/>
 <strong>Students who began prior to Summer 2013</strong>
 <ul>
-<li>Proseminar: %value[proseminar]</li>
-<li>Master's Thesis Seminar: %value[thesisseminar]</li>
-<li>Review of the Literature: %value[review]</li>
-<li>Thesis and Defense: %value[thesisanddefense]</li>
+<li>Proseminar: [submission:values:proseminar]</li>
+<li>Master's Thesis Seminar: [submission:values:thesisseminar]</li>
+<li>Review of the Literature: [submission:values:review]</li>
+<li>Thesis and Defense: [submission:values:thesisanddefense]</li>
 </ul>
      </td>
 
      <td> 
 <strong>Students who began in Summer 2013 or later</strong>
 <ul>
-<li>Proseminar: %value[proseminar]</li>
-<li>Additional Gallatin Graduate Course:  %value[additional]</li>
-<li>Thesis Proposal Seminar: %value[proposal]</li>
-<li>Master’s Thesis I: %value[thesis1]</li>
-<li>Master’s Thesis II: %value[thesis2]</li>
+<li>Proseminar: [submission:values:proseminar]</li>
+<li>Additional Gallatin Graduate Course:  [submission:values:additional]</li>
+<li>Thesis Proposal Seminar: [submission:values:proposal]</li>
+<li>Master’s Thesis I: [submission:values:thesis1]</li>
+<li>Master’s Thesis II: [submission:values:thesis2]</li>
 </ul>
      </td>
     </tr>
@@ -86,58 +86,58 @@
      </TR>
     </THEAD>
     <tr>
-      <td> %value[course_no1] </td>
-      <td> %value[permission1] </td>
-      <td> %value[course_title1] </td>
-      <td> %value[units1] </td>
-      <td> %value[days1] </td>
+      <td> [submission:values:course_no1] </td>
+      <td> [submission:values:permission1] </td>
+      <td> [submission:values:course_title1] </td>
+      <td> [submission:values:units1] </td>
+      <td> [submission:values:days1] </td>
    </tr>
     <tr class='stripe'>
-      <td> %value[course_no2] </td>
-      <td> %value[permission2] </td>
-      <td> %value[course_title2] </td>
-      <td> %value[units2] </td>
-      <td> %value[days2] </td>    
+      <td> [submission:values:course_no2] </td>
+      <td> [submission:values:permission2] </td>
+      <td> [submission:values:course_title2] </td>
+      <td> [submission:values:units2] </td>
+      <td> [submission:values:days2] </td>    
       </tr>
     <tr>
-      <td> %value[course_no3] </td>
-      <td> %value[permission3] </td>
-      <td> %value[course_title3] </td>
-      <td> %value[units3] </td>
-      <td> %value[days3] </td>
+      <td> [submission:values:course_no3] </td>
+      <td> [submission:values:permission3] </td>
+      <td> [submission:values:course_title3] </td>
+      <td> [submission:values:units3] </td>
+      <td> [submission:values:days3] </td>
     </tr>
     <tr   class='stripe'>
-      <td> %value[course_no4] </td>
-      <td> %value[permission4] </td>
-      <td> %value[course_title4] </td>
-      <td> %value[units4] </td>
-      <td> %value[days4] </td>
+      <td> [submission:values:course_no4] </td>
+      <td> [submission:values:permission4] </td>
+      <td> [submission:values:course_title4] </td>
+      <td> [submission:values:units4] </td>
+      <td> [submission:values:days4] </td>
     </tr>
     
     
         <tr>
-      <td> %value[course_no5] </td>
-      <td> %value[permission5] </td>
-      <td> %value[course_title5] </td>
-      <td> %value[units5] </td>
-      <td> %value[days5] </td>
+      <td> [submission:values:course_no5] </td>
+      <td> [submission:values:permission5] </td>
+      <td> [submission:values:course_title5] </td>
+      <td> [submission:values:units5] </td>
+      <td> [submission:values:days5] </td>
    </tr>
     <tr class='stripe'>
-      <td> %value[course_no6] </td>
-      <td> %value[permission6] </td>
-      <td> %value[course_title6] </td>
-      <td> %value[units6] </td>
-      <td> %value[days6] </td>    
+      <td> [submission:values:course_no6] </td>
+      <td> [submission:values:permission6] </td>
+      <td> [submission:values:course_title6] </td>
+      <td> [submission:values:units6] </td>
+      <td> [submission:values:days6] </td>    
       </tr>
     <tr>
-      <td> %value[course_no7] </td>
-      <td> %value[permission7] </td>
-      <td> %value[course_title7] </td>
-      <td> %value[units7] </td>
-      <td> %value[days7] </td>
+      <td> [submission:values:course_no7] </td>
+      <td> [submission:values:permission7] </td>
+      <td> [submission:values:course_title7] </td>
+      <td> [submission:values:units7] </td>
+      <td> [submission:values:days7] </td>
     </tr>
     
   </table>
-       <p><b>%value[understand]</b>, I acknowledge that I understand the above registration restrictions and I have met with my primary adviser to discuss my course selections.</p>
+       <p><b>[submission:values:understand]</b>, I acknowledge that I understand the above registration restrictions and I have met with my primary adviser to discuss my course selections.</p>
   <!-- END EMAIL CONTENT -->
  

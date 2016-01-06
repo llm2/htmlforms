@@ -4,7 +4,7 @@
 
 <p>
 <strong>Dear Adviser</strong>,<br/>
-   <p>Your advisee, %value[first_name] %value[last_name], has submitted a request to receive credit for the International Baccalaureate-Maturity tests as indicated below. The student has been
+   <p>Your advisee, [submission:values:first_name] [submission:values:last_name], has submitted a request to receive credit for the International Baccalaureate-Maturity tests as indicated below. The student has been
 instructed to only submit this form after first discussing with you the plan to add additional credits to his or her program, thus accelerating progress toward graduation.
 </p>
 
@@ -26,27 +26,27 @@ please do not hesitate to contact Gallatin's Office of Advising at <a href="mail
 
   <table class="standard">
     <tr>
-      <td> <strong>Name</strong> %value[first_name]%value[last_name] </td>
-      <td> <strong>NetID</strong> %value[netid] </td>
-      <td> <strong>University ID</strong> %value[uid] </td>
-      <td> <strong>Expected graduation</strong> %value[grad_month] %value[grad_year]</td>
+      <td> <strong>Name</strong> [submission:values:first_name][submission:values:last_name] </td>
+      <td> <strong>NetID</strong> [submission:values:netid] </td>
+      <td> <strong>University ID</strong> [submission:values:uid] </td>
+      <td> <strong>Expected graduation</strong> [submission:values:grad_month] [submission:values:grad_year]</td>
     </tr>
     <tr>
-      <td> <strong>Cumulative Earned Credits</strong> %value[cumulative_earned_credits]</td>
-     <td> <strong>Adviser's Name</strong> %value[first_name_adviser] </td>
-     <td> <strong>Adviser's Email</strong> %value[adviser_email] </td>
+      <td> <strong>Cumulative Earned Credits</strong> [submission:values:cumulative_earned_credits]</td>
+     <td> <strong>Adviser's Name</strong> [submission:values:first_name_adviser] </td>
+     <td> <strong>Adviser's Email</strong> [submission:values:adviser_email] </td>
     </tr>
     <tr>
-      <td colspan="2"> <strong>Are you receiving financial aid (scholarships, grants, loans, etc.)?</strong> %value[funding] </td>
+      <td colspan="2"> <strong>Are you receiving financial aid (scholarships, grants, loans, etc.)?</strong> [submission:values:funding] </td>
     </tr>
     <tr>
-      <td colspan="2"> <strong>Have you completed the IAPC?</strong> %value[iapc] </td>
+      <td colspan="2"> <strong>Have you completed the IAPC?</strong> [submission:values:iapc] </td>
     </tr>
        <tr>
-      <td colspan="2"> <strong>Have you submitted the rationale?</strong> %value[rationale] </td>
+      <td colspan="2"> <strong>Have you submitted the rationale?</strong> [submission:values:rationale] </td>
     </tr> 
            <tr>
-      <td colspan="2"> <strong>Have you registered for the colloquium?</strong> %value[colloquium] </td>
+      <td colspan="2"> <strong>Have you registered for the colloquium?</strong> [submission:values:colloquium] </td>
     </tr> 
   </table>
   <p></p>
@@ -59,61 +59,61 @@ please do not hesitate to contact Gallatin's Office of Advising at <a href="mail
       </TR>
     </THEAD>
         <tr>
-      <td> %value[examination] </td>
-      <td> %value[score] </td>
-      <td> %value[credits] </td>
+      <td> [submission:values:examination] </td>
+      <td> [submission:values:score] </td>
+      <td> [submission:values:credits] </td>
 
     </tr>
     <tr>
-      <td> %value[examination1] </td>
-      <td> %value[score1] </td>
-      <td> %value[credits1] </td>
+      <td> [submission:values:examination1] </td>
+      <td> [submission:values:score1] </td>
+      <td> [submission:values:credits1] </td>
 
     </tr>
     <tr   class='stripe'>
-      <td> %value[examination2] </td>
-      <td> %value[score2] </td>
-      <td> %value[credits2] </td>
+      <td> [submission:values:examination2] </td>
+      <td> [submission:values:score2] </td>
+      <td> [submission:values:credits2] </td>
 
     </tr>
     <tr>
-      <td> %value[examination3] </td>
-      <td> %value[score3] </td>
-      <td> %value[credits3] </td>
+      <td> [submission:values:examination3] </td>
+      <td> [submission:values:score3] </td>
+      <td> [submission:values:credits3] </td>
 
     </tr>
     <tr   class='stripe'>
-      <td> %value[examination4] </td>
-      <td> %value[score4] </td>
-      <td> %value[credits4] </td>
+      <td> [submission:values:examination4] </td>
+      <td> [submission:values:score4] </td>
+      <td> [submission:values:credits4] </td>
 
     </tr>
     <tr>
-      <td> %value[examination5] </td>
-      <td> %value[score5] </td>
-      <td> %value[credits5] </td>
+      <td> [submission:values:examination5] </td>
+      <td> [submission:values:score5] </td>
+      <td> [submission:values:credits5] </td>
 
     </tr>
     <tr   class='stripe'>
-      <td> %value[examination6] </td>
-      <td> %value[score6] </td>
-      <td> %value[credits6] </td>
+      <td> [submission:values:examination6] </td>
+      <td> [submission:values:score6] </td>
+      <td> [submission:values:credits6] </td>
 
     </tr>
     <tr>
-      <td> %value[examination7] </td>
-      <td> %value[score7] </td>
-      <td> %value[credits7] </td>
+      <td> [submission:values:examination7] </td>
+      <td> [submission:values:score7] </td>
+      <td> [submission:values:credits7] </td>
 
  </tr>
     <tr>
-      <td> %value[examination8] </td>
-      <td> %value[score8] </td>
-      <td> %value[credits8] </td>
+      <td> [submission:values:examination8] </td>
+      <td> [submission:values:score8] </td>
+      <td> [submission:values:credits8] </td>
 
       </tr>
     <tr>
-     <td> <strong>Total number of IB's requested:</strong> %value[total_ib] </td>
+     <td> <strong>Total number of IB's requested:</strong> [submission:values:total_ib] </td>
     </tr>
     </table>
 <p></p>
@@ -126,60 +126,60 @@ please do not hesitate to contact Gallatin's Office of Advising at <a href="mail
       </TR>
     </THEAD>
         <tr>
-      <td> %value[examination9] </td>
-      <td> %value[score9] </td>
-      <td> %value[credits9] </td>
+      <td> [submission:values:examination9] </td>
+      <td> [submission:values:score9] </td>
+      <td> [submission:values:credits9] </td>
 
 </tr>
     <tr>
-      <td> %value[examination10] </td>
-      <td> %value[score10] </td>
-      <td> %value[credits10] </td>
+      <td> [submission:values:examination10] </td>
+      <td> [submission:values:score10] </td>
+      <td> [submission:values:credits10] </td>
 
     </tr>
     <tr>
-      <td> %value[examination11] </td>
-      <td> %value[score11] </td>
-      <td> %value[credits11] </td>
+      <td> [submission:values:examination11] </td>
+      <td> [submission:values:score11] </td>
+      <td> [submission:values:credits11] </td>
 
     </tr>
     <tr   class='stripe'>
-      <td> %value[examination12] </td>
-      <td> %value[score12] </td>
-      <td> %value[credits12] </td>
+      <td> [submission:values:examination12] </td>
+      <td> [submission:values:score12] </td>
+      <td> [submission:values:credits12] </td>
 
     </tr>
     <tr>
-      <td> %value[examination13] </td>
-      <td> %value[score13] </td>
-      <td> %value[credits13] </td>
+      <td> [submission:values:examination13] </td>
+      <td> [submission:values:score13] </td>
+      <td> [submission:values:credits13] </td>
 
     </tr>
     <tr   class='stripe'>
-      <td> %value[examination14] </td>
-      <td> %value[score14] </td>
-      <td> %value[credits14] </td>
+      <td> [submission:values:examination14] </td>
+      <td> [submission:values:score14] </td>
+      <td> [submission:values:credits14] </td>
 
     </tr>
     <tr>
-      <td> %value[examination15] </td>
-      <td> %value[score15] </td>
-      <td> %value[credits15] </td>
+      <td> [submission:values:examination15] </td>
+      <td> [submission:values:score15] </td>
+      <td> [submission:values:credits15] </td>
 
     </tr>
     <tr   class='stripe'>
-      <td> %value[examination16] </td>
-      <td> %value[score16] </td>
-      <td> %value[credits16] </td>
+      <td> [submission:values:examination16] </td>
+      <td> [submission:values:score16] </td>
+      <td> [submission:values:credits16] </td>
 
     </tr>
     <tr>
-      <td> %value[examination17] </td>
-      <td> %value[score17] </td>
-      <td> %value[credits17] </td>
+      <td> [submission:values:examination17] </td>
+      <td> [submission:values:score17] </td>
+      <td> [submission:values:credits17] </td>
  </tr>
     <tr>
-     <td> <strong>Total number of MCE credits requested:</strong> %value[total_mat] </td>
+     <td> <strong>Total number of MCE credits requested:</strong> [submission:values:total_mat] </td>
     </tr>
 </table>
   

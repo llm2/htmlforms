@@ -1,9 +1,9 @@
 
 <!-- BEGIN EMAIL CONTENT -->
 <p>
-<strong>Dear %value[first_name_adviser] %value[last_name_adviser]</strong>,
+<strong>Dear [submission:values:first_name_adviser] [submission:values:last_name_adviser]</strong>,
 </p>
-   <p>Your advisee, %value[first_name] %value[last_name], has submitted the attached thesis proposal to
+   <p>Your advisee, [submission:values:first_name] [submission:values:last_name], has submitted the attached thesis proposal to
 Gallatin. Gallatin requires adviser approval of the thesis proposal before
 it is reviewed by a Gallatin faculty member.  Will you please reply to
 this email to submit your approval or disapproval of the thesis proposal?
@@ -22,48 +22,48 @@ Thank you.
 </p>
 <h2>Thesis Proposal</h2>  <table class="standard">
     <tr>
-      <td> <strong>Name</strong> %value[first_name] %value[last_name] </td>
-      <td> <strong>Expected Graduation</strong> %value[expected_graduation_month] %value[expected_graduation_year]</td>
+      <td> <strong>Name</strong> [submission:values:first_name] [submission:values:last_name] </td>
+      <td> <strong>Expected Graduation</strong> [submission:values:expected_graduation_month] [submission:values:expected_graduation_year]</td>
     </tr>
     <tr>
-      <td> <strong>NetID</strong> %value[netid] </td>
-      <td> <strong>University ID</strong> %value[universityid] </td>
+      <td> <strong>NetID</strong> [submission:values:netid] </td>
+      <td> <strong>University ID</strong> [submission:values:universityid] </td>
     </tr>
     <tr>
-      <td> <strong>Thesis Type</strong> %value[type] </td>
-      <td> <strong>Thesis Title</strong> %value[title]</td>
+      <td> <strong>Thesis Type</strong> [submission:values:type] </td>
+      <td> <strong>Thesis Title</strong> [submission:values:title]</td>
     </tr>
      <tr>
-      <td colspan="2"> <strong>Experiential learning</strong> %value[learning] </td>
+      <td colspan="2"> <strong>Experiential learning</strong> [submission:values:learning] </td>
     </tr>
     <tr>
-      <td colspan="2"> <strong>Extracurricular activities</strong> %value[extra] </td>
+      <td colspan="2"> <strong>Extracurricular activities</strong> [submission:values:extra] </td>
     </tr>
    <tr>
-      <td><strong>Earned Units</strong> %value[unitsearned]  </td>
-      <td><strong>Style Guide</strong> %value[style_guide] </td>
+      <td><strong>Earned Units</strong> [submission:values:unitsearned]  </td>
+      <td><strong>Style Guide</strong> [submission:values:style_guide] </td>
     </tr>   <tr>
-      <td> <strong>Methods Course</strong> %value[methods_number] %value[methods_title] </td>
+      <td> <strong>Methods Course</strong> [submission:values:methods_number] [submission:values:methods_title] </td>
     </tr>
 <tr>
       <td> <strong>Graduate Core</strong><br/>
 <strong>Students who began prior to Summer 2013</strong>
 <ul>
-<li>Proseminar: %value[proseminar]</li>
-<li>Master's Thesis Seminar: %value[thesisseminar]</li>
-<li>Review of the Literature: %value[review]</li>
-<li>Thesis and Defense: %value[thesisanddefense]</li>
+<li>Proseminar: [submission:values:proseminar]</li>
+<li>Master's Thesis Seminar: [submission:values:thesisseminar]</li>
+<li>Review of the Literature: [submission:values:review]</li>
+<li>Thesis and Defense: [submission:values:thesisanddefense]</li>
 </ul>
      </td>
 
      <td> 
 <strong>Students who began in Summer 2013 or later</strong>
 <ul>
-<li>Proseminar: %value[proseminar]</li>
-<li>Additional Gallatin Graduate Course:  %value[additional]</li>
-<li>Thesis Proposal Seminar: %value[proposal]</li>
-<li>Master’s Thesis I: %value[thesis1]</li>
-<li>Master’s Thesis II: %value[thesis2]</li>
+<li>Proseminar: [submission:values:proseminar]</li>
+<li>Additional Gallatin Graduate Course:  [submission:values:additional]</li>
+<li>Thesis Proposal Seminar: [submission:values:proposal]</li>
+<li>Master’s Thesis I: [submission:values:thesis1]</li>
+<li>Master’s Thesis II: [submission:values:thesis2]</li>
 </ul>
      </td>
     </tr>
@@ -77,28 +77,28 @@ Thank you.
       </TR>
     </THEAD>
     <tr>
-      <td> %value[course_no1] </td>
-      <td> %value[course_title1] </td>
+      <td> [submission:values:course_no1] </td>
+      <td> [submission:values:course_title1] </td>
     </tr>
     <tr   class='stripe'>
-      <td> %value[course_no2] </td>
-      <td> %value[course_title2] </td>
+      <td> [submission:values:course_no2] </td>
+      <td> [submission:values:course_title2] </td>
     </tr>
     <tr>
-      <td> %value[course_no3] </td>
-      <td> %value[course_title3] </td>
+      <td> [submission:values:course_no3] </td>
+      <td> [submission:values:course_title3] </td>
     </tr>
     <tr   class='stripe'>
-      <td> %value[course_no4] </td>
-      <td> %value[course_title4] </td>
+      <td> [submission:values:course_no4] </td>
+      <td> [submission:values:course_title4] </td>
     </tr>
     <tr>
-      <td> %value[course_no5] </td>
-      <td> %value[course_title5] </td>
+      <td> [submission:values:course_no5] </td>
+      <td> [submission:values:course_title5] </td>
     </tr>
     <tr   class='stripe'>
-      <td> %value[course_no6] </td>
-      <td> %value[course_title6] </td>
+      <td> [submission:values:course_no6] </td>
+      <td> [submission:values:course_title6] </td>
     </tr>
   </table>
   

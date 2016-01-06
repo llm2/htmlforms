@@ -2,9 +2,9 @@
 
   <!-- BEGIN EMAIL CONTENT -->
 
-<p>Dear %value[first_name_adviser] %value[last_name_adviser],</p>
+<p>Dear [submission:values:first_name_adviser] [submission:values:last_name_adviser],</p>
 <p>
-Your advisee, %value[first_name] %value[last_name], has submitted a Thesis Defense Registration for to Gallatin. 
+Your advisee, [submission:values:first_name] [submission:values:last_name], has submitted a Thesis Defense Registration for to Gallatin. 
 </p>
 <p>
 Before registering the defense, students are required to submit the adviser-approved thesis to Gallatin and confirm the date and time for the defense with all members of the committee.
@@ -24,24 +24,24 @@ If you have questions, please write to <a href="mailto:gallatin.thesis@nyu.edu">
 </p>
   <table class="standard">
     <tr>
-      <td> <strong>Name</strong> %value[first_name] %value[last_name]</td>
-      <td> <strong>NetID</strong> %value[netid] <br/><strong>University ID</strong> %value[uid] </td>
+      <td> <strong>Name</strong> [submission:values:first_name] [submission:values:last_name]</td>
+      <td> <strong>NetID</strong> [submission:values:netid] <br/><strong>University ID</strong> [submission:values:uid] </td>
     </tr>
     <tr>
-      <td> <strong>Adviser</strong> %value[first_name_adviser] %value[last_name_adviser] </td>
-      <td> <strong>E-mail </strong>%value[email_adviser]</td>
+      <td> <strong>Adviser</strong> [submission:values:first_name_adviser] [submission:values:last_name_adviser] </td>
+      <td> <strong>E-mail </strong>[submission:values:email_adviser]</td>
     </tr>
     <tr>
-      <td><strong>2nd Reader</strong> %value[first_name_faculty2] %value[last_name_faculty2] </td>
-      <td><strong>E-mail </strong>%value[email_faculty2]</td>
+      <td><strong>2nd Reader</strong> [submission:values:first_name_faculty2] [submission:values:last_name_faculty2] </td>
+      <td><strong>E-mail </strong>[submission:values:email_faculty2]</td>
       </tr>
       <tr>
-      <td> <strong>3rd Reader</strong> %value[first_name_faculty3] %value[last_name_faculty3] </td>
-      <td><strong>E-mail </strong>%value[email_faculty3]</td>
+      <td> <strong>3rd Reader</strong> [submission:values:first_name_faculty3] [submission:values:last_name_faculty3] </td>
+      <td><strong>E-mail </strong>[submission:values:email_faculty3]</td>
     </tr>
     <tr>
-      <td> <strong>Date and Time</strong> %value[date] %value[time] </td>
-      <td> <strong>Notes</strong> %value[av] </td>
+      <td> <strong>Date and Time</strong> [submission:values:date] [submission:values:time] </td>
+      <td> <strong>Notes</strong> [submission:values:av] </td>
     </tr>
 </table>
   

@@ -3,22 +3,22 @@
 
 <strong>Dear Christine</strong>,<br/>
 
-   <p> %value[supervisor] has submitted a request for a new employee %value[first_name] %value[last_name]. Please add him or her to the contact list and see below if business cards should be ordered.</p>
+   <p> [submission:values:supervisor] has submitted a request for a new employee [submission:values:first_name] [submission:values:last_name]. Please add him or her to the contact list and see below if business cards should be ordered.</p>
 <p>
 Thank you.
 </p>
 
 <table class="standard">
     <tr>
-      <td> <strong>Name</strong> %value[first_name] %value[last_name] </td>
-     <td> <strong>Employment Title</strong> %value[title] </td>
+      <td> <strong>Name</strong> [submission:values:first_name] [submission:values:last_name] </td>
+     <td> <strong>Employment Title</strong> [submission:values:title] </td>
    </tr>
     <tr>
-     <td> <strong>Telephone</strong> %value[phone] </td>
-     <td> <strong>Functional Area</strong> %value[fun_area] </td>
+     <td> <strong>Telephone</strong> [submission:values:phone] </td>
+     <td> <strong>Functional Area</strong> [submission:values:fun_area] </td>
 </tr>
     <tr>
-     <td colspan="2"> <strong>Does the employee need business cards?</strong> %value[business_cards] </td>
+     <td colspan="2"> <strong>Does the employee need business cards?</strong> [submission:values:business_cards] </td>
 </tr>
 </table>
 

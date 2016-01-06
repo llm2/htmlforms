@@ -1,7 +1,7 @@
   <!-- BEGIN EMAIL CONTENT -->
 
 <p>Dear Colloquium Administrator,<br/>
-%value[first_name] %value[last_name] has submitted the attached Colloquium Rationale and Booklist.
+[submission:values:first_name] [submission:values:last_name] has submitted the attached Colloquium Rationale and Booklist.
 </p>
 <p>
 The results of this submission may be viewed at:
@@ -9,20 +9,20 @@ The results of this submission may be viewed at:
 </p>
   <table class="standard">
     <tr>
-      <td> <strong>Name </strong> %value[first_name] %value[last_name]</td>
-      <td> <strong>NetID</strong>%value[netid] <br/><strong>University ID</strong> %value[uid] </td>
+      <td> <strong>Name </strong> [submission:values:first_name] [submission:values:last_name]</td>
+      <td> <strong>NetID</strong>[submission:values:netid] <br/><strong>University ID</strong> [submission:values:uid] </td>
     </tr>
     <tr>
-        <td><strong>Adviser</strong> %value[first_name_adviser] %value[last_name_adviser]</td>
-       <td><strong>Adviser E-mail</strong> %value[email_adviser]</td>
+        <td><strong>Adviser</strong> [submission:values:first_name_adviser] [submission:values:last_name_adviser]</td>
+       <td><strong>Adviser E-mail</strong> [submission:values:email_adviser]</td>
    </tr>
     <tr>
-      <td> <strong>Expected Graduation Month</strong> %value[gradmonth]</td>
-      <td> <strong>Were you enrolled in the 3rd Year Symposium?</strong> %value[3rd_year] </td>
+      <td> <strong>Expected Graduation Month</strong> [submission:values:gradmonth]</td>
+      <td> <strong>Were you enrolled in the 3rd Year Symposium?</strong> [submission:values:3rd_year] </td>
     </tr>
     <tr>
-      <td> <strong> Colloquium Committee Member 1</strong> %value[member1] </td>
-      <td> <strong> Colloquium Committee Member 2</strong> %value[member2] </td>
+      <td> <strong> Colloquium Committee Member 1</strong> [submission:values:member1] </td>
+      <td> <strong> Colloquium Committee Member 2</strong> [submission:values:member2] </td>
     </tr>
 </table>
   

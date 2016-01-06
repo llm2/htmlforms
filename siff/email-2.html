@@ -1,30 +1,30 @@
 
 
 <!-- BEGIN EMAIL CONTENT --><p>
-<strong>Dear %value[first_name_adviser] %value[last_name_adviser]</strong>,<br/>
+<strong>Dear [submission:values:first_name_adviser] [submission:values:last_name_adviser]</strong>,<br/>
 
-   <p>your advisee, %value[first_name] %value[last_name], has submitted the attached SIFF Application. The description and budget are attached. Please reply to this email to indicate your approval of the application. If you do not approve, please contact the student directly.
+   <p>your advisee, [submission:values:first_name] [submission:values:last_name], has submitted the attached SIFF Application. The description and budget are attached. Please reply to this email to indicate your approval of the application. If you do not approve, please contact the student directly.
 </p>
 
 <h2>SIFF Application</h2>  <table class="standard">
     <tr>
-      <td> <strong>Name</strong> %value[first_name] %value[last_name] </td>
-      <td> <strong>Expected Graduation</strong> %value[expected_graduation_month] %value[expected_graduation_year]</td>
+      <td> <strong>Name</strong> [submission:values:first_name] [submission:values:last_name] </td>
+      <td> <strong>Expected Graduation</strong> [submission:values:expected_graduation_month] [submission:values:expected_graduation_year]</td>
     </tr>
     <tr>
-      <td> <strong>NetID</strong> %value[netid] </td>
-      <td> <strong>University ID</strong> %value[universityid] </td>
+      <td> <strong>NetID</strong> [submission:values:netid] </td>
+      <td> <strong>University ID</strong> [submission:values:universityid] </td>
     </tr>
     <tr>
-      <td> <strong>Adviser</strong> %value[first_name_adviser] %value[last_name_adviser]</td>
-      <td> <strong>Adviser E-mail</strong> %value[email_adviser] </td>
+      <td> <strong>Adviser</strong> [submission:values:first_name_adviser] [submission:values:last_name_adviser]</td>
+      <td> <strong>Adviser E-mail</strong> [submission:values:email_adviser] </td>
     </tr>
     <tr>
-      <td> <strong>Thesis Title</strong> %value[title]</td>
-      <td> <strong>Requested Amount</strong> %value[amount] </td>
+      <td> <strong>Thesis Title</strong> [submission:values:title]</td>
+      <td> <strong>Requested Amount</strong> [submission:values:amount] </td>
     </tr>
     <tr>
-      <td colspan="2"> <strong>Thesis Abstract</strong> %value[thesis_abstract]</td>
+      <td colspan="2"> <strong>Thesis Abstract</strong> [submission:values:thesis_abstract]</td>
     </tr>
   </table>
   

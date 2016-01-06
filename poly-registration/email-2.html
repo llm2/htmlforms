@@ -4,7 +4,7 @@
 
 <p>
 <strong>Dear Student Services</strong>,<br/>
-   <p>%value[first_name] %value[last_name], has submitted a Polytechnic Registration form.</p>
+   <p>[submission:values:first_name] [submission:values:last_name], has submitted a Polytechnic Registration form.</p>
 <p>The results of this submission may be viewed at <a href="%submission_url">%submission_url</a></p>
 
 <h2>Polytechnic Registration
@@ -12,16 +12,16 @@
 
   <table class="standard">
     <tr>
-      <td> <strong>NetID</strong> %value[netid] </td>
-      <td> <strong>University ID</strong> %value[uid] </td>
+      <td> <strong>NetID</strong> [submission:values:netid] </td>
+      <td> <strong>University ID</strong> [submission:values:uid] </td>
     </tr>
     <tr>
-      <td> <strong>Address</strong> %value[street_address], %value[city] </td>
-      <td> %value[state],  %value[zip] %value[country]</td>
+      <td> <strong>Address</strong> [submission:values:street_address], [submission:values:city] </td>
+      <td> [submission:values:state],  [submission:values:zip] [submission:values:country]</td>
     </tr>
     <tr>
-      <td> <strong>Semester and Year of registration</strong> %value[semester] %value[year]</td>
-      <td> <strong>Faculty Adviser</strong> %value[adviser],  %value[email_adviser] </td>
+      <td> <strong>Semester and Year of registration</strong> [submission:values:semester] [submission:values:year]</td>
+      <td> <strong>Faculty Adviser</strong> [submission:values:adviser],  [submission:values:email_adviser] </td>
     </tr>
   </table>
   <p></p>
@@ -36,53 +36,53 @@
       </TR>
     </THEAD>
     <tr>
-      <td> %value[course_no1] </td>
-      <td> %value[section1] </td>
-      <td> %value[course_title1] </td>
-      <td> %value[units1] </td>
-      <td> %value[prereq1] </td>
+      <td> [submission:values:course_no1] </td>
+      <td> [submission:values:section1] </td>
+      <td> [submission:values:course_title1] </td>
+      <td> [submission:values:units1] </td>
+      <td> [submission:values:prereq1] </td>
     </tr>
     <tr   class='stripe'>
-      <td> %value[course_no2] </td>
-      <td> %value[section2] </td>
-      <td> %value[course_title2] </td>
-      <td> %value[units2] </td>
-      <td> %value[prereq2] </td>
+      <td> [submission:values:course_no2] </td>
+      <td> [submission:values:section2] </td>
+      <td> [submission:values:course_title2] </td>
+      <td> [submission:values:units2] </td>
+      <td> [submission:values:prereq2] </td>
     </tr>
     <tr>
-      <td> %value[course_no3] </td>
-      <td> %value[section3] </td>
-      <td> %value[course_title3] </td>
-      <td> %value[units3] </td>
-      <td> %value[prereq3] </td>
+      <td> [submission:values:course_no3] </td>
+      <td> [submission:values:section3] </td>
+      <td> [submission:values:course_title3] </td>
+      <td> [submission:values:units3] </td>
+      <td> [submission:values:prereq3] </td>
     </tr>
     <tr   class='stripe'>
-      <td> %value[course_no4] </td>
-      <td> %value[section4] </td>
-      <td> %value[course_title4] </td>
-      <td> %value[units4] </td>
-      <td> %value[prereq4] </td>
+      <td> [submission:values:course_no4] </td>
+      <td> [submission:values:section4] </td>
+      <td> [submission:values:course_title4] </td>
+      <td> [submission:values:units4] </td>
+      <td> [submission:values:prereq4] </td>
     </tr>
     <tr>
-      <td> %value[course_no5] </td>
-      <td> %value[section5] </td>
-      <td> %value[course_title5] </td>
-      <td> %value[units5] </td>
-      <td> %value[prereq5] </td>
+      <td> [submission:values:course_no5] </td>
+      <td> [submission:values:section5] </td>
+      <td> [submission:values:course_title5] </td>
+      <td> [submission:values:units5] </td>
+      <td> [submission:values:prereq5] </td>
     </tr>
     <tr   class='stripe'>
-      <td> %value[course_no6] </td>
-      <td> %value[section6] </td>
-      <td> %value[course_title6] </td>
-      <td> %value[units6] </td>
-      <td> %value[prereq6] </td>
+      <td> [submission:values:course_no6] </td>
+      <td> [submission:values:section6] </td>
+      <td> [submission:values:course_title6] </td>
+      <td> [submission:values:units6] </td>
+      <td> [submission:values:prereq6] </td>
     </tr>
     <tr>
-      <td> %value[course_no7] </td>
-      <td> %value[section7] </td>
-      <td> %value[course_title7] </td>
-      <td> %value[units7] </td>
-      <td> %value[prereq7] </td>
+      <td> [submission:values:course_no7] </td>
+      <td> [submission:values:section7] </td>
+      <td> [submission:values:course_title7] </td>
+      <td> [submission:values:units7] </td>
+      <td> [submission:values:prereq7] </td>
     </tr>
   </table>
 

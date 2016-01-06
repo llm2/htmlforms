@@ -1,13 +1,13 @@
 <!-- BEGIN EMAIL CONTENT -->
 
-<strong>Dear %value[first_name] %value[last_name]</strong>,<br/>
+<strong>Dear [submission:values:first_name] [submission:values:last_name]</strong>,<br/>
 
 <p>Thank you for your RSVP to the 2015 NYU Gallatin Alumni College at 1 Washington Place, NY, NY 10003. We look forward to seeing you. You have RSVP'd for the following:</p>
 <h2>Events</h2>
-%value[events]<br/>
+[submission:values:events]<br/>
 <h2>Classes</h2>
-<ul><li>%value[session1]</li>
-<li>%value[session2]<br/></li>
+<ul><li>[submission:values:session1]</li>
+<li>[submission:values:session2]<br/></li>
 </ul>
 
 <p>If you have any questions, please do not hesitate to contact us.</p>

@@ -1,9 +1,9 @@
 
 
 <!-- BEGIN EMAIL CONTENT --><p>
-<strong>Dear %value[adviser_first_name] %value[adviser_last_name]</strong>,<br/>
+<strong>Dear [submission:values:adviser_first_name] [submission:values:adviser_last_name]</strong>,<br/>
 
-   <p>Below is a Gallatin Senior Project proposal that has been submitted by your advisee, %value[first_name] %value[last_name], and which requires your approval before it will be reviewed by Gallatin’s Senior Project Committee.   Your student was instructed to speak with you in advance of submitting this form, and well in advance of the proposal submission deadline.  If your advisee has not discussed this proposal with you, you may reject it, and request that he or she meets with you before you approve it.
+   <p>Below is a Gallatin Senior Project proposal that has been submitted by your advisee, [submission:values:first_name] [submission:values:last_name], and which requires your approval before it will be reviewed by Gallatin’s Senior Project Committee.   Your student was instructed to speak with you in advance of submitting this form, and well in advance of the proposal submission deadline.  If your advisee has not discussed this proposal with you, you may reject it, and request that he or she meets with you before you approve it.
 </p>
    <p><strong>Please Note</strong>:
 <ul><li>The Senior Project Committee will assume that your approval of an advisee’s senior project proposal signifies genuine support for the project. Therefore, if you have questions about the validity of the study, please do not automatically sign or approve the proposal form.  Rather, work with the student until she or he presents a study you can approve.</li>
@@ -27,40 +27,40 @@ Gallatin Senior Project Committee
 </p>
 <h2>Senior Project</h2>  <table class="standard">
     <tr>
-      <td> <strong>Name</strong> %value[first_name] %value[last_name] </td>
-      <td> <strong>Rationale Status</strong> %value[rationale] </td>
+      <td> <strong>Name</strong> [submission:values:first_name] [submission:values:last_name] </td>
+      <td> <strong>Rationale Status</strong> [submission:values:rationale] </td>
     </tr>
     <tr>
-      <td> <strong>NetID</strong> %value[netid] </td>
-      <td> <strong>University ID</strong> %value[uid] </td>
+      <td> <strong>NetID</strong> [submission:values:netid] </td>
+      <td> <strong>University ID</strong> [submission:values:uid] </td>
     </tr>
     <tr>
-      <td> <strong>Expected Graduation</strong>%value[grad_month]  %value[grad_year] </td>
-      <td> <strong>Semester/Year of Registration</strong>%value[semester]  %value[year] </td>
+      <td> <strong>Expected Graduation</strong>[submission:values:grad_month]  [submission:values:grad_year] </td>
+      <td> <strong>Semester/Year of Registration</strong>[submission:values:semester]  [submission:values:year] </td>
    </tr>
    <tr>
-      <td> <strong>Adviser Name</strong> %value[adviser_first_name] %value[adviser_last_name] </td>
-      <td> <strong>Adviser E-mail</strong> %value[adviser_email]</td>
+      <td> <strong>Adviser Name</strong> [submission:values:adviser_first_name] [submission:values:adviser_last_name] </td>
+      <td> <strong>Adviser E-mail</strong> [submission:values:adviser_email]</td>
   </tr>
 
    <tr>
-      <td> <strong>Mentor Name</strong> %value[mentor_first_name] %value[mentor_last_name]</td>
-      <td> <strong>Mentor E-mail</strong> %value[mentor_email] </td>
+      <td> <strong>Mentor Name</strong> [submission:values:mentor_first_name] [submission:values:mentor_last_name]</td>
+      <td> <strong>Mentor E-mail</strong> [submission:values:mentor_email] </td>
   </tr>
    <tr>
-      <td> <strong>Total Units</strong> %value[num_credits]</td>
-     <td> <strong>Title of Senior Project</strong> %value[title] </td>
+      <td> <strong>Total Units</strong> [submission:values:num_credits]</td>
+     <td> <strong>Title of Senior Project</strong> [submission:values:title] </td>
    </tr>
    <tr>
-      <td> <strong>Are you planning to complete your Colloquium and Senior Project during the same semester?</strong> %value[colloquium] </td>
-       <td> <strong> Are you planning to attend a course, class, or workshop to supplement this study?</strong> %value[course] </td>
+      <td> <strong>Are you planning to complete your Colloquium and Senior Project during the same semester?</strong> [submission:values:colloquium] </td>
+       <td> <strong> Are you planning to attend a course, class, or workshop to supplement this study?</strong> [submission:values:course] </td>
    </tr>
    <tr>
-      <td> <strong> Are you planning to make any type of payment to an instructor or separate institution for this study?</strong> %value[payment] </td>
-       <td> <strong>Are you planning to be outside of the United States for any part of this study?</strong> %value[outside] </td>
+      <td> <strong> Are you planning to make any type of payment to an instructor or separate institution for this study?</strong> [submission:values:payment] </td>
+       <td> <strong>Are you planning to be outside of the United States for any part of this study?</strong> [submission:values:outside] </td>
     </tr>
    <tr>
-      <td colspan="2"> <strong> Are you planning to not meet in person with your senior project mentor?</strong> %value[meeting] </td>
+      <td colspan="2"> <strong> Are you planning to not meet in person with your senior project mentor?</strong> [submission:values:meeting] </td>
    </tr>
 </table>
 

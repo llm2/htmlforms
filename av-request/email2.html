@@ -2,7 +2,7 @@
   <!-- BEGIN EMAIL CONTENT -->
 
 <p>Dear Administrator,<br/>
-%value[first_name] %value[last_name] has submitted the following A/V Request.
+[submission:values:first_name] [submission:values:last_name] has submitted the following A/V Request.
 </p>
 <p>
 The results of this submission may be viewed at:
@@ -10,18 +10,18 @@ The results of this submission may be viewed at:
 </p>
   <table class="standard">
     <tr>
-      <td> <strong>Name</strong> %value[first_name] %value[last_name]</td>
-      <td> <strong>NetID</strong> %value[netid] <br/><strong>University ID</strong> %value[uid] </td>
+      <td> <strong>Name</strong> [submission:values:first_name] [submission:values:last_name]</td>
+      <td> <strong>NetID</strong> [submission:values:netid] <br/><strong>University ID</strong> [submission:values:uid] </td>
     </tr>
     <tr>
-      <td> <strong>Proposed Pick-up Date and Time</strong> %value[date] @ %value[time]</td>
-      <td> <strong>Proposed Return  Date and Time</strong> %value[proposed_return_date] @ %value[proposed_return_time]</td>
+      <td> <strong>Proposed Pick-up Date and Time</strong> [submission:values:date] @ [submission:values:time]</td>
+      <td> <strong>Proposed Return  Date and Time</strong> [submission:values:proposed_return_date] @ [submission:values:proposed_return_time]</td>
     </tr>
         <tr>
-      <td colspan="2"> <strong>A/V Equipment</strong> %value[av] </td>
+      <td colspan="2"> <strong>A/V Equipment</strong> [submission:values:av] </td>
     </tr>
        <tr>
-      <td colspan="2"> <strong>Reason for Request</strong> %value[reason] </td>
+      <td colspan="2"> <strong>Reason for Request</strong> [submission:values:reason] </td>
     </tr>
 </table>
   

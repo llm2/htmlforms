@@ -2,8 +2,8 @@
   <!-- BEGIN EMAIL CONTENT -->
 
 <p>
-<strong>Dear %value[first_name] %value[last_name]</strong>,<br/>
-%value[first_name_reviewer] %value[last_name_reviewer] has submitted the following review of your rationale and booklist.
+<strong>Dear [submission:values:first_name] [submission:values:last_name]</strong>,<br/>
+[submission:values:first_name_reviewer] [submission:values:last_name_reviewer] has submitted the following review of your rationale and booklist.
 </p>
 <p>
 The Gallatin faculty reviewer may approve your rationale and booklist or may require further revisions. If revisions are required, you should discuss the reviewer's comments with your adviser, revise the rationale and/or booklist, secure your adviser's approval on the revisions, and then resubmit the rationale and/or booklist to the Gallatin Office of Academic Advising for final approval. The revised rationale should be submitted no less than four weeks before the scheduled colloquium.
@@ -12,17 +12,17 @@ If, in the process of making revisions to your rationale and/or booklist, you re
 </p>
   <table class="standard">
     <tr>
-      <td> <strong>Reviewer</strong> %value[first_name_reviewer] %value[last_name_reviewer]</td>
-     <td> <strong>Reviewer E-mail</strong> %value[rev_email]</td>
+      <td> <strong>Reviewer</strong> [submission:values:first_name_reviewer] [submission:values:last_name_reviewer]</td>
+     <td> <strong>Reviewer E-mail</strong> [submission:values:rev_email]</td>
     </tr>
         <tr>
-      <td colspan="3"> <strong>Rationale Decision</strong> %value[rat_approved] </td>
+      <td colspan="3"> <strong>Rationale Decision</strong> [submission:values:rat_approved] </td>
  </tr>
    <tr>
-      <td colspan="3"> <strong>Booklist Decision</strong> %value[book_approved] </td>
+      <td colspan="3"> <strong>Booklist Decision</strong> [submission:values:book_approved] </td>
  </tr>
    <tr>
-      <td colspan="3"> <strong>Comments</strong> %value[comments] </td>
+      <td colspan="3"> <strong>Comments</strong> [submission:values:comments] </td>
 </table>
   
   <!-- END EMAIL CONTENT -->

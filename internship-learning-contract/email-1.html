@@ -2,7 +2,7 @@
   <!-- BEGIN EMAIL CONTENT -->
 
 <p>
-<strong>Dear %value[first_name] %value[last_name]</strong><br/>
+<strong>Dear [submission:values:first_name] [submission:values:last_name]</strong><br/>
 
 Thank you for submitting your Internship Learning Contract. A copy is included with this e-mail and has been sent to your adviser. 
 </p>
@@ -13,47 +13,47 @@ Thank you for submitting your Internship Learning Contract. A copy is included w
 
   <table class="standard">
      <tr>
-      <td> <strong>Name</strong> %value[first_name] %value[last_name]</td>
-      <td> <strong>Address</strong> %value[street], %value[city], %value[state], %value[country]  </td>
+      <td> <strong>Name</strong> [submission:values:first_name] [submission:values:last_name]</td>
+      <td> <strong>Address</strong> [submission:values:street], [submission:values:city], [submission:values:state], [submission:values:country]  </td>
     </tr>
     <tr>
-     <td> <strong>Phone</strong> %value[phone] </td>
-     <td> <strong>Student Status</strong> %value[student_status] </td>
+     <td> <strong>Phone</strong> [submission:values:phone] </td>
+     <td> <strong>Student Status</strong> [submission:values:student_status] </td>
      </tr>
      <tr>
-      <td> <strong>NetID</strong> %value[netid] </td>
-      <td> <strong>University ID</strong> %value[uid] </td>
+      <td> <strong>NetID</strong> [submission:values:netid] </td>
+      <td> <strong>University ID</strong> [submission:values:uid] </td>
     </tr>
     <tr>
-    <td> <strong>Semester and Year of Registration</strong> %value[semester] %value[year]</td>
-     <td><strong>Number of Units</strong> %value[units]  </td>
+    <td> <strong>Semester and Year of Registration</strong> [submission:values:semester] [submission:values:year]</td>
+     <td><strong>Number of Units</strong> [submission:values:units]  </td>
     </tr>
    <tr>
-    <td> <strong>Number of Hours per Week</strong> %value[weekly_hours]</td>
-    <td> <strong>Learning Contract Agreement</strong> %value[agreement]</td>
+    <td> <strong>Number of Hours per Week</strong> [submission:values:weekly_hours]</td>
+    <td> <strong>Learning Contract Agreement</strong> [submission:values:agreement]</td>
     </tr>
     <tr>
-    <td> <strong>Organization</strong> %value[organization], %value[org_street], %value[org_city], %value[org_state], %value[org_country]</td>
-       <td><strong>Supervisor</strong> %value[first_name_supervisor]  %value[last_name_supervisor] </td>
+    <td> <strong>Organization</strong> [submission:values:organization], [submission:values:org_street], [submission:values:org_city], [submission:values:org_state], [submission:values:org_country]</td>
+       <td><strong>Supervisor</strong> [submission:values:first_name_supervisor]  [submission:values:last_name_supervisor] </td>
    </tr>
     <tr>
-      <td> <strong>Supervisor Phone</strong> %value[sup_phone]</td>
-    <td> <strong>Supervisor E-mail</strong> %value[email_supervisor]</td>
+      <td> <strong>Supervisor Phone</strong> [submission:values:sup_phone]</td>
+    <td> <strong>Supervisor E-mail</strong> [submission:values:email_supervisor]</td>
     </tr>
     <tr>
-    <td colspan="2"> <strong>Job Description</strong> %value[job_description]</td>
+    <td colspan="2"> <strong>Job Description</strong> [submission:values:job_description]</td>
     </tr>
     <tr>
-    <td colspan="2"> <strong>Supervision</strong> %value[supervision]</td>
+    <td colspan="2"> <strong>Supervision</strong> [submission:values:supervision]</td>
     </tr>
     <tr>
-    <td colspan="2"> <strong>Learning Objectives</strong> %value[learning_objectives]</td>
+    <td colspan="2"> <strong>Learning Objectives</strong> [submission:values:learning_objectives]</td>
     </tr>
     <tr>
-    <td colspan="2"> <strong>Learning activities and strategies</strong> %value[learning_activities]</td>
+    <td colspan="2"> <strong>Learning activities and strategies</strong> [submission:values:learning_activities]</td>
     </tr>
     <tr>
-    <td colspan="2"> <strong>Evaluation</strong> %value[evaluation]</td>
+    <td colspan="2"> <strong>Evaluation</strong> [submission:values:evaluation]</td>
     </tr>  
 </table>
   <!-- END EMAIL CONTENT -->

@@ -3,28 +3,28 @@
   <!-- BEGIN EMAIL CONTENT -->
 
 <p>Dear Colloquium Administrator,<br/>
-<strong>%value[first_name_reviewer] %value[last_name_reviewer]</strong>submitted a Faculty Review of the Rationale and Booklist for <strong>%value[first_name] %value[last_name]</strong> on %date.
+<strong>[submission:values:first_name_reviewer] [submission:values:last_name_reviewer]</strong>submitted a Faculty Review of the Rationale and Booklist for <strong>[submission:values:first_name] [submission:values:last_name]</strong> on %date.
 </p>
 <p>
 <a href="https://gabe.es.its.nyu.edu/hermes/?q=printpdf%2F200%2Fsubmission%2F%sid&destination=node%2F200%23overlay%3Dnode%2F200%2Fsubmission%2F%sid">PDF Download</a>
 </p>
   <table class="standard">
     <tr>
-      <td> <strong>Student Name </strong> %value[first_name] %value[last_name]</td>
-      <td> <strong>Student NetID</strong>%value[netid] <br/><strong></td>
+      <td> <strong>Student Name </strong> [submission:values:first_name] [submission:values:last_name]</td>
+      <td> <strong>Student NetID</strong>[submission:values:netid] <br/><strong></td>
     </tr>
     <tr>
-        <td><strong>Reviewer's Name </strong> %value[first_name_reviewer] %value[last_name_reviewer]</td>
-       <td><strong>Reviewer's E-mail</strong> %value[rev_email]</td>
+        <td><strong>Reviewer's Name </strong> [submission:values:first_name_reviewer] [submission:values:last_name_reviewer]</td>
+       <td><strong>Reviewer's E-mail</strong> [submission:values:rev_email]</td>
 </tr>
         <tr>
-      <td colspan="3"> <strong>Rationale Decision</strong> %value[rat_approved] </td>
+      <td colspan="3"> <strong>Rationale Decision</strong> [submission:values:rat_approved] </td>
  </tr>
    <tr>
-      <td colspan="3"> <strong>Booklist Decision</strong> %value[book_approved] </td>
+      <td colspan="3"> <strong>Booklist Decision</strong> [submission:values:book_approved] </td>
  </tr>
    <tr>
-      <td colspan="3"> <strong>Comments</strong> %value[comments] </td>
+      <td colspan="3"> <strong>Comments</strong> [submission:values:comments] </td>
 </table>
   
   <!-- END EMAIL CONTENT -->

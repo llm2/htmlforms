@@ -3,7 +3,7 @@
   <!-- BEGIN EMAIL CONTENT -->
 
 <p>Dear Colloquium Administrator,<br/>
-%value[first_name] %value[last_name] has submitted the following Colloquium Registration.
+[submission:values:first_name] [submission:values:last_name] has submitted the following Colloquium Registration.
 </p>
 <p>
 The results of this submission may be viewed at:
@@ -11,30 +11,30 @@ The results of this submission may be viewed at:
 </p>
   <table class="standard">
     <tr>
-      <td> <strong>Name</strong> %value[first_name] %value[last_name]</td>
-      <td> <strong>NetID</strong> %value[netid] <br/><strong>University ID</strong> %value[uid] </td>
+      <td> <strong>Name</strong> [submission:values:first_name] [submission:values:last_name]</td>
+      <td> <strong>NetID</strong> [submission:values:netid] <br/><strong>University ID</strong> [submission:values:uid] </td>
     </tr>
    <tr>
-      <td colspan="2"> <strong>Colloquium Title</strong> %value[title] </td>
+      <td colspan="2"> <strong>Colloquium Title</strong> [submission:values:title] </td>
     </tr>
     <tr>
-      <td> <strong>Adviser</strong> %value[first_name_adviser] %value[last_name_adviser] </td>
-      <td> <strong>E-mail </strong>%value[email_adviser]</td>
+      <td> <strong>Adviser</strong> [submission:values:first_name_adviser] [submission:values:last_name_adviser] </td>
+      <td> <strong>E-mail </strong>[submission:values:email_adviser]</td>
     </tr>
     <tr>
-      <td><strong>2nd Faculty Member</strong> %value[first_name_faculty2] %value[last_name_faculty2] </td>
-      <td><strong>E-mail </strong>%value[email_faculty2]</td>
+      <td><strong>2nd Faculty Member</strong> [submission:values:first_name_faculty2] [submission:values:last_name_faculty2] </td>
+      <td><strong>E-mail </strong>[submission:values:email_faculty2]</td>
       </tr>
       <tr>
-      <td> <strong>3rd Faculty Member</strong> %value[first_name_faculty3] %value[last_name_faculty3] </td>
-      <td><strong>E-mail </strong>%value[email_faculty3]</td>
+      <td> <strong>3rd Faculty Member</strong> [submission:values:first_name_faculty3] [submission:values:last_name_faculty3] </td>
+      <td><strong>E-mail </strong>[submission:values:email_faculty3]</td>
     </tr>
     <tr>
-      <td> <strong>Colloquium Date</strong> %value[date] </td>
-      <td> <strong>Colloquium Time</strong> %value[time] </td>
+      <td> <strong>Colloquium Date</strong> [submission:values:date] </td>
+      <td> <strong>Colloquium Time</strong> [submission:values:time] </td>
     </tr>
         <tr>
-      <td colspan="2"> <strong>Notes</strong> %value[av] </td>
+      <td colspan="2"> <strong>Notes</strong> [submission:values:av] </td>
     </tr>
 </table>
   

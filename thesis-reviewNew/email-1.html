@@ -3,24 +3,24 @@
   <!-- BEGIN EMAIL CONTENT -->
 
 <p>
-<strong>Dear %value[first_name] %value[last_name]</strong>,<br/>
+<strong>Dear [submission:values:first_name] [submission:values:last_name]</strong>,<br/>
 
-%value[reviewer_first_name] %value[reviewer_last_name] has submitted the following review of your thesis.
+[submission:values:reviewer_first_name] [submission:values:reviewer_last_name] has submitted the following review of your thesis.
 </p>
 <h2>Thesis Review</h2>  
 <table class="standard">
     <tr>
-      <td> <strong>Student Name</strong> %value[first_name] %value[last_name] </td>
-      <td> <strong>NetID</strong> %value[netid] </td>
+      <td> <strong>Student Name</strong> [submission:values:first_name] [submission:values:last_name] </td>
+      <td> <strong>NetID</strong> [submission:values:netid] </td>
     </tr>
     <tr>
-      <td> <strong>Reviewer</strong> %value[reviewer_first_name] %value[reviewer_last_name] </td>
-      <td> <strong>Reviewer E-mail</strong> %value[reviewer_email]</td>
+      <td> <strong>Reviewer</strong> [submission:values:reviewer_first_name] [submission:values:reviewer_last_name] </td>
+      <td> <strong>Reviewer E-mail</strong> [submission:values:reviewer_email]</td>
     </tr>
      <tr>
-      <td colspan="2"> <strong>Approval Status</strong> %value[status] </td>
+      <td colspan="2"> <strong>Approval Status</strong> [submission:values:status] </td>
     </tr>     <tr>
-      <td colspan="2"> <strong>Comments</strong> %value[comments] </td>
+      <td colspan="2"> <strong>Comments</strong> [submission:values:comments] </td>
     </tr>
   </table>
 

@@ -5,7 +5,7 @@
 <strong>Dear Thesis Administrator</strong>,
 </p>
 <p>
-<strong>%value[first_name] %value[last_name]</strong>, has submitted a Final Thesis.
+<strong>[submission:values:first_name] [submission:values:last_name]</strong>, has submitted a Final Thesis.
 </p>
 <p>
 The results of this submission may be viewed at:
@@ -16,23 +16,23 @@ The results of this submission may be viewed at:
 
   <table class="standard">
     <tr>
-      <td> <strong>Name</strong> %value[first_name] %value[last_name] </td>
+      <td> <strong>Name</strong> [submission:values:first_name] [submission:values:last_name] </td>
       <td></td>
     </tr>
     <tr>
-      <td> <strong>NetID</strong> %value[netid] </td>
-      <td> <strong>University ID</strong> %value[uid] </td>
+      <td> <strong>NetID</strong> [submission:values:netid] </td>
+      <td> <strong>University ID</strong> [submission:values:uid] </td>
     </tr>
     <tr>
-      <td> <strong>Faculty Adviser</strong> %value[first_name_adviser] %value[last_name_adviser]</td>
-      <td> <strong>Faculty Adviser E-mail</strong> %value[email_adviser] </td>
+      <td> <strong>Faculty Adviser</strong> [submission:values:first_name_adviser] [submission:values:last_name_adviser]</td>
+      <td> <strong>Faculty Adviser E-mail</strong> [submission:values:email_adviser] </td>
     </tr>
     <tr>
-      <td colspan="2"> <strong>Keywords</strong> %value[key1], %value[key2], %value[key3], %value[key4], %value[key5], %value[key6]</td>
+      <td colspan="2"> <strong>Keywords</strong> [submission:values:key1], [submission:values:key2], [submission:values:key3], [submission:values:key4], [submission:values:key5], [submission:values:key6]</td>
     </tr>
     <tr>
-        <td> <strong>Thesis Type</strong> %value[type] </td>
-    <td> <strong>Comments</strong> %value[comments]</td>
+        <td> <strong>Thesis Type</strong> [submission:values:type] </td>
+    <td> <strong>Comments</strong> [submission:values:comments]</td>
     </tr>
 </table>
   <!-- END EMAIL CONTENT -->

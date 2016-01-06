@@ -1,7 +1,7 @@
 
   <!-- BEGIN EMAIL CONTENT --><p>
 <strong>Dear M.A. Administrator</strong>,<br/>
-   <p>%value[reviewer_first_name] %value[reviewer_last_name]  has submitted the following thesis proposal review for %value[first_name] %value[last_name]. The results of this submission may be viewed at:
+   <p>[submission:values:reviewer_first_name] [submission:values:reviewer_last_name]  has submitted the following thesis proposal review for [submission:values:first_name] [submission:values:last_name]. The results of this submission may be viewed at:
 <a href="%submission_url">%submission_url</a>
 </p>
 <p>
@@ -10,18 +10,18 @@
 </p>
 <h2>Thesis Proposal Review</h2>  <table class="standard">
     <tr>
-      <td> <strong>Student Name</strong> %value[first_name] %value[last_name] </td>
-      <td> <strong>NetID</strong> %value[netid] </td>
+      <td> <strong>Student Name</strong> [submission:values:first_name] [submission:values:last_name] </td>
+      <td> <strong>NetID</strong> [submission:values:netid] </td>
     </tr>
     <tr>
-      <td> <strong>Reviewer Name</strong> %value[reviewer_first_name] %value[reviewer_last_name] </td>
-      <td> <strong>Reviewer E-mail</strong> %value[reviewer_email]</td>
+      <td> <strong>Reviewer Name</strong> [submission:values:reviewer_first_name] [submission:values:reviewer_last_name] </td>
+      <td> <strong>Reviewer E-mail</strong> [submission:values:reviewer_email]</td>
     </tr>
      <tr>
-      <td colspan="2"> <strong>Approval Status</strong> %value[status] </td>
+      <td colspan="2"> <strong>Approval Status</strong> [submission:values:status] </td>
     </tr>
      <tr>
-      <td colspan="2"> <strong>Comments</strong> %value[comments] </td>
+      <td colspan="2"> <strong>Comments</strong> [submission:values:comments] </td>
     </tr>
   </table>
   

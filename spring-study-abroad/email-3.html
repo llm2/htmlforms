@@ -3,9 +3,9 @@
   <!-- BEGIN EMAIL CONTENT -->
 
 <p>
-<strong>Dear %value[adviser]</strong>,<br/>
+<strong>Dear [submission:values:adviser]</strong>,<br/>
 
-Your advisee, %value[first_name] %value[last_name], has submitted an application for a Gallatin travel course for the %value[application_type] term, copied below for your reference. This application requires a response from you. If your advisee has not discussed this application with you, you may request that s/he meet with you before deciding whether or not you approve of this plan.
+Your advisee, [submission:values:first_name] [submission:values:last_name], has submitted an application for a Gallatin travel course for the [submission:values:application_type] term, copied below for your reference. This application requires a response from you. If your advisee has not discussed this application with you, you may request that s/he meet with you before deciding whether or not you approve of this plan.
 </p>
 <p>
 Once you have made a determination, please reply to this email to inform Gallatin’s Office of Global Programs about your decision. You may also want to let your advisee know your decision and your rationale for it. If you have concerns about your advisee’s ability to succeed in this course or program, feel free to contact me directly at <a href="mailto:kim.foote@nyu.edu">kim.foote@nyu.edu</a> or if you prefer, call me at 212-992-6311. 
@@ -30,38 +30,38 @@ Kim Foote, Assistant Director<br/>
 Office of Global Programs
   </p>
 
- <h2>%value[application_type] Study Abroad Application</h2>
+ <h2>[submission:values:application_type] Study Abroad Application</h2>
 
  <table class="standard">
  	<tr><td><strong> Program 
- 	</strong> %value[program]</td><td><strong> I would like to apply to another program listed above if my selected program is not available. (for Summer Application)
- 	</strong> %value[another]: %value[title]</td>
+ 	</strong> [submission:values:program]</td><td><strong> I would like to apply to another program listed above if my selected program is not available. (for Summer Application)
+ 	</strong> [submission:values:another]: [submission:values:title]</td>
 	</tr>
- 	<tr><td><strong> Applicant </strong> %value[first_name] %value[last_name]</td>
+ 	<tr><td><strong> Applicant </strong> [submission:values:first_name] [submission:values:last_name]</td>
  		<td><strong> Email
- 		</strong> %value[netid_email]</td>
+ 		</strong> [submission:values:netid_email]</td>
  	</tr>
  	<tr><td><strong> University ID
- 	</strong> %value[universityid]</td><td><strong> Class Standing</strong> %value[student_status]</td>
+ 	</strong> [submission:values:universityid]</td><td><strong> Class Standing</strong> [submission:values:student_status]</td>
  	</tr>
  	<tr><td><strong> Gallatin Student or Other?
- 	</strong> %value[matriculation]</td><td><strong> NYU/Current School
- 	</strong> %value[school]</td>
+ 	</strong> [submission:values:matriculation]</td><td><strong> NYU/Current School
+ 	</strong> [submission:values:school]</td>
  </tr>
  	<tr><td colspan="2"><strong> Major/Concentration
- 	</strong> %value[concentration]</td></tr>
+ 	</strong> [submission:values:concentration]</td></tr>
  	<tr><td  colspan="2"><strong> Personal Statement
- 	</strong> %value[personal_statement]</td></tr>
+ 	</strong> [submission:values:personal_statement]</td></tr>
  	<tr><td><strong> Adviser 
- 	</strong> %value[adviser]</td><td><strong> Adviser Email
- 	</strong> %value[fac_adviser]</td>
+ 	</strong> [submission:values:adviser]</td><td><strong> Adviser Email
+ 	</strong> [submission:values:fac_adviser]</td>
  	</tr>
  	<tr><td  colspan="2"><strong> Language Proficiencies (for Winter Application)
- 	</strong> %value[language]</td></tr>
+ 	</strong> [submission:values:language]</td></tr>
  	<tr><td  colspan="2"><strong> Relevant Coursework Completed (for Winter Application)
- 	</strong> %value[coursework]</td></tr>
+ 	</strong> [submission:values:coursework]</td></tr>
  	<tr><td  colspan="2"><strong> Countries Visited (for Winter Application)
- 	</strong> %value[countries]</td></tr>
+ 	</strong> [submission:values:countries]</td></tr>
  </table>
 
 

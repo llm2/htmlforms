@@ -4,7 +4,7 @@
 <p>
 <strong>Dear Gallatin Global</strong>,<br/>
 
-%value[first_name] %value[last_name] has submitted a %value[group] application.
+[submission:values:first_name] [submission:values:last_name] has submitted a [submission:values:group] application.
 </p>
 <p>The results of this submission may be viewed at:<br/>
 <a href="%submission_url">%submission_url</a>
@@ -13,26 +13,26 @@
 
   <table class="standard">
      <tr>
-      <td> <strong>Name</strong> %value[first_name] %value[last_name]</td>
-      <td> <strong>Address</strong> %value[street], %value[city], %value[state], %value[country]  </td>
+      <td> <strong>Name</strong> [submission:values:first_name] [submission:values:last_name]</td>
+      <td> <strong>Address</strong> [submission:values:street], [submission:values:city], [submission:values:state], [submission:values:country]  </td>
     </tr>
     <tr>
-     <td> <strong>Phone</strong> %value[phone] </td>
-    <td> <strong>Expected Month and Year of Graduation</strong> %value[grad_month] %value[grad_year]</td>
+     <td> <strong>Phone</strong> [submission:values:phone] </td>
+    <td> <strong>Expected Month and Year of Graduation</strong> [submission:values:grad_month] [submission:values:grad_year]</td>
      </tr>
      <tr>
-      <td> <strong>NetID</strong> %value[netid] </td>
-      <td> <strong>University ID</strong> %value[uid] </td>
+      <td> <strong>NetID</strong> [submission:values:netid] </td>
+      <td> <strong>University ID</strong> [submission:values:uid] </td>
     </tr>
     <tr>
-     <td><strong>Expected Number of Units Completed</strong> %value[units]  </td>
-     <td> <strong>Area of Concentration</strong> %value[concentration] </td>
+     <td><strong>Expected Number of Units Completed</strong> [submission:values:units]  </td>
+     <td> <strong>Area of Concentration</strong> [submission:values:concentration] </td>
     </tr>
     <tr>
-     <td colspan="2"><strong>Essay Part I</strong> %value[essay_part_1]  </td>
+     <td colspan="2"><strong>Essay Part I</strong> [submission:values:essay_part_1]  </td>
     </tr>
     <tr>
-     <td colspan="2"><strong>Essay Part 2</strong> %value[essay_part_2]  </td>
+     <td colspan="2"><strong>Essay Part 2</strong> [submission:values:essay_part_2]  </td>
     </tr>
   </table>
   

@@ -1,8 +1,8 @@
 <!-- BEGIN EMAIL CONTENT -->
 <p>
-<strong>Dear %value[first_name_adviser] %value[last_name_adviser]</strong>,
+<strong>Dear [submission:values:first_name_adviser] [submission:values:last_name_adviser]</strong>,
 </p>
-   <p>Your advisee, %value[first_name] %value[last_name], has requested permission to register for Master’s Thesis II, a required Gallatin core course that combines independent work on the thesis (supervised by the adviser) and participation in a series of workshops organized by Gallatin to help support the process.
+   <p>Your advisee, [submission:values:first_name] [submission:values:last_name], has requested permission to register for Master’s Thesis II, a required Gallatin core course that combines independent work on the thesis (supervised by the adviser) and participation in a series of workshops organized by Gallatin to help support the process.
 </p>
    <p>
 <strong>Please reply to this email to approve the student’s request to register with the understanding that it commits you to supervise the equivalent of a two credit independent study (the course requirements are outlined below).</strong>
@@ -51,27 +51,27 @@ Associate Dean for Finance and Administration
 
 <h2>Master's Thesis II Registration</h2>  <table class="standard">
     <tr>
-      <td> <strong>Name</strong> %value[first_name] %value[last_name] </td>
-      <td> <strong>Expected Graduation</strong> %value[expected_graduation_month] %value[expected_graduation_year]</td>
+      <td> <strong>Name</strong> [submission:values:first_name] [submission:values:last_name] </td>
+      <td> <strong>Expected Graduation</strong> [submission:values:expected_graduation_month] [submission:values:expected_graduation_year]</td>
     </tr>
     <tr>
-      <td> <strong>NetID</strong> %value[netid] </td>
-      <td> <strong>University ID</strong> %value[universityid] </td>
+      <td> <strong>NetID</strong> [submission:values:netid] </td>
+      <td> <strong>University ID</strong> [submission:values:universityid] </td>
     </tr>
     <tr>
-      <td> <strong>Thesis Type</strong> %value[type] </td>
-      <td> <strong>Thesis Title</strong> %value[title]</td>
+      <td> <strong>Thesis Type</strong> [submission:values:type] </td>
+      <td> <strong>Thesis Title</strong> [submission:values:title]</td>
     </tr>
    <tr>
-      <td><strong>Earned Units</strong> %value[unitsearned]  </td>
+      <td><strong>Earned Units</strong> [submission:values:unitsearned]  </td>
  </tr>  
 <tr>
       <td> <strong>Required Courses</strong><br/>
 <ul>
-<li>Proseminar: %value[proseminar]</li>
-<li>Additional Gallatin Graduate Course:  %value[additional]</li>
-<li>Thesis Proposal Seminar: %value[proposal]</li>
-<li>Master's Thesis I: %value[thesis1]</li>
+<li>Proseminar: [submission:values:proseminar]</li>
+<li>Additional Gallatin Graduate Course:  [submission:values:additional]</li>
+<li>Thesis Proposal Seminar: [submission:values:proposal]</li>
+<li>Master's Thesis I: [submission:values:thesis1]</li>
 </ul>
      </td>
     </tr>

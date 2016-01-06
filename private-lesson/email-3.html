@@ -2,51 +2,51 @@
 
 <!-- BEGIN EMAIL CONTENT -->
 <p>
-<strong>Dear %value[first_name_adviser]</strong>,<br/>
+<strong>Dear [submission:values:first_name_adviser]</strong>,<br/>
 
-%value[first_name] %value[last_name], has submitted a Private Lesson Proposal. To approve this proposal, please reply to this e-mail. If you do not approve, please contact the student directly. If you have questions about the private lesson process, please contact <a href="fs1@nyu.edu">Faith Stangler</a> in the Office of External Programs.
+[submission:values:first_name] [submission:values:last_name], has submitted a Private Lesson Proposal. To approve this proposal, please reply to this e-mail. If you do not approve, please contact the student directly. If you have questions about the private lesson process, please contact <a href="fs1@nyu.edu">Faith Stangler</a> in the Office of External Programs.
 </p>
 
 <p>
 <a href="http://gallatin.nyu.edu">NYU Gallatin School of Individualized Study</a></p>
 </p>
-<h2>Private Lesson Proposal: %value[first_name] %value[last_name]</h2>
+<h2>Private Lesson Proposal: [submission:values:first_name] [submission:values:last_name]</h2>
 
   <table class="standard">
     <tr>
-     <td> <strong>Student Status</strong> %value[student_status] </td>
-      <td> <strong>NetID</strong> %value[netid] </td>
-      <td> <strong>University ID</strong> %value[uid] </td>
+     <td> <strong>Student Status</strong> [submission:values:student_status] </td>
+      <td> <strong>NetID</strong> [submission:values:netid] </td>
+      <td> <strong>University ID</strong> [submission:values:uid] </td>
     </tr>
 <tr>
- <td><strong>Adviser Name</strong> %value[first_name_instructor]  %value[last_name_adviser] </td>
-    <td> <strong>Adviser E-mail</strong> %value[email_adviser]</td>
+ <td><strong>Adviser Name</strong> [submission:values:first_name_instructor]  [submission:values:last_name_adviser] </td>
+    <td> <strong>Adviser E-mail</strong> [submission:values:email_adviser]</td>
     </tr>
     <tr>
-    <td><strong>Type of Lesson</strong> %value[type_lesson]</td>
-    <td> <strong>Semester and Year of registration</strong> %value[semester] %value[year]</td>
-     <td><strong>Number of Units</strong> %value[num_credits]  </td>
+    <td><strong>Type of Lesson</strong> [submission:values:type_lesson]</td>
+    <td> <strong>Semester and Year of registration</strong> [submission:values:semester] [submission:values:year]</td>
+     <td><strong>Number of Units</strong> [submission:values:num_credits]  </td>
     </tr>
     <tr>
-    <td> <strong>Studio</strong> %value[studio]  </td>
-     <td> <strong>Address</strong> %value[street], %value[city], %value[state], %value[zip] %value[country]  </td>
+    <td> <strong>Studio</strong> [submission:values:studio]  </td>
+     <td> <strong>Address</strong> [submission:values:street], [submission:values:city], [submission:values:state], [submission:values:zip] [submission:values:country]  </td>
 </tr>
 <tr> 
-  <td> <strong>Phone</strong> %value[telephone]</td> 
-    <td> <strong>Web site</strong> %value[website]</td> 
+  <td> <strong>Phone</strong> [submission:values:telephone]</td> 
+    <td> <strong>Web site</strong> [submission:values:website]</td> 
      </tr>
 <tr>
- <td><strong>Instructor Name</strong> %value[first_name_instructor]  %value[last_name_instructor] </td>
-    <td> <strong>Instructor E-mail</strong> %value[email_instructor]</td>
+ <td><strong>Instructor Name</strong> [submission:values:first_name_instructor]  [submission:values:last_name_instructor] </td>
+    <td> <strong>Instructor E-mail</strong> [submission:values:email_instructor]</td>
     </tr>
 <tr>
-   <td> <strong>Start Date</strong>  %value[start_date]</td>
-   <td> <strong>End Date</strong>  %value[end_date]</td>
+   <td> <strong>Start Date</strong>  [submission:values:start_date]</td>
+   <td> <strong>End Date</strong>  [submission:values:end_date]</td>
 </tr>
 <tr>
-  <td> <strong>Number of Lessons per Semester</strong>  %value[hours_per_lesson]</td>
-  <td> <strong>Hours per lesson</strong>  %value[number_lessons_per_semester]</td>
-  <td> <strong>Total Hours</strong>  %value[total_hours]</td>
+  <td> <strong>Number of Lessons per Semester</strong>  [submission:values:hours_per_lesson]</td>
+  <td> <strong>Hours per lesson</strong>  [submission:values:number_lessons_per_semester]</td>
+  <td> <strong>Total Hours</strong>  [submission:values:total_hours]</td>
 
 </tr>
   </table>

@@ -2,7 +2,7 @@
   <!-- BEGIN EMAIL CONTENT -->
 
 <p>
-<strong>Dear %value[first_name] %value[last_name]</strong><br/>
+<strong>Dear [submission:values:first_name] [submission:values:last_name]</strong><br/>
 
 Thank you for submitting your Internship Progress Report.</p>
 
@@ -13,32 +13,32 @@ Thank you for submitting your Internship Progress Report.</p>
 
   <table class="standard">
     <tr>
-      <td> <strong>NetID</strong> %value[netid] </td>
-      <td> <strong>University ID</strong> %value[uid] </td>
+      <td> <strong>NetID</strong> [submission:values:netid] </td>
+      <td> <strong>University ID</strong> [submission:values:uid] </td>
     </tr>
     <tr>
-      <td> <strong>Adviser</strong> %value[first_name_adviser] %value[last_name_adviser] </td>
-        <td> <strong>Adviser E-mail</strong> %value[adviser_email] </td>
+      <td> <strong>Adviser</strong> [submission:values:first_name_adviser] [submission:values:last_name_adviser] </td>
+        <td> <strong>Adviser E-mail</strong> [submission:values:adviser_email] </td>
   </tr>
            <tr>
-      <td> <strong>Organization</strong> %value[organization] </td>
-        <td> <strong>Supervisor</strong> %value[first_name_supervisor]  %value[last_name_supervisor]</td>
+      <td> <strong>Organization</strong> [submission:values:organization] </td>
+        <td> <strong>Supervisor</strong> [submission:values:first_name_supervisor]  [submission:values:last_name_supervisor]</td>
   </tr> <tr>
-      <td> <strong>Supervisor Phone</strong> %value[sup_phone] </td>
-        <td> <strong>Supervisor E-mail</strong> %value[supervisors_email] </td>
+      <td> <strong>Supervisor Phone</strong> [submission:values:sup_phone] </td>
+        <td> <strong>Supervisor E-mail</strong> [submission:values:supervisors_email] </td>
   </tr>
   <tr><td colspan="2"><h2>Progress Questions</h2></td></tr>
     <tr>
-      <td colspan="2"> <strong>Responsibilities and activities: Briefly describe the work you have been doing in the internship. To what extent have you been doing the things you identified in your contract?</strong> %value[fact] </td>
+      <td colspan="2"> <strong>Responsibilities and activities: Briefly describe the work you have been doing in the internship. To what extent have you been doing the things you identified in your contract?</strong> [submission:values:fact] </td>
     </tr>
     <tr>
-      <td colspan="2"> <strong>Learning Objectives: Assess your progress toward your learning goals as stated in the contract. Have the goals changed in any way? How and why? Discuss any challenges or problems that you face.</strong> %value[fact1] </td>
+      <td colspan="2"> <strong>Learning Objectives: Assess your progress toward your learning goals as stated in the contract. Have the goals changed in any way? How and why? Discuss any challenges or problems that you face.</strong> [submission:values:fact1] </td>
     </tr>
     <tr>
-      <td colspan="2"> <strong>Supervision and Advisement: Are you getting the help you need from your site supervisor and your adviser? What more could they be doing for you?</strong> %value[fact2] </td>
+      <td colspan="2"> <strong>Supervision and Advisement: Are you getting the help you need from your site supervisor and your adviser? What more could they be doing for you?</strong> [submission:values:fact2] </td>
     </tr>
     <tr>
-      <td colspan="2"> <strong>Additional Comments/Information: What else should Gallatin know about your internship?</strong> %value[fact3] </td>
+      <td colspan="2"> <strong>Additional Comments/Information: What else should Gallatin know about your internship?</strong> [submission:values:fact3] </td>
     </tr>
   </table>
   <p></p>

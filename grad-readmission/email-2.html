@@ -3,37 +3,37 @@
 <p>
 <strong>Dear John</strong>,<br/>
 
-%value[first_name] %value[last_name] has submitted a  Graduate Application for Readmission.
+[submission:values:first_name] [submission:values:last_name] has submitted a  Graduate Application for Readmission.
 <p>
 
 <h2>Graduate Application for Readmission</h2>  <table class="standard">
     <tr>
-      <td> <strong>Name</strong> %value[first_name] %value[middle_name] %value[last_name] </td>
-       <td> <strong>NetID</strong> %value[netid] </td>
-      <td> <strong>University ID</strong> %value[uid] </td>
+      <td> <strong>Name</strong> [submission:values:first_name] [submission:values:middle_name] [submission:values:last_name] </td>
+       <td> <strong>NetID</strong> [submission:values:netid] </td>
+      <td> <strong>University ID</strong> [submission:values:uid] </td>
     </tr>
     <tr>
-      <td> <strong>Street</strong> %value[permanent_address] </td>
-      <td> <strong>City</strong> %value[city] </td>
-      <td> <strong>State/Province</strong> %value[state] </td>
+      <td> <strong>Street</strong> [submission:values:permanent_address] </td>
+      <td> <strong>City</strong> [submission:values:city] </td>
+      <td> <strong>State/Province</strong> [submission:values:state] </td>
     </tr>
     <tr>
-      <td> <strong>Country</strong> %value[country] </td>
-      <td> <strong>Zip Code</strong> %value[zip] </td>
-      <td> <strong>Telephone</strong> %value[phone] </td>
+      <td> <strong>Country</strong> [submission:values:country] </td>
+      <td> <strong>Zip Code</strong> [submission:values:zip] </td>
+      <td> <strong>Telephone</strong> [submission:values:phone] </td>
   </tr>
     <tr>
-<td> <strong>E-mail</strong> <a href="mailto:%value[email]">%value[email]</a> </td>
+<td> <strong>E-mail</strong> <a href="mailto:[submission:values:email]">[submission:values:email]</a> </td>
     </tr>
     <tr>
-     <td> <strong>Original Enrollment Dates</strong> %value[original_enrollment]</td>
-      <td> <strong>Expected Semester of Readmission </strong> %value[expected_semester] </td>
-      <td> <strong>Expected Year of Readmission </strong> %value[expected_year] </td>
+     <td> <strong>Original Enrollment Dates</strong> [submission:values:original_enrollment]</td>
+      <td> <strong>Expected Semester of Readmission </strong> [submission:values:expected_semester] </td>
+      <td> <strong>Expected Year of Readmission </strong> [submission:values:expected_year] </td>
     </tr>
     <tr>
-      <td> <strong>Attended Another College</strong> %value[other_colleges]</td>
-      <td> <strong>If Yes, Which College?</strong> %value[college] </td>
-      <td  colspan="2"> <strong>Proposed Concentration</strong> %value[file]</td>
+      <td> <strong>Attended Another College</strong> [submission:values:other_colleges]</td>
+      <td> <strong>If Yes, Which College?</strong> [submission:values:college] </td>
+      <td  colspan="2"> <strong>Proposed Concentration</strong> [submission:values:file]</td>
     </tr>
   </table>
   

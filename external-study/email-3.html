@@ -3,9 +3,9 @@
 <!-- BEGIN EMAIL CONTENT -->
 
 <p>
-<strong>Dear %value[adviser]</strong>,<br/>
+<strong>Dear [submission:values:adviser]</strong>,<br/>
 
-Your advisee, %value[first_name] %value[last_name], has submitted an application for External Study for the %value[term] %value[regyear] term, copied below for your reference. This application requires a response from you. If your advisee has not discussed this application with you, you may request that s/he meet with you before deciding whether or not you approve of this plan.
+Your advisee, [submission:values:first_name] [submission:values:last_name], has submitted an application for External Study for the [submission:values:term] [submission:values:regyear] term, copied below for your reference. This application requires a response from you. If your advisee has not discussed this application with you, you may request that s/he meet with you before deciding whether or not you approve of this plan.
 
 </p>
 <p>
@@ -37,74 +37,74 @@ Office of Global Programs
   <table class="standard">
     <tr>
       <td colspan="3"><strong>I have read and understood Gallatin&rsquo;s External Study
-      policies.</strong> %value[policies]</td>
+      policies.</strong> [submission:values:policies]</td>
     </tr>
 
     <tr>
       <td colspan="3"><strong>I intend to pursue this external study during the period in which I
-      will complete my final 32 units.</strong> %value[32units]</td>
+      will complete my final 32 units.</strong> [submission:values:32units]</td>
     </tr>
 
     <tr>
-      <td><strong>Name</strong> %value[first_name] %value[last_name]</td>
+      <td><strong>Name</strong> [submission:values:first_name] [submission:values:last_name]</td>
 
-      <td><strong>NetID</strong> %value[netid]</td>
+      <td><strong>NetID</strong> [submission:values:netid]</td>
 
-      <td><strong>University ID</strong> %value[uid]</td>
+      <td><strong>University ID</strong> [submission:values:uid]</td>
     </tr>
 
     <tr>
-      <td colspan="3"><strong>Expected Graduation</strong> %value[semester] %value[year]</td>
+      <td colspan="3"><strong>Expected Graduation</strong> [submission:values:semester] [submission:values:year]</td>
     </tr>
     <tr>
-      <td><strong>Adviser</strong> %value[adviser]</td>
+      <td><strong>Adviser</strong> [submission:values:adviser]</td>
 
-      <td><strong>Adviser E-mail</strong> %value[fac_adviser]</td>
+      <td><strong>Adviser E-mail</strong> [submission:values:fac_adviser]</td>
 
-      <td><strong>Adviser School</strong> %value[adviser_school]</td>
+      <td><strong>Adviser School</strong> [submission:values:adviser_school]</td>
     </tr>
 
     <tr>
       <td colspan="3"><strong>Do you plan to enroll in an NYU course or individualized project during
       the semester in which you will pursue your external study?</strong>
-      %value[registration]</td>
+      [submission:values:registration]</td>
     </tr>
     <tr>
-      <td  colspan="3"><strong>Name of external program</strong> %value[external_program]</td>
+      <td  colspan="3"><strong>Name of external program</strong> [submission:values:external_program]</td>
     </tr>
     <tr>
-      <td  colspan="3"><strong>Program website</strong> %value[program_website]</td>
+      <td  colspan="3"><strong>Program website</strong> [submission:values:program_website]</td>
     </tr>
     <tr>
-      <td colspan="3"><strong>Status of application to Program</strong> %value[application]</td>
-    </tr>
-
-    <tr>
-      <td  colspan="3"><strong>Location where you will be studying</strong> %value[city_state], %value[program_state], %value[program_country]</td>
-
-    </tr>
-    <tr>
-      <td  colspan="3"><strong>Period you are requesting for study</strong> %value[term] %value[regyear]</td>
+      <td colspan="3"><strong>Status of application to Program</strong> [submission:values:application]</td>
     </tr>
 
     <tr>
-      <td><strong>Program Start Date</strong> %value[start_program]</td>
-      <td><strong>Program End Date</strong> %value[end_program]</td>
+      <td  colspan="3"><strong>Location where you will be studying</strong> [submission:values:city_state], [submission:values:program_state], [submission:values:program_country]</td>
+
+    </tr>
+    <tr>
+      <td  colspan="3"><strong>Period you are requesting for study</strong> [submission:values:term] [submission:values:regyear]</td>
+    </tr>
+
+    <tr>
+      <td><strong>Program Start Date</strong> [submission:values:start_program]</td>
+      <td><strong>Program End Date</strong> [submission:values:end_program]</td>
     </tr>
     <tr>
       <td  colspan="3"><strong>College or University that will generate a transcript of the external
-      coursework</strong> %value[college]</td>
+      coursework</strong> [submission:values:college]</td>
     </tr>
 
     <tr>
-      <td   colspan="3"><strong>Is this a multi-country program?</strong> %value[other_countries]</td>
+      <td   colspan="3"><strong>Is this a multi-country program?</strong> [submission:values:other_countries]</td>
     </tr>
 
     <tr>
-      <td><strong>External program's administrator</strong> %value[first_name1]
-      %value[last_name1]</td>
-      <td><strong>Telephone</strong> %value[phone1]</td>
-      <td><strong>E-mail</strong> %value[email1]</td>
+      <td><strong>External program's administrator</strong> [submission:values:first_name1]
+      [submission:values:last_name1]</td>
+      <td><strong>Telephone</strong> [submission:values:phone1]</td>
+      <td><strong>E-mail</strong> [submission:values:email1]</td>
     </tr>
   </table>
 
@@ -121,63 +121,63 @@ Office of Global Programs
     </thead>
 
     <tr>
-      <td>%value[course_no1]</td>
+      <td>[submission:values:course_no1]</td>
 
-      <td>%value[course_title1]</td>
+      <td>[submission:values:course_title1]</td>
 
-      <td>%value[credits1]</td>
+      <td>[submission:values:credits1]</td>
     </tr>
 
     <tr class='stripe'>
-      <td>%value[course_no2]</td>
+      <td>[submission:values:course_no2]</td>
 
-      <td>%value[course_title2]</td>
+      <td>[submission:values:course_title2]</td>
 
-      <td>%value[credits2]</td>
+      <td>[submission:values:credits2]</td>
     </tr>
 
     <tr>
-      <td>%value[course_no3]</td>
+      <td>[submission:values:course_no3]</td>
 
-      <td>%value[course_title3]</td>
+      <td>[submission:values:course_title3]</td>
 
-      <td>%value[credits3]</td>
+      <td>[submission:values:credits3]</td>
     </tr>
 
     <tr class='stripe'>
-      <td>%value[course_no4]</td>
+      <td>[submission:values:course_no4]</td>
 
-      <td>%value[course_title4]</td>
+      <td>[submission:values:course_title4]</td>
 
-      <td>%value[credits4]</td>
+      <td>[submission:values:credits4]</td>
     </tr>
 
     <tr>
-      <td>%value[course_no5]</td>
+      <td>[submission:values:course_no5]</td>
 
-      <td>%value[course_title5]</td>
+      <td>[submission:values:course_title5]</td>
 
-      <td>%value[credits5]</td>
+      <td>[submission:values:credits5]</td>
     </tr>
 
     <tr class='stripe'>
-      <td>%value[course_no6]</td>
+      <td>[submission:values:course_no6]</td>
 
-      <td>%value[course_title6]</td>
+      <td>[submission:values:course_title6]</td>
 
-      <td>%value[credits6]</td>
+      <td>[submission:values:credits6]</td>
     </tr>
 
     <tr>
-      <td>%value[course_no7]</td>
+      <td>[submission:values:course_no7]</td>
 
-      <td>%value[course_title7]</td>
+      <td>[submission:values:course_title7]</td>
 
-      <td>%value[credits7]</td>
+      <td>[submission:values:credits7]</td>
     </tr>
   </table>
 
   <h3>Personal Statement</h3>
 
-  <p>%value[personal_statement]</p>
+  <p>[submission:values:personal_statement]</p>
   <!-- END EMAIL CONTENT -->
