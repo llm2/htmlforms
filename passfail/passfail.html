@@ -1,4 +1,4 @@
-<div id="formhermes">
+        <div id="formhermes">
   <div id="formContainer">
     <form class="webform-client-form" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/5" method="post" id="autoform" accept-charset="UTF-8">
       <div class="section text">
@@ -26,13 +26,7 @@
         </div>
       </div>
       <div class="section text">
-        <div class="halfSize">
-          <label for="submitted[phone]">Telephone </label>
-          <input type="text" id="submitted[phone]" name="submitted[phone]" value="" size="60" maxlength="10" />
-        </div>
-      </div>
-      <div class="section text">
-        <div class="halfSize">
+        <div class="fullSize">
           <label for="submitted[studyabroad]">If you are currently studying abroad, please list the study abroad site</label>
           <input type="text" id="submitted[studyabroad]" name="submitted[studyabroad]" value="" size="60" maxlength="128" />
         </div>
@@ -67,7 +61,7 @@
           </span> </div>
       </div>
       <hr/>
-      
+       
             <p><strong>Example</strong></p>
       <div class="section text">
         <div class="quarterSize">
@@ -75,14 +69,14 @@
           <input type="text" id="course_ex" name="course_ex" size="30" maxlength="128" value="IDSEM-UG 1250" disabled="disabled"/>
         </div>
       </div>
-
+ 
             <div class="section text">
         <div class="quarterSize">
           <label for="course_titleex">Section</label>
           <input type="text" id="course_titleex" name="course_titleex" size="60" maxlength="128" value="001" disabled="disabled"/>
         </div>
       </div>      
-      
+       
       <div class="section text">
         <div class="halfSize">
           <label for="course_titleex">Course Title </label>
@@ -90,7 +84,7 @@
         </div>
       </div>
             <p><strong>Your Course</strong></p>
-
+ 
       <div class="section text">
         <div class="quarterSize">
           <label for="submitted[coursenumber]">Course Number </label>
@@ -109,13 +103,47 @@
           <input type="text" id="submitted[coursetitle]" name="submitted[coursetitle]" value="" size="60" maxlength="128" class="required"/>
         </div>
       </div>
+       
+ <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[semester]">Does this course fulfill the Gallatin Foundation Requirement ? <p>Courses taken pass/fail do not count toward the Gallatin foundation requirement. If this course fulfills the foundation requirement and you elect to take it pass/fail by submitting this form, you will need to take another course to satisfy the requirement.</p> </label>
+          <span>
+          <input name="submitted[fulfill_req]" type="radio" id="submitted[fulfill_req]" value="file" class="choice" checked="checked"/>
+          <label for="submitted[fulfill_req]">Yes</label>
+          </span> <span>
+          <input name="submitted[fulfill_req]" type="radio" id="submitted[action]" value="revoke" class="choice"/>
+          <label for="submitted[fulfill_req]">No</label>
+          </span>
+
+        </div>
+      </div>
+            <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[semester]">Does this course fulfill your minor requirement? <p> Courses taken pass/fail may not count towards your minor requirement. Students should consult with the department offering the minor for details.<br><br><br></p> </label>
+           <span>
+          <input name="submitted[fulfill_minor]" type="radio" id="submitted[fulfill_minor]" value="file" class="choice" checked="checked"/>
+          <label for="submitted[fulfill_minor]">Yes</label>
+          </span> <span>
+          <input name="submitted[fulfill_minor]" type="radio" id="submitted[fulfill_minor]" value="revoke" class="choice"/>
+          <label for="submitted[fulfill_minor]">No</label>
+          </span>
+        </div>
+      </div>
+
+         <div class="section text">
+        <div class="fullSize">
+          <label for="submitted[prev_semlist]">If you have filed a pass/fail grade option in a previous semester, please list the semester(s).</label>
+          <input type="text" id="submitted[prev_semlist]" name="submitted[prev_semlist]" value="" size="60" maxlength="128" />
+        </div>
+      </div>
+ 
       <input type="hidden" name="form_id" value="webform_client_form_5" />
       <div class="section end">
         <div class="fullSize">
           <button type="submit"
-		id="submit"
-		name="op"
-		value="Submit">Submit </button>
+        id="submit"
+        name="op"
+        value="Submit">Submit </button>
         </div>
       </div>
     </form>
