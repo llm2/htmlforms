@@ -1,4 +1,4 @@
-        <div id="formhermes">
+<div id="formhermes">
   <div id="formContainer">
     <form class="webform-client-form" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/5" method="post" id="autoform" accept-charset="UTF-8">
       <div class="section text">
@@ -25,12 +25,7 @@
           <input type="text" id="submitted[uid]" name="submitted[uid]" value="N" size="60" maxlength="9" />
         </div>
       </div>
-      <div class="section text">
-        <div class="fullSize">
-          <label for="submitted[studyabroad]">If you are currently studying abroad, please list the study abroad site</label>
-          <input type="text" id="submitted[studyabroad]" name="submitted[studyabroad]" value="" size="60" maxlength="128" />
-        </div>
-      </div>
+      
       <div class="section text">
         <div class="halfSize">
           <label for="submitted[year]">Year of Filing </label>
@@ -45,6 +40,12 @@
             <option value="spring">Spring</option>
             <option value="summer">Summer</option>
           </select>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="fullSize">
+          <label for="submitted[studyabroad]">If you are currently studying abroad, please list the study abroad site</label>
+          <input type="text" id="submitted[studyabroad]" name="submitted[studyabroad]" value="" size="60" maxlength="128" />
         </div>
       </div>
       <hr/>
@@ -62,7 +63,7 @@
       </div>
       <hr/>
        
-            <p><strong>Example</strong></p>
+            <h3>Example</h3>
       <div class="section text">
         <div class="quarterSize">
           <label for="course_ex">Course No.</label>
@@ -83,7 +84,7 @@
           <input type="text" id="course_titleex" name="course_titleex" size="60" maxlength="128" value="Mysticism" disabled="disabled"/>
         </div>
       </div>
-            <p><strong>Your Course</strong></p>
+            <h3>Your Course</h3>
  
       <div class="section text">
         <div class="quarterSize">
@@ -103,32 +104,33 @@
           <input type="text" id="submitted[coursetitle]" name="submitted[coursetitle]" value="" size="60" maxlength="128" class="required"/>
         </div>
       </div>
-       
+       <h3>Requirements</h3>
  <div class="section text">
-        <div class="halfSize">
-          <label for="submitted[semester]">Does this course fulfill the Gallatin Foundation Requirement ? <p>Courses taken pass/fail do not count toward the Gallatin foundation requirement. If this course fulfills the foundation requirement and you elect to take it pass/fail by submitting this form, you will need to take another course to satisfy the requirement.</p> </label>
+        <div class="fullSize">
+          <p><strong>Does this course fulfill the Gallatin Foundation Requirement?</strong> Courses taken pass/fail do not count toward the Gallatin foundation requirement. If this course fulfills the foundation requirement and you elect to take it pass/fail by submitting this form, you will need to take another course to satisfy the requirement.</p>
           <span>
-          <input name="submitted[fulfill_req]" type="radio" id="submitted[fulfill_req]" value="file" class="choice" checked="checked"/>
+          <input name="submitted[fulfill_req]" type="radio" id="submitted[fulfill_req]" value="yes" class="choice"/>
           <label for="submitted[fulfill_req]">Yes</label>
-          </span> <span>
-          <input name="submitted[fulfill_req]" type="radio" id="submitted[action]" value="revoke" class="choice"/>
+          </span> 
+          <span>
+          <input name="submitted[fulfill_req]" type="radio" id="submitted[action]" value="no" class="choice"/>
           <label for="submitted[fulfill_req]">No</label>
           </span>
 
         </div>
       </div>
-            <div class="section text">
-        <div class="halfSize">
-          <label for="submitted[semester]">Does this course fulfill your minor requirement? <p> Courses taken pass/fail may not count towards your minor requirement. Students should consult with the department offering the minor for details.<br><br><br></p> </label>
+             <div class="section text">
+        <div class="fullSize">
+          <p><strong>Does this course fulfill your minor requirement?</strong> Courses taken pass/fail may not count towards your minor requirement. Students should consult with the department offering the minor for details.</p>
            <span>
-          <input name="submitted[fulfill_minor]" type="radio" id="submitted[fulfill_minor]" value="file" class="choice" checked="checked"/>
+          <input name="submitted[fulfill_minor]" type="radio" id="submitted[fulfill_minor]" value="yes" class="choice" />
           <label for="submitted[fulfill_minor]">Yes</label>
           </span> <span>
-          <input name="submitted[fulfill_minor]" type="radio" id="submitted[fulfill_minor]" value="revoke" class="choice"/>
+          <input name="submitted[fulfill_minor]" type="radio" id="submitted[fulfill_minor]" value="no" class="choice"/>
           <label for="submitted[fulfill_minor]">No</label>
           </span>
         </div>
-      </div>
+      </div> 
 
          <div class="section text">
         <div class="fullSize">
