@@ -4,32 +4,32 @@
       <div class="section text">
         <div class="halfSize">
           <label for="submitted[first_name]">First Name </label>
-          <input type="text" id="submitted[first_name]" name="submitted[first_name]" value="" size="60" maxlength="128" class="name"/>
+          <input type="text" id="submitted[first_name]" name="submitted[first_name]" value="" size="60" maxlength="128" required title="Please enter your First Name"/>
           <span class="first_name-msgContainer"></span></div>
       </div>
       <div class="section text">
         <div class="halfSize">
           <label for="submitted[last_name]">Last Name </label>
-          <input type="text" id="submitted[last_name]" name="submitted[last_name]" value="" size="60" maxlength="128"  class="name"/>
+          <input type="text" id="submitted[last_name]" name="submitted[last_name]" value="" size="60" maxlength="128" required title="Please enter your Last Name"/>
           <span class="last_name-msgContainer"></span> </div>
       </div>
       <div class="section text">
         <div class="halfSize">
           <label for="submitted[netid]">NetID </label>
-          <input type="text" id="submitted[netid]" name="submitted[netid]" value="" size="60" maxlength="128" class="netid"/>
+          <input type="text" id="submitted[netid]" name="submitted[netid]" value="" size="60" maxlength="128" required pattern="[a-zA-Z]+\d+" title="The NetID is a combination of your initials and a few random numbers, e.g., aqe123"/>
           <span class="netid-msgContainer"></span></div>
       </div>
       <div class="section text">
         <div class="halfSize">
           <label for="submitted[uid]">University ID </label>
-          <input type="text" id="submitted[uid]" name="submitted[uid]" value="N" size="60" maxlength="9" />
+          <input type="text" id="submitted[uid]" name="submitted[uid]" value="N" size="60" maxlength="9" required pattern="[N][0-9]{8}" title="The University ID begins with N and is followed by 8 digits"/>
         </div>
       </div>
       
       <div class="section text">
         <div class="halfSize">
           <label for="submitted[year]">Year of Filing </label>
-          <input type="text" id="submitted[year]" name="submitted[year]" value="" size="60" maxlength="128" class="required"/>
+          <input type="text" id="submitted[year]" name="submitted[year]" value="" size="60" maxlength="128" required pattern="[0-9]{4}" title="Please enter a valid Year"/>
         <span class="year-msgContainer"></span></div>
       </div>
       <div class="section text">
@@ -89,19 +89,19 @@
       <div class="section text">
         <div class="quarterSize">
           <label for="submitted[coursenumber]">Course Number </label>
-          <input type="text" id="submitted[coursenumber]" name="submitted[coursenumber]" value="" size="60" maxlength="128" required pattern="[a-zA-Z\-]+\s*\d+" title="Please enter a valid course number."/>
+          <input type="text" id="submitted[coursenumber]" name="submitted[coursenumber]" value="" size="60" maxlength="128" required pattern="[a-zA-Z\-]+\s*\d+" title="Please enter a valid course number"/>
         </div>
       </div>
       <div class="section text">
         <div class="quarterSize">
           <label for="submitted[section]">Section </label>
-          <input type="text" id="submitted[section]" name="submitted[section]" value="001" size="60" maxlength="128" class="required"/>
+          <input type="text" id="submitted[section]" name="submitted[section]" value="001" size="60" maxlength="128" required/>
         </div>
       </div>
       <div class="section text">
         <div class="halfSize">
           <label for="submitted[coursetitle]">Course Title </label>
-          <input type="text" id="submitted[coursetitle]" name="submitted[coursetitle]" value="" size="60" maxlength="128" class="required"/>
+          <input type="text" id="submitted[coursetitle]" name="submitted[coursetitle]" value="" size="60" maxlength="128" required/>
         </div>
       </div>
        <h3>Requirements</h3>
@@ -109,11 +109,11 @@
         <div class="fullSize">
           <p><strong>Does this course fulfill the Gallatin Foundation Requirement?</strong> Courses taken pass/fail do not count toward the Gallatin foundation requirement. If this course fulfills the foundation requirement and you elect to take it pass/fail by submitting this form, you will need to take another course to satisfy the requirement.</p>
           <span>
-          <input name="submitted[fulfill_req]" type="radio" id="submitted[fulfill_req]" value="yes" class="choice"/>
+          <input name="submitted[fulfill_req]" type="radio" id="submitted[fulfill_req]" value="yes" required/>
           <label for="submitted[fulfill_req]">Yes</label>
           </span> 
           <span>
-          <input name="submitted[fulfill_req]" type="radio" id="submitted[action]" value="no" class="choice"/>
+          <input name="submitted[fulfill_req]" type="radio" id="submitted[action]" value="no" />
           <label for="submitted[fulfill_req]">No</label>
           </span>
 
@@ -123,10 +123,10 @@
         <div class="fullSize">
           <p><strong>Does this course fulfill your minor requirement?</strong> Courses taken pass/fail may not count towards your minor requirement. Students should consult with the department offering the minor for details.</p>
            <span>
-          <input name="submitted[fulfill_minor]" type="radio" id="submitted[fulfill_minor]" value="yes" class="choice" />
+          <input name="submitted[fulfill_minor]" type="radio" id="submitted[fulfill_minor]" value="yes" required />
           <label for="submitted[fulfill_minor]">Yes</label>
           </span> <span>
-          <input name="submitted[fulfill_minor]" type="radio" id="submitted[fulfill_minor]" value="no" class="choice"/>
+          <input name="submitted[fulfill_minor]" type="radio" id="submitted[fulfill_minor]" value="no"/>
           <label for="submitted[fulfill_minor]">No</label>
           </span>
         </div>
