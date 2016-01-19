@@ -374,9 +374,23 @@
         </div>
       </div>
             <div class="section text">
+        <div class="fullSize">
+          <label for="submitted[adviser_name]">Adviser Name</label>
+          <input type="text" id="submitted[adviser_name]" name="submitted[adviser_name]" size="60" />
+        </div>
+      </div>
+            <div class="section text">
         <div class="halfSize">
           <label for="submitted[adviser_e_mail]">Adviser E-mail </label>
           <input class="email" type="email" id="submitted[adviser_e_mail]" name="submitted[adviser_e_mail]" size="60" />
+          <p>The deadline for recommendations is April 1st for May graduation candidates, and December 1st for January graduation candidates. Applications with late or missing recommendations will not be considered.</p>
+        </div>
+      </div>
+      <div class="section checkbox">
+        <div class="fullSize">
+          <span><input type="checkbox" id="submitted[acknowledge]" name="submitted[acknowledge]" value="Yes" class="required"/><label for="submitted[acknowledge]">I acknowledge that my adviser listed on this application must submit a recommendation to Rae Georges (<a href="mailtto:rae.georges@nyu.edu">rae.georges@nyu.edu</a>) by email.</label>
+            <span class="acknowledge-msgContainer"></span>
+          </span>
         </div>
       </div>
             <div class="section text">
