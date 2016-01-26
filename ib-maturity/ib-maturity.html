@@ -1,29 +1,37 @@
-<div id="formhermes">
+
+ <div id="formhermes">
   <div id="formContainer">
     <form class="autoform" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/227" method="post" id="autoform" accept-charset="UTF-8">
-      <div class="section text">
+   
+   	<div class="section text">
         <div class="halfSize">
           <label for="submitted[first_name]">First Name</label>
           <input type="text" id="submitted[first_name]" name="submitted[first_name]" value="" size="60" maxlength="128" class="name"/>
-          <span class="first_name-msgContainer"></span></div>
+          <span class="first_name-msgContainer"></span>
+		  </div>
       </div>
-      <div class="section text">
+
+ 
+<div class="section text">
         <div class="halfSize">
           <label for="submitted[last_name]">Last Name</label>
-          <input type="text" id="submitted[last_name]" name="submitted[last_name]" value="" size="60" maxlength="128" class="name"/>
-          <span class="last_name-msgContainer"></span></div>
+          <input type="text" id="submitted[last_name]" name="submitted[last_name]" value="" size="60" maxlength="128" class="last"/>
+          <span class="last_name-msgContainer"></span>
+		  </div>
       </div>
       <div class="section text">
         <div class="halfSize">
           <label for="submitted[netid]">NetID (Example: abc123)</label>
           <input type="text" id="submitted[netid]" name="submitted[netid]" value="" size="60" maxlength="128" class="netid"/>
-          <span class="netid-msgContainer"></span></div>
+          <span class="netid-msgContainer"></span>
       </div>
-      <div class="section text">
+      </div>
+     <div class="section text">
         <div class="halfSize">
           <label for="submitted[uid]">University ID</label>
           <input type="text" id="submitted[uid]" name="submitted[uid]" value="N" size="60" maxlength="128" class="uid"/>
-          <span class="uid-msgContainer"></span></div>
+          <span class="uid-msgContainer"></span>
+      </div>
       </div>
       <div class="section checkbox">
         <div class="halfSize">
@@ -35,7 +43,7 @@
           </select>
           <span class="grad_month-msgContainer"></span> </div>
       </div>
-      <div class="section checkbox">
+       <div class="section checkbox">
         <div class="halfSize">
           <label for="submitted[grad_year]">Expected Graduation Year</label>
           <select name="submitted[grad_year]" id="submitted[grad_year]" class="requiredselect" >
@@ -50,74 +58,91 @@
           </select>
           <span class="grad_year-msgContainer"></span> </div>
       </div>
-      <div class="section text">
+
+       <div class="section text">
         <div class="fullSize">
           <label for="submitted[cumulative_earned_credits]">Cumulative Earned Credits</label>
           <input type="text" id="submitted[cumulative_earned_credits]" name="submitted[cumulative_earned_credits]" value="" size="60" maxlength="128" class="required">
           <span class="cumulative_earned_credits-msgContainer"></span></div>
       </div>
-      <div class="section text">
+
+       <div class="section text">
         <div class="halfSize">
           <label for="submitted[first_name_adviser]">Adviser's Name</label>
           <input type="text" id="submitted[first_name_adviser]" name="submitted[first_name_adviser]" value="" size="60" maxlength="128" class="name"/>
           <span class="first_name_adviser-msgContainer"></span></div>
       </div>
-      <div class="section text">
+      
+       <div class="section text">
         <div class="halfSize">
           <label for="submitted[adviser_email]">Adviser E-mail</label>
           <input type="text" id="submitted[adviser_email]" name="submitted[adviser_email]" value="" size="60" maxlength="128" class="email"/>
           <span class="adviser_email-msgContainer"></span></div>
       </div>
-      <hr/>
-      <div class="section radio">
-        <div class="fullsize">
-          <label for="submitted[funding]">Are you receiving financial aid (scholarships, grants, loans, etc.)?</label>
-          
-          <span class="options">
-          <input name="submitted[funding]" id="submitted[funding]" value="Yes" type="radio" checked="checked"/>
-          <label for="funding">Yes</label>
-          
+
+
+<div class="section radio">
+      <div class="fullSize">
+        <label for="submitted[funding]">Are you receiving financial aid (scholarships, grants, loans, etc.)?</label>
+        <br />
+        <span class = "options">
+          <input name="submitted[funding]" value="Yes" type="radio" checked="checked"/>
+          <label for="submitted[funding]">Yes</label>
+          </span>
+          <span>
           <input name="submitted[funding]" value="No" class="required" type="radio"/>
-          <label for="funding">No</label>
-          </span> <span class="funding-msgContainer"></span> </div>
+          <label for="submitted[funding]">No</label>
+          </span>
+         <span class="submitted[funding]-msgContainer"></span>
       </div>
-      <div class="section radio">
-        <div class="fullsize">
-          <label for="submitted[rationale]">Have you submitted the rationale?</label>
-          <br />
-          <span class="options">
-          <input name="submitted[rationale]" id="submitted[rationale]" value="Yes" type="radio" checked="checked"/>
+    </div>
+    <div class="section radio">
+      <div class="fullSize">
+        <label for="submitted[rationale]">Have you submitted the rationale?</label>
+        <br />
+        <span class = "options">
+          <input name="submitted[rationale]" value="Yes" type="radio" checked="checked"/>
           <label for="submitted[rationale]">Yes</label>
-          </span><span>
+          </span>
+          <span>
           <input name="submitted[rationale]" value="No" class="required" type="radio"/>
           <label for="submitted[rationale]">No</label>
-          </span><span class="rationale-msgContainer"></span></span> </div>
+          </span>
+         <span class="submitted[rationale]-msgContainer"></span>
       </div>
-      <div class="section radio">
-        <div class="fullSize">
-          <label for="submitted[iapc]">Have you completed the IAPC?</label>
-          <br />
-          <span class="options">
-          <input name="submitted[iapc]" id="submitted[iapc]" value="Yes" type="radio" checked="checked"/>
+    </div>
+    <div class="section radio">
+      <div class="fullSize">
+        <label for="submitted[iapc]">Have you completed the IAPC?</label>
+        <br />
+        <span class = "options">
+          <input name="submitted[iapc]" value="Yes" type="radio" checked="checked"/>
           <label for="submitted[iapc]">Yes</label>
-          </span><span>
+          </span>
+          <span>
           <input name="submitted[iapc]" value="No" class="required" type="radio"/>
           <label for="submitted[iapc]">No</label>
-          </span><span class="iapc-msgContainer"></span></div>
+          </span>
+         <span class="submitted[iapc]-msgContainer"></span>
       </div>
-      <div class="section radio">
-        <div class="fullSize">
-          <label for="submitted[colloquium]">Have you registered for the colloquium?</label>
-          <br />
-          <span class="options">
-          <input name="submitted[colloquium]" id="submitted[colloquium]" value="Yes" type="radio" checked="checked"/>
+    </div>
+    <div class="section radio">
+      <div class="fullSize">
+        <label for="submitted[colloquium]">Have you registered for the colloquium?</label>
+        <br />
+        <span class = "options">
+          <input name="submitted[colloquium]" value="Yes" type="radio" checked="checked"/>
           <label for="submitted[colloquium]">Yes</label>
-          </span><span>
+          </span>
+          <span>
           <input name="submitted[colloquium]" value="No" class="required" type="radio"/>
           <label for="submitted[colloquium]">No</label>
-          </span><span class="colloquium-msgContainer"></span></div>
+          </span>
+         <span class="submitted[colloquium]-msgContainer"></span>
       </div>
-      <hr>
+    </div>
+     
+      <hr/>
       <h3>IB Credit Request</h3>
       <p><i>Credit granted for higher level examinations only</i></p>
       <table border="0" width="100%" cellpadding="10px">
@@ -427,7 +452,8 @@
 		name="reset"
 		value="Reset">Reset</button>
         </div>
-      </div>
+      </div> 
+
     </form>
   </div>
 </div>
