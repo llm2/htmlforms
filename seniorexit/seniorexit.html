@@ -93,14 +93,18 @@ function checkCookie() {
         <TD><input type="radio" name="submitted[internship_opportunities]" value="did not meet" /></TD>
       </TR>
     </table>
+
+    <hr/>
+
     <div class="section text">
-      <div class="halfSize">
-        <label for="submitted[semesters]">How many semesters were you enrolled at Gallatin? </label>
-        <input type="text" id="submitted[semesters]" name="submitted[semesters]" value="" size="60" maxlength="128" class="form-text" />
+      <div class="fullSize">
+        <label for="submitted[semesters]">How many semesters were you enrolled at Gallatin?  </label>
+        <input type="text" id="submitted[semesters]" name="submitted[semesters]" value="" size="60" maxlength="128"/>
       </div>
     </div>
+    
     <div class="section text">
-      <div class="halfSize">
+      <div class="fullSize">
         <label for="submitted[degree]">Degree status</label>
         <select name="submitted[degree]" id="submitted[degree]" class="requiredselect">
           <option value="">Select</option>
@@ -109,8 +113,10 @@ function checkCookie() {
         </select>
       </div>
     </div>
-    <hr />
-    <div class="section text">
+
+    <hr/>
+     
+        <div class="section text">
       <div class="halfSize">
         <label for="submitted[study_abroad]">Did you study abroad? </label>
         <select name="submitted[study_abroad]" id="submitted[study_abroad]" class="requiredselect">
@@ -139,7 +145,7 @@ function checkCookie() {
           <option value="Washington">Washington, DC</option>
           <option value="Other">Other (please specify below)</option>
         </select>
-        <input type="text" id="submitted[other_location]" name="submitted[other_location]" value="" size="60" maxlength="128"/>
+       
       </div>
     </div>
     <hr />
@@ -165,18 +171,18 @@ function checkCookie() {
           <option value="Law">Law</option>
           <option value="Other">Other (please specify below)</option>
         </select>
-        <input type="text" id="submitted[other_programs]" name="submitted[other_programs]" value="" size="60" maxlength="128"/>
+       
       </div>
     </div>
     <div class="section text">
-      <div class="halfSize">
+      <div class="fullSize">
         <label for="submitted[grad_schools]">If applicable, please list the graduate or professional schools you have been accepted to</label>
         <input type="text" id="submitted[grad_schools]" name="submitted[grad_schools]" value="" size="60" maxlength="128"/>
       </div>
     </div>
     <hr />
     <div class="section text">
-      <div class="halfSize">
+      <div class="fullSize">
         <label for="submitted[work_field]">What field do you plan to work in after graduation? </label>
         <select name="submitted[work_field]" id="submitted[work_field]" class="select">
           <option value="">Select</option>
@@ -189,7 +195,7 @@ function checkCookie() {
           <option value="Media">Media</option>
           <option value="Other">Other (please specify below)</option>
         </select>
-        <input type="text" id="submitted[other_fields]" name="submitted[other_fields]" value="" size="60" maxlength="128" class="form-text" />
+        
       </div>
     </div>
     <hr />
@@ -233,7 +239,7 @@ function checkCookie() {
       </div>
     </div>
     <div class="section text">
-      <div class="halfSize">
+      <div class="fullSize">
         <label for="submitted[name_study]">Name of internship organization or independent study? </label>
         <input type="text" id="submitted[name_study]" name="submitted[name_study]" value="" size="60" maxlength="128"/>
       </div>
