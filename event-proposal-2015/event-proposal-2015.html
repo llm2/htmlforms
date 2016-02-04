@@ -4,29 +4,29 @@
     <div class="section text">
       <div class="halfSize">
         <label for="submitted[first_name]">Requester First Name</label>
-        <input name="submitted[first_name]" type="text" id="submitted[first_name]" class="required" maxlength="128"/>
+        <input name="submitted[first_name]" type="text" id="submitted[first_name]" class="name" maxlength="128"/>
         <span class="submitted[first_name]-msgContainer"></span> 
       </div>
     </div>
 
    <div class="section text">
       <div class="halfSize">
-        <label for="submitted[last_name]">Last Name</label>
-        <input name="submitted[last_name]" type="text" id="submitted[last_name]" class="required" maxlength="128"/>
+        <label for="submitted[last_name]">Requester Last Name</label>
+        <input name="submitted[last_name]" type="text" id="submitted[last_name]" class="name" maxlength="128"/>
         <span class="submitted[last_name]-msgContainer"></span>
       </div>
     </div>
   
     <div class="section text">
-      <div class="fullSize">
+      <div class="halfSize">
         <label for="submitted[netid]">NetID</label>
-        <input name="submitted[netid]" type="text" id="submitted[netid]" class="required" maxlength="128"/>
+        <input name="submitted[netid]" type="text" id="submitted[netid]" class="netid" maxlength="128"/>
         <span class="submitted[netid]-msgContainer"></span> 
       </div>
     </div> 
 
     <div class="section text">
-      <div class="halfSize">
+      <div class="fullSize">
         <label for="submitted[event_title]">Event Title</label>
         <input type="text" name="submitted[event_title]" id="submitted[event_title]" class="required" maxlength="128"/>
         <span class="submitted[event_title]-msgContainer"></span> 
@@ -45,6 +45,7 @@
     <div class="section text">
       <div class="fullSize">
         <label for="submitted[faculty_sponsor]">Full-time Gallatin faculty or administrator sponsor</label>
+        <p>All events must be sponsored by a full time Gallatin faculty member or administrator, a Gallatin class or Gallatin club.  </p>
         <input name="submitted[faculty_sponsor]" type="text" id="submitted[faculty_sponsor]" class="required" maxlength="128"/>
         <span class="submitted[faculty_sponsor]-msgContainer"></span> 
       </div>
@@ -56,9 +57,8 @@
         <span class="submitted[faculty_contact]-msgContainer"></span> 
       </div>
     </div>
-    <hr/>
-    <p> Desired Event Dates and Times </p>
-<div class="section text">
+    <h2>Desired Event Dates and Times</h2>
+  <div class="section text">
       <div class="halfSize">
         <div id="commentsdiv">
           <label for="submitted[approx]"></label>
@@ -155,7 +155,8 @@
         </div>
       </div>
     </div>
-    <hr/>
+
+    <h2>Event Details</h2>
     
     <div class="section text">
       <div class="halfSize">
@@ -208,8 +209,6 @@
 
     <div class="section text">
       <div class="fullSize">
-
-
         <label for="submitted[target]">Target audience (i.e. open to the public, Gallatin students, faculty, staff, all NYU Alumni, external groups etc.)</label>
         <input name="submitted[target]" type="text" id="first" maxlength="128"/>
         <span class="submitted[target]-msgContainer"></span> 
@@ -265,17 +264,15 @@
 
     <div class="section radio">
       <div class="fullSize">
-        <label for="submitted[calendar]">Will you want this on the Gallatin Online Events calendar?</label>
+        <label for="submitted[calendar]">Do you want the event added to the Gallatin online events calendar?</label>
         <br />
         <span class = "options">
           <input name="submitted[calendar]" value="Yes" type="radio" checked="checked"/>
           <label for="submitted[calendar]">Yes</label>
-          </span>
-          <span>
           <input name="submitted[calendar]" value="No" class="required" type="radio"/>
           <label for="submitted[calendar]">No</label>
           </span>
-      <span class="submitted[calendar]-msgContainer"></span> 
+        <span class="submitted[calendar]-msgContainer"></span> 
       </div>
     </div>
 
@@ -286,8 +283,6 @@
         <span class = "options">
           <input name="submitted[rsvp]" value="Yes" type="radio" checked="checked"/>
           <label for="submitted[rsvp]">Yes</label>
-          </span>
-          <span>
           <input name="submitted[rsvp]" value="No" class="required" type="radio"/>
           <label for="submitted[rsvp]">No</label>
           </span>
@@ -302,8 +297,6 @@
          <span class = "options">
           <input name="submitted[catering]" value="Yes" type="radio" checked="checked"/>
           <label for="submitted[catering]">Yes</label>
-          </span>
-          <span>
           <input name="submitted[catering]" value="No" class="required" type="radio"/>
           <label for="submitted[catering]">No</label>
           </span>
@@ -318,8 +311,6 @@
           <span class = "options">
           <input name="submitted[catering_options]" value="Yes" type="radio" checked="checked"/>
           <label for="submitted[catering_options]">Yes</label>
-          </span>
-          <span>
            <input name="submitted[catering_options]" value="No" class="required" type="radio"/>
           <label for="submitted[catering_options]">No</label>
           </span>
@@ -333,8 +324,6 @@
           <span class = "options">
           <input name="submitted[alcoholic_beverages]" value="Yes" type="radio" checked="checked"/>
           <label for="submitted[alcoholic_beverages]">Yes</label>
-          </span>
-          <span>
            <input name="submitted[alcoholic_beverages]" value="No" class="required" type="radio"/>
           <label for="submitted[alcoholic_beverages]">No</label>
           </span>
@@ -349,9 +338,6 @@
           <span class = "options">
           <input name="submitted[space_layout]" value="Yes" type="radio" checked="checked"/>
           <label for="submitted[space_layout]">Yes</label>
-          </span>
-      
-          <span>
            <input name="submitted[space_layout]" value="No" class="required" type="radio"/>
           <label for="submitted[space_layout]">No</label>
           
