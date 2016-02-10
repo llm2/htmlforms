@@ -1,271 +1,261 @@
-<div id="formContainer">
-
-<form name="thesis" method="post" action="https://www.nyu.edu/cgi-bin/cgiwrap/llm2/formprocessorpro2.cgi" enctype="multipart/form-data" class="autoform" id="autoform">
- <input type="hidden" name="base_path" value="/www/sites/nyu.edu/htdocs/pages/gallatin/current/forms/environmental-studies-partnership" />
-<hr />
+ <div id="formhermes">
+  <div id="formContainer">
+    <form class="autoform" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/610" method="post" id="autoform" accept-charset="UTF-8">
+   
 <div class="section text">
   <div class="halfSize">
     <p>
-      <label for="first_name">First Name</label>
-      <input name="first_name" type="text" id="first_name" class="first_name" />
+      <label for="submitted[first_name]">First Name</label>
+      <input type="text" id="submitted[first_name]" name="submitted[first_name]" value="" size="60" maxlength="128" class="name"/>
       <span class="first_name-msgContainer"></span></p>
   </div>
 </div>
 <div class="section text">
   <div class="halfSize">
     <p>
-      <label for="last_name">Last Name</label>
-      <input name="last_name" type="text" id="last_name" class="last_name" />
+      <label for="submitted[last_name]">Last Name</label>
+      <input type="text" id="submitted[last_name]" name="submitted[last_name]" value="" size="60" maxlength="128" class="last"/>
       <span class="last_name-msgContainer"></span></p>
   </div>
 </div>
 <div class="section text">
   <div class="halfSize">
     <p>
-      <label for="nnumber">University ID</label>
-      <input name="nnumber" type="text" id="nnumber" value="N" class="uid" />
-      <span class="nnumber-msgContainer"></span></p>
+      <label for="submitted[uid]">University ID</label>
+      <input type="text" id="submitted[uid]" name="submitted[uid]" value="N" size="60" maxlength="128" class="uid"/>
+      <span class="uid-msgContainer"></span></p>
   </div>
 </div>
 <div class="section text">
   <div class="halfSize">
     <p>
-      <label for="netid">Net ID</label>
-      <input name="netid" type="text" id="netid" class="netid" />
+      <label for="submitted[netid]">Net ID</label>
+      <input type="text" id="submitted[netid]" name="submitted[netid]" value="" size="60" maxlength="128" class="netid"/>
       <span class="netid-msgContainer"></span></p>
   </div>
 </div>
 <div class="section text">
   <div class="halfSize">
     <p>
-      <label for="Telephone">Phone</label>
-      <input name="Telephone" type="text" id="Telephone" class="Telephone" />
+      <label for="submitted[Telephone]">Phone</label>
+      <input type="text" id="submitted[Telephone]" name="submitted[Telephone]" value="" size="60" maxlength="128"/> 
       <span class="Telephone-msgContainer"></span></p>
   </div>
 </div>
 <div class="section text">
   <div class="halfSize">
     <p>
-      <label for="email">Email</label>
-      <input name="email" type="text" id="email" class="email" />
-      <span class="email-msgContainer"></span></p>
+      <label for="submitted[faculty_adviser]">Primary Faculty Advisor</label>
+      <input name="submitted[faculty_adviser]" type="text" id="submitted[faculty_adviser]" />
+      <span class="faculty_adviser-msgContainer"></span></p>
   </div>
 </div>
-<div class="section checkbox">
+<!-- <div class="section text">
   <div class="halfSize">
     <p>
-      <label for="grad_month">Expected Graduation Month</label>
-    </p>
-    <p>
-      <select name="grad_month" id="grad_month">
-        <option name="Jan" id="January">January</option>
-        <option name="May" id="May">May</option>
-        <option name="Sept" id="September">September</option>
+      <label for="email">Email</label>
+     <input type="text" id="submitted[Telephone]" name="submitted[T]" value="" size="60" maxlength="128"/>
+      <span class="email-msgContainer"></span></p>
+  </div>
+</div> -->
+<div class="section text">
+  <div class="halfSize">
+
+      <label for="submitted[grad_month]">Expected Graduation Month</label>
+      <select name="submitted[grad_month]" id="submitted[grad_month]">
+        <option value="January">January</option>
+        <option value="May">May</option>
+        <option value="September">September</option>
       </select>
-    </p>
     <span class="grad_month-msgContainer"></span> </div>
 </div>
-<div class="section checkbox">
+
+<div class="section text">
   <div class="halfSize">
-    <p>
-      <label for="grad_year">Expected Graduation Year</label>
-    </p>
-    <p>
-      <select name="grad_year" id="grad_year" class="requiredselect" >
-        <option value="2011" id="2011">2011</option>
-        <option value="2012" id="2011">2012</option>
-        <option value="2013" id="2011">2013</option>
-        <option value="2014" id="2011">2014</option>
-        <option value="2015" id="2011">2015</option>
-        <option value="2016" id="2011">2016</option>
-      </select>
-    </p>
+      <label for="submitted[grad_year]">Expected Graduation Year</label>
+      <input type="text" id="submitted[grad_year]" name="submitted[grad_year]" value="" size="60" maxlength="128"/> 
     <span class="grad_year-msgContainer"></span></div>
 </div>
 <div class="section radio">
-  <div class="halfSize">
+  <div class="fullSize">
     <p>
-      <label for="class_level">Class Level</label>
+      <label for="submitted[class_level]">Class Level</label>
     </p>
     <span class="options"> <span>
-    <input name="class_level" value="freshmen" type="radio" />
-    <label for="class_level">Freshmen</label>
+    <input name="submitted[class_level]" value="freshmen" type="radio" />
+    <label for="submitted[class_level]">Freshmen</label>
     </span> <span>
-    <input name="class_level" value="sophomore" class="required" type="radio" />
+    <input name="submitted[class_level]" value="sophomore" type="radio" />
     <label for="class_level">Sophomore</label>
     </span> <span>
-    <input name="class_level" value="junior" type="radio" />
-    <label for="class_level">Junior</label>
+    <input name="submitted[class_level]" value="junior" type="radio" />
+    <label for="submitted[class_level]">Junior</label>
     </span> <span>
-    <input name="class_level" value="senior" type="radio" />
-    <label for="class_level">Senior</label>
+    <input name="submitted[class_level]" value="senior" type="radio" />
+    <label for="submitted[class_level]">Senior</label>
     </span></span> <span class="class_level-msgContainer"></span> </div>
 </div>
 <div class="section text">
   <div class="halfSize">
     <p>
-      <label for="academic_concentration">Academic Concentration</label>
-      <input name="academic_concentration" type="text" id="academic_concentration" class="academic_concentration" />
+      <label for="submitted[academic_concentration]">Academic Concentration</label>
+      <input name="submitted[academic_concentration]" type="text" id="submitted[academic_concentration]" />
       <span class="academic_concentration-msgContainer"></span></p>
   </div>
 </div>
-<div class="section text">
-  <div class="halfSize">
-    <p>
-      <label for="faculty_advisor">Primary Faculty Advisor</label>
-      <input name="faculty_advisor" type="text" id="faculty_advisor" class="faculty_advisor" />
-      <span class="faculty_advisor-msgContainer"></span></p>
-  </div>
-</div>
+
 <hr />
 <h3>ACADEMIC PLANNER FOR COMPLETION OF GALLATIN/ES PARTNERSHIP</h3>
 <div class="section text">
   <div class="halfSize">
-    <label for="courseNo"><b>Course Title</b></label>
+    <label for="submitted[courseNo]"><b>Course Title</b></label>
   </div>
 </div>
 <div class="section text">
   <div class="quarterSize">
-    <label for="classNo"><b>Class No.</b></label>
+    <label for="submitted[classNo]"><b>Class No.</b></label>
   </div>
 </div>
 <div class="section text">
   <div class="eighthSize">
-    <label for="completed"><b>Completed </b></label>
+    <label for="submitted[completed]"><b>Completed </b></label>
   </div>
 </div>
 <div class="section text">
   <div class="eighthSize">
-    <label for="semester_year"><b> Semester/Year</b></label>
+    <label for="submitted[semester_year]"><b> Semester/Year</b></label>
   </div>
 </div>
 <div class="section text">
   <div class="halfSize">
-    <label name="courseNo1" id="courseNo1" value="environmental_systems_science" size="50" />
+    <label name="submitted[courseNo1]" id="submitted[courseNo1]" value="environmental_systems_science" size="50" />
     Environmental Systems Science
     </label>
   </div>
 </div>
 <div class="section text">
   <div class="quarterSize">
-    <label name="classNo1" id="classNo1" value="ENVST-UA100" size="50" />
+    <label name="submitted[classNo1]" id="submitted[classNo1]" value="ENVST-UA100" size="50" />
     ENVST-UA 100
     </label>
   </div>
 </div>
 <div class="section text">
   <div class="eighthSize">
-    <input name="completed1" type="checkbox" id="completed1" class="section checkBox" size="50" />
+    <input name="submitted[completed1]" type="checkbox" id="submitted[completed1]" class="section checkBox" size="50" />
   </div>
 </div>
 <div class="section text">
   <div class="eighthSize">
-    <input name="semester_year1" type="text" id="semester_year1" class="text" size="50" />
+    <input name="submitted[semester_year1]" type="text" id="submitted[semester_year1]" class="text" size="50" />
   </div>
 </div>
 <div class="section text">
   <div class="halfSize">
-    <label name="courseNo2" id="courseNo2" value="environment_and_society" size="50" />
+    <label name="submitted[courseNo2]" id="submitted[courseNo2]" value="environment_and_society" size="50" />
     Environment and Society
     </label>
   </div>
 </div>
 <div class="section text">
   <div class="quarterSize">
-    <label name="classNo2" id="classNo2" value="ENVST-UA101" size="50" />
+    <label name="submitted[classNo2]" id="submitted[classNo2]" value="ENVST-UA101" size="50" />
     ENVST-UA 101
     </label>
   </div>
 </div>
 <div class="section text">
   <div class="eighthSize">
-    <input name="completed2" type="checkbox" id="completed2" class="section checkBox" size="50" />
+    <input name="submitted[completed2]" type="checkbox" id="submitted[completed2]" class="section checkBox" size="50" />
   </div>
 </div>
 <div class="section text">
   <div class="eighthSize">
-    <input name="semester_year2" type="text" id="semester_year2" class="text" size="50" />
+    <input name="submitted[semester_year2]" type="text" id="submitted[semester_year2]" class="text" size="50" />
   </div>
 </div>
 <div class="section text">
   <div class="halfSize">
-    <label name="courseNo3" id="courseNo3" value="elective" size="50" />
+    <label name="submitted[courseNo3]" id="submitted[courseNo3]" value="elective" size="50" />
     Elective :
     </label>
   </div>
 </div>
 <div class="section text">
   <div class="quarterSize">
-    <input name="classNo3" type="text" id="classNo3" class="text" size="50" />
+    <input name="submitted[elective1]" type="text" id="submitted[elective1]" class="text" size="50" />
   </div>
 </div>
 <div class="section text">
   <div class="eighthSize">
-    <input name="completed3" type="checkbox" id="completed3" class="section checkBox" size="50" />
+    <input name="submitted[completed3]" type="checkbox" id="submitted[completed3]" class="section checkBox" size="50" />
   </div>
 </div>
 <div class="section text">
   <div class="eighthSize">
-    <input name="semester_year3" type="text" id="semester_year3" class="text" size="50" />
+    <input name="submitted[semester_year3]" type="text" id="submitted[semester_year3]" class="text" size="50" />
   </div>
 </div>
 <div class="section text">
   <div class="halfSize">
-    <label name="courseNo4" id="courseNo4" value="elective" size="50" />
+    <label name="submitted[courseNo4]" id="submitted[courseNo4]" value="elective" size="50" />
     Elective :
     </label>
   </div>
 </div>
 <div class="section text">
   <div class="quarterSize">
-    <input name="classNo4" type="text" id="classNo4" class="text" size="50" />
+    <input name="submitted[elective2]" type="text" id="submitted[elective2]" class="text" size="50" />
   </div>
 </div>
 <div class="section text">
   <div class="eighthSize">
-    <input name="completed4" type="checkbox" id="completed4" class="section checkBox" size="50" />
+    <input name="submitted[completed4]" type="checkbox" id="submitted[completed4]" class="section checkBox" size="50" />
   </div>
 </div>
 <div class="section text">
   <div class="eighthSize">
-    <input name="semester_year4" type="text" id="semester_year4" class="text" size="50" />
+    <input name="submitted[semester_year4]" type="text" id="submitted[semester_year4]" class="text" size="50" />
   </div>
 </div>
 <div class="section text">
   <div class="halfSize">
-    <label name="courseNo5" id="courseNo5" value="capstone_seminar" size="50" />
+    <label name="submitted[courseNo5]" id="submitted[courseNo5]" value="capstone_seminar" size="50" />
     Capstone Seminar
     </label>
   </div>
 </div>
 <div class="section text">
   <div class="quarterSize">
-    <label name="classNo5" id="classNo5" value="ENVST-UA900" size="50" />
+    <label name="submitted[capstone_seminar]" id="submitted[capstone_seminar]" value="ENVST-UA900" size="50" />
     ENVST-UA 900
     </label>
   </div>
 </div>
 <div class="section text">
   <div class="eighthSize">
-    <input name="completed5" type="checkbox" id="completed5" class="section checkBox" size="50" />
+    <input name="submitted[capstone_completed] " type="checkbox" id="submitted[capstone_completed] " class="section checkBox" size="50" />
   </div>
 </div>
 <div class="section text">
   <div class="eighthSize">
-    <input name="semester_year5" type="text" id="semester_year5" class="text" size="50" />
+    <input name="submitted[semester_year5]" type="text" id="submitted[semester_year5]" class="text" size="50" />
   </div>
 </div>
+      <input type="hidden" name="form_id" value="webform_client_form_227" />
+      <div class="section end">
+        <div class="fullSize">
+          <button type="submit"
+    id="submit"
+    name="op"
+    value="Submit">Submit </button>
+          <button type="reset"
+    id="reset"
+    name="reset"
+    value="Reset">Reset</button>
+        </div>
+      </div> 
 
-<div class="section end">
-    <div class="fullSize">
-      <button type="submit"
-		id="submit"
-		name="submit"
-		value="Submit">Submit </button>
-      <button type="reset"
-		id="reset"
-		name="reset"
-		value="Reset">Reset </button>
-    </div>
+   </form>
   </div>
-</form>
+</div>
