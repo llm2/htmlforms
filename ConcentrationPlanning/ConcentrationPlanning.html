@@ -1,0 +1,122 @@
+
+<div id="formhermes">
+  <div id="formContainer">
+    <form class="autoform" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/625" method="post" id="autoform" accept-charset="UTF-8">
+     <h2>Student Details </h2>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[first_name]">First Name </label>
+          <input type="text" id="submitted[first_name]" name="submitted[first_name]" size="60" maxlength="128" class="name" />
+          <span class="first_name-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[last_name]">Last Name </label>
+          <input type="text" id="submitted[last_name]" name="submitted[last_name]" size="60" maxlength="128" class="name" />
+          <span class="last_name-msgContainer"></span></div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[netid]">Net ID </label>
+          <input type="text" id="submitted[netid]" name="submitted[netid]" size="60" maxlength="128" class="netid" />
+          <span class="netid-msgContainer"></span></div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[uid]">University ID </label>
+          <input type="text" id="submitted[uid]" name="submitted[uid]" size="60" maxlength="128" class="uid" value="N"/>
+          <span class="uid-msgContainer"></span></div>
+      </div>
+      <div class="section checkbox">
+        <div class="halfSize">
+          <label for="submitted[semester]">Semester of Registration </label>
+          <select id="submitted[semester]" name="submitted[semester]" class="requiredselect">
+            <option>Fall</option>
+            <option>Spring</option>
+            <option>Winter/January</option>
+            <option>Summer</option>
+          </select>
+          <span class="semester-msgContainer"></span> </div>
+      </div>
+      <div class="section checkbox">
+        <div class="halfSize">
+          <label for="submitted[year]">Year of Registration </label>
+          <select id="submitted[year]" name="submitted[year]" class="requiredselect">
+            <option>2012</option>
+            <option>2013</option>
+            <option>2014</option>
+            <option>2015</option>
+            <option>2016</option>
+            <option>2017</option>
+            <option>2018</option>
+            <option>2019</option>
+            <option>2020</option>
+          </select>
+          <span class="year-msgContainer"></span></div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[expected_graduation_month]">Expected Graduation Month </label>
+          <select id="submitted[expected_graduation_month]" name="submitted[expected_graduation_month]" class="requiredselect">
+            <option>January</option>
+            <option selected="selected">May</option>
+            <option>September</option>
+          </select>
+          <span class="expected_graduation_month-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[expected_graduation_year]">Expected Graduation Year </label>
+          <select id="submitted[expected_graduation_year]" name="submitted[expected_graduation_year]" class="requiredselect">
+            <option>2012</option>
+            <option>2013</option>
+            <option>2014</option>
+            <option>2015</option>
+            <option selected="selected">2016</option>
+            <option>2017</option>
+            <option>2018</option>
+            <option>2019</option>
+            <option>2020</option>
+          </select>
+          <span class="expected_graduation_year-msgContainer"></span> </div>
+      </div>
+   <hr/>
+      <h2> Statement </h2>  
+      <div class="section text">
+        <div class="fullSize">
+          <label for="files[submitted_file]">Please attach a statement describing your proposed concentration. Make sure your name is included in the title of the document (.doc, .docx, and .pdf formats accepted).</label>
+          <input type="file" id="files[submitted_file]" name="files[submitted_file]" class="required" />
+        </div>
+      </div>
+   <hr/>
+    <h2>Proposed Course Scehdule</h2>
+    <h3>Semester 1</h3>
+        <div class="section text">
+        <div class="quarterSize">
+          <label for="submitted[course_no1]">Course No./Depratment</label>
+          <input type="text" id="submitted[course_no1]" name="submitted[course_no1]" size="30" maxlength="128" class="required"/>
+          <span class="course_no1-msgContainer"></span> </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[class_no1]">Title/Description</label>
+          <input type="text" id="submitted[class_no1]" name="submitted[class_no1]" size="60" maxlength="128"  class="required"/>
+        </div>
+      </div>
+
+      <div class="section end">
+        <div class="fullSize">
+          <button type="submit"
+		id="submit"
+		name="op"
+		value="Submit">Submit </button>
+          <button type="reset"
+		id="reset"
+		name="reset"
+		value="Reset">Reset </button>
+        </div>
+      </div>
+      <input type="hidden" name="form_id" value="webform_client_form_625" />
+    </form>
+  </div>
+</div>
