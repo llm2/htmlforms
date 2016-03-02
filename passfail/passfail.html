@@ -105,6 +105,7 @@
           <input type="text" id="submitted[coursetitle]" name="submitted[coursetitle]" value="" size="60" maxlength="128" required/>
         </div>
       </div>
+
        <h3>Requirements</h3>
  <div class="section text">
         <div class="fullSize">
@@ -119,10 +120,13 @@
           </span>
 
         </div>
+      
       </div>
-             <div class="section text">
-        <div class="fullSize">
-          <p><strong>Does this course fulfill your minor requirement?</strong> Courses taken pass/fail may not count towards your minor requirement. Students should consult with the department offering the minor for details.</p>
+
+   <div class="section text">
+        <div class="fullSize">  
+          <label for="submitted[fulfill_minor]"><strong>Does this course fulfill your minor requirement?</strong> Courses taken pass/fail may not count towards your minor requirement. Students should consult with the department offering the minor for details.</label>
+          <!-- <p><strong>Does this course fulfill your minor requirement?</strong> Courses taken pass/fail may not count towards your minor requirement. Students should consult with the department offering the minor for details.</p> -->
            <span>
           <input name="submitted[fulfill_minor]" type="radio" id="submitted[fulfill_minor]" value="yes" required />
           <label for="submitted[fulfill_minor]">Yes</label>
