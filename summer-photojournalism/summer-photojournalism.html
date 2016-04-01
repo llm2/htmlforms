@@ -20,12 +20,12 @@
       <div class="section text">
          <div class="halfSize">
             <label for="submitted[netid]">NetID</label>
-            <input type="text" id="submitted[netid]" name="submitted[netid]" value="" size="60" maxlength="128"/>
+            <input type="text" id="submitted[netid]" name="submitted[netid]" value="" size="60" maxlength="128" class="netid"/>
          </div>
       </div>
       <div class="section text">
          <div class="halfSize">
-            <label for="submitted[universityid]">University ID </label>
+            <label for="submitted[universityid]">University ID (current NYU students only)</label>
             <input type="text" id="submitted[universityid]" name="submitted[universityid]" value="N" size="60" maxlength="9" />
          </div>
       </div>
@@ -284,31 +284,9 @@
             <span class="concentration-msgContainer"></span> 
          </div>
       </div>
-      <h3>Current Student</h3>
-      <div class="section text">
-         <div class="fullSize">
-            <label for="submitted[school]">NYU school where you are matriculated </label>
-            <input type="text" id="submitted[school]" name="submitted[school]" value="" size="60" maxlength="128"/>
-            <span class="school-msgContainer"></span> 
-         </div>
-      </div>
       <div class="section text">
         <div class="halfSize">
-          <label for="submitted[grad_year]">Expected Graduation Year </label>
-          <select id="submitted[grad_year]" name="submitted[grad_year]">
-            <option value="">Select one</option>
-            <option>2016</option>
-            <option>2017</option>
-            <option>2018</option>
-            <option>2019</option>
-            <option>2020</option>
-          </select>
-          <span class="grad_year-msgContainer"></span> </div>
-      </div>
-      <h3>Alumni</h3>
-      <div class="section text">
-        <div class="halfSize">
-          <label for="submitted[grad_year]">Year</label>
+          <label for="submitted[grad_year]">Expected Graduation Year or Graduation Year (for alumni)</label>
           <select id="submitted[grad_year]" name="submitted[grad_year]">
             <option value="">Select One</option>
              <option>1972</option>            
@@ -363,7 +341,14 @@
           </select>
           </div>
       </div>
-
+      <h3>Current Student</h3>
+      <div class="section text">
+         <div class="fullSize">
+            <label for="submitted[school]">NYU school where you are matriculated </label>
+            <input type="text" id="submitted[school]" name="submitted[school]" value="" size="60" maxlength="128"/>
+            <span class="school-msgContainer"></span> 
+         </div>
+      </div>
       <h2>Personal Statement</h2>
       <div class="section text">
          <div class="fullSize">
