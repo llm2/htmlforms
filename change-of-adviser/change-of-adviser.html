@@ -15,16 +15,11 @@
         <input type="text" size="15" maxlength="50" name="submitted[last_name]" id="submitted[last_name]" class="name"/>
         <span class="last_name-msgContainer"></span> </div>
     </div>
-    <div class="section radio">
+    <div class="section text">
       <div class="halfSize">
-        <label for="submitted[status]">Status</label>
-        <span class="options"> <span>
-        <input name="submitted[status]" value="UG" type="radio" checked="checked"/>
-        <label for="status">Undergraduate</label>
-        </span> <span>
-        <input name="submitted[status]" id="submitted[status]" value="GG" class="required" type="radio" />
-        <label for="status">Graduate</label>
-        </span> <span class="status-msgContainer"></span></span> </div>
+        <label for="submitted[netid]">NetID</label>
+        <input type="text" size="25" maxlength="21" name="submitted[netid]" id="submitted[netid]" class="netid"/>
+        <span class="netid-msgContainer"></span> </div>
     </div>
     <div class="section text">
       <div class="halfSize">
@@ -32,6 +27,19 @@
         <input name="submitted[uid]" type="text" id="submitted[uid]" value="N" class="uid" />
         <span class="uid-msgContainer"></span> </div>
     </div>
+    <div class="section radio">
+      <div class="fullSize">
+        <label for="submitted[status]">Status</label>
+        <span class="options">
+        <input name="submitted[status]" value="UG" type="radio" checked="checked"/>
+        <label for="status">Undergraduate</label>
+        
+        <input name="submitted[status]" id="submitted[status]" value="GG" class="required" type="radio" />
+        <label for="status">Graduate</label>
+        </span> <span class="status-msgContainer"></span>
+         </div>
+    </div>
+
     <div class="section text">
       <div class="halfSize">
         <label for="submitted[credits]">Credits earned to date</label>
@@ -52,18 +60,19 @@
       <div class="halfSize">
         <label for="submitted[grad_year]">Expected Graduation Year</label>
         <select name="submitted[grad_year]" id="submitted[grad_year]" class="requiredselect" >
-          <option value="2014">2014</option>
-          <option value="2015">2015</option>
           <option value="2016">2016</option>
           <option value="2016">2017</option>
           <option value="2016">2018</option>
           <option value="2016">2019</option>
-         <option value="2016">2020</option>
+          <option value="2016">2020</option>
+          <option value="2016">2021</option>
+          <option value="2016">2022</option>
+          <option value="2016">2023</option>
         </select>
         <span class="grad_year-msgContainer"></span> </div>
     </div>
     <div class="section text">
-      <div class="halfSize">
+      <div class="fullSize">
         <label for="submitted[street]">Address</label>
         <input type="text" size="40" maxlength="128" name="submitted[street]" />
         <span class="street-msgContainer"></span> </div>
@@ -169,12 +178,7 @@
         <input type="text" size="25" maxlength="100" name="submitted[phone]" />
         <span class="phone-msgContainer"></span> </div>
     </div>
-    <div class="section text">
-      <div class="halfSize">
-        <label for="submitted[netid]">NetID</label>
-        <input type="text" size="25" maxlength="21" name="submitted[netid]" id="submitted[netid]" class="netid"/>
-        <span class="netid-msgContainer"></span> </div>
-    </div>
+
     <hr />
     <div class="section text">
       <div class="halfSize">
@@ -191,15 +195,17 @@
     <div class="section text">
       <div class="halfSize">
         <label for="submitted[class_adviser]">Class Adviser</label>
-              <select name="submitted[class_adviser]" id="submitted[class_adviser]" class="required">
+        <select name="submitted[class_adviser]" id="submitted[class_adviser]" class="required">
               <option value="">Select One</option>
-                <option>Meredith Theeman</option>
-				<option>Matthew Gregory</option>
-				<option>Cyd Cipolla</option>
-				<option>Joshua Shirkey</option>
-				<option>Yevgeniya Traps</option>
-		</select>
-        <span class="class_adviser-msgContainer"></span> </div>
+              <option>Meredith Theeman</option>
+              <option>Ben Brooks</option>
+              <option>Matthew Gregory</option>
+              <option>Cyd Cipolla</option>
+              <option>Joshua Shirkey</option>
+              <option>Yevgeniya Traps</option>
+        </select>
+        <span class="class_adviser-msgContainer"></span> 
+      </div>
         <hr />
     </div>
     <div class="section text">
@@ -211,13 +217,13 @@
     <div class="section text">
       <div class="fullSize">
         <label for="submitted[concentration]">Your area(s) of concentration</label>
+        <p>(Please be as specific as possible.  For example, rather than "the arts," please specify whether it is "arts management," "arts and society," "studio arts," etc.; rather than "communications," specify "media studies," "history of technology," "graphic communications," etc.)</p>
         <input name="submitted[concentration]" maxlength="128" id="submitted[concentration]" type="text" class="required"/>
         <span class="concentration-msgContainer"></span> </div>
     </div>
-    <p>(Please be as specific as possible.  For example, rather than "the arts," please specify whether it is "arts management," "arts and society," "studio arts," etc.; rather than "communications," specify "media studies," "history of technology," "graphic communications," etc.)</p>
     <hr />
     <br>
-    <p>Please complete Part A if you are requesting a specific adviser; all students must complete Part B.</p>
+    <h2>Please complete Part A if you are requesting a specific adviser; all students must complete Part B.</h2>
     <div class="section text">
       <div class="fullSize">
         <label for="submitted[adviser_requested]"><b>Part A:</b> Name of adviser you are requesting</label>
@@ -235,8 +241,7 @@
         <label for="agreed">No</label>
         </span> </span> </div>
     </div>
-    <p>Please note: approval of your request is contingent on the adviser's current advising load.</p>
-    <br>
+    <h3>Please note: approval of your request is contingent on the adviser's current advising load.</h3>
     <div class="section text">
       <div class="fullSize">
         <label for="submitted[academic_area]"><b>Part B:</b> Academic area in which you would prefer to have an adviser</label>
@@ -253,13 +258,13 @@
         <div class="section end">
       <div class="fullSize">
         <button type="submit"
-		id="submit"
-		name="op"
-		value="Submit">Submit </button>
+    id="submit"
+    name="op"
+    value="Submit">Submit </button>
         <button type="reset"
-		id="reset"
-		name="reset"
-		value="Reset">Reset </button>
+    id="reset"
+    name="reset"
+    value="Reset">Reset </button>
       </div>
     </div>
   </form>

@@ -79,7 +79,6 @@ var suggest = new glow.widgets.AutoSuggest(
           <label for="submitted[year]">Year of Registration </label>
           <select id="submitted[year]" name="submitted[year]" class="requiredselect">
             <option value="">Select one</option>
-            <option>2015</option>
             <option>2016</option>
             <option>2017</option>
             <option>2018</option>
@@ -88,22 +87,20 @@ var suggest = new glow.widgets.AutoSuggest(
           </select>
           <span class="year-msgContainer"></span></div>
       </div>
-<!--
      <div class="section checkbox">
         <div class="fullSize">
           <label for="submitted[appt]">Registration Appointment Date</label>
           <select id="submitted[appt]" name="submitted[appt]" class="requiredselect">
             <option value="">Select one</option>
-            <option value="January">January Term 2016</option>
-            <option value="Mon 11/16">Mon., Nov. 16</option>
-            <option value="Tues 11/17">Tues., Nov. 17</option>
-            <option value="Wed 11/18">Wed., Nov. 18</option>
-            <option value="Thur 11/19">Thur., Nov. 19</option>
-            <option value="Fri 11/20">Fri., Nov. 20</option>
+            <option value="Summer">Summer 2016</option>
+            <option value="Mon 04/11"> Mon., April 11</option>
+            <option value="Tues 04/12">Tues., April 12</option>
+            <option value="Wed 04/13">Wed., April 13</option>
+            <option value="Thur 04/14">Thur., April 14</option>
+            <option value="Fri 04/15">Fri., April 15</option>
           </select>
           <span class="appt-msgContainer"></span></div>
       </div>
-    -->
       <div class="section text">
         <div class="halfSize">
           <label for="submitted[expected_graduation_month]">Expected Graduation Month </label>
@@ -120,7 +117,6 @@ var suggest = new glow.widgets.AutoSuggest(
           <label for="submitted[expected_graduation_year]">Expected Graduation Year </label>
           <select id="submitted[expected_graduation_year]" name="submitted[expected_graduation_year]" class="requiredselect">
             <option value="">Select one</option>
-            <option>2015</option>
             <option>2016</option>
             <option>2017</option>
             <option>2018</option>
@@ -189,45 +185,206 @@ var suggest = new glow.widgets.AutoSuggest(
       </div>
       
       <hr />
-      <div class="text"><h2>Registration restrictions<br>
-</h2>
-<h3>Internships</h3>
-<p>Undergraduate students may enroll in as many as (but no more than) 24 total internship units during their undergraduate course of study, and as many as (but no more than) four internship units per semester.
-</p>
-<h3>Business courses</h3>
-<p>No more than 31 credits in business courses can count towards the Gallatin degree. This includes courses in the Stern School, the McGhee Division in the School of Professional Studies, and those transferred from other colleges and universities. <br>
-</p>
-<h3>Private Lessons</h3>
-<p>
-Undergraduate students may not take more than 24 credits in private lessons during their studies at the Gallatin School. Included in this total will be units earned from Gallatin Private Lessons (INDIV-UG 1701) as well as units earned from Steinhardt music courses noted as “individual instruction in the performing arts” (e.g., Participation in NYU Orchestra, Private Vocal Training, etc.).
-</p>
-<h3>The Liberal Studies Program (LSP)</h3>
-<p>After matriculation at Gallatin students are not permitted to receive degree credit for LSP courses. The course code for these courses contains “- UF” (formerly prefixed with “T”).</p>
+     
 
-<h3>School of Professional Studies Restriction (SPS)<br>
-</h3>
-<p>Gallatin students are not permitted to receive degree credit for certain courses in SPS. The course code for these courses contains “- UC”.  Please review the <a href="/content/gallatin/en/about/bulletin/undergrad/cross-school/academic-departments.html#School">list of SPS courses</a> that Gallatin students can take for credit.
-</p>
+<div class="section fullSize">
+  <h2>Please answer all of the questions below, which refer to the “Semester of Registration” you selected above</h2>
 
-<h3>Maintaining Matriculation</h3>
-<p>Students may maintain matriculation by fee for a maximum of 4 semesters during<br>
-their academic career, but for no more than two consecutive semesters.<br>
-</p>
-<h3>Repeating Courses</h3>
-<p>Most courses may be taken one time only for credit toward the BA, unless the course has been approved to be repeated for credit. See the Gallatin website for more information about <a href="/content/gallatin/en/about/bulletin/undergrad/policies/gallatin-repeatable-courses1.html">repeating courses</a>.
-</p>
-</div>
-            <hr/>
-       <div class="section checkbox">
-        <div class="fullSize">
-          <span><input type="checkbox" id="submitted[understand]" name="submitted[understand]" value="Yes" class="required"/><label for="submitted[understand]">I acknowledge that I understand the above registration restrictions and I have met with my primary adviser to discuss my course selections.</label>
-          <span class="understand-msgContainer"></span></span>
+  <h3>Are you planning to register for a Gallatin Internship?</h3>
+    <span class="options">
+      <input name="submitted[internship]" type="radio" data-toggle="collapse" data-target="#internship" value="Yes or Unsure" required/>  Yes or Unsure
+      <input name="submitted[internship]" type="radio" value=""/> No
+    </span>
+
+    <div class="panel-group" id="accordion">
+      <div class="panel panel-default">
+        <div id="internship" class="panel-collapse collapse">
+          <div class="panel-body">
+            <p>Undergraduate students may enroll in as many as (but no more than) 24 total internship units during their undergraduate course of study, and as many as (but no more than) four internship units per semester.</p>
+              <div class="row">
+                <div class="center">
+                  <a class = "btn-section" href="http://gallatin.nyu.edu/academics/undergraduate/internships.html" target="_blank">Internship registration instructions</a>
+                </div>
+              </div>
+          </div>
         </div>
       </div>
+    </div>
+</div>
+
+<div class="section fullSize">
+  <h3>Are you planning to register for a Stern business course? </h3>
+
+    <span class="options">
+      <input name="submitted[stern]" type="radio" data-toggle="collapse" data-target="#stern" value="Yes or Unsure" required/>  Yes or Unsure
+      <input name="submitted[stern]" type="radio" value=""/> No
+    </span>
+
+    <div class="panel-group" id="accordion">
+      <div class="panel panel-default">
+        <div id="stern" class="panel-collapse collapse">
+          <div class="panel-body">
+            <p>No more than 31 credits in business courses can count towards the Gallatin degree. This includes courses in the Stern School, the McGhee Division in the School of Professional Studies, and those transferred from other colleges and universities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="section fullSize">
+  <h3>Are you planning to register for a Gallatin Private Lesson? </h3>
+
+    <span class="options">
+      <input name="submitted[private]" type="radio" data-toggle="collapse" data-target="#private" value="Yes or Unsure" required/>  Yes or Unsure
+      <input name="submitted[private]" type="radio" value=""/> No
+    </span>
+
+    <div class="panel-group" id="accordion">
+      <div class="panel panel-default">
+        <div id="private" class="panel-collapse collapse">
+          <div class="panel-body">
+            <p>Undergraduate students may not take more than 24 credits in private lessons during their studies at the Gallatin School. Included in this total will be units earned from Gallatin Private Lessons (INDIV-UG 1701) as well as units earned from Steinhardt music courses noted as “individual instruction in the performing arts” (e.g., Participation in NYU Orchestra, Private Vocal Training, etc.).</p>
+            <div class="row">
+                <div class="center">
+                  <a class = "btn-section" href="http://gallatin.nyu.edu/academics/undergraduate/private.html" target="_blank">Private Lesson registration instructions</a>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="section fullSize">
+  <h3>Are you planning to register for a Liberal Studies Program (LSP) course? </h3>
+
+    <span class="options">
+      <input name="submitted[lsp]" type="radio" data-toggle="collapse" data-target="#lsp" value="Yes or Unsure" required/>  Yes or Unsure
+      <input name="submitted[lsp]" type="radio" value=""/> No
+    </span>
+
+    <div class="panel-group" id="accordion">
+      <div class="panel panel-default">
+        <div id="lsp" class="panel-collapse collapse">
+          <div class="panel-body">
+            <p>After matriculation at Gallatin students are not permitted to receive degree credit for LSP courses. The course code for these courses contains “- UF” (formerly prefixed with “T”).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="section fullSize">
+  <h3>Are you planning to register for a School of Professional Studies (SPS) course? </h3>
+
+    <span class="options">
+      <input name="submitted[sps]" type="radio" data-toggle="collapse" data-target="#sps" value="Yes or Unsure" required/>  Yes or Unsure
+      <input name="submitted[sps]" type="radio" value=""/> No
+    </span>
+
+    <div class="panel-group" id="accordion">
+      <div class="panel panel-default">
+        <div id="sps" class="panel-collapse collapse">
+          <div class="panel-body">
+            <p>Gallatin students are not permitted to receive degree credit for certain courses in SPS. The course code for all courses in SPS contains “- UC”.</p>
+             <div class="row">
+                <div class="center">
+                  <a class = "btn-section" href="http://gallatin.nyu.edu/content/gallatin/en/about/bulletin/undergrad/cross-school/academic-departments.html#School" target="_blank">SPS courses that Gallatin students can take for credit</a>
+                </div>
+              </div>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="section fullSize">
+  <h3>Are you planning to maintain matriculation and not enroll in courses? </h3>
+
+    <span class="options">
+      <input name="submitted[maintain]" type="radio" data-toggle="collapse" data-target="#maintain" value="Yes or Unsure" required/>  Yes or Unsure
+      <input name="submitted[maintain]" type="radio" value=""/> No
+    </span>
+
+    <div class="panel-group" id="accordion">
+      <div class="panel panel-default">
+        <div id="maintain" class="panel-collapse collapse">
+          <div class="panel-body">
+            <p>Students may maintain matriculation by fee for a maximum of 4 semesters during their academic career, but for no more than two consecutive semesters.</p>
+            <div class="row">
+                <div class="center">
+                  <a class = "btn-section" href="http://gallatin.nyu.edu/academics/registration/undergraduate/matriculation.html" target="_blank">Maintaining Matriculation, including registration instructions</a>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="section fullSize">
+  <h3>Are you planning to repeat a course that you took already? </h3>
+
+    <span class="options">
+      <input name="submitted[repeat]" type="radio" data-toggle="collapse" data-target="#repeat" value="Yes or Unsure" required/>  Yes or Unsure
+      <input name="submitted[repeat]" type="radio" value=""/> No
+    </span>
+
+    <div class="panel-group" id="accordion">
+      <div class="panel panel-default">
+        <div id="repeat" class="panel-collapse collapse">
+          <div class="panel-body">
+            <p>Most courses may be taken one time only for credit toward the BA, unless the course has been approved to be repeated for credit.</p>
+               <div class="row">
+                <div class="center">
+                  <a class = "btn-section" href="http://gallatin.nyu.edu/content/gallatin/en/about/bulletin/undergrad/policies/gallatin-repeatable-courses1.html" target="_blank">Repeating courses</a>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="section fullSize">
+  <h3>Are you planning to sit for the Colloquium this semester? </h3>
+
+    <span class="options">
+      <input name="submitted[colloquium]" type="radio" data-toggle="collapse" data-target="#colloquium" value="Yes or Unsure" required/> Yes or Unsure
+      <input name="submitted[colloquium]" type="radio" value=""/> No
+    </span>
+
+    <div class="panel-group" id="accordion">
+      <div class="panel panel-default">
+        <div id="colloquium" class="panel-collapse collapse">
+          <div class="panel-body">
+            <p>Students who plan to sit for the colloquium may register for <a href="http://gallatin.nyu.edu/content/gallatin/en/academics/undergraduate/colloquium/collq-ug--colloquium.html">“Colloquium” (COLLQ-UG, 2 units)</a> to earn two units for successfully completing the colloquium. Registration for “Colloquium” (COLLQ-UG, 2 units) is recommended but not required for students admitted prior to summer 2015. For students admitted to Gallatin in summer 2015 and later, the colloquium credit is required. 
+            </p><p>
+              Students planning to register for COLLQ-UG “Colloquium” should enter this course number into the course selections below. If you registered for COLLQ-UG in a prior semester, you do not need to register again; you will be assigned a grade of I (incomplete) that will change to P after you pass the colloquium. 
+            </p><p>
+            Note: The COLLQ-UG does not count toward the 32-credit Gallatin requirement.
+            </p>
+            <div class="row">
+                <div class="center">
+                  <a class = "btn-section" href="http://gallatin.nyu.edu/academics/undergraduate/colloquium/collq-ug-1.html" target="_blank">COLLQ-UG “Colloquium”</a>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+            <hr/>
+       <div class="section fullSize">
+
+          <span class="options"><label for="submitted[understand]">By answering YES or UNSURE to any of the above questions I acknowledge that I read the information and instructions about these topics.  </label><input type="checkbox" id="submitted[understand]" name="submitted[understand]" value="Yes" class="required"/>
+          <span class="understand-msgContainer"></span></span>
+
+      </div>
       <hr/>
+             <div class="section fullSize">
+
       <h2>Course Selections</h2>
 
       <p><strong>Example</strong> (permission numbers are not required for all courses)</p>
+    </div>
       <div class="section text">
         <div class="quarterSize">
           <label for="course_ex">Course/Section No.</label>
@@ -480,7 +637,7 @@ their academic career, but for no more than two consecutive semesters.<br>
           <input type="text" id="submitted[days7]" name="submitted[days7]" size="60" maxlength="128" />
         </div>
       </div>
-      <hr/>
+  <!--    <hr/>
        <div class="section radio">
         <div class="fullSize">
           <label for="submitted[colloquium]">Beginning fall 2015, students who plan to sit for the colloquium may register for <a href="/content/gallatin/en/academics/undergraduate/colloquium/collq-ug--colloquium.html">“Colloquium” (COLLQ-UG, 2 units)</a> to earn two units for successfully completing the colloquium. If you plan to register for “Colloquium (COLLQ-UG, 2 units), you should include it in the Course Selections list above and also indicate YES below. If you are not planning to register for “Colloquium (COLLQ-UG, 2 units) this semester, please indicate NO below.</label>
@@ -489,12 +646,12 @@ their academic career, but for no more than two consecutive semesters.<br>
           <input name="submitted[colloquium]" id="submitted[colloquium]" value="IMPORTANT information about registering for COLLQ-UG, Colloquium, 2 units:
 You indicated on your Plan of Study that you will be registering for COLLQ-UG Colloquium.  This registration requires a permission number that will be sent to you from Gallatin’s Office of Student Services by the third week of December. You should register for all of your other classes without waiting for a permission number for COLLQ-UG Colloquium. Once you receive the permission number, you can register for COLLQ-UG, Colloquium." type="radio" class="radio" required="required"/>
           <label for="submitted[colloquium]">Yes</label>
-          </span><span>
+          
           <input name="submitted[colloquium]" value="No" type="radio"/>
           <label for="submitted[colloquium]">No</label>
           </span><span class="colloquium-msgContainer"></span></div>
       </div>
-
+-->
 
       <div class="section end">
         <div class="fullSize">
