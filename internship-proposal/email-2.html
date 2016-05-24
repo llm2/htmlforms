@@ -1,5 +1,3 @@
-
-
 <!-- BEGIN EMAIL CONTENT -->
 <p>
 <strong>Dear [submission:values:first_name_adviser]</strong>,<br/>
@@ -13,39 +11,37 @@ Your advisee, [submission:values:first_name] [submission:values:last_name], has 
 <h2>Internship Proposal: [submission:values:first_name] [submission:values:last_name]</h2>
 
   <table class="standard">
-    <tr>
-     <td> <strong>Phone</strong> [submission:values:phone] </td>
-     <td> <strong>Student Status</strong> [submission:values:student_status] </td>
-     </tr>
      <tr>
       <td> <strong>NetID</strong> [submission:values:netid] </td>
       <td> <strong>University ID</strong> [submission:values:uid] </td>
     </tr>
     <tr>
+     <td> <strong>Phone</strong> [submission:values:phone] </td>
+     <td> <strong>Student Status</strong> [submission:values:student_status] </td>
+     </tr>
+    <tr>
+    <td> <strong>Name of Organization</strong> [submission:values:organization]  </td>
+     <td> <strong>Street Address</strong> [submission:values:street_organization], <strong>City</strong> [submission:values:city_organization], <strong>State/Province</strong> [submission:values:state_organization], <strong>Zip/Postal</strong> [submission:values:zip_organization], <strong>Country</strong> [submission:values:country_organization] </td>
+     <td>  <strong>Location of the internship</strong> [submission:values:location] </td>
+   </tr>
+    <tr>
+   <td><strong>Supervisor Name</strong> [submission:values:first_name_supervisor]  [submission:values:last_name_supervisor], <strong>Supervisor'sTitle</strong> [submission:values:title_supervisor] </td>
+      <td> <strong>Supervisor's E-mail</strong> [submission:values:email_supervisor] <strong>Supervisor Phone</strong> [submission:values:sup_phone]</td>
+    </tr>
+    <tr>
     <td> <strong>Semester and Year of registration</strong> [submission:values:semester] [submission:values:year]</td>
      <td><strong>Number of Units</strong> [submission:values:units]  </td>
     </tr>
+<tr>
+   <td>  <strong>Industry Field</strong> [submission:values:industry_field], [submission:values:other]</td>
+   <td>  <strong>Job Function</strong> [submission:values:function]</td>
+</tr>
     <tr>
-    <td> <strong>Name of Organization</strong> [submission:values:organization]  </td>
-     <td> <strong>Street Address</strong> [submission:values:street_organization] </td>
-     <td> <strong>City</strong> [submission:values:city_organization] </td>
-    <td> <strong>State/Province</strong> [submission:values:state_organization] </td> 
-    <td> <strong>Zip/Postal</strong> [submission:values:zip_organization] </td>
-    <td> <strong>Country</strong> [submission:values:country_organization] </td>
- <td>  <strong>Industry Field</strong> [submission:values:industry] </td>
-   </tr>
-    <tr>
- <td><strong>Supervisor Name</strong> [submission:values:first_name_supervisor]  [submission:values:last_name_supervisor] </td>
-      <td> <strong>Supervisor Phone</strong> [submission:values:sup_phone]</td>
-    <td> <strong>Supervisor's E-mail</strong> [submission:values:email_supervisor]</td>
+     <td colspan="2"> <strong>Describe 1-2 academic goals.</strong> [submission:values:reason1:nolabel] </td>
     </tr>
     <tr>
-     <td colspan="2"> <strong>Goals</strong> [submission:values:reason1] </td>
-    </tr>
-    <tr>
-      <td colspan="2"> <strong>Interests</strong> [submission:values:reason] </td>
+      <td colspan="2"> <strong>What professional experience do you hope to gain?</strong> [submission:values:reason] </td>
     </tr>
   </table>
 
   <!-- END EMAIL CONTENT -->
-  
