@@ -1,12 +1,4 @@
-﻿        <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-<!--<script>
-  $(document).ready(function() {
-    $.datepicker.setDefaults($.datepicker.regional[""]);
-    $( "#start_date" ).datepicker();
-  });
-  </script> -->
+﻿
 <div id="formhermes">
   <div id="formContainer">
     <form class="autoform" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/207" method="post" id="autoform" accept-charset="UTF-8">
@@ -114,15 +106,17 @@
       </div>
       <hr/>
       <div class="section checkbox">
-        <div class="halfSize">
-          <label for="submitted[keys]"><strong>Keys</strong></label>
+        <div class="fullSize">
+          <h3>Keys</h3>
           <span class="options">
           <input type="checkbox"  name="submitted[keys]" value="Master (all doors)"/>
           <label for="submitted[keys]">Master (all doors) </label>
-          </span> <span>
+          </span>
+          <span class="options">
           <input type="checkbox" name="submitted[keys]" value="Semi-Master (floor entrances)"/>
           <label for="submitted[keys]">Semi-master (floor entrances)</label>
           </span>
+          <span class="options">
           <input type="checkbox" name="submitted[keys]" value="Specific room keys (please specify rooms)"/>
           <label for="submitted[keys]">Specific room keys (please specify rooms) </label>
           </span><span class="keys-msgContainer"></span></div>
@@ -135,57 +129,62 @@
       </div>
       <hr/>
       <div class="section checkbox">
-        <div class="halfSize">
-          <label for="submitted[access]"><strong>Building Access</strong></label>
+        <div class="fullSize">
+          <h3>Building Access</h3>
           <span class="options">
           <input type="checkbox" name="submitted[access]" value="Weekdays 8:00 a.m. to 9:00 p.m."/>
           <label for="submitted[access]">Weekdays 8:00 a.m. to 9:00 p.m.</label>
-          </span> <span>
+          </span>
+          <span class="options">
           <input type="checkbox" name="submitted[access]" value="8th Floor File Room"/>
           <label for="submitted[access]">8th Floor File Room</label>
           </span>
+          <span class="options">
           <input type="checkbox" name="submitted[access]" value="Weekends, After Hours, & Holidays"/>
           <label for="submitted[access]">Weekends, After Hours, & Holidays (please specify reason)</label>
-          <span class="afterhours_access-msgContainer"></span></div>
-      </div>
-      <div class="section text">
-        <div class="fullSize">
-          <label for="submitted[afterhours_access]"></label>
-          <input type="text" name="submitted[afterhours_access]" size="" maxlength="" />
-          <span class="afterhours_access-msgContainer"></span> </div>
+          </span>
+        </div>
       </div>
       <hr />
       <div class="section checkbox">
         <div class="fullSize">
-          <label for="submitted[long_distance]"><strong>Long Distance Code</strong></label>
-          <span class="options"> <span>
+          <h3>Long Distance Code</h3>
+                    <span class="options">
+
           <input type="checkbox" name="submitted[long_distance]" value="North Jersey, Connecticut, Long Island, and Westchester, 24 hours, 7 days per week"/>
           <label for="submitted[long_distance]">North Jersey, Connecticut, Long Island, and Westchester, 24 hours, 7 days per week</label>
-          </span> <span>
+          </span>
+          <span class="options">
           <input type="checkbox" name="submitted[long_distance]" value="US, Canada, Caribbean, M-F, 8 a.m. - 8 p.m."/>
           <label for="submitted[long_distance]">US, Canada, Caribbean, M-F, 8 a.m. - 8 p.m.</label>
-          </span> <span>
+          </span>
+          <span class="options">
           <input type="checkbox" name="submitted[long_distance]" value="US, Canada, Caribbean, 7 days per week"/>
           <label for="submitted[long_distance]">US, Canada, Caribbean, 7 days per week</label>
-          </span> <span>
+          </span>
+          <span class="options">
           <input type="checkbox" name="submitted[long_distance]" value="US & International,  M-F 8 a.m. - 8 p.m."/>
           <label for="submitted[long_distance]">US & International,  M-F 8 a.m. - 8 p.m.</label>
-          </span> <span>
+          </span>
+          <span class="options">
           <input type="checkbox" name="submitted[long_distance]" value="US & International, 7 days 24 hours"/>
           <label for="submitted[long_distance]">US & International, 7 days 24 hours </label>
-          </span> </span> </div>
+                    </span>
+
+     </div>
       </div>
       <hr />
       <div class="section checkbox">
-        <div class="halfSize">
-          <label for="submitted[extension]"><strong>Telephone Extension</strong></label>
-          <span class="options"> <span>
+        <div class="fullSize">
+          <h3>Telephone Extension</h3>
+          <span class="options"> 
           <input type="radio" name="submitted[extension]" value="new"/>
           <label for="submitted[extension]">New extension needed</label>
-          </span> <span>
+                       </span>   
+                       <span class="options"> 
           <input type="radio" name="submitted[extension]" value="current"/>
           <label for="submitted[extension]">Employee should use current extension</label>
-          </span> </span> </div>
+      </span> </div>
       </div>
        <div class="section text">
         <div class="halfSize">
@@ -196,18 +195,7 @@
           <input type="text" name="submitted[extension_appearance]" size="" maxlength="" />
           <span class="extension_appearance-msgContainer"></span> </div>
       </div>
-     <!-- <div class="section text">
-        <div class="halfSize">
-          <label for="submitted[extension_appearance]"></label>
-          <input type="text" name="submitted[extension_appearance]" size="" maxlength="" />
-          <span class="extension_appearance-msgContainer"></span> </div>
-      </div>
-      <div class="section text">
-        <div class="halfSize">
-          <label for="submitted[extension_appearance]"></label>
-          <input type="text" name="submitted[extension_appearance]" size="" maxlength="" />
-          <span class="extension_appearance-msgContainer"></span></div>
-      </div> !-->
+
       <hr />
       <div class="section radio">
         <div class="halfSize">
@@ -216,10 +204,9 @@
           <span class="options">
           <input name="submitted[activate_network]" id="submitted[activate_network]" type="radio" value="yes" checked="checked"/>
           <label for="submitted[activate_network]">Yes</label>
-          </span><span>
           <input name="submitted[activate_network]" id="submitted[activate_network]" value="no" type="radio"/>
           <label for="submitted[activate_network]">No</label>
-          </span><span class="activate_network-msgContainer"></span></div>
+          </span></div>
       </div>
       <div class="section radio">
         <div class="halfSize">
@@ -228,10 +215,9 @@
           <span class="options">
           <input name="submitted[CMS]" id="submitted[CMS]" value="yes" type="radio"/>
           <label for="submitted[CMS]">Yes</label>
-          </span><span>
           <input name="submitted[CMS]" value="no" type="radio" checked="checked"/>
           <label for="submitted[CMS]">No</label>
-          </span><span class="CMS-msgContainer"></span></div>
+          </span></div>
       </div>
       <hr />
       <div class="section radio">
@@ -241,7 +227,6 @@
           <span class="options">
           <input name="submitted[SIS]" id="submitted[SIS]" value="yes" type="radio"/>
           <label for="submitted[SIS]">Yes</label>
-          </span><span>
           <input name="submitted[SIS]" value="no" type="radio" checked="checked"/>
           <label for="submitted[SIS]">No</label>
           </span><span class="SIS-msgContainer"></span></div>
@@ -253,7 +238,6 @@
           <span class="options">
           <input name="submitted[Albert]" id="submitted[Albert]" type="radio"/>
           <label for="submitted[Albert]">Yes</label>
-          </span><span>
           <input name="submitted[Albert]" value="unchecked" type="radio" checked="checked"/>
           <label for="submitted[Albert]">No</label>
           </span><span class="Albert-msgContainer"></span></div>
@@ -266,7 +250,6 @@
           <span class="options">
           <input name="submitted[Brio]" id="submitted[Brio]" value="yes" type="radio"/>
           <label for="submitted[Brio]">Yes</label>
-          </span><span>
           <input name="submitted[Brio]" value="no" type="radio" checked="checked"/>
           <label for="submitted[Brio]">No</label>
           </span><span class="Brio-msgContainer"></span></div>
@@ -278,7 +261,6 @@
           <span class="options">
           <input name="submitted[Email_Direct]" id="submitted[Email_Direct]" value="yes" type="radio"/>
           <label for="submitted[Email_Direct]">Yes</label>
-          </span><span>
           <input name="submitted[Email_Direct]" value="no" type="radio" checked="checked"/>
           <label for="submitted[Email_Direct]">No</label>
           </span><span class="Email_Direct-msgContainer"></span></div>
@@ -291,7 +273,6 @@
           <span class="options">
           <input name="submitted[access_archived_student_files]" id="submitted[access_archived_student_files]" value="yes" type="radio"/>
           <label for="submitted[access_archived_student_files]">Yes</label>
-          </span><span>
           <input name="submitted[access_archived_student_files]" value="no" type="radio" checked="checked"/>
           <label for="submitted[access_archived_student_files]">No</label>
           </span><span class="access_archived_student_files-msgContainer"></span></div>
@@ -303,7 +284,6 @@
           <span class="options">
           <input name="submitted[access_hermes]" id="submitted[access_hermes]" value="yes" type="radio"/>
           <label for="submitted[access_hermes]">Yes</label>
-          </span><span>
           <input name="submitted[access_hermes]" value="no" type="radio" checked="checked"/>
           <label for="submitted[access_hermes]">No</label>
           </span><span class="access_hermes-msgContainer"></span></div>
@@ -323,7 +303,6 @@
           <span class="options">
           <input name="submitted[gallatin_drive]" id="submitted[gallatin_drive]" value="yes" type="radio"/>
           <label for="submitted[gallatin_drive]">Yes</label>
-          </span><span>
           <input name="submitted[gallatin_drive]" value="no"  type="radio" checked="checked"/>
           <label for="submitted[gallatin_drive]">No</label>
           </span><span class="gallatin_drive-msgContainer"></span></div>
@@ -335,7 +314,6 @@
           <span class="options">
           <input name="submitted[h_drive]" id="submitted[other_drives]" value="yes" type="radio"/>
           <label for="submitted[h_drive]">Yes</label>
-          </span><span>
           <input name="submitted[h_drive]" value="no" type="radio" checked="checked"/>
           <label for="submitted[h_drive]">No</label>
           </span><span class="h_drive-msgContainer"></span></div>
@@ -347,7 +325,6 @@
           <span class="options">
           <input name="submitted[other_drives]" id="submitted[other_drives]" value="yes" type="radio"/>
           <label for="submitted[other_drives]">Yes</label>
-          </span><span>
           <input name="submitted[other_drives]" value="no" type="radio" checked="checked"/>
           <label for="submitted[other_drives]">No</label>
           </span><span class="other_drives-msgContainer"></span></div>
@@ -366,7 +343,6 @@
           <span class="options">
           <input name="submitted[imagenow]" id="submitted[imagenow]" value="yes" type="radio"/>
           <label for="submitted[imagenow]">Yes</label>
-          </span><span>
           <input name="submitted[imagenow]" value="no" type="radio" checked="checked"/>
           <label for="submitted[imagenow]">No</label>
           </span><span class="imagenow-msgContainer"></span></div>
@@ -379,10 +355,21 @@
           <span class="options">
           <input name="submitted[box_account]" id="submitted[box_account]" value="yes" type="radio"/>
           <label for="submitted[box_account]">Yes</label>
-          </span><span>
           <input name="submitted[box_account]" value="no" type="radio" checked="checked"/>
           <label for="submitted[box_account]">No</label>
           </span><span class="box_account-msgContainer"></span></div>
+      </div>
+             <div class="section radio">
+        <div class="halfSize">
+          <label for="submitted[copier]">Add email address to copier for scanning?
+</label>
+          <br />
+          <span class="options">
+          <input name="submitted[copier]" id="submitted[copier]" value="yes" type="radio"/>
+          <label for="submitted[copier]">Yes</label>
+          <input name="submitted[copier]" value="no" type="radio" checked="checked"/>
+          <label for="submitted[copier]">No</label>
+          </span></div>
       </div>
  
       <input type="hidden" name="form_id" value="webform_client_form_207" />
