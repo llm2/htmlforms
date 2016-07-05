@@ -91,7 +91,7 @@ function clearForm(form) {
         <div class="section checkbox">
           <div class="fullSize">
             <input name="submitted[attending]" type="checkbox" id="submitted[attending]" value="yes" />
-            <label for="submitted[attending]">Yes, I plan to attend the Welcome Week Orientation, August 30-Sept 4, 2015 at 12:00pm.</label>
+            <label for="submitted[attending]">Yes, I plan to attend the Welcome Week Orientation, August 29-Sept 2, 20116.</label>
           </div>
         </div>
         <hr/>
@@ -119,9 +119,10 @@ function clearForm(form) {
                   <hr/>
 
           <h2>Parents/Guardians</h2>
-          <p>Welcome Orientation Sunday, August 30, 2015 9:00am</p>
+
            <div class="section text">
             <div class="halfSize">
+                        <p>Welcome Orientation Monday August 29th, 2016</p>
               <label for="submitted[howmany]">If your parents/guardians plan to come to the parent orientation, how many will be attending?</label>
               <input type="text" name="submitted[howmany]" id="submitted[howmany]"/>
             </div>
@@ -129,10 +130,11 @@ function clearForm(form) {
                   <hr/>
 
           <h2>Interests</h2>
-
-      <p>Please select your top three interests in
+            <div class="fullSize">
+      <p>Please select your top five interests in
         order of preference. Your first choice should be in box number 1, your
         second choice should be in box number 2, etc.</p>
+      </div>
       <table class="standard">
         <THEAD>
           <TR>
@@ -212,101 +214,55 @@ function clearForm(form) {
           </select>
           </TD>
         </TR>
+        <TR class='stripe'>
+          <TD><label for="interest_4">4</label></TD>
+          <TD><select name="submitted[interest_4]" id="interest_4" class="requiredselect">
+            <option value="">Choose One</option>
+            <option>Architecture/Design</option>
+            <option>Art</option>
+            <option>Business</option>
+            <option>Computer Science/Video Games</option>
+            <option>Fashion</option>
+            <option>Film/TV</option>
+            <option>Foreign Language/Global Affairs</option>
+            <option>Gender/Sexuality</option>
+            <option>Media</option>
+            <option>Music</option>
+            <option>Politics</option>
+            <option>Psychology</option>
+            <option>Science/Pre-Health</option>
+            <option>Tech</option>
+            <option>Social Issues/Social Impact</option>
+            <option>Theatre</option>
+            <option>Writing</option>
+          </select>
+          </TD>
+        </TR>
+        <TR>
+          <TD><label for="interest_5">5</label></TD>
+          <TD><select name="submitted[interest_5]" id="interest_5"  class="requiredselect">
+            <option value="">Choose One</option>
+            <option>Architecture/Design</option>
+            <option>Art</option>
+            <option>Business</option>
+            <option>Computer Science/Video Games</option>
+            <option>Fashion</option>
+            <option>Film/TV</option>
+            <option>Foreign Language/Global Affairs</option>
+            <option>Gender/Sexuality</option>
+            <option>Media</option>
+            <option>Music</option>
+            <option>Politics</option>
+            <option>Psychology</option>
+            <option>Science/Pre-Health</option>
+            <option>Tech</option>
+            <option>Social Issues/Social Impact</option>
+            <option>Theatre</option>
+            <option>Writing</option>
+          </select>
+          </TD>
+        </TR>
       </table>
-
-
-
-
-
-
-        <!--  <p>Please choose up to five areas of academic interest</p>
-          <div class="section checkbox">
-            <div class="fullSize">
-              <ul class="checklist">
-               <li>
-                <label for="architecture">
-                  <input type="checkbox" name="submitted[affinity][architecture]"  name="submitted[affinity][architecture]" value="architecture" />Architecture/Design
-                </label>
-              </li>
-              <li>
-                <label for="art">
-                  <input type="checkbox" name="submitted[affinity][art]"  name="submitted[affinity][art]" value="art" />Art
-                </label>
-              </li>
-              <li>
-                <label for="business">
-                  <input type="checkbox" name="submitted[affinity][business]"  name="submitted[affinity][business]" value="business" />Business
-                </label>
-              </li>
-              <li>
-                <label for="classics">
-                  <input type="checkbox" name="submitted[affinity][classics]"  name="submitted[affinity][classics]" value="classics" />Classics/History
-                </label>
-              </li>
-              <li>
-                <label for="fashion">
-                  <input type="checkbox" name="submitted[affinity][fashion]"  name="submitted[affinity][fashion]" value="fashion" />Fashion
-                </label>
-              </li>
-              <li>
-                <label for="film">
-                  <input type="checkbox" name="submitted[affinity][film]"  name="submitted[affinity][film]" value="film" />Film and Media
-                </label>
-              </li>
-              <li>
-                <label for="global">
-                  <input type="checkbox" name="submitted[affinity][global]"  name="submitted[affinity][global]" value="global" />Foreign Language Study/Global Affairs
-                </label>
-              </li>
-              <li>
-                <label for="writing">
-                  <input type="checkbox" name="submitted[affinity][writing]"  name="submitted[affinity][writing]" value="writing" />Journalism/Writing
-                </label>
-              </li>
-              <li>
-                <label for="literature">
-                  <input type="checkbox" name="submitted[affinity][literature]"  name="submitted[affinity][literature]" value="literature" />Literature
-                </label>
-              </li>
-              <li>
-                <label for="music">
-                  <input type="checkbox" name="submitted[affinity][music]"  name="submitted[affinity][music]" value="music" />Music
-                </label>
-              </li>
-              <li>
-                <label for="politics">
-                  <input type="checkbox" name="submitted[affinity][politics]"  name="submitted[affinity][politics]" value="politics" />Politics
-                </label>
-              </li>
-              <li>
-                <label for="race">
-                  <input type="checkbox" name="submitted[affinity][race]"  name="submitted[affinity][race]" value="race" />Race/Gender and Sexuality
-                </label>
-              </li>
-              <li>
-                <label for="science">
-                  <input type="checkbox" name="submitted[affinity][science]"  name="submitted[affinity][science]" value="science" />Science/Pre-Health
-                </label>
-              </li>
-              <li>
-                <label for="social">
-                  <input type="checkbox" name="submitted[affinity][social]"  name="submitted[affinity][social]" value="social" />Social Entrepreneurship
-                </label>
-              </li>
-              <li>
-                <label for="socsci">
-                  <input type="checkbox" name="submitted[affinity][socsci]"  name="submitted[affinity][socsci]" value="socsci" />Social Sciences (Anthropology, Psychology, Sociology)
-                </label>
-              </li>
-              <li>
-                <label for="theater">
-                  <input type="checkbox" name="submitted[affinity][theater]"  name="submitted[affinity][theater]" value="theater" />Theater
-                </label>
-              </li>
-            </ul>
-          </div>
-        </div>
--->
 
 
         <div class="section text">
