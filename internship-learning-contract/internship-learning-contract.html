@@ -1,3 +1,5 @@
+<script src="/content/dam/gallatin/js/country.js" type="text/javascript"></script>
+
 <div id="formhermes">
   <div id="formContainer">
     <form class="autoform" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/150" method="post" id="autoform" accept-charset="UTF-8">
@@ -138,9 +140,9 @@
           <span class="zip-msgContainer"></span> 
         </div>
       </div>
-      <div class="halfSize country">
+      <div class="halfSize">
         <label for="submitted[country]">Country </label>
-        <input type="text" name="submitted[country]" id="submitted[country]"/>
+        <input type="text" name="submitted[country]" id="submitted[country]" class="country"/>
       </div>
       <div class="section text">
         <div class="halfSize">
@@ -204,15 +206,44 @@
         <div class="halfSize">
           <label for="submitted[year]">Year of Registration </label>
           <select id="submitted[year]" name="submitted[year]" class="requiredselect">
-            <option>2014</option>
-            <option>2015</option>
             <option>2016</option>
             <option>2017</option>
             <option>2018</option>
             <option>2019</option>
             <option>2020</option>
+            <option>2021</option>           
+            <option>2022</option>
           </select>
           <span class="year-msgContainer"></span> 
+        </div>
+      </div>
+            <hr/>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[first_name_supervisor]">Supervisor First Name</label>
+          <input type="text" id="submitted[first_name_supervisor]" name="submitted[first_name_supervisor]" value="" class="name">
+          <span class="first_name_supervisor-msgContainer"></span>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[last_name_supervisor]">Supervisor Last Name</label>
+          <input type="text" id="submitted[last_name_supervisor]" name="submitted[last_name_supervisor]" value="" class="name">
+          <span class="last_name_supervisor-msgContainer"></span>
+        </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[sup_phone]">Supervisor Phone</label>
+          <input type="text" id="submitted[sup_phone]" name="submitted[sup_phone]" size="60" maxlength="128"/>
+          <span class="sup_phone-msgContainer"></span> 
+        </div>
+      </div>
+      <div class="section text">
+        <div class="halfSize">
+          <label for="submitted[email_supervisor]">Supervisor E-mail</label>
+          <input type="text" id="submitted[email_supervisor]" name="submitted[email_supervisor]" size="60" maxlength="128" class="email"/>
+          <span class="email_supervisor-msgContainer"></span> 
         </div>
       </div>
       <div class="section text">
@@ -320,84 +351,59 @@
           <span class="zip-msgContainer"></span> 
         </div>
       </div>
-      <div class="halfSize country">
+      <div class="halfSize">
         <label for="submitted[org_country]">Country </label>
-        <input type="text" name="submitted[org_country]" id="submitted[org_country]"/>
-      </div>
-      <hr/>
-      <div class="section text">
-        <div class="halfSize">
-          <label for="submitted[first_name_supervisor]">Supervisor First Name</label>
-          <input type="text" id="submitted[first_name_supervisor]" name="submitted[first_name_supervisor]" value="" class="name">
-          <span class="first_name_supervisor-msgContainer"></span>
-        </div>
-      </div>
-      <div class="section text">
-        <div class="halfSize">
-          <label for="submitted[last_name_supervisor]">Supervisor Last Name</label>
-          <input type="text" id="submitted[last_name_supervisor]" name="submitted[last_name_supervisor]" value="" class="name">
-          <span class="last_name_supervisor-msgContainer"></span>
-        </div>
-      </div>
-      <div class="section text">
-        <div class="halfSize">
-          <label for="submitted[sup_phone]">Supervisor Phone</label>
-          <input type="text" id="submitted[sup_phone]" name="submitted[sup_phone]" size="60" maxlength="128"/>
-          <span class="sup_phone-msgContainer"></span> 
-        </div>
-      </div>
-      <div class="section text">
-        <div class="halfSize">
-          <label for="submitted[email_supervisor]">Supervisor E-mail</label>
-          <input type="text" id="submitted[email_supervisor]" name="submitted[email_supervisor]" size="60" maxlength="128" class="email"/>
-          <span class="email_supervisor-msgContainer"></span> 
-        </div>
+        <input type="text" name="submitted[org_country]" id="submitted[org_country]" class="country"/>
       </div>
 
-      <label for="submitted[job_description]"><h2>Job Description</h2></label>
-      <hr/>
-      <p>Describe in as much detail as possible your role and responsibilities in the internship. Identify your duties, any projects that you will undertake, teams you will work with, products or services you will provide, clients/patrons you will serve. etc. </p>
+
+      <h2>Job Description</h2>
+
+
       <div class="section text">
         <div class="fullSize">
+                <p>Describe in as much detail as possible your role and responsibilities in the internship. Identify your duties, any projects that you will undertake, teams you will work with, products or services you will provide, clients/patrons you will serve. etc. </p>
           <textarea name="submitted[job_description]" cols="90" rows="5" id="submitted[job_description]" class="required"></textarea>
           <span class="job_description-msgContainer"></span> 
         </div>
       </div>
-      <label for="submitted[supervision]"><h2>Supervision</h2></label>
-      <hr/>
-      <p>Describe the supervision you will be provided at the internship site. What instruction, assistance, guidance and consultation will you receive? From whom? Will you have regularly scheduled supervisory sessions? </p>
+      <h2>Supervision</h2>
+
+
       <div class="section text">
         <div class="fullSize">
+                <p>Describe the supervision you will be provided at the internship site. What instruction, assistance, guidance and consultation will you receive? From whom? Will you have regularly scheduled supervisory sessions? </p>
           <textarea name="submitted[supervision]" cols="90" rows="5" id="submitted[supervision]" class="required"></textarea>
           <span class="supervision-msgContainer"></span> 
         </div>
       </div>
-      <label for="submitted[learning_objectives]"><h2>Learning Objectives</h2></label>
-      <hr/>
-      <p>Describe in as much detail as possible what you hope to learn through the internship. Be specific: are you talking about developing skills, expanding your knowledge, testing theories, exploring career interests, discovering your strengths and weaknesses, or some other goals? Are these objectives related to your area of concentration? If yes, how?</p>
+     <h2>Learning Objectives</h2>
+
+
       <div class="section text">
         <div class="fullSize">
+                <p>Describe in as much detail as possible what you hope to learn through the internship. Be specific: are you talking about developing skills, expanding your knowledge, testing theories, exploring career interests, discovering your strengths and weaknesses, or some other goals? Are these objectives related to your area of concentration? If yes, how?</p>
           <textarea name="submitted[learning_objectives]" cols="90" rows="5" id="submitted[learning_objectives]" class="required"></textarea>
           <span class="learning_objectives-msgContainer"></span> 
         </div>
       </div>
-      <label for="submitted[learning_activities]"><h2>Learning activities and strategies</h2></label>
-      <hr/>
-      <p>Describe in detail the specific processes by which you will achieve these goals. On-the-job: How will your internship activities enable you to meet your learning objectives? Include projects, research, report writing, conversations, etc., which you will do while working, relating them to what you intend to learn. Off-the-job: How will you supplement the work experience with reading, research and consultation?</p>
+  <h2>Learning activities and strategies</h2>
+
 
       <div class="section text">
         <div class="fullSize">
+                <p>Describe in detail the specific processes by which you will achieve these goals. On-the-job: How will your internship activities enable you to meet your learning objectives? Include projects, research, report writing, conversations, etc., which you will do while working, relating them to what you intend to learn. Off-the-job: How will you supplement the work experience with reading, research and consultation?</p>
           <textarea name="submitted[learning_activities]" cols="90" rows="5" id="submitted[learning_activities]" class="required"></textarea>
           <span class="learning_activities-msgContainer"></span> 
         </div>
       </div>
 
-      <label for="submitted[evaluation]"><h2>Evaluation</h2></label>
-      <hr/>
-      <p>How will you determine whether you have met your learning goals? By what criteria will your supervisor assess your performance at the internship site? By what criteria will your adviser assess your performance in the internship?</p>
+     <h2>Evaluation</h2>
+
 
       <div class="section text">
         <div class="fullSize">
+                <p>How will you determine whether you have met your learning goals? By what criteria will your supervisor assess your performance at the internship site? By what criteria will your adviser assess your performance in the internship?</p>
           <textarea name="submitted[evaluation]" cols="90" rows="5" id="submitted[evaluation]" class="required"></textarea>
           <span class="evaluation-msgContainer"></span> 
         </div>
