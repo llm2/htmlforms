@@ -6,7 +6,7 @@
 glow.ready(function() {
   myOpts = {
     isMatch: function(indexedWord, inputWord) {
-     var myarray = indexedWord.split(" ");		    
+     var myarray = indexedWord.split(" ");        
      return (
             // match if first or last names (third name if available) begin with inputWord
             myarray[0].indexOf(inputWord) == 0 || myarray[1].indexOf(inputWord) == 0 ||
@@ -19,8 +19,8 @@ glow.ready(function() {
     },
     onItemSelect: function(e) {
         this.val(e.selectedItem.name); // Updates the binded HTML input element with the selected value
-		//set val for netid from myData
-		document.forms["autoform"].adviser.value = e.selectedItem.email;
+    //set val for netid from myData
+    document.forms["autoform"].adviser.value = e.selectedItem.email;
   }
 
 }
@@ -119,8 +119,6 @@ var suggest = new glow.widgets.AutoSuggest(
               <label for="submitted[year]">Year of Registration </label>
               <select id="submitted[year]" name="submitted[year]" class="requiredselect">
                 <option value="">Select One</option>
-                <option>2014</option>
-                <option>2015</option>
                 <option>2016</option>
                 <option>2017</option>
                 <option>2018</option>
@@ -135,6 +133,7 @@ var suggest = new glow.widgets.AutoSuggest(
               <label for="submitted[units]">Number of Units</label>
                <select id="submitted[units]" name="submitted[units]" class="requiredselect">
                 <option value="">Select One</option>
+                <option>1</option>
                 <option>2</option>
                 <option>3</option>
                 <option>4</option>
@@ -142,19 +141,38 @@ var suggest = new glow.widgets.AutoSuggest(
               <span class="units-msgContainer"></span>
             </div>
           </div>
+          <div class="section text">
+            <div class="halfSize">
+              <label for="submitted[industry_field]">Industry Field</label>
+              <select id="submitted[industry_field]" name="submitted[industry_field]" class="requiredselect">
+                <option value="">Select One</option>
+                <option>Arts</option>
+                <option>Journalism</option>
+                <option>Public Relations</option>
+                <option>Business</option>
+                <option>Marketing</option>
+                <option>Management</option>
+                <option>Finance</option>
+                <option>Fashion</option>
+                <option>Non-Profit</option>
+                <option>Community Service</option>
+                <option>Legal</option>
+                <option>Education</option>
+                <option>FILM/TV</option>  
+                <option>Communications</option>
+                <option>Social Services</option>
+                <option>Other</option>
+              </select>
+              <span class="industry_field-msgContainer"></span>
+            </div>
+          </div>  
 
-<<<<<<< HEAD
-
-          
-
-=======
           <div class="section text">
             <div class="halfSize">
               <label for="submitted[other]">If other please specify</label>
               <input type="text" id="submitted[other]" name="submitted[other]" value="">
               <span class="other-msgContainer"></span>
             </div>
->>>>>>> origin/master
             <div class="halfSize">
           <label for="submitted[state_location]">Location of the Internship</label>
           <select name="submitted[state_location]" id="submitted[state_location]">
@@ -230,54 +248,14 @@ var suggest = new glow.widgets.AutoSuggest(
             </optgroup>
           </select>
         </div>
-     
-
-
-          <div class="section text">
-            <div class="halfSize">
-              <label for="submitted[industry_field]">Industry Field</label>
-              <select id="submitted[industry_field]" name="submitted[industry_field]" class="requiredselect">
-                <option value="">Select One</option>
-                <option>Arts</option>
-                <option>Journalism</option>
-                <option>Public Relations</option>
-                <option>Business</option>
-                <option>Marketing</option>
-                <option>Management</option>
-                <option>Finance</option>
-                <option>Fashion</option>
-                <option>Non-Profit</option>
-                <option>Community Service</option>
-                <option>Legal</option>
-                <option>Education</option>
-                <option>FILM/TV</option>  
-                <option>Communications</option>
-                <option>Social Services</option>
-                <option>Other</option>
-              </select>
-              <span class="industry_field-msgContainer"></span>
-            </div>
-          </div>  
-
-
-       
-          <div class="section text">
-            <div class="halfSize">
-              <label for="submitted[other]">If other please specify</label>
-              <input type="text" id="submitted[other]" name="submitted[other]" value="" class="required">
-              <span class="other-msgContainer"></span>
-            </div>
-          </div>
-
+      </div>
           <div class="section text">
             <div class="fullSize">
-              <label for="submitted[function]">Internship Title (Job Function)</label>
+              <label for="submitted[function]">Job Function</label>
               <input type="text" id="submitted[function]" name="submitted[function]" value="" class="required">
               <span class="function-msgContainer"></span>
             </div>
           </div>
-
-
           <div class="section text">
             <div class="fullSize">
               <label for="submitted[organization]">Name of Organization</label>

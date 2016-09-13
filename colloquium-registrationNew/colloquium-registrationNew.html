@@ -1,13 +1,4 @@
-﻿<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-<!--<script>
-  $(document).ready(function() {
-	$.datepicker.setDefaults($.datepicker.regional[""]);
-	$( "#date" ).datepicker();
-  });
-  
-  </script> -->
+﻿
 <div id="formhermes">
   <div id="formContainer">
     <form class="autoform" enctype="multipart/form-data" action="https://gabe.es.its.nyu.edu/hermes/?q=node/125" method="post" id="autoform" accept-charset="UTF-8">
@@ -26,7 +17,7 @@
       </div>
       <div class="section text">
         <div class="halfSize">
-          <label for="submitted[netid]">Net ID</label>
+          <label for="submitted[netid]">NetID</label>
           <input name="submitted[netid]" type="text" id="submitted[netid]"  size="60" maxlength="128" class="netid"/>
           <span class="netid-msgContainer"></span> </div>
       </div>
@@ -50,8 +41,11 @@
       </div>
       <hr/>
       <h2>Committee Information</h2>
-      <p>The colloquium committee consists of your adviser and two other faculty members. At least one member of your committee must be a full-time Gallatin faculty member. If you are having difficulty finding faculty members for you committee, please contact the senior class adviser.</p>
+      
       <div class="section text">
+        <div class="fullSize">
+        <p>The colloquium committee consists of your adviser and two other faculty members. At least one member of your committee must be a full-time Gallatin faculty member. If you are having difficulty finding faculty members for you committee, please contact the senior class adviser.</p>
+      </div>
         <div class="halfSize">
           <label for="submitted[first_name_adviser]">Adviser&rsquo;s First Name </label>
           <input name="submitted[first_name_adviser]" type="text" id="submitted[first_name_adviser]" size="60" maxlength="128" class="name"/>
@@ -112,7 +106,7 @@
       <div class="section checkbox">
         <div class="fullSize"> <span>
           <input type="checkbox" id="submitted[confirmed]" name="submitted[confirmed]" value="Yes" class="datepicker required"/>
-          <label for="submitted[confirmed]">I have confirmed the following date and time of my colloquium with all the committee members.</label>
+          <label for="submitted[confirmed]">I have confirmed the following date and time of my colloquium with all the committee members to ensure that everyone can attend. I understand that changes to this date and time will necessitate the submission of a new registration form.</label>
           <span class="confirmed-msgContainer"></span></span> </div>
       </div>
       <div class="section text">
