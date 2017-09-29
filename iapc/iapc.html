@@ -1,15 +1,15 @@
 <style>
 .checklist {
-	border: 1px solid #ccc;
-	list-style: none;
-	height: 20em;
-	overflow: auto;
-	width: 100%;
+  border: 1px solid #ccc;
+  list-style: none;
+  height: 20em;
+  overflow: auto;
+  width: 100%;
 }
 .checklist, .checklist li {
-	margin: 0;
-	padding: 0;
-	width: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 .main .parsys ul.checklist li::before{
   display: none;
@@ -17,50 +17,50 @@
   margin-left: 0;
 }
 .checklist label {
-	display: block;
-	padding-left: 25px;
-	width: 90%;
-	text-indent: 10px;
+  display: block;
+  padding-left: 25px;
+  width: 90%;
+  text-indent: 10px;
 }
 .checklist label:hover {
-	background: #777;
-	color: #fff;
+  background: #777;
+  color: #fff;
 }
 </style>
   <!-- Form Validation -->
   <script type="text/javascript">
-	  	
-		function checkTotalAreasOfInterests(limit)/* this is the maximum number of options you want selected */{
-		var ctr = 0;		
-		var selObj = document.getElementById('interests');		
-		for (var i=0; i< selObj.options.length; i++){
-			if (selObj.options[i].selected==true)
-				ctr++;
-		}
-		if(ctr <= 0){
-			 alert("Please select at least one Area of Interest.");
-      		 return false;
-		}
-		if (ctr>limit){
-   		     alert("You are allowed to select only up to " + limit + " Areas of Interests.");
-      		 return false;
-		}
-		return true;
-		}
-	  
-	  function initChecklist() {
+      
+    function checkTotalAreasOfInterests(limit)/* this is the maximum number of options you want selected */{
+    var ctr = 0;    
+    var selObj = document.getElementById('interests');    
+    for (var i=0; i< selObj.options.length; i++){
+      if (selObj.options[i].selected==true)
+        ctr++;
+    }
+    if(ctr <= 0){
+       alert("Please select at least one Area of Interest.");
+           return false;
+    }
+    if (ctr>limit){
+           alert("You are allowed to select only up to " + limit + " Areas of Interests.");
+           return false;
+    }
+    return true;
+    }
+    
+    function initChecklist() {
     if (document.all && document.getElementById) {
         // Get all unordered lists
-	   var lists = document.getElementsByTagName("ul");
+     var lists = document.getElementsByTagName("ul");
         
         for (i = 0; i < lists.length; i++) {
             var theList = lists[i];
             
-		  // Only work with those having the class "checklist"
+      // Only work with those having the class "checklist"
             if (theList.className.indexOf("checklist") > -1) {
                 var labels = theList.getElementsByTagName("label");
                 
-			 // Assign event handlers to labels within
+       // Assign event handlers to labels within
                 for (var j = 0; j < labels.length; j++) {
                     var theLabel = labels[j];
                     theLabel.onmouseover = function() { this.className += " hover"; };
@@ -70,8 +70,8 @@
         }
     }
 }
-	  
-	  </script>
+    
+    </script>
   <!-- Form Validation -->
 
 <div id="formhermes">
@@ -254,9 +254,7 @@
       <div class="section text">
         <div class="fullSize">
           <p> The Intellectual Autobiography and Plan for Concentration (IAPC) is a brief, reflective essay of two to three pages (typed and double-spaced), in which students write about their intellectual development and their plans for designing the concentration. In constructing the essay, students should describe their educational experiences, the central idea(s)
-            of the concentration and the coursework relevant to their concentration. This requirement applies to students who
-            enter Gallatin during or after the Fall 2003 term. For more information about the essay and this requirement, please
-            see the <a href="">Policies and Procedures for the Undergraduate Intellectual Autobiography and Plan for Concentration</a> booklet. </p>
+            of the concentration and the coursework relevant to their concentration. </p>
           <label for="files[submitted_file]">Please attach your IAPC. Make sure your name is included in the title of the document (.doc, .docx, and .pdf formats accepted).</label>
           <input type="file" id="files[submitted_file]" name="files[submitted_file]" class="required" />
         </div>
@@ -265,9 +263,9 @@
       <div class="section end">
         <div class="fullSize">
           <button type="submit"
-		id="submit"
-		name="op"
-		value="Submit">Submit </button>
+    id="submit"
+    name="op"
+    value="Submit">Submit </button>
         </div>
       </div>
     </form>

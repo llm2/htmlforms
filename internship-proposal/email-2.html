@@ -2,7 +2,7 @@
 <p>
 <strong>Dear [submission:values:first_name_adviser]</strong>,<br/>
 
-Your advisee, [submission:values:first_name] [submission:values:last_name], has submitted an Internship Proposal. To approve this proposal, please reply to this e-mail. If you do not approve, please contact the student directly. Please note that by approving this internship proposal, you are the grading instructor for the internship and will submit the final internship grade for the student. If you have questions about the Internship process, please contact <a href="fs1@nyu.edu">Faith Stangler</a> in the Office of External Programs.
+Your advisee, [submission:values:first_name] [submission:values:last_name], has submitted an Internship Proposal. To approve this proposal, please reply to this email. If you do not approve, please contact the student directly. Please note that by approving this internship proposal, you are the grading instructor for the internship and will submit the final internship grade for the student. If you have questions about the Internship process, please contact <a href="fs1@nyu.edu">Faith Stangler</a> in the Office of External Programs.
 </p>
 
 <p>
@@ -22,11 +22,13 @@ Your advisee, [submission:values:first_name] [submission:values:last_name], has 
     <tr>
     <td> <strong>Name of Organization</strong> [submission:values:organization]  </td>
      <td> <strong>Street Address</strong> [submission:values:street_organization], <strong>City</strong> [submission:values:city_organization], <strong>State/Province</strong> [submission:values:state_organization], <strong>Zip/Postal</strong> [submission:values:zip_organization], <strong>Country</strong> [submission:values:country_organization] </td>
-     <td>  <strong>Location of the internship</strong> [submission:values:location] </td>
    </tr>
+<tr>
+     <td colspan="2">  <strong>Location of the Internship</strong> [submission:values:state_location] </td>
+</tr>
     <tr>
-   <td><strong>Supervisor Name</strong> [submission:values:first_name_supervisor]  [submission:values:last_name_supervisor], <strong>Supervisor'sTitle</strong> [submission:values:title_supervisor] </td>
-      <td> <strong>Supervisor's E-mail</strong> [submission:values:email_supervisor] <strong>Supervisor Phone</strong> [submission:values:sup_phone]</td>
+   <td><strong>Supervisor Name</strong> [submission:values:first_name_supervisor]  [submission:values:last_name_supervisor]<br/><strong>Supervisor Title</strong> [submission:values:title_supervisor] </td>
+      <td> <strong>Supervisor Email</strong> [submission:values:email_supervisor] <br/><strong>Supervisor Phone</strong> [submission:values:sup_phone]</td>
     </tr>
     <tr>
     <td> <strong>Semester and Year of registration</strong> [submission:values:semester] [submission:values:year]</td>
@@ -34,14 +36,28 @@ Your advisee, [submission:values:first_name] [submission:values:last_name], has 
     </tr>
 <tr>
    <td>  <strong>Industry Field</strong> [submission:values:industry_field], [submission:values:other]</td>
-   <td>  <strong>Job Function</strong> [submission:values:function]</td>
+   <td>  <strong>Organization Type </strong> [submission:values:organization_type]</td>
+   </tr>
+<tr><td colspan="2">  <strong>Job Function</strong> [submission:values:function]</td>
 </tr>
     <tr>
-     <td colspan="2"> <strong>Describe 1-2 academic goals.</strong> [submission:values:reason1:nolabel] </td>
+     <td colspan="2"> <strong>Briefly describe the company or organization and what it does</strong> [submission:values:describe_the_company:nolabel] </td>
     </tr>
     <tr>
-      <td colspan="2"> <strong>What professional experience do you hope to gain?</strong> [submission:values:reason] </td>
+      <td colspan="2"> <strong>Give a description of the internship position for which you are applying </strong> [submission:values:internship_position] </td>
     </tr>
+
+    <tr>
+     <td colspan="2"> <strong>How would you describe your interest in or qualifications for this internship? More specifically, do you have a particular interest in this field from your studies or did something else spark your interest?</strong> [submission:values:interest_in:nolabel] </td>
+    </tr>
+    <tr>
+      <td colspan="2"> <strong>Internship Categories </strong> [submission:values:internship_categories] </td>
+    </tr>
+    <tr>
+      <td colspan="2"> <strong>Internship Objectives</strong> [submission:values:internship_objectives] </td>
+    </tr>
+
+
   </table>
 
   <!-- END EMAIL CONTENT -->
